@@ -6,7 +6,7 @@
 
 ## 1.1 A UNIX rövid története
 
-* Első változat: 1969, Ken Thompson és Dennis Ritchie -> AT&T Bell Laboratóriumában PDP-7 típusú számítógépre
+* Első változat: 1969, **Ken Thompson és Dennis Ritchie** -> *AT&T Bell* Laboratóriumában PDP-7 típusú számítógépre
 * 1973-ban átírták a rendszer magját C nyelvre -> könnyű hordozhatóság
 * AT&T ingyen az amerikai egyetemeknek adta a forráskódját -> 10 éven belül százezer működő UNIX rendszer
 * Gyors terjedés -> egységes ellenőrzés hiánya -> számos helyi változat -> *Legjelentősebbek:*
@@ -15,7 +15,7 @@
 * Népszerű -> szabványosítás fontossága
   * USL -> SVR4
   * BSD -> OSF (Open System Foundation) ajánlása: OSF/1
-  * Független bizottságok (nem az érdekelt cégek támogatásával működnek) -> IEEE (ANSI és ISO támogatásával) a **POSIX** (Portable Operating System Interface(x)) ajánlást -> igyekszik egységesíteni a két fő szabványt
+  * Független bizottságok (nem az érdekelt cégek támogatásával működnek) -> *IEEE* (ANSI és ISO támogatásával) a **POSIX** (Portable Operating System Interface(x)) ajánlást -> igyekszik egységesíteni a két fő szabványt
 * Korán *Intel PC* alapú UNIXok is
 
 ## 1.2 Elterjedt UNIX-ok
@@ -28,5 +28,5 @@
 
 ## 1.3 Ismertebb BSD rendszerek
 
-* FreeBSD
+* **FreeBSD**
 * PCBSD megszűnt
