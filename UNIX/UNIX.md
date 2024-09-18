@@ -1,5 +1,4 @@
-# Dr. Mileff Péter: UNIX/Linux operációs rendszer üzemeltetése (2022)
-# 1. Bevezetés
+# Dr. Mileff Péter: UNIX/Linux operációs rendszer üzemeltetése (2022) - 1. Bevezetés
 
 * UNIX régi operációs rendszer, stabilan és egyre növekvő arányban
 * Korábban egyetemi szféra -> banki, vállalati, adatfeldolgozó szféra
