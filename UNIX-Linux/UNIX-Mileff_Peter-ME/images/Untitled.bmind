@@ -4,13 +4,13 @@
       "title": "Sheet1",
       "rootTopicKey": "603e756e-5775-4670-ab60-67c47bc430ce",
       "editorRootTopicKey": "603e756e-5775-4670-ab60-67c47bc430ce",
-      "focusKey": "d9154767-8872-4da4-b49b-30e8f3be6557",
+      "focusKey": "603e756e-5775-4670-ab60-67c47bc430ce",
       "topics": [
         {
           "key": "a7808c96-19b2-4d10-9368-35b3c6c625b5",
           "parentKey": "66fcc73a-879b-49e1-94a0-cc39f730f364",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -29,7 +29,7 @@
             "c640ca13-d1b0-40ca-ba8e-9577dfb50607",
             "99942b44-0b49-4279-8a08-2e87cc40a110"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -48,7 +48,7 @@
             "c532ab72-b201-45ee-abac-f6a7741dac7c",
             "d4532c5c-d1a4-4f50-9f05-920d9799ef6a"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -61,7 +61,7 @@
           "key": "99942b44-0b49-4279-8a08-2e87cc40a110",
           "parentKey": "7c1ef121-71e8-40e2-8ec5-1f1bfa7b3907",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -74,7 +74,7 @@
           "key": "9987f0c7-dcd1-4e27-906b-6d104e09e09c",
           "parentKey": "f7e04bee-76c4-4f17-9031-12ba028b3c45",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -87,7 +87,7 @@
           "key": "c640ca13-d1b0-40ca-ba8e-9577dfb50607",
           "parentKey": "7c1ef121-71e8-40e2-8ec5-1f1bfa7b3907",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -100,7 +100,7 @@
           "key": "b068a329-72b8-4c8d-afbb-8a8c4e1c5c6c",
           "parentKey": "603e756e-5775-4670-ab60-67c47bc430ce",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -113,7 +113,7 @@
           "key": "3d52d4a1-8fd3-4e1a-8dad-2a8eb3ae73e6",
           "parentKey": "7c1ef121-71e8-40e2-8ec5-1f1bfa7b3907",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -128,7 +128,7 @@
           "subKeys": [
             "50518210-7d34-4853-9ad7-90762342c8aa"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -143,7 +143,7 @@
           "subKeys": [
             "7459f4a1-97ed-40a6-8176-c6f564792f49"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -156,7 +156,7 @@
           "key": "b5917364-cd9f-4f68-aa1f-cc120b249b6e",
           "parentKey": "c673b03e-0df6-4279-b376-7d7c44df493a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -169,7 +169,7 @@
           "key": "0dad39e8-eff6-4c26-b7cd-a249271c1b09",
           "parentKey": "66fcc73a-879b-49e1-94a0-cc39f730f364",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -182,7 +182,7 @@
           "key": "0b88cfd4-97a4-4029-a12c-19f00dd7430e",
           "parentKey": "3d6dbbed-a4ba-4c72-a13d-5c521791d76a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -195,7 +195,7 @@
           "key": "0f441e81-707b-4882-ae0b-406e1441d346",
           "parentKey": "603e756e-5775-4670-ab60-67c47bc430ce",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -208,7 +208,7 @@
           "key": "c0c4a4f4-30e3-4fdb-b4ef-67a870679846",
           "parentKey": "2dc8e090-59e4-4479-b7d1-454bd82b7c5d",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -223,7 +223,7 @@
           "subKeys": [
             "c0c4a4f4-30e3-4fdb-b4ef-67a870679846"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -236,7 +236,7 @@
           "key": "6447badb-4c5d-4e3e-9a7a-ade32edd7c14",
           "parentKey": "66fcc73a-879b-49e1-94a0-cc39f730f364",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -249,7 +249,7 @@
           "key": "0d5b6108-7197-4d51-99a9-c7ff9f59e0a5",
           "parentKey": "330d8abc-9237-4744-9e14-7265bfa62da7",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -262,7 +262,7 @@
           "key": "ea2dab92-0b0f-44c2-b366-aa02b86e6820",
           "parentKey": "4f8d06fe-190c-40e4-b979-9034c69fc144",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -275,7 +275,7 @@
           "key": "a56bad59-356f-4c10-8ac0-108a3c4701ea",
           "parentKey": "a57066d8-e1a8-4391-8046-61a687b65631",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -288,7 +288,7 @@
           "key": "5bec8fd6-1021-475f-9fb3-8f441ac799f6",
           "parentKey": "4f8d06fe-190c-40e4-b979-9034c69fc144",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -301,7 +301,7 @@
           "key": "b3667e70-11c0-4d46-8f94-0dfd87b0fba7",
           "parentKey": "a57066d8-e1a8-4391-8046-61a687b65631",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -314,7 +314,7 @@
           "key": "27e3d319-e25d-472a-b229-8012e2ac023e",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -327,7 +327,7 @@
           "key": "e875edf2-c21c-4ab1-a557-ec5b71d6dfe1",
           "parentKey": "603e756e-5775-4670-ab60-67c47bc430ce",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -340,7 +340,7 @@
           "key": "3d9e1337-bf6f-43a8-9add-4685bd35aa39",
           "parentKey": "8bac9767-d359-4a26-ad82-61f24a152858",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -353,7 +353,7 @@
           "key": "51476347-db6e-4eee-a572-87a6288eb9c7",
           "parentKey": "f20b1b69-3ad4-4efe-b2b1-71d12471fa5a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -393,7 +393,7 @@
           "key": "5f9ff9a6-387c-4580-85d2-c923e4336312",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -406,7 +406,7 @@
           "key": "1ead8ed7-347c-4308-bd27-3b188433a9d7",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -419,7 +419,7 @@
           "key": "51ca131e-1ce2-4453-9dfb-8ea9f92f240a",
           "parentKey": "e3c818e9-b20a-49b1-b118-cbaa43188392",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -435,7 +435,7 @@
             "c460a45f-7943-4ce8-a211-af03e86914c3",
             "221378a8-6326-4e87-aea7-e4cb88c49663"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -448,7 +448,7 @@
           "key": "221378a8-6326-4e87-aea7-e4cb88c49663",
           "parentKey": "53ffc448-e32a-4fa7-9671-28be91b1cc0a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -461,7 +461,7 @@
           "key": "940cbe36-ad55-4b2e-91f8-140c95c75681",
           "parentKey": "327c0db7-e8d5-40fa-8f7f-b0e5f38aea5f",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -474,7 +474,7 @@
           "key": "d418c5ee-b809-4f65-88e7-ec22a959ef37",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -487,7 +487,7 @@
           "key": "b5bcc851-f64b-4d92-8825-f3eea3e5720b",
           "parentKey": "c01c2416-6fb4-40d6-a172-6305c31d5179",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -506,7 +506,7 @@
             "be03c5b6-0a8f-4f00-b7ca-10aa3d567d8f",
             "b5917364-cd9f-4f68-aa1f-cc120b249b6e"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -519,7 +519,7 @@
           "key": "5d9335c4-918a-47e7-a965-f3e689b2d89f",
           "parentKey": "4eb48922-92c3-43ea-849d-b0f356c85e87",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -535,7 +535,7 @@
             "b5bcc851-f64b-4d92-8825-f3eea3e5720b",
             "6f88ed20-d808-43bb-8543-2d79cd563f80"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -548,7 +548,7 @@
           "key": "a376fde5-1df8-473e-9260-cd83d69416dd",
           "parentKey": "a57066d8-e1a8-4391-8046-61a687b65631",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -561,7 +561,7 @@
           "key": "76b5e874-f7ce-4991-a28b-684508c5f46d",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -574,7 +574,7 @@
           "key": "00faa189-5514-4745-95d0-edf23745c4bf",
           "parentKey": "4f8d06fe-190c-40e4-b979-9034c69fc144",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -589,7 +589,7 @@
           "subKeys": [
             "7adebf75-5ce8-4c3f-be1d-3f3851c919e3"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -604,7 +604,7 @@
           "subKeys": [
             "940cbe36-ad55-4b2e-91f8-140c95c75681"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -620,7 +620,7 @@
             "2fa87cb6-0313-48a8-9403-1cf90f2918c5",
             "148bbf21-3c77-4ba3-8baa-061225a0f54d"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -633,7 +633,7 @@
           "key": "d9154767-8872-4da4-b49b-30e8f3be6557",
           "parentKey": "441d743f-9e4e-44b5-ae28-a6b4848ab5dc",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -646,7 +646,7 @@
           "key": "ac974448-575b-4097-afa5-578c9d2e7c43",
           "parentKey": "b3d9bbc4-cfcc-4d7e-967a-3fb9d67cd482",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -659,7 +659,7 @@
           "key": "d06e0321-e5fc-4edc-ada2-6036ff97a43e",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -672,7 +672,7 @@
           "key": "153dcf2e-a40c-4624-83ab-50ed509de86b",
           "parentKey": "3989232f-80de-4b55-b387-15a18e8af085",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -687,7 +687,7 @@
           "subKeys": [
             "3d9e1337-bf6f-43a8-9add-4685bd35aa39"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -700,7 +700,7 @@
           "key": "1daaf524-6d3c-4145-a0ef-8bcff2faa00f",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -715,7 +715,7 @@
           "subKeys": [
             "d9154767-8872-4da4-b49b-30e8f3be6557"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -728,7 +728,7 @@
           "key": "148bbf21-3c77-4ba3-8baa-061225a0f54d",
           "parentKey": "f51f7d7f-489a-4e16-b6bb-11161d08b6bc",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -745,7 +745,7 @@
             "51476347-db6e-4eee-a572-87a6288eb9c7",
             "f7e04bee-76c4-4f17-9031-12ba028b3c45"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -758,7 +758,7 @@
           "key": "7646e33e-089e-4fe8-a627-4198eff47bbc",
           "parentKey": "e3c818e9-b20a-49b1-b118-cbaa43188392",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -771,7 +771,7 @@
           "key": "edf1f7f2-e2be-4dbf-9308-7e6105826de5",
           "parentKey": "f7e04bee-76c4-4f17-9031-12ba028b3c45",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -789,7 +789,7 @@
             "3dcc51e6-5d5f-4d1c-a318-d20932fd2af1",
             "5d9335c4-918a-47e7-a965-f3e689b2d89f"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -807,7 +807,7 @@
             "8bac9767-d359-4a26-ad82-61f24a152858",
             "0d5b6108-7197-4d51-99a9-c7ff9f59e0a5"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -820,7 +820,7 @@
           "key": "85b0595d-0b76-40a0-8396-5ba97088df3c",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -833,7 +833,7 @@
           "key": "0f99621c-2b53-4b27-84cc-16210a33dd3a",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -846,7 +846,7 @@
           "key": "c460a45f-7943-4ce8-a211-af03e86914c3",
           "parentKey": "53ffc448-e32a-4fa7-9671-28be91b1cc0a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -859,7 +859,7 @@
           "key": "f9c4ee7e-d888-4371-bd84-12c7aed366f5",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -872,7 +872,7 @@
           "key": "aeadc88f-0aeb-46b8-9b5b-814549311e57",
           "parentKey": "b3d9bbc4-cfcc-4d7e-967a-3fb9d67cd482",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -905,7 +905,7 @@
           "key": "fdaa53d1-0556-42b9-8c05-da4b990e305b",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -920,7 +920,7 @@
           "subKeys": [
             "8444d95a-db61-48c3-a665-9a0dd9220521"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -933,7 +933,7 @@
           "key": "50518210-7d34-4853-9ad7-90762342c8aa",
           "parentKey": "c04c67ee-f126-4ea3-9138-695c25912c0a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -946,7 +946,7 @@
           "key": "e9379b22-eb6e-4a41-bf09-569725b5da4c",
           "parentKey": "b3d9bbc4-cfcc-4d7e-967a-3fb9d67cd482",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -959,7 +959,7 @@
           "key": "3bf7ae4c-27b2-4d8b-a574-f3188025d79c",
           "parentKey": "c673b03e-0df6-4279-b376-7d7c44df493a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -990,7 +990,7 @@
           "key": "9cf7bb7e-a264-43a5-a9c7-e8d2a00c99c3",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1003,7 +1003,7 @@
           "key": "b336e403-4ab5-4bce-9ae5-7583f83dbd92",
           "parentKey": "3dcc51e6-5d5f-4d1c-a318-d20932fd2af1",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1016,7 +1016,7 @@
           "key": "6f88ed20-d808-43bb-8543-2d79cd563f80",
           "parentKey": "c01c2416-6fb4-40d6-a172-6305c31d5179",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1029,7 +1029,7 @@
           "key": "b9e36085-02e9-4062-812b-182597200c18",
           "parentKey": "f20b1b69-3ad4-4efe-b2b1-71d12471fa5a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1042,7 +1042,7 @@
           "key": "e94568dc-d5fb-41c1-9940-54b0da461e74",
           "parentKey": "3989232f-80de-4b55-b387-15a18e8af085",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1057,7 +1057,7 @@
           "subKeys": [
             "b336e403-4ab5-4bce-9ae5-7583f83dbd92"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1070,7 +1070,7 @@
           "key": "ff8df4be-b31d-42a7-92a3-e5a496a0d93b",
           "parentKey": "736017b7-f630-4e0b-bb83-352d2557a7ca",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1083,7 +1083,7 @@
           "key": "815b1edd-a398-4fc4-ba1f-4326b5bd15cd",
           "parentKey": "330d8abc-9237-4744-9e14-7265bfa62da7",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1096,7 +1096,7 @@
           "key": "8b751d6c-8597-4b24-b93f-4e0534cb3917",
           "parentKey": "86f17d56-382c-449f-85be-2378b54a0702",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1109,7 +1109,7 @@
           "key": "7459f4a1-97ed-40a6-8176-c6f564792f49",
           "parentKey": "cc296942-b40f-4697-84bc-d6ba825ec7b2",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1122,7 +1122,7 @@
           "key": "fb4addb7-92e7-49cc-9bcf-b137312d628c",
           "parentKey": "3989232f-80de-4b55-b387-15a18e8af085",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1135,7 +1135,7 @@
           "key": "5542f467-8d44-4b0a-994a-e11f51ee8609",
           "parentKey": "66fcc73a-879b-49e1-94a0-cc39f730f364",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1148,7 +1148,7 @@
           "key": "c03e89f8-e19e-44c0-a86b-da7eeacc65e2",
           "parentKey": "f7e04bee-76c4-4f17-9031-12ba028b3c45",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1161,7 +1161,7 @@
           "key": "3bec80a7-e794-4ef1-bbdc-da69137ffbcc",
           "parentKey": "f7e04bee-76c4-4f17-9031-12ba028b3c45",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1174,7 +1174,7 @@
           "key": "7adebf75-5ce8-4c3f-be1d-3f3851c919e3",
           "parentKey": "b91f1a87-0bcb-478e-9ec5-16becf72b91b",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1187,7 +1187,7 @@
           "key": "be03c5b6-0a8f-4f00-b7ca-10aa3d567d8f",
           "parentKey": "c673b03e-0df6-4279-b376-7d7c44df493a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1200,7 +1200,7 @@
           "key": "acf2e09d-dd12-4290-bf18-bcdb97fbabb4",
           "parentKey": "66fcc73a-879b-49e1-94a0-cc39f730f364",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1222,7 +1222,7 @@
             "5f9ff9a6-387c-4580-85d2-c923e4336312",
             "85b0595d-0b76-40a0-8396-5ba97088df3c"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1235,7 +1235,7 @@
           "key": "90b96b23-f9d3-49eb-b923-e8e317dccbc4",
           "parentKey": "f7e04bee-76c4-4f17-9031-12ba028b3c45",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1248,7 +1248,7 @@
           "key": "8444d95a-db61-48c3-a665-9a0dd9220521",
           "parentKey": "f1759847-a73e-488b-974b-57ed96addad3",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1263,7 +1263,7 @@
           "subKeys": [
             "ff8df4be-b31d-42a7-92a3-e5a496a0d93b"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1276,7 +1276,7 @@
           "key": "932175d3-c7f9-46ba-a0a6-6f7591a94ab5",
           "parentKey": "6cce8c3f-0a02-4568-8b06-c0c8ceacb8b6",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1295,7 +1295,7 @@
             "3bec80a7-e794-4ef1-bbdc-da69137ffbcc",
             "9987f0c7-dcd1-4e27-906b-6d104e09e09c"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1308,7 +1308,7 @@
           "key": "0cdc9ff7-fb72-437e-b61f-0d9c244d5c66",
           "parentKey": "f6b26934-2114-4e4e-8edd-ab8d40c75947",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1324,7 +1324,7 @@
             "0cdc9ff7-fb72-437e-b61f-0d9c244d5c66",
             "1f86987f-2772-4cc7-b266-21caef191ec3"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1337,7 +1337,7 @@
           "key": "71939de1-1a65-46bb-8f8a-5d8fc9e4a510",
           "parentKey": "330d8abc-9237-4744-9e14-7265bfa62da7",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1359,7 +1359,7 @@
             "76b5e874-f7ce-4991-a28b-684508c5f46d",
             "6cce8c3f-0a02-4568-8b06-c0c8ceacb8b6"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1372,7 +1372,7 @@
           "key": "43be0415-890f-4702-9483-3327d54e3f44",
           "parentKey": "c673b03e-0df6-4279-b376-7d7c44df493a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1390,7 +1390,7 @@
             "c04c67ee-f126-4ea3-9138-695c25912c0a",
             "0b88cfd4-97a4-4029-a12c-19f00dd7430e"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1403,7 +1403,7 @@
           "key": "9d7afec0-47c3-4bc0-9f67-2cd5d3b21fd0",
           "parentKey": "3989232f-80de-4b55-b387-15a18e8af085",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1420,7 +1420,7 @@
             "a376fde5-1df8-473e-9260-cd83d69416dd",
             "b3667e70-11c0-4d46-8f94-0dfd87b0fba7"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1435,7 +1435,7 @@
           "subKeys": [
             "932175d3-c7f9-46ba-a0a6-6f7591a94ab5"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1457,7 +1457,7 @@
             "acf2e09d-dd12-4290-bf18-bcdb97fbabb4",
             "5542f467-8d44-4b0a-994a-e11f51ee8609"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1476,7 +1476,7 @@
             "f51f7d7f-489a-4e16-b6bb-11161d08b6bc",
             "441d743f-9e4e-44b5-ae28-a6b4848ab5dc"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1489,7 +1489,7 @@
           "key": "87bde209-9cc3-4d0d-b75d-3f45fd51d667",
           "parentKey": "c673b03e-0df6-4279-b376-7d7c44df493a",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1502,7 +1502,7 @@
           "key": "2fa87cb6-0313-48a8-9403-1cf90f2918c5",
           "parentKey": "f51f7d7f-489a-4e16-b6bb-11161d08b6bc",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1515,7 +1515,7 @@
           "key": "c532ab72-b201-45ee-abac-f6a7741dac7c",
           "parentKey": "4f8d06fe-190c-40e4-b979-9034c69fc144",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1528,7 +1528,7 @@
           "key": "1f86987f-2772-4cc7-b266-21caef191ec3",
           "parentKey": "f6b26934-2114-4e4e-8edd-ab8d40c75947",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1541,7 +1541,7 @@
           "key": "838850a4-54d7-4d0f-976f-7fdbf4aed3bd",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1554,7 +1554,7 @@
           "key": "d4532c5c-d1a4-4f50-9f05-920d9799ef6a",
           "parentKey": "4f8d06fe-190c-40e4-b979-9034c69fc144",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1567,7 +1567,7 @@
           "key": "92b3fdb1-382a-42e3-8cc2-2905613ebfe2",
           "parentKey": "c1710b47-b737-468f-b7a2-7b39ca2476db",
           "subKeys": [],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1583,57 +1583,57 @@
         "allowUndo": true,
         "layoutDir": 0,
         "theme": {
-          "name": "defaultTheme",
-          "randomColor": false,
+          "name": "random-color-round",
+          "randomColor": true,
           "background": "rgba(255,255,255,1)",
-          "highlightColor": "#C31004",
-          "marginH": 50,
-          "marginV": 5,
+          "highlightColor": "#50C9CE",
+          "marginH": 60,
+          "marginV": 20,
           "contentStyle": {
-            "lineHeight": "1"
+            "lineHeight": "1.5",
+            "color": "#262626"
           },
           "linkStyle": {
             "lineRadius": 5,
-            "lineWidth": "2px",
-            "lineColor": "#595959",
-            "lineType": "curve"
+            "lineType": "curve",
+            "lineWidth": "3px"
           },
           "rootTopic": {
             "contentStyle": {
-              "background": "#C31004",
-              "color": "#fff",
               "fontSize": "34px",
-              "borderRadius": "5px",
-              "padding": "16px 18px 16px 18px"
+              "borderRadius": "35px",
+              "padding": "5px 10px"
             },
             "subLinkStyle": {
-              "lineType": "curve"
+              "lineType": "curve",
+              "lineWidth": "3px",
+              "lineColor": "rgb(113, 203, 45)"
             }
           },
           "primaryTopic": {
             "contentStyle": {
-              "background": "#333",
-              "borderRadius": "5px",
-              "color": "#fff",
-              "fontSize": "14px",
-              "padding": "6px 10px 5px 10px"
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderRadius": "10px",
+              "fontSize": "20px",
+              "padding": "0px 5px"
             },
             "subLinkStyle": {
-              "hasUnderline": true,
-              "lineType": "round"
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "rgb(113, 203, 45)"
             }
           },
           "normalTopic": {
             "contentStyle": {
-              "borderRadius": "5px",
-              "background": "#fff0",
-              "color": "#383833",
+              "borderRadius": "10px",
               "fontSize": "13px",
-              "padding": "1px"
+              "padding": "0"
             },
             "subLinkStyle": {
-              "hasUnderline": true,
-              "lineType": "round"
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "white"
             }
           }
         }
