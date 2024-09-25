@@ -1,1 +1,1 @@
-A jegyeteim
+A jegyzeteim
