@@ -1,5 +1,7 @@
 # A to be létige és a személyes névmások
 
+![1.1](images/1.1.png)
+
 * A személyes névmások mutatják meg, ki cselekszik a mondatban
 * Leírást adunk valakiről vagy valamiről
 

@@ -1,5 +1,7 @@
 # Van valami valahol - Alapok I-II
 
+![1.1](images/1.1.png)
+
 There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
 
 * **There is**: egyes szám -> There is apple on the table

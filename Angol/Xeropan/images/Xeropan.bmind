@@ -1,0 +1,211 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+      "editorRootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+      "focusKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+      "topics": [
+        {
+          "key": "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
+          "parentKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+          "subKeys": [
+            "f9015519-f8db-4f4e-a8cb-7ac4eeb34702"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Abszolút kezdő"
+            }
+          ]
+        },
+        {
+          "key": "eafbc236-d09f-4f62-bd69-190a15a9d38c",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.3. Névelők alapszinten"
+            }
+          ]
+        },
+        {
+          "key": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "parentKey": "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
+          "subKeys": [
+            "1866fd7b-57c8-4f30-a9f2-e7df06b8f49e",
+            "5446bd77-ca2c-42e6-821b-d56b7739bbfa",
+            "eafbc236-d09f-4f62-bd69-190a15a9d38c",
+            "8cf72b8d-1087-4378-b007-e5510ff8183e",
+            "29e6ca06-aeb1-4d57-9cbf-f6dc8692ae11",
+            "c5e6db56-1746-4f17-8a30-c98c37d774ca"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1. Start"
+            }
+          ]
+        },
+        {
+          "key": "1866fd7b-57c8-4f30-a9f2-e7df06b8f49e",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.1. To be létige és a személyes névmások"
+            }
+          ]
+        },
+        {
+          "key": "8cf72b8d-1087-4378-b007-e5510ff8183e",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.4. Ezek/Azok - Mik ezek?"
+            }
+          ]
+        },
+        {
+          "key": "5446bd77-ca2c-42e6-821b-d56b7739bbfa",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.2. Ez/Az - Mi ez?"
+            }
+          ]
+        },
+        {
+          "key": "29e6ca06-aeb1-4d57-9cbf-f6dc8692ae11",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.5. Van valami valahol - Alapok I-II"
+            }
+          ]
+        },
+        {
+          "key": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+          "parentKey": null,
+          "subKeys": [
+            "5c9b32b2-6b1b-401e-99cc-9f9223e37283"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Xeropan"
+            }
+          ]
+        },
+        {
+          "key": "c5e6db56-1746-4f17-8a30-c98c37d774ca",
+          "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.6. Megszámlálható, megszámlálhatatlan - alapok"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "theme3",
+          "randomColor": false,
+          "background": "#CCFBFE",
+          "highlightColor": "#D0021B",
+          "marginH": 50,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#CD8987",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#CDACA1",
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderColor": "#E4C1F9",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "18px",
+              "padding": "5px"
+            },
+            "subLinkStyle": {
+              "lineType": "line",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "background": "#CDCACC",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "13px",
+              "padding": "0",
+              "boxShadow": "1px 1px 1px #ccc"
+            },
+            "subLinkStyle": {
+              "lineType": "line",
+              "lineRadius": 5,
+              "lineWidth": "1px",
+              "lineColor": "#43a9ff"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

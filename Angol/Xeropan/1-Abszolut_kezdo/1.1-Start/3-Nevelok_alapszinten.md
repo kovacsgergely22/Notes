@@ -1,5 +1,7 @@
 # Névelők alapszinten
 
+![1.1](images/1.1.png)
+
 Az **a/an** (egy) és a **the** szavak névelők, névszókat előznek meg.
 
 * **a/an** (határozatlan névelők):

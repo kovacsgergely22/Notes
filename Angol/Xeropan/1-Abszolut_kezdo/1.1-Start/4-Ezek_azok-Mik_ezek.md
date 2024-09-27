@@ -1,5 +1,7 @@
 # Ezek/azok - Mik ezek?
 
+![1.1](images/1.1.png)
+
 these, those mutató névmások, főnév utánuk többes számban!
 
 * **these**: ezek
