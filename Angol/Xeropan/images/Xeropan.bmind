@@ -4,13 +4,54 @@
       "title": "Sheet1",
       "rootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
       "editorRootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
-      "focusKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+      "focusKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
       "topics": [
+        {
+          "key": "8cfe248d-162f-4646-bddd-68490e324a70",
+          "parentKey": "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4. A gyakoriságot kifejező határozók helye a modatban"
+            }
+          ]
+        },
+        {
+          "key": "b2107e94-25cd-475e-b4cc-7f3eabeb2aba",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.5. Rövid válaszok"
+            }
+          ]
+        },
+        {
+          "key": "fb7f298f-6d97-4161-bf72-9848302c3812",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.8. Összevont alakok"
+            }
+          ]
+        },
         {
           "key": "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
           "parentKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
           "subKeys": [
-            "f9015519-f8db-4f4e-a8cb-7ac4eeb34702"
+            "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
+            "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+            "317a36c9-68ca-4e25-950d-76a18b238e6d"
           ],
           "collapse": false,
           "style": null,
@@ -18,6 +59,19 @@
             {
               "type": "CONTENT",
               "data": "1. Abszolút kezdő"
+            }
+          ]
+        },
+        {
+          "key": "f571d601-a0e1-46a2-9ba0-76b4104bb273",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.7. Egyszerű jelen idő - állító mondatok"
             }
           ]
         },
@@ -45,7 +99,7 @@
             "29e6ca06-aeb1-4d57-9cbf-f6dc8692ae11",
             "c5e6db56-1746-4f17-8a30-c98c37d774ca"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -68,6 +122,32 @@
           ]
         },
         {
+          "key": "346e59e0-f7a0-4edc-a861-cd21f671a96f",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.9. Birtoklás kifejezése az \"s végződéssel"
+            }
+          ]
+        },
+        {
+          "key": "4c97f072-173c-4182-8ea8-18b5e9040aca",
+          "parentKey": "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.2. Nemzetek és nyelvek"
+            }
+          ]
+        },
+        {
           "key": "8cf72b8d-1087-4378-b007-e5510ff8183e",
           "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
           "subKeys": [],
@@ -77,6 +157,58 @@
             {
               "type": "CONTENT",
               "data": "1.1.4. Ezek/Azok - Mik ezek?"
+            }
+          ]
+        },
+        {
+          "key": "2710334c-a326-480f-b80b-13093dfcda5c",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.6. Számok - alapok"
+            }
+          ]
+        },
+        {
+          "key": "ce0a9d21-edb4-4f90-a4ef-804a85ef882b",
+          "parentKey": "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.1. Egyszerű jelen idő - alapok"
+            }
+          ]
+        },
+        {
+          "key": "4455e758-2a69-473e-adb0-373908affda9",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.10. Birtoklás kifejezése a \"have got\" szerkezettel"
+            }
+          ]
+        },
+        {
+          "key": "5fa02583-dc8b-4669-8be2-ce24be3d3283",
+          "parentKey": "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.3. Megkérdezni és megmondani az időt"
             }
           ]
         },
@@ -107,6 +239,69 @@
           ]
         },
         {
+          "key": "e2909fc9-3c7f-4a52-8cd5-6691bcc1d57b",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.1. Kérdőszavak I."
+            }
+          ]
+        },
+        {
+          "key": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "parentKey": "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
+          "subKeys": [
+            "e2909fc9-3c7f-4a52-8cd5-6691bcc1d57b",
+            "87a207fc-4a3c-4d7c-a974-008eca62340f",
+            "d5e5730a-26af-4051-98d1-9533863c718b",
+            "a1d2cd5b-bfc2-4eb3-910b-50c9a644a7a0",
+            "b2107e94-25cd-475e-b4cc-7f3eabeb2aba",
+            "2710334c-a326-480f-b80b-13093dfcda5c",
+            "f571d601-a0e1-46a2-9ba0-76b4104bb273",
+            "fb7f298f-6d97-4161-bf72-9848302c3812",
+            "346e59e0-f7a0-4edc-a861-cd21f671a96f",
+            "4455e758-2a69-473e-adb0-373908affda9"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3. Ismerkedés"
+            }
+          ]
+        },
+        {
+          "key": "a1d2cd5b-bfc2-4eb3-910b-50c9a644a7a0",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.4. Szórend - alapok"
+            }
+          ]
+        },
+        {
+          "key": "87a207fc-4a3c-4d7c-a974-008eca62340f",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2. Felszólító mód"
+            }
+          ]
+        },
+        {
           "key": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
           "parentKey": null,
           "subKeys": [
@@ -118,6 +313,37 @@
             {
               "type": "CONTENT",
               "data": "Xeropan"
+            }
+          ]
+        },
+        {
+          "key": "b3e9f082-fb2e-4b02-956d-582b1e38335f",
+          "parentKey": "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
+          "subKeys": [
+            "ce0a9d21-edb4-4f90-a4ef-804a85ef882b",
+            "4c97f072-173c-4182-8ea8-18b5e9040aca",
+            "5fa02583-dc8b-4669-8be2-ce24be3d3283",
+            "8cfe248d-162f-4646-bddd-68490e324a70"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2. Első lépések"
+            }
+          ]
+        },
+        {
+          "key": "d5e5730a-26af-4051-98d1-9533863c718b",
+          "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.3. A \"like\" ige és szinonímái"
             }
           ]
         },
