@@ -1,0 +1,133 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
+      "editorRootTopicKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
+      "focusKey": "c437dfec-eb97-4593-8334-e6014d4af8f1",
+      "topics": [
+        {
+          "key": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
+          "parentKey": null,
+          "subKeys": [
+            "140ea599-f10e-4fa0-be7d-8429049fa60a"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "XML sémanyelvek"
+            }
+          ]
+        },
+        {
+          "key": "140ea599-f10e-4fa0-be7d-8429049fa60a",
+          "parentKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
+          "subKeys": [
+            "3e78bbc3-36db-4d24-ae84-392829a68934",
+            "c437dfec-eb97-4593-8334-e6014d4af8f1"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. W3C XML Schema"
+            }
+          ]
+        },
+        {
+          "key": "3e78bbc3-36db-4d24-ae84-392829a68934",
+          "parentKey": "140ea599-f10e-4fa0-be7d-8429049fa60a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.0. Bevezetés"
+            }
+          ]
+        },
+        {
+          "key": "c437dfec-eb97-4593-8334-e6014d4af8f1",
+          "parentKey": "140ea599-f10e-4fa0-be7d-8429049fa60a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1. Alapfogalmak"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "random-color-round",
+          "randomColor": true,
+          "background": "rgba(255,255,255,1)",
+          "highlightColor": "#50C9CE",
+          "marginH": 60,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5",
+            "color": "#262626"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve",
+            "lineWidth": "3px"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "fontSize": "34px",
+              "borderRadius": "35px",
+              "padding": "5px 10px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "3px",
+              "lineColor": "rgb(113, 203, 45)"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderRadius": "10px",
+              "fontSize": "20px",
+              "padding": "0px 5px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "rgb(113, 203, 45)"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "borderRadius": "10px",
+              "fontSize": "13px",
+              "padding": "0"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "white"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}
