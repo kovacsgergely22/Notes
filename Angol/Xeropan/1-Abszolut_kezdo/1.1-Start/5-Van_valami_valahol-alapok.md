@@ -4,9 +4,9 @@
 
 There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
 
-* ***There is***: egyes szám -> There is apple on the table
+* ***There is***: egyes szám -> *There is apple on the table.*
   * **Összevonható** -> there's
-* ***There are***: többes szám -> There are books in the shop
+* ***There are***: többes szám -> *There are books in the shop.*
   * **Nem vonjuk össze**
 * **Kérdés** -> there is/are megcserélésével -> *Is there apple on the table?*
 * **Válasz** -> mint a többi is/are kérdésnél -> *Yes, there is.*
