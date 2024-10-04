@@ -1,3 +1,3 @@
 # Jegyzetek
 
-A jegyzeteim
+Az összes jegyzetem, minden témában.
