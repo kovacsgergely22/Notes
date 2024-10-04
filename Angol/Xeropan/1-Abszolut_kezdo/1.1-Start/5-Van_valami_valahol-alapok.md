@@ -14,7 +14,7 @@ There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
   * *No, there is not* -> *No, there is'nt*
 
 * ***Some***: valamennyi, néhány
-  * Főleg **állító mondatokban**: There is some water in the fridge
+  * Főleg **állító mondatokban**: *There is some water in the fridge.*
 * ***Any***: bármennyi, semennyi
   * **kérdésekben és tagadó mondatokban**: *Is there any water in the fridge?*, *No, there is'nt any water in the fridge.*
 * Nem csak fn-ek előtt állhatnak, **önállóan is**: *There isn't any water in the glass, but there is some in the bottle.*
