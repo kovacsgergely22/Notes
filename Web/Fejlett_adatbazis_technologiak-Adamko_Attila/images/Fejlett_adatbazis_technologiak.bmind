@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "9765d937-ffaa-4f98-9184-9c99413de390",
       "editorRootTopicKey": "9765d937-ffaa-4f98-9184-9c99413de390",
-      "focusKey": "dcfdb93f-677f-4cfe-8f24-8115348d4a79",
+      "focusKey": "bf1aa60e-26c6-4fa4-bbdf-5e05dbaf96fe",
       "topics": [
         {
           "key": "30326827-199d-49d9-aad0-afd5d5f3b1fe",
@@ -80,7 +80,7 @@
             "e17ef1a2-21d7-4955-bcb2-0800bf88bad0",
             "30326827-199d-49d9-aad0-afd5d5f3b1fe"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -165,7 +165,7 @@
             "44fac8ac-ad0f-473e-8f4b-c4428063a4b7",
             "bc6d2639-b259-499f-a398-5f1cd4102945"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -261,7 +261,7 @@
             "564e0969-8895-4f17-a032-2893a21ea116",
             "d099f7e9-a7e9-4adc-beb7-283b030e8478"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -278,7 +278,7 @@
             "f8d3e76c-273c-4d0c-b68c-b37c87b3d0f7",
             "dcfdb93f-677f-4cfe-8f24-8115348d4a79"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -332,7 +332,7 @@
           "subKeys": [
             "4038b419-a681-4b3c-8c0b-b685c88a53c0"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -382,7 +382,7 @@
             "b9e68381-5226-47b8-861e-c705ba719e15",
             "a4301d89-5183-4ee9-a4f3-318be92268eb"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -568,7 +568,7 @@
             "a3dc1f7a-f984-425c-a777-dc07b2622f82",
             "99e87a51-e2ff-43fe-8423-3eb155598b28"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
