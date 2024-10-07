@@ -2,8 +2,6 @@
 
 [Videó elérhetősége](https://subscription.packtpub.com/video/web-development/9781838822828/113199/113204/fonts-in-css#46)
 
-[HTML mintafájl elérhetősége](csssandbox_starter/csssandbox_starter/03_fonts.html)
-
 [Kész HTML mintafájl elérhetősége](csssandbox_finished/csssandbox_finished/03_fonts.html)
 
 ## Web Safe Fonts
