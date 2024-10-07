@@ -15,4 +15,5 @@ these, those mutató névmások, főnév utánuk többes számban!
 * Ha teljesen egyértelmű, mire mutat a mutató névmás, nem kötelező kitenni a főnevet mögé ->
   * These books are boring, but those are interesting.
 
+---
 [^1]: Start, 6.fejezet - Mik ezek?

@@ -8,4 +8,5 @@
 * Megkérdezni, mi ez a tárgy: *What is this?*/ *What is that?*
 * Bemutatunk valakit: *This is my brother, Paul.*
 
+---
 [^1]: Start lecke, 3. fejezet - Ez, az éa az a másik dolog
