@@ -1,4 +1,4 @@
-# A to be létige és a személyes névmások
+# A to be létige és a személyes névmások [^1]
 
 ![1.1](images/1.1.png)
 
@@ -25,3 +25,5 @@
   * You are'nt a student -> Are you a student?
   * **Válasz**: nem kell egész mondatot ismételni, csak személyes névmás és igealak
     * Are you a student? -> Yes, I am
+
+[˘1]: Start lecke, 1.fejezet - Találkozz Max professzorral
