@@ -1,6 +1,6 @@
-# A to be létige és a személyes névmások 
+# A to be létige és a személyes névmások [^1]
 
-![1.1](images/1.1.png) [^1]
+![1.1](images/1.1.png)
 
 * A személyes névmások mutatják meg, ki cselekszik a mondatban
 * Leírást adunk valakiről vagy valamiről
@@ -26,4 +26,4 @@
   * **Válasz**: nem kell egész mondatot ismételni, csak személyes névmás és igealak
     * Are you a student? -> Yes, I am
 
-[˘1]: Start lecke, 1.fejezet - Találkozz Max professzorral
+[^1]: Start lecke, 1.fejezet - Találkozz Max professzorral
