@@ -1,4 +1,4 @@
-# A to be létige és a személyes névmások [^1]
+# A to be létige és a személyes névmások I-II. [^1]
 
 ![1.1](images/1.1.png)
 
@@ -26,4 +26,4 @@
   * **Válasz**: nem kell egész mondatot ismételni, csak személyes névmás és igealak
     * Are you a student? -> Yes, I am
 
-[^1]: Start lecke, 1.fejezet - Találkozz Max professzorral
+[^1]: Start lecke, 1.fejezet - Találkozz Max professzorral, 2. fejezet - Találkozz a testvéreimmel

@@ -1,4 +1,4 @@
-# Névelők alapszinten
+# Névelők alapszinten [^1]
 
 ![1.1](images/1.1.png)
 
@@ -12,3 +12,5 @@ Az **a/an** (egy) és a **the** szavak névelők, névszókat előznek meg.
 * **the** (határozott névelő):
   * újra említjük
   * kezdőbetűtől független, egyes és többes számban, megszámlálható és megszámlálhatatlan fn-kel együtt
+
+[^1]: Start, 5. fejezet - Nézd, mim van!

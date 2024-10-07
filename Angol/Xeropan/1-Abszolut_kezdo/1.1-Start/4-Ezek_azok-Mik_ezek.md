@@ -1,4 +1,4 @@
-# Ezek/azok - Mik ezek?
+# Ezek/azok - Mik ezek? [^1]
 
 ![1.1](images/1.1.png)
 
@@ -14,3 +14,5 @@ these, those mutató névmások, főnév utánuk többes számban!
   * family -> families, lady -> ladies
 * Ha teljesen egyértelmű, mire mutat a mutató névmás, nem kötelező kitenni a főnevet mögé ->
   * These books are boring, but those are interesting.
+
+[^1]: Start, 6.fejezet - Mik ezek?
