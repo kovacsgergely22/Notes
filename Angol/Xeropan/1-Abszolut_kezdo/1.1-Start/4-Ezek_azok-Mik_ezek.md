@@ -1,14 +1,14 @@
-# Ezek/azok - Mik ezek? [^1]
+# Ezek/azok - Mik ezek? 
 
 ![1.1](images/1.1.png)
 
-> * **this**: közel mutat
+> * **this** [^1]: közel mutat
 > * **that**: távolra mutat
 > * Megmondani, mi ez a tárgy: **This/That + is + a/an + főnév**
 > * Megkérdezni, mi ez a tárgy: *What is this?*/ *What is that?*
 > * Bemutatunk valakit: *This is my brother, Paul.*
 
-these, those mutató névmások, főnév utánuk többes számban!
+these, those mutató névmások, főnév utánuk többes számban! [^2]
 
 * **these**: ezek
 * **those**: azok
@@ -22,4 +22,5 @@ these, those mutató névmások, főnév utánuk többes számban!
   * These books are boring, but those are interesting.
 
 ---
-[^1]: Start, 6.fejezet - Mik ezek?
+[^1]: Start lecke, 3. fejezet - Ez, az éa az a másik dolog
+[^2]: Start, 6.fejezet - Mik ezek?
