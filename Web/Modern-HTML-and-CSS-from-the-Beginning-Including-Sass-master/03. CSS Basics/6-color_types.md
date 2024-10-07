@@ -5,3 +5,5 @@
 [Kész HTML mintafájl elérhetősége](csssandbox_finished/csssandbox_finished/04_colors.html)
 
 [Színminták weboldala](https://www.color-hex.com/)
+
+[HTML Color Codes - színkeverés, választás](https://htmlcolorcodes.com/)
