@@ -26,4 +26,5 @@
   * **Válasz**: nem kell egész mondatot ismételni, csak személyes névmás és igealak
     * Are you a student? -> Yes, I am
 
+
 [^1]: Start lecke, 1.fejezet - Találkozz Max professzorral
