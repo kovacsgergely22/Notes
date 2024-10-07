@@ -12,7 +12,7 @@
 
 [Google Fonts](https://fonts.google.com/)
 
-* + ikonra kattintva felugró ablak -> import link
+* "+" ikonra kattintva felugró ablak -> import link
 
 ## CSS Units
 
