@@ -1,0 +1,168 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+      "editorRootTopicKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+      "focusKey": "a11a3c48-ae36-47bf-bd98-11c8d74db9d0",
+      "topics": [
+        {
+          "key": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "parentKey": null,
+          "subKeys": [
+            "6ca9db5f-23db-44cd-bc16-19e23b2348fc",
+            "1e9e7ce5-edd5-42f2-a3e6-b6036e9ab5f1",
+            "511cd0ba-db01-476b-a29b-0348d3406784",
+            "b8a48341-0c1d-452f-9bd0-dde2c4fb6dfb",
+            "a11a3c48-ae36-47bf-bd98-11c8d74db9d0"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Az adatkapcsolati réteg"
+            }
+          ]
+        },
+        {
+          "key": "6ca9db5f-23db-44cd-bc16-19e23b2348fc",
+          "parentKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3.1. Az adatkapcsolati réteg tervezési szempontjai"
+            }
+          ]
+        },
+        {
+          "key": "1e9e7ce5-edd5-42f2-a3e6-b6036e9ab5f1",
+          "parentKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3.2. Hibajelzés és hibajavítás"
+            }
+          ]
+        },
+        {
+          "key": "511cd0ba-db01-476b-a29b-0348d3406784",
+          "parentKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3.3. Elemi adatkapcsolati protokollok"
+            }
+          ]
+        },
+        {
+          "key": "b8a48341-0c1d-452f-9bd0-dde2c4fb6dfb",
+          "parentKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3.4. Csúszóablakos protokollok"
+            }
+          ]
+        },
+        {
+          "key": "a11a3c48-ae36-47bf-bd98-11c8d74db9d0",
+          "parentKey": "e7cafa60-9672-4a7a-b6c7-f3d8976a7a55",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3.5. Példák adatkapcsolati protokollokra"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "theme2",
+          "randomColor": false,
+          "background": "rgba(255,255,255,1)",
+          "highlightColor": "#F5A623",
+          "marginH": 45,
+          "marginV": 10,
+          "contentStyle": {
+            "lineHeight": "1.5"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#50C18A",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#ffffff",
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderColor": "rgb(221, 170, 68)",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "18px",
+              "padding": "5px"
+            },
+            "subLinkStyle": {
+              "lineType": "round",
+              "lineRadius": 5,
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "background": "#fff",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "13px",
+              "padding": "0",
+              "boxShadow": "1px 1px 1px #ccc"
+            },
+            "subLinkStyle": {
+              "lineType": "round",
+              "lineRadius": 5,
+              "lineWidth": "1px",
+              "lineColor": "#43a9ff"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

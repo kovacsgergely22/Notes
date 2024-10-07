@@ -1,0 +1,761 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "278a3325-7473-4683-81b1-52b2d573c588",
+      "editorRootTopicKey": "278a3325-7473-4683-81b1-52b2d573c588",
+      "focusKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+      "topics": [
+        {
+          "key": "aa4974a3-f377-4bde-9ace-1e5642e865d3",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.3. Az internetprotokoll 6-os verziója"
+            }
+          ]
+        },
+        {
+          "key": "2197ee56-035e-4255-a14e-424d6f6d7f52",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.5. Integrált szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "49754839-6755-45bb-9460-b3f2d1cee45b",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.1. Az IP-protokoll 4-es változata"
+            }
+          ]
+        },
+        {
+          "key": "8d526fd6-6f1a-4ad0-a11d-9b07df74760a",
+          "parentKey": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3.1. A torlódáskezelés alapelvei"
+            }
+          ]
+        },
+        {
+          "key": "ea7e62fb-87c7-492e-947e-79f8c0e0280a",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.9. Mobil IP"
+            }
+          ]
+        },
+        {
+          "key": "90bf14d5-fdc6-4466-bd59-aaa46fa98fbb",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.7. Adatszóró útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "d8069a08-e3ac-4f42-8170-e650a90fc143",
+            "f1010b60-5abb-48b4-a5d2-b12359283fd4",
+            "8381fc04-ca24-44ee-99af-ded75fa28ef8",
+            "0b26e632-2e39-4e41-aa8d-a622a186c2e8",
+            "2197ee56-035e-4255-a14e-424d6f6d7f52",
+            "9136388b-fc3c-465f-b289-6ef68840b4ce"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4. A szolgáltatás minősége"
+            }
+          ]
+        },
+        {
+          "key": "3a7c79c0-be8f-4705-9ffb-64d22d57c91f",
+          "parentKey": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1.5. A virtuálisáramkör- és a datagramalapú hálózatok összehasonlítása"
+            }
+          ]
+        },
+        {
+          "key": "3b52b913-519c-4707-acd1-b2f898453f2f",
+          "parentKey": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1.3. Összeköttetés nélküli szolgáltatás megvalósítása"
+            }
+          ]
+        },
+        {
+          "key": "5205fe06-3cc9-4d2f-8958-db0826e490d7",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.7. BGP - a külső átjárő protokoll"
+            }
+          ]
+        },
+        {
+          "key": "6cd078fc-de30-48a7-9973-c298b8530c91",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.11. Útválasztás ad hoc hálózatokban"
+            }
+          ]
+        },
+        {
+          "key": "97db8282-098b-4321-b0b3-7697e205bb70",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.4. Az internet vezérlőprotokolljai"
+            }
+          ]
+        },
+        {
+          "key": "0a9b4264-dabc-45c2-9a9a-32e510c22b77",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.6. OSPF - a belső átjáró protokoll"
+            }
+          ]
+        },
+        {
+          "key": "8381fc04-ca24-44ee-99af-ded75fa28ef8",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.3. Csomagütemezés"
+            }
+          ]
+        },
+        {
+          "key": "06712516-0295-407a-b2c7-3d662612ac04",
+          "parentKey": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5.1. Miben különböznek a hálózatok?"
+            }
+          ]
+        },
+        {
+          "key": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "ba329aa0-4d3f-476d-8249-77177caba7cf",
+            "e2fc328e-98ef-4b73-857a-8236e24ba3f2",
+            "3b52b913-519c-4707-acd1-b2f898453f2f",
+            "8118acac-e42e-4291-9be6-2a5ed69e38c4",
+            "3a7c79c0-be8f-4705-9ffb-64d22d57c91f"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1. A hálózati réteg tervezési kérdései"
+            }
+          ]
+        },
+        {
+          "key": "175dd79e-483b-4453-a747-d8750ccce9f2",
+          "parentKey": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3.5. Terhelés eltávolítása"
+            }
+          ]
+        },
+        {
+          "key": "a8e40017-4305-467a-b00f-4daa6a881375",
+          "parentKey": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5.5. Csomag darabokra tördelése"
+            }
+          ]
+        },
+        {
+          "key": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "8d526fd6-6f1a-4ad0-a11d-9b07df74760a",
+            "c4728abe-7724-4377-9320-f2423153c1cf",
+            "f8df9b8e-a000-41db-a03e-428d1cd4812f",
+            "a3221574-c7ec-4f13-a372-4dabe94706df",
+            "175dd79e-483b-4453-a747-d8750ccce9f2"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3. Torlódáskezelési algoritmusok"
+            }
+          ]
+        },
+        {
+          "key": "0511f1fd-8452-4282-bf94-4770c96304d0",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.6. Hierarchikus útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "f349fc07-d2cf-4a36-b403-7dc781164d42",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.5. Kapcsolatállapot-alapú útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "f8df9b8e-a000-41db-a03e-428d1cd4812f",
+          "parentKey": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3.3. Belépés-ellenőrzés"
+            }
+          ]
+        },
+        {
+          "key": "9136388b-fc3c-465f-b289-6ef68840b4ce",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.6. Differenciált szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "e2fc328e-98ef-4b73-857a-8236e24ba3f2",
+          "parentKey": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1.2. A szállítási rétegnek nyújtott szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "ba329aa0-4d3f-476d-8249-77177caba7cf",
+          "parentKey": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1.1. Tárol-és-továbbít típusú csomagkapcsolás"
+            }
+          ]
+        },
+        {
+          "key": "cfbb6f2b-4477-47e4-a322-01ea1bad5485",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.8. Többesküldés az interneten"
+            }
+          ]
+        },
+        {
+          "key": "2791d9d2-3f12-4418-a79c-adb07ab136e5",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.3. Elárasztás"
+            }
+          ]
+        },
+        {
+          "key": "8118acac-e42e-4291-9be6-2a5ed69e38c4",
+          "parentKey": "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.1.4. Összeköttetés-alapú szolgáltatás megvalósítása"
+            }
+          ]
+        },
+        {
+          "key": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "49754839-6755-45bb-9460-b3f2d1cee45b",
+            "1c65d566-8307-4d16-ba0f-e60e891e8213",
+            "aa4974a3-f377-4bde-9ace-1e5642e865d3",
+            "97db8282-098b-4321-b0b3-7697e205bb70",
+            "97b8e9f0-74b2-48a4-a07e-9d2567d52e19",
+            "0a9b4264-dabc-45c2-9a9a-32e510c22b77",
+            "5205fe06-3cc9-4d2f-8958-db0826e490d7",
+            "cfbb6f2b-4477-47e4-a322-01ea1bad5485",
+            "ea7e62fb-87c7-492e-947e-79f8c0e0280a"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6. Hálózati réteg az interneten"
+            }
+          ]
+        },
+        {
+          "key": "5cdaf843-93b3-4da6-b001-26ae9d8c95b4",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.4. Távolságvektor-alapú útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "409effc9-35a4-4d89-9ab3-a84c6c9180d7",
+            "e660e3c8-5ebb-4382-881e-afc38770fcd2",
+            "2791d9d2-3f12-4418-a79c-adb07ab136e5",
+            "5cdaf843-93b3-4da6-b001-26ae9d8c95b4",
+            "f349fc07-d2cf-4a36-b403-7dc781164d42",
+            "0511f1fd-8452-4282-bf94-4770c96304d0",
+            "90bf14d5-fdc6-4466-bd59-aaa46fa98fbb",
+            "55223ce5-5ab5-4c31-8e52-f13723141108",
+            "9e9ad7b9-2dcd-43ec-99a8-370ea97d94e9",
+            "169f06fe-6fa5-4838-aeef-c69b18cb8c3c",
+            "6cd078fc-de30-48a7-9973-c298b8530c91"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2. Útválasztó algoritmusok"
+            }
+          ]
+        },
+        {
+          "key": "169f06fe-6fa5-4838-aeef-c69b18cb8c3c",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.10. Útválasztás mozgó hosztokhoz"
+            }
+          ]
+        },
+        {
+          "key": "0b26e632-2e39-4e41-aa8d-a622a186c2e8",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.4. Belépés-ellenőrzés"
+            }
+          ]
+        },
+        {
+          "key": "c4728abe-7724-4377-9320-f2423153c1cf",
+          "parentKey": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3.2. Forgalomalapú útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "e81d70bd-2373-4a8c-8450-89029d6a98a9",
+          "parentKey": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5.4. Útválasztás összekapcsolt hálózatokban"
+            }
+          ]
+        },
+        {
+          "key": "409effc9-35a4-4d89-9ab3-a84c6c9180d7",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.1. Az optimális elv"
+            }
+          ]
+        },
+        {
+          "key": "1c65d566-8307-4d16-ba0f-e60e891e8213",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.2. IP-címek"
+            }
+          ]
+        },
+        {
+          "key": "a3221574-c7ec-4f13-a372-4dabe94706df",
+          "parentKey": "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.3.4. Forgalomlefojtás"
+            }
+          ]
+        },
+        {
+          "key": "5f775e1a-8384-4fe8-99be-174aa2534284",
+          "parentKey": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5.3. Alagút típusú átvitel"
+            }
+          ]
+        },
+        {
+          "key": "278a3325-7473-4683-81b1-52b2d573c588",
+          "parentKey": null,
+          "subKeys": [
+            "babb98f1-2fad-4b55-ad42-26a43aaa1624",
+            "68684702-f34e-4be4-8272-3ce8fc1156cb",
+            "81bfe3fa-9e47-4cfe-9911-9f5fcdf3c619",
+            "204bea1c-18a5-43d3-b0a6-17926136f12a",
+            "29e18caf-f450-4406-9328-61ff34331cc1",
+            "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. A hálózati réteg"
+            }
+          ]
+        },
+        {
+          "key": "97b8e9f0-74b2-48a4-a07e-9d2567d52e19",
+          "parentKey": "26a2f7c5-9a9a-4696-afa7-11aff1f6a9d1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.6.5. Címkekapcsolás és MPLS"
+            }
+          ]
+        },
+        {
+          "key": "e660e3c8-5ebb-4382-881e-afc38770fcd2",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.2. Legrövidebb útvonal alapján történő útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "parentKey": "278a3325-7473-4683-81b1-52b2d573c588",
+          "subKeys": [
+            "06712516-0295-407a-b2c7-3d662612ac04",
+            "d5f63ec1-6f4a-47ff-a8c7-7736c094fa73",
+            "5f775e1a-8384-4fe8-99be-174aa2534284",
+            "e81d70bd-2373-4a8c-8450-89029d6a98a9",
+            "a8e40017-4305-467a-b00f-4daa6a881375"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5. Hálózatok összekapcsolása"
+            }
+          ]
+        },
+        {
+          "key": "f1010b60-5abb-48b4-a5d2-b12359283fd4",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.2. Forgalomformálás"
+            }
+          ]
+        },
+        {
+          "key": "9e9ad7b9-2dcd-43ec-99a8-370ea97d94e9",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.9. Bárkinek (anycast) küldéses útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "d5f63ec1-6f4a-47ff-a8c7-7736c094fa73",
+          "parentKey": "29e18caf-f450-4406-9328-61ff34331cc1",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.5.2. Hogyan lehet összekapcsolni a hálózatokat?"
+            }
+          ]
+        },
+        {
+          "key": "55223ce5-5ab5-4c31-8e52-f13723141108",
+          "parentKey": "68684702-f34e-4be4-8272-3ce8fc1156cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.2.8. Többesküldéses útválasztás"
+            }
+          ]
+        },
+        {
+          "key": "d8069a08-e3ac-4f42-8170-e650a90fc143",
+          "parentKey": "204bea1c-18a5-43d3-b0a6-17926136f12a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5.4.1. Alkalmazási követelmények"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "theme3",
+          "randomColor": false,
+          "background": "rgba(255,255,255,1)",
+          "highlightColor": "#D0021B",
+          "marginH": 50,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#CD8987",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#CDACA1",
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderColor": "#E4C1F9",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "18px",
+              "padding": "5px"
+            },
+            "subLinkStyle": {
+              "lineType": "line",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "background": "#CDCACC",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "13px",
+              "padding": "0",
+              "boxShadow": "1px 1px 1px #ccc"
+            },
+            "subLinkStyle": {
+              "lineType": "line",
+              "lineRadius": 5,
+              "lineWidth": "1px",
+              "lineColor": "#43a9ff"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

@@ -1,0 +1,777 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+      "editorRootTopicKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+      "focusKey": "631c8053-7e78-421f-b0fc-58e1a2350257",
+      "topics": [
+        {
+          "key": "8ecbe832-1654-457b-9113-02aea156a2e1",
+          "parentKey": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2.1. ALOHA"
+            }
+          ]
+        },
+        {
+          "key": "5baf804d-9e33-436c-857d-1fd40ee86da8",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.7. 10 gigabites Ethernet"
+            }
+          ]
+        },
+        {
+          "key": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "b5bb82cd-d8ce-4418-9a2d-39c4dc3ef697",
+            "d4a474d0-fafe-403f-971f-894a5712d7d5",
+            "d9a5def2-cca3-4f77-ae5c-a835615fdc69",
+            "92886998-bef1-4884-93c0-23737425ed8c",
+            "f7b7f873-7218-46fc-bd96-fe75a93b66a4"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5. Széles sávú vezeték nélküli hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "d4a474d0-fafe-403f-971f-894a5712d7d5",
+          "parentKey": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5.2. A 802.16 felépítése és protokollkészlete"
+            }
+          ]
+        },
+        {
+          "key": "631c8053-7e78-421f-b0fc-58e1a2350257",
+          "parentKey": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8.5. Virtuális LAN"
+            }
+          ]
+        },
+        {
+          "key": "5be6b335-12b1-4725-b61b-3860acfd7539",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.5. A Bluetooth kapcsolati rétegei"
+            }
+          ]
+        },
+        {
+          "key": "a8abd1cf-4d5d-45a1-9789-b2ec428742de",
+          "parentKey": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8.1. Hidak használata"
+            }
+          ]
+        },
+        {
+          "key": "619e54ed-ea39-40d5-9bce-5c4a49a5f201",
+          "parentKey": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8.2. Helyi hálózatok összekapcsolása"
+            }
+          ]
+        },
+        {
+          "key": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "f5d54f9b-aa2d-4cf8-a212-44dd5e9c817a",
+            "97a55b3c-2d05-4eb1-98d5-20abdcae97d0",
+            "c76fa80b-e5b1-4c51-8f68-04bef8efb564",
+            "a2c8832a-888d-41a7-87bf-90e0689f0963",
+            "5be6b335-12b1-4725-b61b-3860acfd7539",
+            "05627a0d-1020-4962-ba25-c2db6309daab"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6. Bluetooth"
+            }
+          ]
+        },
+        {
+          "key": "9eaf59fa-b780-4498-a233-f79e3237dec8",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.6. GIgabites Ethernet"
+            }
+          ]
+        },
+        {
+          "key": "63094d52-9d5b-421a-b1fd-c9c939536991",
+          "parentKey": "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.7.3. Az EPC Gen 2 címkeazonosító rétege"
+            }
+          ]
+        },
+        {
+          "key": "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "830f1d86-61dd-4b19-ac89-09d9b0472be9",
+            "c29ec73a-8e3d-4920-9f62-bc40022f0f0c",
+            "63094d52-9d5b-421a-b1fd-c9c939536991",
+            "03b0af30-3a2c-4ee9-8937-ca65ddf1f58d"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.7. RFID"
+            }
+          ]
+        },
+        {
+          "key": "f7b7f873-7218-46fc-bd96-fe75a93b66a4",
+          "parentKey": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5.5. a 802.16 keretszerkezete"
+            }
+          ]
+        },
+        {
+          "key": "df9407bf-8fed-41ef-9288-0336c555afe1",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.5. Gyors Ethernet"
+            }
+          ]
+        },
+        {
+          "key": "415deb71-bd6a-449f-8e8e-40ba805b3641",
+          "parentKey": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8.3. Feszítőfás hidak"
+            }
+          ]
+        },
+        {
+          "key": "7a21b644-afff-4aa8-ad14-8d8bd5ba456b",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.1. A klasszikus Ethernet fizikai rétege"
+            }
+          ]
+        },
+        {
+          "key": "d9a5def2-cca3-4f77-ae5c-a835615fdc69",
+          "parentKey": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5.3. a 802.16 fizikai rétege"
+            }
+          ]
+        },
+        {
+          "key": "a2c8832a-888d-41a7-87bf-90e0689f0963",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.4. Bluetooth rádiós rétege"
+            }
+          ]
+        },
+        {
+          "key": "830f1d86-61dd-4b19-ac89-09d9b0472be9",
+          "parentKey": "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.7.1. Az EPC Gen 2 felépítése"
+            }
+          ]
+        },
+        {
+          "key": "92886998-bef1-4884-93c0-23737425ed8c",
+          "parentKey": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5.4. a 802.16 MAC-alrétegének protokollja"
+            }
+          ]
+        },
+        {
+          "key": "06605adf-86fc-4f60-97a2-03d0d4a4abf3",
+          "parentKey": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2.2. Vivőjel-érzékeléses többszörös hozzáférésű protokollok"
+            }
+          ]
+        },
+        {
+          "key": "a781e00e-1112-41ac-884b-82585aa759f4",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.3. Az Ethernet teljesítőképessége"
+            }
+          ]
+        },
+        {
+          "key": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "7a21b644-afff-4aa8-ad14-8d8bd5ba456b",
+            "9cd53440-37f0-4fc6-94f1-41cfa38df627",
+            "a781e00e-1112-41ac-884b-82585aa759f4",
+            "43bf5c63-b4cd-4645-8868-f2556ae044aa",
+            "df9407bf-8fed-41ef-9288-0336c555afe1",
+            "9eaf59fa-b780-4498-a233-f79e3237dec8",
+            "5baf804d-9e33-436c-857d-1fd40ee86da8",
+            "efcb2965-56b0-4c42-b016-2d2bb7ea14b7"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3. Ethernet"
+            }
+          ]
+        },
+        {
+          "key": "859289ad-efcf-42c5-831b-daa351128f63",
+          "parentKey": "ab9e1f77-8562-4b78-bb77-1305e97eda65",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.1.2. Dinamikus csatornakiosztás"
+            }
+          ]
+        },
+        {
+          "key": "05627a0d-1020-4962-ba25-c2db6309daab",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.6. A Bluetooth keretszerkezete"
+            }
+          ]
+        },
+        {
+          "key": "cb589d93-0582-41bb-8888-8b23485b41b6",
+          "parentKey": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4.2. A 802.11 fizikai rétege"
+            }
+          ]
+        },
+        {
+          "key": "33a05386-973c-495a-965d-9328cfe9b704",
+          "parentKey": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4.1. A 802.11 felépítése és protokollkészlete"
+            }
+          ]
+        },
+        {
+          "key": "431f83fd-1f8e-4ef4-a67a-c0f6965abb35",
+          "parentKey": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2.4. Korlátozott versenyes protokollok"
+            }
+          ]
+        },
+        {
+          "key": "97a55b3c-2d05-4eb1-98d5-20abdcae97d0",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.2. Bluetooth alkalmazások"
+            }
+          ]
+        },
+        {
+          "key": "c76fa80b-e5b1-4c51-8f68-04bef8efb564",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.3. Bluetooth protokollkészlete "
+            }
+          ]
+        },
+        {
+          "key": "c29ec73a-8e3d-4920-9f62-bc40022f0f0c",
+          "parentKey": "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.7.2. Az EPC Gen 2 fizikai rétege"
+            }
+          ]
+        },
+        {
+          "key": "f5d54f9b-aa2d-4cf8-a212-44dd5e9c817a",
+          "parentKey": "bf1f643f-3662-4a06-b366-510ab3281e79",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.6.1. A bluetooth felépítése"
+            }
+          ]
+        },
+        {
+          "key": "03b0af30-3a2c-4ee9-8937-ca65ddf1f58d",
+          "parentKey": "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.7.4. A címkeazonosítási üzenet formátumai"
+            }
+          ]
+        },
+        {
+          "key": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "8ecbe832-1654-457b-9113-02aea156a2e1",
+            "06605adf-86fc-4f60-97a2-03d0d4a4abf3",
+            "d05b3dd9-96e7-418f-b3d2-667ec7406be7",
+            "431f83fd-1f8e-4ef4-a67a-c0f6965abb35",
+            "971ee8b0-8305-4509-bfea-1718b6442243"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2. Többszörös hozzáférésű protokollok"
+            }
+          ]
+        },
+        {
+          "key": "4c9d42d5-f25d-440f-94cc-317ca6204d01",
+          "parentKey": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8.4. Ismétlők, elosztók, hidak, kapcsolók, útválasztók és átjárók"
+            }
+          ]
+        },
+        {
+          "key": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "parentKey": null,
+          "subKeys": [
+            "ab9e1f77-8562-4b78-bb77-1305e97eda65",
+            "393ea116-d066-4c22-8d85-50c519e8a82c",
+            "e6bd0b93-baac-4617-918d-9f14dd567137",
+            "37082ccb-0dab-472e-abff-01d97eaa74de",
+            "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+            "bf1f643f-3662-4a06-b366-510ab3281e79",
+            "f1a24750-c40a-424c-a6d8-2ca4c8a906c9",
+            "ba5de13f-8ed1-4dc9-b648-ab9238989f5f"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. A közeg-hozzáférési alréteg"
+            }
+          ]
+        },
+        {
+          "key": "d05b3dd9-96e7-418f-b3d2-667ec7406be7",
+          "parentKey": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2.3. Ütközésmentes protokollok"
+            }
+          ]
+        },
+        {
+          "key": "4def3555-90fa-4a18-8487-04dc347af019",
+          "parentKey": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4.4. a 802.11 keretszerkezete"
+            }
+          ]
+        },
+        {
+          "key": "7a578946-77ce-4313-ae4d-e0758d5dfeec",
+          "parentKey": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4.5. Szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "b5bb82cd-d8ce-4418-9a2d-39c4dc3ef697",
+          "parentKey": "1ba50b0d-c7c5-4130-bc40-d8ef9e2540dd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.5.1. A 802.16 összehasonlítása a 802.11-gyel és a 3G-vel"
+            }
+          ]
+        },
+        {
+          "key": "9cd53440-37f0-4fc6-94f1-41cfa38df627",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.2. A klasszikus Ethernet MAC-alréteg protokollja"
+            }
+          ]
+        },
+        {
+          "key": "efcb2965-56b0-4c42-b016-2d2bb7ea14b7",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.8. Visszatekintés az Ethernetre"
+            }
+          ]
+        },
+        {
+          "key": "971ee8b0-8305-4509-bfea-1718b6442243",
+          "parentKey": "393ea116-d066-4c22-8d85-50c519e8a82c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.2.5. Vezeték nélküli LAN-protokollok"
+            }
+          ]
+        },
+        {
+          "key": "9cb10e7d-912e-435d-9823-be0a3ab0f544",
+          "parentKey": "ab9e1f77-8562-4b78-bb77-1305e97eda65",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.1.1. Statikus csatornakiosztás"
+            }
+          ]
+        },
+        {
+          "key": "ba5de13f-8ed1-4dc9-b648-ab9238989f5f",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "a8abd1cf-4d5d-45a1-9789-b2ec428742de",
+            "619e54ed-ea39-40d5-9bce-5c4a49a5f201",
+            "415deb71-bd6a-449f-8e8e-40ba805b3641",
+            "4c9d42d5-f25d-440f-94cc-317ca6204d01",
+            "631c8053-7e78-421f-b0fc-58e1a2350257"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.8. Kapcsolás az adatkapcsolati rétegben"
+            }
+          ]
+        },
+        {
+          "key": "ab9e1f77-8562-4b78-bb77-1305e97eda65",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "9cb10e7d-912e-435d-9823-be0a3ab0f544",
+            "859289ad-efcf-42c5-831b-daa351128f63"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.1. A csatornakiosztás problémája"
+            }
+          ]
+        },
+        {
+          "key": "43bf5c63-b4cd-4645-8868-f2556ae044aa",
+          "parentKey": "e6bd0b93-baac-4617-918d-9f14dd567137",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.3.4. Kapcsolt Ethernet"
+            }
+          ]
+        },
+        {
+          "key": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "parentKey": "78e1083d-382c-4e99-aebb-4b0b5d68914e",
+          "subKeys": [
+            "33a05386-973c-495a-965d-9328cfe9b704",
+            "cb589d93-0582-41bb-8888-8b23485b41b6",
+            "f07d979a-45f0-4097-a543-bb6bfa325ae9",
+            "4def3555-90fa-4a18-8487-04dc347af019",
+            "7a578946-77ce-4313-ae4d-e0758d5dfeec"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4. Vezeték nélküli LAN-ok"
+            }
+          ]
+        },
+        {
+          "key": "f07d979a-45f0-4097-a543-bb6bfa325ae9",
+          "parentKey": "37082ccb-0dab-472e-abff-01d97eaa74de",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4.4.3. A 802.11 MAC-alrétegének protokollja"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "theme3",
+          "randomColor": false,
+          "background": "rgba(255,255,255,1)",
+          "highlightColor": "#9013FE",
+          "marginH": 50,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#FF99C8",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#FCF6BD",
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderColor": "#E4C1F9",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "18px",
+              "padding": "5px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "background": "#E4FDE1",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "13px",
+              "padding": "0px",
+              "boxShadow": "1px 1px 1px #ccc"
+            },
+            "subLinkStyle": {
+              "lineType": "round",
+              "lineRadius": 5,
+              "lineWidth": "1px",
+              "lineColor": "#43a9ff"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

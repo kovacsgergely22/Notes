@@ -1,0 +1,202 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+      "editorRootTopicKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+      "focusKey": "16484f23-b081-4185-a4ef-af3646d32d2b",
+      "topics": [
+        {
+          "key": "ee412adc-4e1d-4f54-941a-cd2bcea3c975",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.4. Kommunikációs műholdak"
+            }
+          ]
+        },
+        {
+          "key": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "parentKey": null,
+          "subKeys": [
+            "a1b3e8a0-c25a-44f6-81b4-76dd565d0280",
+            "ecafce87-d715-498a-99ff-88504b717493",
+            "fd643334-dfd7-4a56-9073-411c26e733b9",
+            "ee412adc-4e1d-4f54-941a-cd2bcea3c975",
+            "9697a94b-9cc1-4531-a3dc-a724929760f4",
+            "72f212fe-d30a-4a1a-a6d2-34dcf75c1bc1",
+            "df32a14f-a4bf-4243-a361-03f9b6d756ab",
+            "16484f23-b081-4185-a4ef-af3646d32d2b"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. A fizikai réteg"
+            }
+          ]
+        },
+        {
+          "key": "9697a94b-9cc1-4531-a3dc-a724929760f4",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.5. Digitális moduláció és multiplexelés"
+            }
+          ]
+        },
+        {
+          "key": "ecafce87-d715-498a-99ff-88504b717493",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.2. Vezetékes átviteli közegek"
+            }
+          ]
+        },
+        {
+          "key": "a1b3e8a0-c25a-44f6-81b4-76dd565d0280",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.1 Az adatátvitel elméleti alapjai"
+            }
+          ]
+        },
+        {
+          "key": "16484f23-b081-4185-a4ef-af3646d32d2b",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.8. Kábeltelevízió"
+            }
+          ]
+        },
+        {
+          "key": "df32a14f-a4bf-4243-a361-03f9b6d756ab",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.7. A mobiltelefon rendszer"
+            }
+          ]
+        },
+        {
+          "key": "fd643334-dfd7-4a56-9073-411c26e733b9",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.3. Vezeték nélküli adatátvitel"
+            }
+          ]
+        },
+        {
+          "key": "72f212fe-d30a-4a1a-a6d2-34dcf75c1bc1",
+          "parentKey": "5b42cfef-e3f1-4ceb-b1d8-9efc86845549",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2.6. A nyilvános kapcsolt telefonhálózat"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "defaultTheme",
+          "randomColor": false,
+          "background": "#DDDDDD",
+          "highlightColor": "#C31004",
+          "marginH": 50,
+          "marginV": 5,
+          "contentStyle": {
+            "lineHeight": "1"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineWidth": "2px",
+            "lineColor": "#595959",
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#C31004",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#333",
+              "borderRadius": "5px",
+              "color": "#fff",
+              "fontSize": "14px",
+              "padding": "6px 10px 5px 10px"
+            },
+            "subLinkStyle": {
+              "hasUnderline": true,
+              "lineType": "round"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "borderRadius": "5px",
+              "background": "#fff0",
+              "color": "#383833",
+              "fontSize": "13px",
+              "padding": "1px"
+            },
+            "subLinkStyle": {
+              "hasUnderline": true,
+              "lineType": "round"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

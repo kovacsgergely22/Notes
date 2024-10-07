@@ -1,0 +1,586 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+      "editorRootTopicKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+      "focusKey": "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+      "topics": [
+        {
+          "key": "ba6c2551-f169-4fc0-945d-d8e2545a6426",
+          "parentKey": "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.6.3. Ki kicsoda az internetszabványok világában?"
+            }
+          ]
+        },
+        {
+          "key": "9f0df690-45ce-48f0-a44b-8432fc0e1850",
+          "parentKey": "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.2. Otthoni alkalmazások"
+            }
+          ]
+        },
+        {
+          "key": "dce2bf93-2038-4fa3-a317-394945452830",
+          "parentKey": "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.5.2. Harmadik generációs mobiltelefon hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "5572038c-f625-4513-acb9-1c31823bcfa4",
+            "a2f74556-ba57-4b89-a06d-b54f2ffa25ea",
+            "ba6c2551-f169-4fc0-945d-d8e2545a6426"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.6. A hálózatok szabványosítása"
+            }
+          ]
+        },
+        {
+          "key": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "0db1551a-5b9e-4c14-ab74-7e1f83e84bfc",
+            "d6bf5953-1f13-47cc-bb2a-5028fa11f590",
+            "5954168e-b3df-437a-820c-4538ae2b7b4f",
+            "7979ee4f-11d8-4ddd-9495-eca427ed40ec",
+            "92ddc4d2-bd4b-4203-93f8-d112465939c8"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2. Hálózati hardver"
+            }
+          ]
+        },
+        {
+          "key": "4048397c-4c56-4483-8332-180dc46d61f4",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.6. A TCP/IP hivatkozási modell bírálata"
+            }
+          ]
+        },
+        {
+          "key": "7c1fa8f4-7225-4c1b-a3a6-74d3ad67c7bd",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.7. Mértékegységek"
+            }
+          ]
+        },
+        {
+          "key": "a0ce9e8e-cd43-4ab1-8e05-cb0983dd4b57",
+          "parentKey": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.3. Összeköttetés alapú és összeköttetés nélküli szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "e6f8eaa1-4f5f-4e75-a32f-caf9819a1672",
+          "parentKey": "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.5.3. Vezeték nélküli LAN-ok: 802.11"
+            }
+          ]
+        },
+        {
+          "key": "1f009150-13b8-49e1-9ded-47068633b061",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.8. Röviden a továbbiakról"
+            }
+          ]
+        },
+        {
+          "key": "a2f74556-ba57-4b89-a06d-b54f2ffa25ea",
+          "parentKey": "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.6.2. Ki kicsoda a nemzetközi szabványok világában?"
+            }
+          ]
+        },
+        {
+          "key": "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "ee10e25e-f409-4ca8-8ba1-e2c7b6948bbf",
+            "9f0df690-45ce-48f0-a44b-8432fc0e1850",
+            "00f61c7d-20df-436a-84c2-b469562c5119",
+            "0c816d5c-6c9e-4e78-bf67-c77c90162953"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1. A számítógép hálózatok használata"
+            }
+          ]
+        },
+        {
+          "key": "7979ee4f-11d8-4ddd-9495-eca427ed40ec",
+          "parentKey": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4. Nagy kiterjedésű hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "0db1551a-5b9e-4c14-ab74-7e1f83e84bfc",
+          "parentKey": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.1. Személyi hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "2f005f7d-0240-4c9c-a4c5-6639948946ee",
+            "5146712c-ae8b-484b-a6d3-a063d6429f19",
+            "a0ce9e8e-cd43-4ab1-8e05-cb0983dd4b57",
+            "7a5b44e7-28ff-49bd-965c-cd542c2adc91",
+            "71e52cf3-e97d-4eeb-b224-93d6092194ac"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3. Hálózati szoftver"
+            }
+          ]
+        },
+        {
+          "key": "2f005f7d-0240-4c9c-a4c5-6639948946ee",
+          "parentKey": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.1. Protokollhierarchiák"
+            }
+          ]
+        },
+        {
+          "key": "92ddc4d2-bd4b-4203-93f8-d112465939c8",
+          "parentKey": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.5. Összekapcsolt hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "5572038c-f625-4513-acb9-1c31823bcfa4",
+          "parentKey": "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.6.1. Ki kicsoda a hírtávközlés világában"
+            }
+          ]
+        },
+        {
+          "key": "ee10e25e-f409-4ca8-8ba1-e2c7b6948bbf",
+          "parentKey": "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.1. Üzleti alkalmazások"
+            }
+          ]
+        },
+        {
+          "key": "14487977-2d90-495e-9dc8-99fee490d407",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "c959be5c-b2cf-4b65-ad70-b8ff41e15084",
+            "f2e995be-1c44-4b6f-b454-4d8ff10e15ef",
+            "ed9466c4-9189-4ff4-bbcd-cea36f099240",
+            "2036bc84-a293-4728-9c03-541c40617029",
+            "076151e8-8a1c-4d2d-bbe5-3a24c70d78a6",
+            "4048397c-4c56-4483-8332-180dc46d61f4"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4. Hivatkozási modellek"
+            }
+          ]
+        },
+        {
+          "key": "ed9466c4-9189-4ff4-bbcd-cea36f099240",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.3. A könyvben használt modell"
+            }
+          ]
+        },
+        {
+          "key": "ac755a11-e484-4799-a069-2dc05d54f956",
+          "parentKey": "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.5.4. Az RFID és a szenzorhálózatok"
+            }
+          ]
+        },
+        {
+          "key": "71e52cf3-e97d-4eeb-b224-93d6092194ac",
+          "parentKey": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.5. A szolgáltatások kapcsolata a protokollokkal"
+            }
+          ]
+        },
+        {
+          "key": "5954168e-b3df-437a-820c-4538ae2b7b4f",
+          "parentKey": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.3. Nagyvárosi hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "076151e8-8a1c-4d2d-bbe5-3a24c70d78a6",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.5. Az OSI hivatkozási modell és protokolljainak bírálata"
+            }
+          ]
+        },
+        {
+          "key": "7a5b44e7-28ff-49bd-965c-cd542c2adc91",
+          "parentKey": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.4. Szolgáltatási primitívek"
+            }
+          ]
+        },
+        {
+          "key": "d6bf5953-1f13-47cc-bb2a-5028fa11f590",
+          "parentKey": "9e986e95-8347-4a22-9858-d10913aa9eba",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.2. Lokális hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "2036bc84-a293-4728-9c03-541c40617029",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4. Az OSI és a TCP/IP hivatkozási modell összehasonlítása"
+            }
+          ]
+        },
+        {
+          "key": "00f61c7d-20df-436a-84c2-b469562c5119",
+          "parentKey": "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.3. Mozgó felhasználók"
+            }
+          ]
+        },
+        {
+          "key": "5146712c-ae8b-484b-a6d3-a063d6429f19",
+          "parentKey": "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2. A rétegek tervezési kérdései"
+            }
+          ]
+        },
+        {
+          "key": "6d283389-f4f2-426a-936e-05dc00b0c881",
+          "parentKey": "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.5.1. Az internet"
+            }
+          ]
+        },
+        {
+          "key": "f2e995be-1c44-4b6f-b454-4d8ff10e15ef",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.2. A TCP/IP hivatkozási modell"
+            }
+          ]
+        },
+        {
+          "key": "0c816d5c-6c9e-4e78-bf67-c77c90162953",
+          "parentKey": "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.1.4. Társadalmi vonatkozások"
+            }
+          ]
+        },
+        {
+          "key": "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+          "parentKey": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "subKeys": [
+            "6d283389-f4f2-426a-936e-05dc00b0c881",
+            "dce2bf93-2038-4fa3-a317-394945452830",
+            "e6f8eaa1-4f5f-4e75-a32f-caf9819a1672",
+            "ac755a11-e484-4799-a069-2dc05d54f956"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.5. Hálózati példák"
+            }
+          ]
+        },
+        {
+          "key": "8b6e591c-8c71-48cb-9751-4c28031a48bb",
+          "parentKey": null,
+          "subKeys": [
+            "352f6d45-f116-414d-ab0a-95bcbea6d9b0",
+            "9e986e95-8347-4a22-9858-d10913aa9eba",
+            "87d363f7-58f7-4e96-9403-594f6fb1eefd",
+            "14487977-2d90-495e-9dc8-99fee490d407",
+            "58b5ec7e-dab6-4a7e-87a7-23a161872c9e",
+            "5b23e27c-fa9f-43dd-8e8e-e9ff7cdfd15f",
+            "7c1fa8f4-7225-4c1b-a3a6-74d3ad67c7bd",
+            "1f009150-13b8-49e1-9ded-47068633b061"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Bevezetés"
+            }
+          ]
+        },
+        {
+          "key": "c959be5c-b2cf-4b65-ad70-b8ff41e15084",
+          "parentKey": "14487977-2d90-495e-9dc8-99fee490d407",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.1. Az OSI hivatkozási modell"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "random-color-round",
+          "randomColor": true,
+          "background": "rgba(255,255,255,1)",
+          "highlightColor": "#50C9CE",
+          "marginH": 60,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5",
+            "color": "#262626"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve",
+            "lineWidth": "3px"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "fontSize": "34px",
+              "borderRadius": "35px",
+              "padding": "5px 10px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "3px",
+              "lineColor": "rgb(113, 203, 45)"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderRadius": "10px",
+              "fontSize": "20px",
+              "padding": "0px 5px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "rgb(113, 203, 45)"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "borderRadius": "10px",
+              "fontSize": "13px",
+              "padding": "0"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "white"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}
