@@ -1,0 +1,508 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+      "editorRootTopicKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+      "focusKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+      "topics": [
+        {
+          "key": "6fac07cc-fe95-47f9-a67a-7c8fc7eab78d",
+          "parentKey": "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.5.1. Tartalom és internetes forgalom"
+            }
+          ]
+        },
+        {
+          "key": "f35548b8-40f1-4d1c-9974-cda1098ad07c",
+          "parentKey": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4.4. Élő média folyamszerű továbbítása"
+            }
+          ]
+        },
+        {
+          "key": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [
+            "53a38392-1a20-435e-901d-321c2b497464",
+            "04b8c2ac-7de0-4e6d-83f6-d65386c31be6",
+            "b24eeaff-07d2-4283-b4e0-c619abfa4326",
+            "f35548b8-40f1-4d1c-9974-cda1098ad07c",
+            "cfba645e-b03c-44fc-9e96-87b67a6e9a2c"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4. Hang és mozgókép folyamszerű átvitele"
+            }
+          ]
+        },
+        {
+          "key": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "parentKey": null,
+          "subKeys": [
+            "37ea27dd-b307-4dc3-9ab8-65833e0a7103",
+            "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+            "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+            "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+            "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+            "2e043a65-1412-4d35-b83d-65afea425d60"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7. Az alkalmazási réteg"
+            }
+          ]
+        },
+        {
+          "key": "7df7d2ac-929c-41cf-9907-e76308686727",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.4. HTTP - a hypertext átviteli protokoll"
+            }
+          ]
+        },
+        {
+          "key": "f5ac5b83-825b-401e-9801-8635596ee974",
+          "parentKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2.2. A felhasználói ügynök"
+            }
+          ]
+        },
+        {
+          "key": "ae216061-eb2a-4ef2-aee6-c60840071a48",
+          "parentKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2.3. Üzenetformátumok"
+            }
+          ]
+        },
+        {
+          "key": "04b8c2ac-7de0-4e6d-83f6-d65386c31be6",
+          "parentKey": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4.2. Digitális mozgókép"
+            }
+          ]
+        },
+        {
+          "key": "a19781cc-82f3-4cd4-9c61-95858b716cae",
+          "parentKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2.4. Üzenettovábbítás"
+            }
+          ]
+        },
+        {
+          "key": "2df11375-3d6e-4fee-b85b-a43cd492c740",
+          "parentKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2.5. Végső kézbesítés"
+            }
+          ]
+        },
+        {
+          "key": "37ea27dd-b307-4dc3-9ab8-65833e0a7103",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [
+            "47c1a693-d289-4a6b-abbd-93c75af20acb",
+            "c311c67a-58d8-4d49-b072-1f5bb73d5f79",
+            "2d75fe66-e310-4110-bd4c-df43342ebff3"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.1. DNS - a körzetnévkezelő rendszer"
+            }
+          ]
+        },
+        {
+          "key": "e34689ce-af3e-4925-b4b9-124c96ed6966",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.2. Statikus weboldalak"
+            }
+          ]
+        },
+        {
+          "key": "859671b9-1ff4-43f0-a734-1e801d6cfb08",
+          "parentKey": "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.5.2. Szerverfarmok és webhelyettesek"
+            }
+          ]
+        },
+        {
+          "key": "cfba645e-b03c-44fc-9e96-87b67a6e9a2c",
+          "parentKey": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4.5. Valós idejű konferenciahívás"
+            }
+          ]
+        },
+        {
+          "key": "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [
+            "6fac07cc-fe95-47f9-a67a-7c8fc7eab78d",
+            "859671b9-1ff4-43f0-a734-1e801d6cfb08",
+            "63099763-525c-48a1-acdc-7bfae9d971df",
+            "4a664000-0fcb-410b-b8e3-278fb668da8f"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.5. Tartalomszállítás"
+            }
+          ]
+        },
+        {
+          "key": "4a7206a0-ef3a-4c1d-8b49-1081a7ffc33d",
+          "parentKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2.1. Architektúra és szolgáltatások"
+            }
+          ]
+        },
+        {
+          "key": "2e043a65-1412-4d35-b83d-65afea425d60",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.6. Összefoglalás"
+            }
+          ]
+        },
+        {
+          "key": "4a664000-0fcb-410b-b8e3-278fb668da8f",
+          "parentKey": "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.5.4. Egyenrangú társak hálózata"
+            }
+          ]
+        },
+        {
+          "key": "2d75fe66-e310-4110-bd4c-df43342ebff3",
+          "parentKey": "37ea27dd-b307-4dc3-9ab8-65833e0a7103",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.1.3. Névszerverek"
+            }
+          ]
+        },
+        {
+          "key": "df939a87-9fd3-4dcf-9266-5bf53d42f8d9",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.5. A mobilweb"
+            }
+          ]
+        },
+        {
+          "key": "63099763-525c-48a1-acdc-7bfae9d971df",
+          "parentKey": "c9d9ecde-a5f3-4048-acde-35d6cb3f1ae9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.5.3. Tartalomszállító hálózatok"
+            }
+          ]
+        },
+        {
+          "key": "15b6005b-3ba0-4b0d-8bd4-ee82e4f32b98",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.1. A web felépítésének áttekintése"
+            }
+          ]
+        },
+        {
+          "key": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [
+            "4a7206a0-ef3a-4c1d-8b49-1081a7ffc33d",
+            "f5ac5b83-825b-401e-9801-8635596ee974",
+            "ae216061-eb2a-4ef2-aee6-c60840071a48",
+            "a19781cc-82f3-4cd4-9c61-95858b716cae",
+            "2df11375-3d6e-4fee-b85b-a43cd492c740"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.2. Elektronikus levél"
+            }
+          ]
+        },
+        {
+          "key": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "parentKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+          "subKeys": [
+            "15b6005b-3ba0-4b0d-8bd4-ee82e4f32b98",
+            "e34689ce-af3e-4925-b4b9-124c96ed6966",
+            "b37a4488-85ae-4b4d-981c-3c1e92f8ef38",
+            "7df7d2ac-929c-41cf-9907-e76308686727",
+            "df939a87-9fd3-4dcf-9266-5bf53d42f8d9",
+            "b7ded498-4b18-4caa-9cb0-f3e169511bc0"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3. A világháló"
+            }
+          ]
+        },
+        {
+          "key": "53a38392-1a20-435e-901d-321c2b497464",
+          "parentKey": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4.1. Digitális hang"
+            }
+          ]
+        },
+        {
+          "key": "b37a4488-85ae-4b4d-981c-3c1e92f8ef38",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.3. Dinamikus weboldalak és webalkalmazások"
+            }
+          ]
+        },
+        {
+          "key": "b7ded498-4b18-4caa-9cb0-f3e169511bc0",
+          "parentKey": "d14c8e5a-63cf-4939-aa21-90bf18c833ac",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.3.6. Webes keresés"
+            }
+          ]
+        },
+        {
+          "key": "c311c67a-58d8-4d49-b072-1f5bb73d5f79",
+          "parentKey": "37ea27dd-b307-4dc3-9ab8-65833e0a7103",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.1.2. Erőforrás-nyilvántartás"
+            }
+          ]
+        },
+        {
+          "key": "47c1a693-d289-4a6b-abbd-93c75af20acb",
+          "parentKey": "37ea27dd-b307-4dc3-9ab8-65833e0a7103",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.1.1. A DNS-névtér"
+            }
+          ]
+        },
+        {
+          "key": "b24eeaff-07d2-4283-b4e0-c619abfa4326",
+          "parentKey": "a8ea220e-28bd-45b0-8dc8-bb7f00a94afe",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7.4.3. Tárolt média folyamszerű átvitele"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "theme3",
+          "randomColor": false,
+          "background": "#A9DEF9",
+          "highlightColor": "#9013FE",
+          "marginH": 50,
+          "marginV": 20,
+          "contentStyle": {
+            "lineHeight": "1.5"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#FF99C8",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#FCF6BD",
+              "borderWidth": "1px",
+              "borderStyle": "solid",
+              "borderColor": "#E4C1F9",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "18px",
+              "padding": "5px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve",
+              "lineWidth": "2px",
+              "lineColor": "#43a9ff"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "background": "#E4FDE1",
+              "borderRadius": "5px",
+              "color": "rgb(103,103,103)",
+              "fontSize": "13px",
+              "padding": "0px",
+              "boxShadow": "1px 1px 1px #ccc"
+            },
+            "subLinkStyle": {
+              "lineType": "round",
+              "lineRadius": 5,
+              "lineWidth": "1px",
+              "lineColor": "#43a9ff"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}

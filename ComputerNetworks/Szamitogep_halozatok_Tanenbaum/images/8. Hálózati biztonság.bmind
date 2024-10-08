@@ -1,0 +1,758 @@
+{
+  "sheetModels": [
+    {
+      "title": "Sheet1",
+      "rootTopicKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+      "editorRootTopicKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+      "focusKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+      "topics": [
+        {
+          "key": "2cbea333-6a8f-4a0f-a7d8-3b5cda9d7030",
+          "parentKey": "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.6.1. IPsec"
+            }
+          ]
+        },
+        {
+          "key": "678c3bb6-dc18-4028-a33e-c8c98cfed2b9",
+          "parentKey": "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.9.2. Biztonságos névkezelés"
+            }
+          ]
+        },
+        {
+          "key": "c28f2613-a858-44d5-8d04-392a762f17f1",
+          "parentKey": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2.2. AES - a fejlett titkosító szabvány"
+            }
+          ]
+        },
+        {
+          "key": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "fc9180d7-5d24-46a6-9551-9aa27d66a6ab",
+            "c28f2613-a858-44d5-8d04-392a762f17f1",
+            "564d86e9-0e31-4cef-b3e3-81abaaefa135",
+            "ab6dbc30-0a93-42e5-8f59-e37644dc9a60",
+            "c3c774fb-da82-4b97-b196-51efe37ddbf4"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2. Szimmetrikus kulcsú algoritmusok"
+            }
+          ]
+        },
+        {
+          "key": "a67851c5-c100-454e-b3ed-d18010241645",
+          "parentKey": "0f73ff56-f5cf-4432-8aee-e845702d0e75",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.10.1. A személyiségi jogok védelme"
+            }
+          ]
+        },
+        {
+          "key": "9e32cece-4371-4ccd-b101-a120b160d858",
+          "parentKey": "19faa7a4-ded1-4107-9f94-2e33ae75f3d5",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.8.2. S/MIME"
+            }
+          ]
+        },
+        {
+          "key": "bc80c490-05b7-4bca-9477-fd01c4b35b88",
+          "parentKey": "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.4.1. Szimmetrikus kulcsú aláírások"
+            }
+          ]
+        },
+        {
+          "key": "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "a287965f-f564-4b92-ae81-c3dfcb423e99",
+            "678c3bb6-dc18-4028-a33e-c8c98cfed2b9",
+            "025e72a2-394b-49ad-ae68-bd5951fd8b2d",
+            "784e4774-8fbf-4ab4-97f2-f75ab78e5c0d"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.9. A web biztonsága"
+            }
+          ]
+        },
+        {
+          "key": "025e72a2-394b-49ad-ae68-bd5951fd8b2d",
+          "parentKey": "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.9.3. SSL - a biztonságos csatlakozóréteg"
+            }
+          ]
+        },
+        {
+          "key": "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "bc80c490-05b7-4bca-9477-fd01c4b35b88",
+            "93031c8c-7e3d-4c85-91ec-3a8a19f312b3",
+            "f5e1cbcc-5369-43d0-998d-25c01a5d9b56",
+            "1f5e5fc4-71f3-4a12-bb0f-7416785e4c82"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.4. Digitális aláírások"
+            }
+          ]
+        },
+        {
+          "key": "0f73ff56-f5cf-4432-8aee-e845702d0e75",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "a67851c5-c100-454e-b3ed-d18010241645",
+            "01de6af2-7016-4266-8fbf-1b06f36f38fb",
+            "2ec3d6aa-e032-41d8-a082-f01dc000e41d"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.10. Társadalmi kérdések"
+            }
+          ]
+        },
+        {
+          "key": "5d79f18b-939e-4d88-a103-7a69ae426da0",
+          "parentKey": "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.6.3. Virtuális magánhálózatok"
+            }
+          ]
+        },
+        {
+          "key": "62edadf4-8f94-4f55-812e-7d99a2b9f3fe",
+          "parentKey": "21a8542f-7399-4f8e-9138-ba7dd243df44",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.5.1. Tanúsítványok"
+            }
+          ]
+        },
+        {
+          "key": "fc9180d7-5d24-46a6-9551-9aa27d66a6ab",
+          "parentKey": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2.1. DES - az adattitkosító szabvány"
+            }
+          ]
+        },
+        {
+          "key": "21a8542f-7399-4f8e-9138-ba7dd243df44",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "62edadf4-8f94-4f55-812e-7d99a2b9f3fe",
+            "e9fa66b1-a643-4b6b-8917-454cca7d083c",
+            "1c9603ba-304b-476c-9170-9598838d803f"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.5. A nyilvános kulcsok kezelése"
+            }
+          ]
+        },
+        {
+          "key": "c3c774fb-da82-4b97-b196-51efe37ddbf4",
+          "parentKey": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2.5. Kriptoanalízis"
+            }
+          ]
+        },
+        {
+          "key": "d651eb5a-9d9c-4536-b9e9-0c92e53c7901",
+          "parentKey": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7.3. Hitelességvizsgálat kulcselosztó központ alkalmazásával"
+            }
+          ]
+        },
+        {
+          "key": "9c7f141d-497e-4aff-b121-0bc5fa42ad4d",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "4d2c2a44-c255-43c4-89e8-08b9389695dc",
+            "b81623c0-9d72-4273-a528-338c255be3ce"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.3. Nyilvános kulcsú algoritmusok"
+            }
+          ]
+        },
+        {
+          "key": "8981ae3d-3a85-4d3a-8799-63aa0ebbf925",
+          "parentKey": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1.3. Keverő kódolók"
+            }
+          ]
+        },
+        {
+          "key": "ab6dbc30-0a93-42e5-8f59-e37644dc9a60",
+          "parentKey": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2.4. Egyéb kódolók"
+            }
+          ]
+        },
+        {
+          "key": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "parentKey": null,
+          "subKeys": [
+            "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+            "3d486725-dd1d-479c-b64d-b0077c8097ca",
+            "9c7f141d-497e-4aff-b121-0bc5fa42ad4d",
+            "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+            "21a8542f-7399-4f8e-9138-ba7dd243df44",
+            "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+            "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+            "19faa7a4-ded1-4107-9f94-2e33ae75f3d5",
+            "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+            "0f73ff56-f5cf-4432-8aee-e845702d0e75"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8. Hálózati biztonság"
+            }
+          ]
+        },
+        {
+          "key": "19faa7a4-ded1-4107-9f94-2e33ae75f3d5",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "43434771-0a02-4a5f-86e5-7018fcad7656",
+            "9e32cece-4371-4ccd-b101-a120b160d858"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.8. Az elektronikus levelek biztonsága"
+            }
+          ]
+        },
+        {
+          "key": "b81623c0-9d72-4273-a528-338c255be3ce",
+          "parentKey": "9c7f141d-497e-4aff-b121-0bc5fa42ad4d",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.3.2. Más nyilvános kulcsú eljárások"
+            }
+          ]
+        },
+        {
+          "key": "564d86e9-0e31-4cef-b3e3-81abaaefa135",
+          "parentKey": "3d486725-dd1d-479c-b64d-b0077c8097ca",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.2.3. Titkosítási módok"
+            }
+          ]
+        },
+        {
+          "key": "50eb4462-3ca5-402f-8611-55fbf8d3f556",
+          "parentKey": "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.6.4. Vezeték nélküli biztonság"
+            }
+          ]
+        },
+        {
+          "key": "93031c8c-7e3d-4c85-91ec-3a8a19f312b3",
+          "parentKey": "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.4.2. Nyilvános kulcsú aláírások"
+            }
+          ]
+        },
+        {
+          "key": "e9fa66b1-a643-4b6b-8917-454cca7d083c",
+          "parentKey": "21a8542f-7399-4f8e-9138-ba7dd243df44",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.5.2. X.509"
+            }
+          ]
+        },
+        {
+          "key": "0cbbbb12-5d55-4734-a9f7-c18d1906d80e",
+          "parentKey": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1.2. Helyettesítő titkosítók"
+            }
+          ]
+        },
+        {
+          "key": "715efc69-6e70-45c1-80c9-b2d99b78ea03",
+          "parentKey": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1.5. Két alapvető kriptográfiai elv"
+            }
+          ]
+        },
+        {
+          "key": "f5e1cbcc-5369-43d0-998d-25c01a5d9b56",
+          "parentKey": "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.4.3. Üzenetpecsétek"
+            }
+          ]
+        },
+        {
+          "key": "1c9603ba-304b-476c-9170-9598838d803f",
+          "parentKey": "21a8542f-7399-4f8e-9138-ba7dd243df44",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.5.3. Nyilvános kulcs infrastruktúrák"
+            }
+          ]
+        },
+        {
+          "key": "1f5e5fc4-71f3-4a12-bb0f-7416785e4c82",
+          "parentKey": "89a33db8-46b3-4713-b8a5-90d5e27a92b0",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.4.5. A születésnap-támadás"
+            }
+          ]
+        },
+        {
+          "key": "784e4774-8fbf-4ab4-97f2-f75ab78e5c0d",
+          "parentKey": "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.9.4. A hordozható kódok biztonsága"
+            }
+          ]
+        },
+        {
+          "key": "f4e37760-237f-41dd-b7ad-31a0472b08cf",
+          "parentKey": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7.5. Hitelességvizsgálat nyilvános kulcsú titkosítással"
+            }
+          ]
+        },
+        {
+          "key": "42ef75ab-1264-4649-adce-fb9931e9fc9e",
+          "parentKey": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7.1. Osztott titkos kulcson alapuló hitelességvizsgálat"
+            }
+          ]
+        },
+        {
+          "key": "43434771-0a02-4a5f-86e5-7018fcad7656",
+          "parentKey": "19faa7a4-ded1-4107-9f94-2e33ae75f3d5",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.8.1. PGP - elég jól biztosított személyiségi jog"
+            }
+          ]
+        },
+        {
+          "key": "4d2c2a44-c255-43c4-89e8-08b9389695dc",
+          "parentKey": "9c7f141d-497e-4aff-b121-0bc5fa42ad4d",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.3.1. RSA"
+            }
+          ]
+        },
+        {
+          "key": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "29f623c3-93f4-49a0-a442-93e41528129a",
+            "0cbbbb12-5d55-4734-a9f7-c18d1906d80e",
+            "8981ae3d-3a85-4d3a-8799-63aa0ebbf925",
+            "30b5e42c-484a-42f9-9eea-451f010fcf68",
+            "715efc69-6e70-45c1-80c9-b2d99b78ea03"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1. Kriptográfia"
+            }
+          ]
+        },
+        {
+          "key": "30b5e42c-484a-42f9-9eea-451f010fcf68",
+          "parentKey": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1.4. Egyszer használatos bitminta"
+            }
+          ]
+        },
+        {
+          "key": "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "2cbea333-6a8f-4a0f-a7d8-3b5cda9d7030",
+            "fdd0474c-4a9b-4e62-afde-2f1dbe0e15d1",
+            "5d79f18b-939e-4d88-a103-7a69ae426da0",
+            "50eb4462-3ca5-402f-8611-55fbf8d3f556"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.6. A kommunikáció biztonsága"
+            }
+          ]
+        },
+        {
+          "key": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "parentKey": "a5752fb3-ba0b-4c44-98d6-a78d72122b50",
+          "subKeys": [
+            "42ef75ab-1264-4649-adce-fb9931e9fc9e",
+            "c87d8a45-10ed-4126-8ee9-023b03ea39fa",
+            "d651eb5a-9d9c-4536-b9e9-0c92e53c7901",
+            "d0c888c9-b8fe-410a-b2e1-95a1d69882b3",
+            "f4e37760-237f-41dd-b7ad-31a0472b08cf"
+          ],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7. Hitelességvizsgáló protokollok"
+            }
+          ]
+        },
+        {
+          "key": "01de6af2-7016-4266-8fbf-1b06f36f38fb",
+          "parentKey": "0f73ff56-f5cf-4432-8aee-e845702d0e75",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.10.2. Szólásszabadság"
+            }
+          ]
+        },
+        {
+          "key": "a287965f-f564-4b92-ae81-c3dfcb423e99",
+          "parentKey": "8448ad19-15a2-4899-9ed3-c09923ac49f9",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.9.1. Fenyegetések"
+            }
+          ]
+        },
+        {
+          "key": "d0c888c9-b8fe-410a-b2e1-95a1d69882b3",
+          "parentKey": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7.4. Hitelességvizsgálat Kerberos alkalmazásával"
+            }
+          ]
+        },
+        {
+          "key": "fdd0474c-4a9b-4e62-afde-2f1dbe0e15d1",
+          "parentKey": "b66b35ca-c55b-4798-a544-02eb0caa8b4e",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.6.2. Tűzfalak"
+            }
+          ]
+        },
+        {
+          "key": "c87d8a45-10ed-4126-8ee9-023b03ea39fa",
+          "parentKey": "213e34c4-4c04-4fca-bd5c-046fdc8f4aec",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.7.2. Osztott kulcs létesítése: a Diffie-Hellmann kulcscsere"
+            }
+          ]
+        },
+        {
+          "key": "2ec3d6aa-e032-41d8-a082-f01dc000e41d",
+          "parentKey": "0f73ff56-f5cf-4432-8aee-e845702d0e75",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.10.3. A szerzői jogok"
+            }
+          ]
+        },
+        {
+          "key": "29f623c3-93f4-49a0-a442-93e41528129a",
+          "parentKey": "d29bb862-9605-4f5e-9f51-9a6f83f4b517",
+          "subKeys": [],
+          "collapse": true,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8.1.1. Bevezetés a kriptográfiába"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "viewMode": "MindMap",
+        "readOnly": false,
+        "allowUndo": true,
+        "layoutDir": 0,
+        "theme": {
+          "name": "defaultTheme",
+          "randomColor": false,
+          "background": "#DDDDDD",
+          "highlightColor": "#C31004",
+          "marginH": 50,
+          "marginV": 5,
+          "contentStyle": {
+            "lineHeight": "1"
+          },
+          "linkStyle": {
+            "lineRadius": 5,
+            "lineWidth": "2px",
+            "lineColor": "#595959",
+            "lineType": "curve"
+          },
+          "rootTopic": {
+            "contentStyle": {
+              "background": "#C31004",
+              "color": "#fff",
+              "fontSize": "34px",
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
+            },
+            "subLinkStyle": {
+              "lineType": "curve"
+            }
+          },
+          "primaryTopic": {
+            "contentStyle": {
+              "background": "#333",
+              "borderRadius": "5px",
+              "color": "#fff",
+              "fontSize": "14px",
+              "padding": "6px 10px 5px 10px"
+            },
+            "subLinkStyle": {
+              "hasUnderline": true,
+              "lineType": "round"
+            }
+          },
+          "normalTopic": {
+            "contentStyle": {
+              "borderRadius": "5px",
+              "background": "#fff0",
+              "color": "#383833",
+              "fontSize": "13px",
+              "padding": "1px"
+            },
+            "subLinkStyle": {
+              "hasUnderline": true,
+              "lineType": "round"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "extData": {},
+  "currentSheetIndex": 0,
+  "formatVersion": "0.1"
+}
