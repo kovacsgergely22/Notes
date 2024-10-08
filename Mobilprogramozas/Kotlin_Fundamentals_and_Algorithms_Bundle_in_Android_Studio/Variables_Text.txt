@@ -1,0 +1,209 @@
+// *************************************** Intro to variables ***************************************
+    // Variables are a way to associate a value with a name. Variables have a name, type, and value. The kinds of
+        values that a variable can have and the amount of space it takes in memory depends on the variable type.
+    // We use variables any time we need to store and keep track of a value throughout the code
+    // We access a variable's value by calling on its name and can fetch or change it
+    // Val constants' value cannot change once assigned
+
+    // Topics Covered
+        // Intro - cover what variables are and look at basic syntax
+        // Commonly used types - primitives, strings, ranges, and nullables
+        // Conversion - converting from one type to another and restrictions
+        // Operators - value-changing and condition-testing kinds
+        // Advanced topics - type casting, binary and hexadecimal values and bitwise operators
+
+    // Variable declaration and initialization (var for variable and val for constant)
+    // val/var name : type = value
+    val characterName : String = "Nimish"           // constant, name = characterName, type = String, value = "Nimish"
+    //characterName = "Mammoth"                     // cannot change val values
+
+    var numberOfLives : Int
+    numberOfLives = 3                               // can reassign var values
+
+    // Can assign the value of an existing variable to another variable assuming they are of the same type
+    // This means enemyHitPoints takes on the current value of characterHitPoints but changes to either do not affect
+    // the other one
+    var characterHitPoints = 100
+    var enemyHitPoints : Int = characterHitPoints
+    characterHitPoints = 200
+
+    // characterHitPoints = "hello"                 // not allowed, mismatching types
+
+// *************************************** Primitive variable types ***************************************
+    // Simple variable types that have limited functionality but cover most variable value types we would use
+    // 6 numerical types, booleans, and characters
+
+    // 4 whole numbers: bytes, shorts, ints, longs (listed from smallest to largest)
+    // bytes: 8 bits, shorts: 16 bits, ints: 32 bits, longs: 64 bits
+    var numberOfLives : Int = 3
+
+    // 2 decimal numbers: floats and doubles
+    //floats: 32 bits, doubles: 64 bits
+    var bankBalance : Double = 100.25
+
+    // booleans are only true or false
+    var isDoorOpen : Boolean = false
+    var isGreaterThan : Boolean = 5 > 2             // isGreaterThan = true
+
+    // characters are a way to represent any unicode character but are 1 unit in length
+    var characterInitial : Char = 'N'
+
+// *************************************** Strings ***************************************
+    // Collection of characters between "" with unlimited length
+    // Not a primitive type so has more functionality
+
+    val characterName : String = "Nimish"
+    val characterTitle : String = " of the Vale"
+
+    val fullTitle : String = characterName + characterTitle
+
+    // string interpolation: variable after $ converts its value to a string and inserts it into string
+    val numberOfLives : Int = 3
+    val livesText : String = "Our character has $numberOfLives lives left."
+
+    // more interpolation, has expression to evaluate in {}
+    val characterNameLengthText : String = "Our character's name has ${characterName.length} characters in it."
+
+    // substring is a smaller string that is part of the larger string, going from index 0 to 2 in this case so fetches
+    // string "Ni"
+    characterName.substring(0,2)
+
+// *************************************** Ranges ***************************************
+    // Ranges are a list of every whole number from start number to end number (inclusive)
+
+    val firstTenNumbers = 1..10             // firstTenNumbers = [1,2,3,4,5,6,7,8,9,10]
+
+    for (i in 1..10) {}                     // Use for-in loop to iterate through
+    for (i in 10 downTo 1) {}               // Iterate through numbers from 10..1
+
+    if (40 in 1..100) {}                    // Check if 40 is in the range from 1..100
+
+    val firstElement = firstTenNumbers.first    // firstElement = 1
+    val lastElement = (1..5).last               // lastElement = 5
+
+    for (i in 1..10 step 2) {}              // Skip every other number (range of odd numbers from 1..10)
+
+// *************************************** Nullable variables ***************************************
+    // Nullable variables are variables that can take on a "null" value meaning they have no value at all
+    // Non-nullable variables can never be null meaning they will always have some value, even if 0 or "" (empty string)
+
+    var someInt : Int = 0
+    //someInt = null                    // not allowed, non-nullable variables can never be null
+
+    var someOtherInt : Int? = 0
+    someOtherInt = null                 // nullable variable someOtherInt can be null or not null
+
+    var catchPhrase : String? = "What's up dawg?"
+    catchPhrase = null
+    catchPhrase = ""                    // "" is empty string and not the same as null
+
+    // Safe unwrap, this will store results in nullable-Int type variable catchPhraseLength. If catchPrase == null,
+    // catchPhrase.length = null, and so catchPhraseLength = null also. If not, then just get length of catchPhrase
+    val catchPhraseLength = catchPhrase?.length     // Int?
+
+    // Unsafe unwrap, will store catchPhrase.length but if catchPhrase == null, this will case the app or program to
+    // crash due to a null pointer exception. Benefit is that results stored in non-optional type Int
+    // Usually discouraged
+    val catchPhraseLengthNonNullable = catchPhrase!!.length // Int
+
+    // This reads: if catchPhrase.length != null, store its value in catchPhraseLengthRoundTwo, otherwise store 0
+    val catchPhraseLengthRoundTwo = catchPhrase?.length ?: 0
+
+// *************************************** Converting between variable types ***************************************
+    // Can convert from smaller to larger numerical types easily
+    val byte1 : Byte = 127
+    val byteConversion1 = byte1.toLong()
+
+    // Be careful when converting from higher to lower numerical types as conversion simply cuts off the leading bits
+    // and so you may get unexpected results unless you examine the bit-structure of the number
+    val int1 : Int = 128
+    val intConversion1 = int1.toByte()  // -128
+    // 1000 0000 = -128
+    // 0111 1111 = 127
+    // 00011100 00000000 00000000 10000000
+
+    // Whole numbers to decimals is easy and decimal to whole number chops off decimal places without rounding
+    val intConversion2 : Double = int1.toDouble()
+
+    // Number to character returns the character represented by the unicode represented by the number
+    val byteConversion2 = byte1.toChar()        // != '127'
+
+    // Can convert from anything to string but not always the other way around
+    val intConversion3 = int1.toString()    // "128"
+
+    val double1 : Double = 20.25
+    val doubleConversion1 = double1.toInt()     // 20
+
+    val boolean1 : Boolean = false
+    val booleanConversion1 = boolean1.toString()    // "false"
+
+    // Character to number returns the number that represents the characters unicode
+    val char1 : Char = 'g'
+    val charConversion1 = char1.toInt()     // result is the unicode for the char 'g'
+    val charConversion2 = char1.toString()  // "g"
+
+    // Can convert string of numbers to a numerical type
+    val string1 : String = "Here is a string"
+    var string2 : String = "125"
+    val stringConversion1 = string2.toInt() // result is 125 but cannot convert non numerical string to a number
+
+    // Can convert a "true" or "false" string to boolean
+    val string3 : String = "true"
+    val stringConversion2 = string3.toBoolean() // can only do this if string is a boolean representation
+
+    var nullableInt1 : Int? = 56
+    var nonNullableInt1 : Int = 129
+
+    // use !! to convert nullable to non-nullable type
+    nullableInt1 = nonNullableInt1
+    nonNullableInt1 = nullableInt1!!
+
+// *************************************** Operators part 1 ***************************************
+    // Assignment, arithmetic, and unary operators
+
+    // Assignment: =
+    val int1 : Int = 45
+
+    // Arithmetic: +, -, *, /, %
+    val string1 : String = "Mammoth "
+    val string2 = string1 + "Interactive"           // "Mammoth Interactive"
+    var int2 : Int = int1 + 25                      // int2 = 70
+    int2 = int2 - ((20 / 30) * 3)                   // int2 = 68
+
+    val int3 : Int = 50 % 7                         // int3 = 1
+    val double1 = 25.25
+    val mathResult = int1 - double1                 // mathResult is a double, = 19.25
+
+    // Assignment/arithmetic: +=, -=, *=, /=
+    var int4 : Int = 10
+    int4 += 5                                       // int4 = int4 + 5, = 15
+
+    // Unary: +, -, ++, --, !
+    var int5 : Int = -5
+    val int6 = -int5                                // int6 = 5
+    int5++                                          // int5 = int5 + 1, = -4
+    int5--                                          // int5 = -5
+    var bool1 : Boolean = false
+    bool1 = !bool1                                  // just reverses boolean value, bool1 = true
+
+// *************************************** Operators part 2 ***************************************
+    // Conditional: compare values, test equality or membership
+
+    // Comparison: >, <, >=, <=, ==, !=, ===, !==
+    val bool1 : Boolean = 5 > 2                     // bool1 = true
+    val bool2 : Boolean = 4 <= 2                    // = false
+    val bool3 : Boolean = "hi" == "hvsdfdasi"       // = false
+    val bool4 : Boolean = "hi" > "hello"            // = true
+
+    val int1 : Int = 5
+    val int2 : Int = 5
+    val bool5 : Boolean = int1 === int2             // tests reference to the same object, = false
+
+    // in
+    val range1 = 1..5
+    val bool6 = 2 in range1                         // bool6 = true
+
+    // is
+    val bool7 : Boolean = int1 is Int               // bool7 = true
+    //val bool8 : Boolean = int2 is String          // Cannot do this as Int and String are incompatible
+

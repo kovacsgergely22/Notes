@@ -1,0 +1,177 @@
+// *************************************** Intro to Functions ***************************************
+// Functions store code within convenient blocks to be executed only when needed. This allows us to choose specifically
+// when we want the code to be executed and, unlike with control flow, no conditions need to be met in order to trigger
+// a function execution unless we want that
+// Trigger a function execution by calling on the function name and passing in appropriate parameter values
+
+    // Topics Covered
+        // Basic function syntax
+        // Parameters and return types
+        // Unique Kotlin function syntax
+        // Lambdas
+        // Advanced topics such as inline, generic, and recursive functions
+
+// *************************************** Basic function syntax ***************************************
+// Functions have 5 parts: access-modifier, name, parameters, return-type, body
+// Kotlin syntax: modifier fun name(parameters) : return-type { function body }
+// Old java syntax: modifier return-type name(parameter(s)) { function body }
+// All functions must have name and body in order to work, the modifier, return-type, and parameters are all optional
+// Code in function is executed when function is "called" meaning we type the name and enter any necessary parameters.
+// Once the function reaches the end of the code in its body, or if it reaches a return statement, it exits
+// Parameters have name : type and are constants that only exist within scope of function and take on the value
+// passed into them when function is called
+// Functions declared and implemented within classes are called methods
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // This is how we call functions, type name and pass in parameters if necessary
+        moveCharacterForwards()
+        moveCharacterBackwards()
+        moveCharacter(-3)
+    }
+
+    var characterPosition : Int = 5
+
+    // Will increase characterPosition by 1 only when called
+    fun moveCharacterForwards() {
+        characterPosition++
+    }
+
+    // Will decrease characterPosition by 1 only when called
+    fun moveCharacterBackwards() {
+        characterPosition--
+    }
+
+    // Function has parameter positionChange. This exists only within the scope of the function so we cannot use
+    // positionChange outside of the function. We treat the parameter like a constant that takes on a value passed into
+    // the function when called by moveCharacter(value). When calling this function, must pass in some Int-type value
+    fun moveCharacter(positionChange : Int) {
+        characterPosition += positionChange
+    }
+
+// *************************************** Functions with Return Types ***************************************
+// A return value is some value specified by the return type that is outputted when function is called. This means we
+// can execute the function and store the results in a variable treating the functions execution as an expression rather
+// than just a statement
+// All functions have return types. If we don't specify one, the default type is Unit and return value is null meaning
+// we don't output a value and treat function execution as a statement rather than expression
+// Can call return in a function to exit out prematurely if no specified return type. This ignores all succeeding code
+// in the function body. If function as explicit return type, there must be a return statement with a value of the
+// correct type in the body
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // tryToMakeTransaction is returning a boolean type value and we are storing the ouputted results in
+        // didTransactionOccur
+        val didTransactionOccur = tryToMakeTransaction(10.5)
+    }
+
+    var currentCredits : Double = 50.5
+
+    // If no return type specified or return type is Unit, a simple return is all that's needed, or can actually omit
+    // the return statement altogether. This function would be better name doNothing()
+    /*fun doSomething() : Unit {
+        return
+    }*/
+
+    // This is returning a boolean type variable so need to make sure that regardless of what happens in the function
+    // body, it will return either true or false before it exits
+    fun tryToMakeTransaction(transactionCost : Double) : Boolean {
+        if (transactionCost > currentCredits) {
+            return false
+        } else {
+            currentCredits -= transactionCost
+            return true
+        }
+    }
+
+// *************************************** Variable scope ***************************************
+// Global variables are declared within a class but outside of any functions (can be initialized within a function but
+// declaration must be outside). These variables can be used anywhere within the class including in methods
+// Generally put global variables at the top of class declaration but don't have to
+// Local variables are variables declared and initialized within a function or control flow body. They are only
+// accessible within that function or control flow and do not exist outside of it. Similar to parameters but can change
+// value if they are not val constants
+
+    // Global variable, exists everywhere and can be accessed anywhere
+    var genericGlobal : Int = 20
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        doSomething(2)
+    }
+
+    fun doSomething(parameter : Int) {
+
+        // Local variable, does not exist outside of function but can be accessed anywhere within doSomething
+        var functionVariable : Int = 5
+
+        genericGlobal++
+
+        functionVariable = 20
+
+        if (functionVariable > 5) {
+            // Another local variable, only exists within this if statement so cannot access it outside
+            var x = 20
+        }
+
+        //x = 50    // not allowed as x only exists within if statement
+
+        //parameter++
+    }
+
+// *************************************** Unique Kotlin function syntax ***************************************
+// Function syntax in java was pretty rigid but in Kotlin is quite flexible and there are many ways of phrasing the
+// same function
+// Single expression functions are simple functions that only perform 1 task so rather that put body of function inside
+// {}, just set function name = expression
+// Named parameters are a way to view name of parameter as you pass values into function so that you know what the value
+// you pass in represents. It doesn't affect functionality in any way, just makes the code more readable
+// Default parameters are parameters with a default value so that if you choose not to pass in a new value, the
+// parameters can still have a value and be used within the function
+
+    var int1 : Int = 0
+    var characterHP : Int = 50
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // These 2 functions do exactly the same thing but increaseValue is a regular function and moddedIncreaseValue
+        // is a single expression function
+        increaseValue()
+        moddedIncreaseValue()
+
+        // addStrings called with named parameters. Usually just pass in value without parameter name but using named
+        // parameters makes the code more readable and is easier to understand how we will use parameter values
+        val finalString = addStrings(str1 = "Mammoth ", str2 = "Interactive")
+
+        // Passing in explicit value for default parameter, fruitAmount = 2
+        healCharacter(fruitAmount = 2, healAmount = 20)
+        // Using default value for fruitAmount, fruitAmount is still used and = 1
+        healCharacter(healAmount = 20)
+    }
+
+    fun increaseValue() {
+        int1++
+    }
+
+    // Single expression function, does the same thing as increaseValue but can put code all in 1 expression and treat
+    // the function kind of like a variable
+    fun moddedIncreaseValue() = int1++
+
+    fun addStrings(str1 : String, str2: String) : String {
+        return str1 + str2
+    }
+
+    // fruitAmount has a default value of 1. If we don't enter a value for this parameter when we call the function,
+    // fruitAmount will take on the value of 1
+    fun healCharacter(fruitAmount : Int = 1, healAmount : Int) {
+        characterHP += fruitAmount * healAmount
+    }

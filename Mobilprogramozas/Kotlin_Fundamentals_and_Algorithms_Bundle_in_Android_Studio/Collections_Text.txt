@@ -1,0 +1,30 @@
+// *************************************** Intro to Collections ***************************************
+    // Ways to store groups of same-type values in one variable
+    // Can think of these as being lists of values of the same time
+    // Most have additional functionality but some collection types are very primitive
+    // Some collection types are more efficient for certain tasks (some are faster at fetching, some at storing, etc.)
+
+    // Topics list:
+        // Arrays
+        // Lists
+        // Sets
+        // Maps
+        // Advanced topics
+
+// *************************************** Arrays ***************************************
+    // Similar to arrays in java and easy to use
+    // Simple list that provides a way to retrieve or modify existing values
+    // Cannot add elements to or delete elements from Arrays, must use other collection types for this
+
+    val matches : String = "matches"
+    var inventoryArray : Array<String> = arrayOf("food","clothes",matches)      // Can have literal and variable values
+    inventoryArray = arrayOf("food","clothes")          // Reassigning entire list is allowed
+
+    val firstElement : String = inventoryArray[0]       // Retrieves element at index 0 ("food")
+    val secondElement : String = inventoryArray.get(1)  // Retrieves element at index 1 ("clothes")
+
+    inventoryArray[0] = "berries"                       // Replaces "food" with "berries"
+    inventoryArray.set(1,"shirt")                       // Replaces "clothes" with "shirt"
+
+    // Copies array into another array with length 4 instead of 3 and fills in missing value with ""
+    val newArray : Array<String?> = inventoryArray.copyOf(inventoryArray.size + 1)

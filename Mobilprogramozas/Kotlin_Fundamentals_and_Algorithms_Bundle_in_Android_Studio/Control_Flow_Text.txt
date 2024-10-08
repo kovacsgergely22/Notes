@@ -1,0 +1,223 @@
+// *************************************** Intro to Control flow ***************************************
+    // Provides a way to selectively execute blocks of code based on the outcome of true/false tests
+    // Generally execute some code if condition tested for evaluates to true and either do nothing or execute some
+    // other code if the condition is false
+
+    // Topics Covered:
+        // If statements and expressions
+        // When statements and expressions
+        // Loops: while and for
+        // Advanced topics
+
+// *************************************** If statements ***************************************
+    // If statements test some condition in () and execute code in {} if test evaluates to true
+    // Else-if statements test another condition in () if previous test fails
+    // Else statements are a failsafe and a way to execute some code if all previous tests fail
+
+    var characterXPos : Int = 0
+    var characterYPos : Int = 0
+    var keyStroke : String = "right"
+
+    // If first if statement test passes, characterYPos++ and exit
+    // If first test fails, move on to first else-if test
+    // If else-if test fails, move on to next test, and if all tests fail, execute else statement
+    // (print("Invalid key press")). Only perfom test if all previous tests fail, and only execute code in {} if current
+    // test passes
+    if (keyStroke == "up") {
+        characterYPos++
+    } else if (keyStroke == "down") {
+        characterYPos--
+    } else if (keyStroke == "left") {
+        characterXPos--
+    } else if (keyStroke == "right") {
+        characterXPos++
+    } else {
+        print("Invalid key press")
+    }
+
+    // && = and, both tests on either side of it must pass in order for overall test to pass
+    // || = or, either or both of the tests on either side of it must pass in order for overall test to pass
+
+    var characterHP : Int = 25
+    var characterLives : Int = 1
+    var isGameOver : Boolean = false
+
+    // isGameOver = true only if characterHP == 0 AND characterLives == 0, if either or both fail then skip {}
+    if (characterHP == 0 && characterLives == 0) {
+        isGameOver = true
+    }
+
+    // Inner if statement only executed if outer if statement test passess
+    if (characterHP == 0) {
+        // if character has some fruit, give them a chance to restore some health
+        if (characterLives == 0) {
+            isGameOver = true
+        }
+    }
+
+    // Can change if statement to if expression and store results in a variable
+    // Must provide an else clause as variable has to take on some value
+    var fruit : String = "big"
+    val healthRestored = if (fruit == "big") {
+        50                                      // healthRestored = 50
+    } else {
+        25                                      // healthRestored = 25
+    }
+
+    // same test as above but different syntax
+    val healthRestored = if (fruit == "big") 50 else 25
+
+// *************************************** When statements and expressions ***************************************
+    // Similar to switch statements in other languages
+    // Almost identical to if, else-if, else statement/expression but testing value of some variable in ()
+    // When statements/expressions must be exhaustive meaning must take into account all possible values. Usually
+    // provide an else clause to capture any other unconsidered values
+
+    var xPos : Int = 0
+    var yPos : Int = 0
+    var keyStroke : String = "left"
+
+    // Each of the cases is stating a possible value for keyStroke and the code to execute if keyStroke == that value
+    // This is the same as the first if statement that we looked at
+    when (keyStroke) {
+        "up" -> yPos++
+        "down" -> yPos--
+        "left" -> xPos--
+        "right" -> xPos++
+        else -> {
+            print("Keystroke not recognized")
+        }
+    }
+
+    // Test to see if characterHP == some value or is in some range (as specified by the in operator)
+    var characterHP : Int = 33
+    when (characterHP) {
+        0 -> print("Character is dead")
+        in 1..50 -> print("Character has low HP")
+        in 51..99 -> print("Character is healthy")
+        100 -> print("Character has full HP")
+        else -> print("Invalid HP value")
+    }
+
+    // Test to see if anyVar is of a specific type
+    var anyVar : Any = "Hello"
+    when (anyVar) {
+        is String -> print("anyVar is a String")
+        is Int, Double -> print("anyVar is a Number")
+        else -> print("anyVar is not a String or a Number")
+    }
+
+    // Can turn a when statement into a when expression. Each case returns a possible value to store in healAmount
+    var fruit : String = "small"
+    val healAmount = when (fruit) {
+        "big" -> 50
+        "small" -> 25
+        else -> {
+            print("Invalid fruit type")
+            0
+        }
+    }
+
+// *************************************** Checking for null value ***************************************
+    // There are a couple of ways to test if a variable is null or not, usually want to do this before using it
+
+    var nullable1 : String? = "Mammoth"
+
+    // Execute code in if statement if nullable1 is not null, otherwise, print("nullable1 = null")
+    if (nullable1 != null) {
+        nullable1 += " Interactive"
+    } else {
+        print("nullable1 = null")
+    }
+    nullable1 = null
+
+    // stringResult = left hand side if it is not null, otherwise = right hand side
+    val stringResult = nullable1 + " Interactive" ?: "Mammoth Interactive"
+
+// *************************************** While loops ***************************************
+    // Test condition in () at the beginning of each loop iteration and execute code in {} if true
+    // Loop until condition = false, at which point exit loop
+    // Kind of like executing the same if statement a bunch of times in a row
+    // If condition fails immediately, code in {} never gets executed
+    // Be careful, easy to get stuck in an infinite loop if condition in () is never false
+
+    var isGameOver : Boolean = false
+    var characterHP : Int = 5
+
+    // With each loop iteration, decrease HP by 1. Once HP == 0, isGameOver = true so next loop iteration, test fails
+    // and we exit the loop
+    while (isGameOver == false) {
+        characterHP--
+        if (characterHP == 0) {
+            isGameOver = true
+        }
+    }
+
+    // Good way to ensure that the loop only executes 5 times
+    var index : Int = 0
+    while(index < 5) {
+        // execute code here
+        index++
+    }
+
+    // do while is similar to while loop but execute code first then test for condition. This ensure that the loop code
+    // executes at least once
+    do {
+
+    } while (index > 10)
+
+// *************************************** For loops ***************************************
+    // Allow us finer control over how many times the loop will execute
+    // Best paired with ranges or control flow of some time as usually used to visit every member of a list or range
+    // Starts at the first member and ends at the last member. With each iteration, assign current value to constant
+    // specified in loop declaration
+
+    // With each iteration, i = 1, then 3, then 5, ... , then 9, as we are stepping by 2
+    for (i in 1..10 step 2) {
+        print(i)
+    }
+
+    var inventoryArray : Array<String> = arrayOf("clothes","food","matches","fishing rod")
+
+    // This loop visits every index of inventoryArray starting with the first and ending with the last. With each
+    // iteration, index takes on the current index of inventoryArray (0,1,2,...,4)
+    for (index in inventoryArray.indices) {
+        print(inventoryArray[index])
+    }
+
+    // Prints every member of inventoryArray
+    for (item in inventoryArray) {
+        print(item)
+    }
+
+// *************************************** Loop jumps ***************************************
+    // Continue statements ignore all other code in current loop iteration and jump right to next iteration
+    // Break statements break out of the current control flow (typically the loop) and ignore all other iterations
+    // Can specify which loop to break out of with loop labels
+
+    // Skips over every number in range that is divisible by 5
+    for (i in 1..100) {
+        if (i % 5 == 0) {
+            continue
+        }
+        print(i)
+    }
+
+    var inventoryArray : Array<String> = arrayOf("clothes","food","binoculars")
+    var hasFood : Boolean = false
+
+    // Exits loop once it reaches the member at index 1 and assigns hasFood = true
+    for (item in inventoryArray) {
+        if (item == "food") {
+            hasFood = true
+            break
+        }
+    }
+
+    // Here is a nested loop so for each iteration of the outer loop, the inner loop runs through all of its iterations
+    // Without the @label, the break statement would only break out of the inner loop
+    outerloop@ for (i in 1..10) {
+        innerloop@ for (i in 1..10) {
+            break@outerloop
+        }
+    }

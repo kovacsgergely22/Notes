@@ -1,0 +1,275 @@
+// ********************************* Intro to Classes, Objects, and Other Constructs *********************************
+// Classes (and other constructs) are a way to represent an entire object with state and behaviour. They are much more
+// powerful and complex than simple variables as variables are just used to hold a value
+// Classes use variables to define and maintain state and properties
+// Classes use functions and methods to define behaviours and manipulate variables
+// Classes are just the skeleton implementation of an object that define behaviours and properties. Objects are
+// instances of classes that can then maintain state and execute behaviours. Think of classes as a blueprints and
+// objects as an actual object built from the blueprint
+
+    // Topics covered:
+        // Intro: create a class and use constructors/initializers
+        // Body: add properties and behaviours and define which parts of code have access to them
+        // Inheritance: subclasses and superclasses
+        // Class-like constructs: interfaces, enumerations
+        // Advanced topics: various class types including nested, abstract, data, and sealed classes, generics, and more
+
+// FINAL GameCharacter, PlayerCharacter, GameObject, AND CharacterType IMPLEMENTATIONS AT THE BOTTOM
+
+// *************************************** Class syntax ***************************************
+// Class names are nouns like variables but are capitalized
+// Object names are lower case and are used like variables but are much more powerful
+// Classes are also reference types which means if we say objectA = objectB then the two are forever the same and
+// affecting one affects the other (different from variables as those are called value types and setting
+// variableA = variableB just sets their values at that point in time to be the same)
+// Defining a new class defines a new type
+// Classes are instantiated using a constructor which creates an object and usually sets up some of the
+// variables/properties of the object. Default blank constructors are provided if we don't specify a constructor
+
+    // These are instances of GameCharacter instantiated using the default or blank constructor
+    val character1 : GameCharacter = GameCharacter()
+
+    // character2 and character1 now refer to the same object so any changes made to either will be mimiced by the other
+    val character2 : GameCharacter = character1
+
+    // This instance uses a constructor that sets up the GameCharacter.name attribute
+    val character3 : GameCharacter = GameCharacter("Nimish")
+
+// *************************************** Further class initialization ***************************************
+// Can implement multiple different constructors to set up instances of a class with different variables initialized
+// Init blocks also perform other tasks and execute code in {} when new instance of class created
+
+    // Creates new instance of GameCharacter with character1.name = "Nimish"
+    val character1 : GameCharacter = GameCharacter("Nimish")
+    // Creates new instance of GameCharacter with character2.name = "Mammoth" and .arrayOf = ["clothes","fruit"]
+    val character2 : GameCharacter = GameCharacter("Mammoth", arrayOf("clothes","fruit"))
+
+// *************************************** Properties and Behaviours ***************************************
+// Global variables (often called fields in Java or instance variables) are used to represent attributes of an object
+// or maintain an objects current state
+// Methods are used to represent behaviours that an object may execute at some point, often used to mutate state
+// Access properties or methods but calling on objectName/instanceName.propertyName/methodName
+
+    val character1 : GameCharacter = GameCharacter("Mammoth") // new instance of GameCharacter
+    val char1Name : String = character1.name                  // char1Name takes on value of character1.name = "Mammoth"
+
+    val character2 : GameCharacter = GameCharacter("Rat", arrayOf("Fur","Bones"))
+    val char2Name : String = character2.name                    // fetching character2.name
+    val char2Inventory : Array<String> = character2.inventory   // fetching character2.inventory
+    character2.inventory = arrayOf("Fur","Bones","Teeth")   // changing character2.inventory to ["Fur","Bones","Teeth"]
+
+    character1.health = 89                          // changing character1.health to 89
+    character1.changeHealth(10)                     // calling changeHealth on character1 so character1.health = 10
+
+// *************************************** This keyword ***************************************
+// "this" refers to the current class's variable or method. Say we had 2 classes, ClassA and ClassB and they both had
+// an attribute called name. If we are in ClassA and it uses a new instance of ClassB called instanceB, we use
+// instanceB.name to refer to instanceB's name and this.name to refer to ClassA.name
+
+var name : String = "Katie"
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    var character1 : GameCharacter = GameCharacter("Arnold")
+    val char1Name = character1.name             // character1.name ("Arnold")
+    val mainName = this.name                    // MainActivity.name ("Katie")
+}
+
+// *************************************** Visibility modifiers ***************************************
+// Accessibility/visibility modifiers restrict which parts of your code have access to variables, functions, and classes
+// Generally we want to restrict access as much as possible to prevent unwanted changes within the code
+// Can omit them altogether but should get used to using them
+// private allows variable/method access only within the class declaration
+// protected allows variable/method access only within class and subclasses
+// internal allows variable/method access to all files, classes, etc. within the same package
+// public allows variable/method access everywhere in application
+// If no modifier specified, default value is public
+
+    val character1 : GameCharacter = GameCharacter("Mammoth")
+    character1.addHealth(20)
+    character1.decreaseHealth(40)
+    // Above, if we had declared addHealth() to be private, we could not access it here by calling on
+    // character1.addHealth(), but could still call this.addHealth() within GameCharacter class
+
+// *************************************** Getters and setters ***************************************
+// Getters provide a way to retrieve a variables current value
+// Setters provide a way to change a variables current value
+// All variables by default have an implicit getter and setter to retrieve and modify value
+// We can customize the getter and/or setter of a variable to customize get/set behaviour
+// Three main benefits:
+    // Can make variable read-only by changing setter to private
+    // Can restrict values variable can take on by changing setter implementation through backing fields
+    // Can make a variable a computed property by implementing custom getter AND setter. Computed properties hold no
+    // value of their own, their value is calculated at retrieval time based on other variable values dictated in getter
+// Old Java syntax would require us to create get and set functions for each variable to achieve the same effect
+
+    val newCharacter = GameCharacter("Harry")
+    newCharacter.health = 200                   // health drops down to 100 due to custom setter
+    val name = newCharacter.name
+    //newCharacter.name = "Larry"               // cannot do this as name is now read-only
+
+// *************************************** Inheritance ***************************************
+// Inheritance is one class inheriting all of another classes constructors, properties (variables) and behaviours
+// (methods)
+// The class inheriting is called the subclass and the class inherited from is called the superclass.
+// Once a class is declared a subclass of some superclass, it gets access to everything that is not private and can use
+// it without having to redeclare/reimplement everything
+// Subclass can also define its own properties and methods that the superclass does not have access to, as well as
+// override superclass method and variable implementations to implement different getters, setters, or default values,
+// or provide entirely different method implementation
+// "super" keyword is like "this" but for the superclass. If ClassA is a subclass of ClassB and they both have methods
+// named doSomething() and we are currently in ClassA, then this.doSomething() refers to ClassA's doSomething() and
+// super.doSomething() refers to ClassB's doSomething()
+
+    val newPlayerCharacter = PlayerCharacter("Generic Name")
+    val damage = newPlayerCharacter.attackDamage
+    newPlayerCharacter.changeHealth(50)      // subclass PlayerCharacter has same variables and methods as GameCharacter
+
+    val newGameCharacter = GameCharacter("Another Generic Name")
+    newGameCharacter.changeHealth(50)
+
+// *************************************** Interfaces ***************************************
+// Interfaces provide abstract methods and properties. They are there as a skeleton to provide methods and variables
+// that a class may later implement. The benefit over superclasses is that a subclass can inherit from only 1 superclass
+// but a class can implement as many interfaces as needs be
+// Interface properties are typically read only (implement just a getter) or are declared normally (never implemented)
+// We can, but generally don't, implement interface methods
+// If superclass implements an interface, subclass also gains access to interface methods and variables
+
+    val gameChar = GameCharacter("Name Here")
+    gameChar.xPosition = 5
+
+    val playerChar = PlayerCharacter("Some Name")
+    playerChar.xPosition = 10
+    playerChar.moveBackwards(4)
+
+// *************************************** Enumerations ***************************************
+// Enumerations are a way to define a new value type (different from class reference type)
+// We define a list of possible values that an enumeration type can take on by defining enumeration constants
+// We can also provide raw values associated with each enumeration type
+// Enumeration types also have a way to retrieve the constant as a string or a list of all the constants as strings
+
+// *************************************** Final GameCharacter Implementation ***************************************
+// Superclass
+
+open class GameCharacter internal constructor(_name : String) : GameObject {
+
+    internal var name : String = _name
+        private set
+    internal var inventory : Array<String> = arrayOf()
+    open internal var health : Int = 100
+        set(value) {
+            if (value > 100) field = 100
+            if (value < 0) field = 0
+        }
+
+    internal var weight : Int = 20
+    internal var isRunning : Boolean = false
+    internal var speed : Int
+        get() = if (weight > 50) 1
+                else 2
+        set(value) {
+            if (value > 1) isRunning = true
+            else isRunning = false
+        }
+
+    override var xPosition: Int = 0
+    override var yPosition: Int = 0
+    override var zPosition: Int = 0
+
+    val characterType : CharacterType = CharacterType.HUMAN
+
+    init {
+        print("new instance of GameCharacter created called $_name")
+        characterType.strength
+    }
+
+    internal constructor(_name: String, _inventory : Array<String>) : this(_name) {
+        inventory = _inventory
+    }
+
+    open internal fun changeHealth(healthChange : Int) {
+        this.health += healthChange
+    }
+
+    internal fun addHealth(healthChange : Int) {
+        changeHealth(healthChange)
+    }
+
+    internal fun decreaseHealth(healthChange : Int) {
+        changeHealth(-healthChange)
+    }
+
+    /*
+    fun getName() : String {
+        return this.name
+    }
+
+    fun setHealth(newHealth : Int) {
+        this.health = newHealth
+    }
+    */
+
+    override fun moveBackwards(byAmount: Int) {
+        xPosition += byAmount
+    }
+
+    override fun moveForwards(byAmount: Int) {
+        xPosition -= byAmount
+    }
+}
+
+// *************************************** Final PlayerCharacter Implementation ***************************************
+// Subclass of GameCharacter
+
+class PlayerCharacter(_name : String) : GameCharacter(_name) {
+
+    internal var attackDamage : Int = 5
+    override var health: Int = 200
+        set(value) {
+            if (value > 200) field = 200
+            if (value < 0) field = 0
+        }
+    var lives : Int = 3
+
+    internal fun increaseDamage(byAmount: Int) {
+        this.attackDamage += byAmount
+    }
+
+    override fun changeHealth(healthChange: Int) {
+        super.changeHealth(healthChange)
+        if (this.health <= 0) {
+            lives -= 1
+            this.health = 200
+        }
+    }
+}
+
+// *************************************** Final GameObject Implementation ***************************************
+// Interface
+
+interface GameObject {
+
+    val xPosition : Int
+        get() = 0
+    val yPosition : Int
+        get() = 0
+    val zPosition : Int
+        get() = 0
+
+    fun moveForwards(byAmount : Int) { }
+
+    fun moveBackwards(byAmount: Int) { }
+}
+
+// *************************************** Final CharacterType Implementation ***************************************
+// Enumeration
+
+enum class CharacterType(val strength : Int) {
+    HUMAN(5),
+    ELF(7),
+    DWARF(6),
+    ORC(4)
+}
