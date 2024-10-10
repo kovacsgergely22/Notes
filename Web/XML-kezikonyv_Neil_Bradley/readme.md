@@ -8,5 +8,9 @@
 * 1998-ban jelent meg
 * XML érzékeny a kis- és nagybetűkre
 
+## Jegyzetek a jegyzeteléshez
+* ~~1.md Bevezetés~~
+* 1.md Dokumentumjelölések (3.)
+
 ---
 [^1]: Neil Bradley: Az XML-kézikönyv, Szak kiadó, Bicske, 2000. (Az eredeti mű: The XML Companion, Second edition, Pearson, 2000.)
