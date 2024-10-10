@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "427d11a6-d48a-4d6d-9047-0c17dc46b773",
       "editorRootTopicKey": "427d11a6-d48a-4d6d-9047-0c17dc46b773",
-      "focusKey": "427d11a6-d48a-4d6d-9047-0c17dc46b773",
+      "focusKey": "c8381840-cb39-429b-9c73-cc9a3c21709b",
       "topics": [
         {
           "key": "cb2e3117-0a8a-4b8f-ad51-2ce9464df776",
@@ -81,7 +81,7 @@
             "45c50ce3-a2c0-436b-be0b-8ae2ec926430",
             "faef6d4e-a73a-44bc-8155-20c64c256a0a"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -225,7 +225,7 @@
             "dad9f01b-69a6-45a8-8111-73fbd9025bff",
             "b8891842-9e11-4c6e-a0ca-4e9a7b71c32b"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -904,7 +904,7 @@
             "91930836-1707-45ed-a6b4-7344cac65148",
             "de13f6f1-72bf-42a4-9764-40c8c68bfb41"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1328,7 +1328,7 @@
             "2fc6994e-d0bf-4e95-bce1-f816530bd63b",
             "fe85f820-b219-4b31-837d-39300fe1a5f0"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -2189,7 +2189,7 @@
         "viewMode": "MindMap",
         "readOnly": false,
         "allowUndo": true,
-        "layoutDir": 2,
+        "layoutDir": 0,
         "theme": {
           "name": "random-color-round",
           "randomColor": true,
