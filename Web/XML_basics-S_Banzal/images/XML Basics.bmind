@@ -277,7 +277,7 @@
         "viewMode": "MindMap",
         "readOnly": false,
         "allowUndo": true,
-        "layoutDir": 0,
+        "layoutDir": 2,
         "theme": {
           "name": "random-color-round",
           "randomColor": true,
