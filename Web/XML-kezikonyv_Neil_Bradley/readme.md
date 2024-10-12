@@ -4,6 +4,10 @@
 
 ![0](images/0.png)
 
+## Megjegyzések
+
+A könyv fejezetei felsorolásánál, a szögletes zárójelben lévő szám a könyv fejezetszámát tartalmazza. A tartalomjegyzék és a mindmap számozását a struktúra érzékeltetése miatt írtam át.
+
 ***XML (Extensible Markup Language - Kiterjesztett Jelölő Nyelv) a World Wide Web Consortium (W3C) által kifejlesztett megjelenítési és dokumentumtárolási formátum.***
 * 1998-ban jelent meg
 * XML érzékeny a kis- és nagybetűkre
