@@ -15,7 +15,8 @@ A könyv fejezetei felsorolásánál, a szögletes zárójelben lévő szám a k
 
 ## Jegyzetek a jegyzeteléshez
 * ~~1.md Bevezetés~~
-* 1.md Dokumentumjelölések (3.)
+* ~~1.md Dokumentumjelölések (3.)~~
+* 1.md Fizikai felépítés
 
 ---
 [^1]: Neil Bradley: Az XML-kézikönyv, Szak kiadó, Bicske, 2000. (Az eredeti mű: The XML Companion, Second edition, Pearson, 2000.)
