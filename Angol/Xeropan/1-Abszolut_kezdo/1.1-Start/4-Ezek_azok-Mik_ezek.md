@@ -8,7 +8,7 @@
 > * Megkérdezni, mi ez a tárgy: *What is this?*/ *What is that?*
 > * Bemutatunk valakit: *This is my brother, Paul.*
 
-these, those mutató névmások, főnév utánuk többes számban! [^2]
+these, those mutató névmások, főnév utánuk **többes számban**! [^2]
 
 * **these:** ezek
 * **those:** azok
