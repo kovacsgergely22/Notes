@@ -13,7 +13,7 @@ these, those mutató névmások, főnév utánuk **többes számban**! [^2]
 * **these:** ezek
 * **those:** azok
 
-* *többes szám* jele általában: **-s** -> Those dogs are cute
+* **többes szám** jele általában: **-s** -> Those dogs are cute
 * **-s, -sh, -ch, -x** végű szavak -> többes szám jele **-es** ->
   * glass -> glasses, dish -> dishes, -> church -> churches, box-> boxes
 * **-y** végű: **ies** ->
