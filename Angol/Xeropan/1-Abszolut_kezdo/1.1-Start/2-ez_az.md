@@ -9,4 +9,4 @@
 * Bemutatunk valakit: *This is my brother, Paul.*
 
 ---
-[^1]: Start lecke, 3. fejezet - Ez, az éa az a másik dolog
+[^1]: Abszolút kezdő, Start lecke, 3. fejezet - Ez, az éa az a másik dolog

@@ -13,4 +13,4 @@
     * **ige (be) és főnév egyes számú alakjával (megszámlálhatatlan főneveknek nincs többes száma)**: *Is there any furniture in the room?*
 
 ---
-[^1]: 12.fejezet - Mennyit tudsz?
+[^1]: Abszolút kezdő, Start, 12. fejezet - Mennyit tudsz?

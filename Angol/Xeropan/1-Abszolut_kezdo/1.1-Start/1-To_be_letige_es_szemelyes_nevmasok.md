@@ -27,4 +27,4 @@
     * Are you a student? -> Yes, I am
 
 ---
-[^1]: Start lecke, 1.fejezet - Találkozz Max professzorral, 2. fejezet - Találkozz a testvéreimmel
+[^1]: Abszolút kezdő, Start lecke, 1.fejezet - Találkozz Max professzorral, 2. fejezet - Találkozz a testvéreimmel

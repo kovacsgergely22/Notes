@@ -20,4 +20,4 @@ There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
 * Nem csak fn-ek előtt állhatnak, **önállóan is**: *There isn't any water in the glass, but there is some in the bottle.*
 
 ---
-[^1]: 10.fejezet - Nincs határa a tanulásnak, 11. fejezet - Tanulj új szavakat!
+[^1]: Abszolút kezdő, Start, 10. fejezet - Nincs határa a tanulásnak, 11. fejezet - Tanulj új szavakat!
