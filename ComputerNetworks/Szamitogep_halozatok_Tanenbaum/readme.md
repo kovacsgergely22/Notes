@@ -36,6 +36,9 @@ A társszerző, David J. Wetherall által készített videók elérhetők a link
 * 5.4, 5.5, 5.6.4, 5.6.5, 5.6.6, 5.6.7, 5.6.8, 5.6.9, 5.7 hiányzik
 * 6.md következik
 * 6.md videók
+* ~~7.md DNS~~
+* 7.md Elektronikus levél
+* 7.md videók
 
 
 ----

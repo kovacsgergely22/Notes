@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
       "editorRootTopicKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
-      "focusKey": "f25ccd86-c55b-4ffc-bff1-14c46617823f",
+      "focusKey": "cc00cc86-7d1f-4d50-89c7-8f9017e2d981",
       "topics": [
         {
           "key": "6fac07cc-fe95-47f9-a67a-7c8fc7eab78d",
@@ -324,7 +324,7 @@
             "a19781cc-82f3-4cd4-9c61-95858b716cae",
             "2df11375-3d6e-4fee-b85b-a43cd492c740"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
