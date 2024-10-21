@@ -23,4 +23,4 @@ these, those mutató névmások, főnév utánuk **többes számban**! [^2]
 
 ---
 [^1]: Abszolút kezdő, Start lecke, 3. fejezet - Ez, az éa az a másik dolog
-[^2]: Abszolút kezdő, Start, 6. fejezet - Mik ezek?
+[^2]: Abszolút kezdő, Start lecke, 6. fejezet - Mik ezek?
