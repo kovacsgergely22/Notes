@@ -4,6 +4,10 @@
 
 ![0](images/0.png)
 
+## Tartalomjegyzék
+
+1. [Az XML leírása](Web/XML-kezikonyv_Neil_Bradley/1.md)
+
 
 ***XML (Extensible Markup Language - Kiterjesztett Jelölő Nyelv) a World Wide Web Consortium (W3C) által kifejlesztett megjelenítési és dokumentumtárolási formátum.***
 * 1998-ban jelent meg
