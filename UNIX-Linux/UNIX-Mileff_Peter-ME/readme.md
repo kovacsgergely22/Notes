@@ -6,6 +6,10 @@
 
 ![0_all](images/0_all.png)
 
+---
+
+## Fejezetek
+
 1. [Bevezetés](1.md)
 2. [A Linux működésének rövid áttekintése](2.md)
 3. [UNIX fájlrendszer és alapfogalmai](3.md)
@@ -18,6 +22,8 @@
 10. [Folyamatok](10.md)
 
 [Könyv elérhetősége: ME oldalán](https://users.iit.uni-miskolc.hu/~mileff/linux/Unix_Linux_rendszergazda_v0.95.pdf)
+
+---
 
 ## Jegyzetek
 
