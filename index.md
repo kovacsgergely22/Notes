@@ -6,7 +6,7 @@ Az összes jegyzetem, minden témában.
 
 * [Számítógép hálózatok](ComputerNetworks/readme.md)
 * [UNIX/Linux](UNIX-Linux/readme.md)
-* [XML](web/xml.md)
+* [XML](Web/xml.md)
 
 ## Hasznos linkek
 
