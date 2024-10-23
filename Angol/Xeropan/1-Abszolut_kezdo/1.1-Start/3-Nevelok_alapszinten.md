@@ -14,4 +14,4 @@ Az **a/an** (egy) és a **the** szavak névelők, névszókat előznek meg.
   * kezdőbetűtől független, egyes és többes számban, **megszámlálható és megszámlálhatatlan** fn-kel együtt
 
 ---
-[^1]: Abszolút kezdő, Start, 5. fejezet - Nézd, mim van!
+[^1]: Abszolút kezdő, Start lecke, 5. fejezet - Nézd, mim van!
