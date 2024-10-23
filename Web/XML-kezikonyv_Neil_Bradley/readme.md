@@ -2,9 +2,9 @@
 
 ![XML-kézikönyv](images/XML-kezikonyv.jpg)
 
-![0](images/0.png)
-
 ## Tartalomjegyzék
+
+![0](images/0.png)
 
 1. [Az XML leírása](Web/XML-kezikonyv_Neil_Bradley/1.md)
 
