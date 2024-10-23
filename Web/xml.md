@@ -1,6 +1,6 @@
 # XML témakörök
 
-[Tartalomjegyzék](../index.md)
+[Jegyzetek](../index.md)
 
 ## Könyvek, online kurzusok jegyzetei a témában
 

@@ -1,5 +1,5 @@
 # Számítógép hálózatok (Computer Networks)
 
-[Tartalomjegyzék](../index.md)
+[Jegyzetek](../index.md)
 
 [Számítógép hálózatok - Tanenbaum](Szamitogep_halozatok_Tanenbaum/readme.md)
