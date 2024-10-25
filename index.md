@@ -16,4 +16,6 @@ Az összes jegyzetem, minden témában.
 
 [HTML5 karakterek](https://dev.w3.org/html5/spec-LC/named-character-references.html)
 
+[W3Schools](https://www.w3schools.com/)
+
 [Code beautify](https://codebeautify.org/)
