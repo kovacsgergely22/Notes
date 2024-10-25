@@ -18,4 +18,6 @@ Az összes jegyzetem, minden témában.
 
 [W3Schools](https://www.w3schools.com/)
 
+[developer.mozilla.org](https://developer.mozilla.org/en-US/)
+
 [Code beautify](https://codebeautify.org/)
