@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "603e756e-5775-4670-ab60-67c47bc430ce",
       "editorRootTopicKey": "603e756e-5775-4670-ab60-67c47bc430ce",
-      "focusKey": "b91f1a87-0bcb-478e-9ec5-16becf72b91b",
+      "focusKey": "f20b1b69-3ad4-4efe-b2b1-71d12471fa5a",
       "topics": [
         {
           "key": "a7808c96-19b2-4d10-9368-35b3c6c625b5",
@@ -29,7 +29,7 @@
             "c640ca13-d1b0-40ca-ba8e-9577dfb50607",
             "99942b44-0b49-4279-8a08-2e87cc40a110"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -1457,7 +1457,7 @@
             "acf2e09d-dd12-4290-bf18-bcdb97fbabb4",
             "5542f467-8d44-4b0a-994a-e11f51ee8609"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
