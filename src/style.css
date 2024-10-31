@@ -64,7 +64,7 @@ main {
 
 #sidebar {
     position: sticky;
-    top: 125px;
+    top: 15%;
     background-color:aliceblue;
     float: inline-start;
     width: 30%;
