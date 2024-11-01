@@ -1,5 +1,7 @@
 # A to be létige és a személyes névmások I-II. [^1]
 
+[Előző](../readme.md)
+
 ![1.1](images/1.1.png)
 
 * A személyes névmások mutatják meg, ki cselekszik a mondatban
@@ -25,6 +27,8 @@
   * You are'nt a student -> Are you a student?
   * **Válasz**: nem kell egész mondatot ismételni, csak személyes névmás és igealak
     * Are you a student? -> Yes, I am
+
+[Következő](2-ez_az.md)
 
 ---
 [^1]: Abszolút kezdő, Start lecke, 1.fejezet - Találkozz Max professzorral, 2. fejezet - Találkozz a testvéreimmel

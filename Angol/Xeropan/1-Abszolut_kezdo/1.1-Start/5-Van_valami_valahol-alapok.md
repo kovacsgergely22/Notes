@@ -1,5 +1,7 @@
 # Van valami valahol - Alapok I-II [^1]
 
+[Előző](4-Ezek_azok-Mik_ezek.md)
+
 ![1.1](images/1.1.png)
 
 There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
@@ -18,6 +20,8 @@ There is/there are szerkezettel -> **valaminek a létezése**, van vagy nincs
 * ***Any***: bármennyi, semennyi
   * **kérdésekben és tagadó mondatokban**: *Is there any water in the fridge?*, *No, there is'nt any water in the fridge.*
 * Nem csak fn-ek előtt állhatnak, **önállóan is**: *There isn't any water in the glass, but there is some in the bottle.*
+
+[Következő](6-Megszamlalhato_megszamlalhatatlan-alapok.md)
 
 ---
 [^1]: Abszolút kezdő, Start, 10. fejezet - Nincs határa a tanulásnak, 11. fejezet - Tanulj új szavakat!

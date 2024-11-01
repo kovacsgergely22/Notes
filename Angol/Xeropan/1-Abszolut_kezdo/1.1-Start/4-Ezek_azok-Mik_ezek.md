@@ -1,5 +1,7 @@
 # Ezek/azok - Mik ezek? 
 
+[Előző](3-Nevelok_alapszinten.md)
+
 ![1.1](images/1.1.png)
 
 > * **this:** [^1] közel mutat
@@ -20,6 +22,8 @@ these, those mutató névmások, főnév utánuk **többes számban**! [^2]
   * *family -> families, lady -> ladies*
 * Ha teljesen egyértelmű, mire mutat a mutató névmás, nem kötelező kitenni a főnevet mögé ->
   * *These books are boring, but those are interesting.*
+
+[Következő](5-Van_valami_valahol-alapok.md)
 
 ---
 [^1]: Abszolút kezdő, Start lecke, 3. fejezet - Ez, az éa az a másik dolog

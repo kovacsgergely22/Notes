@@ -4,7 +4,7 @@
 
 ![]()
 
-[Következő](../2.2-Csalad/1.md)
+[Következő]()
 
 ---
 [^1]: 
