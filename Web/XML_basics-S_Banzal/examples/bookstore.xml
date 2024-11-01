@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book category="COOKING">
+        <title lang="en">Indian Food</title>
+        <author>Swati Jain</author>
+        <year>2011</year>
+        <price>200.00</price>
+    </book>
+    <book category="CHILDREN">
+        <title lang="en">Dolls</title>
+        <author>J K Jain</author>
+        <year>2010</year>
+        <price>29.95</price>
+    </book>
+    <book category="WEB">
+        <title lang="en">Learning XML</title>
+        <author>G.Ram</author>
+        <year>2009</year>
+        <price>13.95</price>
+    </book>
+</bookstore>
