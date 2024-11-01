@@ -1,6 +1,7 @@
 # Xeropan - Angol Jegyzeteim
 
-
+1. [Abszolút kezdő](1-Abszolut_kezdo/readme.md)
+2. [Minimumszint](2-Minimumszint/readme.md)
 
 ## Jegyzetek
 
