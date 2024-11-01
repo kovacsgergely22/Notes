@@ -1,4 +1,8 @@
-# Jegyzetek
+# Xeropan - Angol Jegyzeteim
+
+
+
+## Jegyzetek
 
 * ~~Képek: 1.1, elkészítés, beillesztés~~
 * ~~Megszámlálható, megszámlálhatatlan - alapok következik -> 6~~
@@ -7,5 +11,5 @@
 * ~~1.3.8. Összevont alakok~~
 * ~~1.3.9. Birtoklás kifejezése az -s végződéssel~~
 * ~~1.3.10. Birtoklás kifejezése have got szerkezettel~~
-* 2.Minimumszint következik
-* Lábjegyzetben, vagy valamilyen információban beírni, hogy a Xeropanban melyik lecke
+* ~~2.Minimumszint következik~~
+* ~~Lábjegyzetben, vagy valamilyen információban beírni, hogy a Xeropanban melyik lecke~~
