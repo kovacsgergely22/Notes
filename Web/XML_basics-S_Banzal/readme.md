@@ -11,7 +11,7 @@
 
 ## Feladatok:
 
-[] 1.md mindmapjának elkészítése
+[x] 1.md mindmapjának elkészítése
 [] 2.md fájl létrehozása, előkészítése
 
 ---

@@ -10,20 +10,20 @@
    5. [Van valami, valahol](1.1-Start/5-Van_valami_valahol-alapok.md)
    6. [Megszámlálható, megszámlálhatatlan](1.1-Start/6-Megszamlalhato_megszamlalhatatlan-alapok.md)
 2. Első lépések
-   1. [1](1.2-Elso_lepesek/1.md)
-   2. [2](1.2-Elso_lepesek/2.md)
-   3. [3](1.2-Elso_lepesek/3.md)
-   4. [4](1.2-Elso_lepesek/4.md)
+   1. [Egyszerű jelen idő - alapok](1.2-Elso_lepesek/1.md)
+   2. [Nemzetek és nyelvek](1.2-Elso_lepesek/2.md)
+   3. [Megkérdezni és megmodani az időt](1.2-Elso_lepesek/3.md)
+   4. [A gyakoriságot kifejező határozók helye a mondatban](1.2-Elso_lepesek/4.md)
 3. Ismerkedés
-   1. [1](1.3-Ismerkedes/1.md)
-   2. [2](1.3-Ismerkedes/2.md)
-   3. [3](1.3-Ismerkedes/3.md)
-   4. [4](1.3-Ismerkedes/4.md)
-   5. [5](1.3-Ismerkedes/5.md)
-   6. [6](1.3-Ismerkedes/6.md)
-   7. [7](1.3-Ismerkedes/7.md)
-   8. [8](1.3-Ismerkedes/8.md)
-   9. [9-10](1.3-Ismerkedes/9-10.md)
+   1. [Kérdőszavak I.](1.3-Ismerkedes/1.md)
+   2. [Felszólító mód](1.3-Ismerkedes/2.md)
+   3. [A like ige és szinonímái](1.3-Ismerkedes/3.md)
+   4. [Szórend - alapok](1.3-Ismerkedes/4.md)
+   5. [Rövid válaszok](1.3-Ismerkedes/5.md)
+   6. [Számok - alapok](1.3-Ismerkedes/6.md)
+   7. [Egyszerű jelen idő - állító mondatok](1.3-Ismerkedes/7.md)
+   8. [Összevont alakok](1.3-Ismerkedes/8.md)
+   9. [Birtoklás kifejezése az -s és a have got végződéssel](1.3-Ismerkedes/9-10.md)
 
 ## Jelölések
 
