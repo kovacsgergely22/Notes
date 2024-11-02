@@ -1,6 +1,9 @@
 # 2. Minimumszint leckecsoport nyelvtani leckéi
 
-![2all](images/2all.png)
+![2](images/2.png)
+
+![2-1](images/2-1.png)
+![2-2](images/2-2.png)
 
 1. Utazás
    1. [Birtoklás kifejezése az of elöljárószóval](2.1-Utazas/1.md)

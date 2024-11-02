@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
       "editorRootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
-      "focusKey": "4430c301-e99e-42e5-b27a-e907832872a8",
+      "focusKey": "29c2c97b-093f-4dd0-a289-f02de0e1ec3d",
       "topics": [
         {
           "key": "1538df52-0003-431e-a359-b28398d50223",
@@ -45,7 +45,7 @@
             "de1c9836-008d-49e8-a54b-fcd7d4fdf78e",
             "c6c9747f-e4f0-49f6-9708-2b5259a7ca51"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -171,7 +171,7 @@
             "62d02b90-b96f-4426-9953-8bd67f7e30f1",
             "5680cb98-e0ea-49f4-b232-5336fb0f4584"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -316,7 +316,7 @@
             "03cede3b-2282-4bc4-b000-29b0d5948971",
             "e9055c3b-5288-41ba-b4a9-c3d3711a002d"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -363,7 +363,7 @@
             "abfccc49-4fa7-4dee-b7a0-62b0ca2a5e8b",
             "d2e6fa0c-117a-4413-98f9-d387e6a27e7e"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -408,7 +408,7 @@
             "d6ffa9ce-3929-4cd1-b469-39e45abec8ac",
             "29c2c97b-093f-4dd0-a289-f02de0e1ec3d"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -836,7 +836,7 @@
             "f9f68701-ff05-425f-964e-a25d8cd86ac7",
             "4d1028bb-fc34-41ad-8232-94561503cbd9"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
