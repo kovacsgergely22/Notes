@@ -14,10 +14,5 @@
 - [x] 1.md mindmapjának elkészítése
 - [ ] 2.md fájl létrehozása, előkészítése
 
-## Teszt
-
-term
-: definition
-
 ---
 [^1]: Shashi Banzal: XML Basics, Mercury Learning and Information, 2020.
