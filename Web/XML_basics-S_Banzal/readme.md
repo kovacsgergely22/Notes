@@ -1,6 +1,6 @@
 # Shashi Banzal: XML Basics jegyzetek [^1]
 
-![xml_basics](images/xml_basics.png)
+![xml_basics](images/xml_basics.jpg)
 
 ![0](images/0.png)
 
