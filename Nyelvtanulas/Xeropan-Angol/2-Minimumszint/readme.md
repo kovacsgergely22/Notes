@@ -2,8 +2,6 @@
 
 ![2all](images/2all.png)
 
-![2](images/2.png)
-
 1. Utazás
    1. [Birtoklás kifejezése az of elöljárószóval](2.1-Utazas/1.md)
    2. [Képesség kifejezése a can segédigével](2.1-Utazas/2.md)
