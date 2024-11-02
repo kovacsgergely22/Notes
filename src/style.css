@@ -108,7 +108,8 @@ main {
 
 .content {
     float: inline-end;
-    width: 65%;
+    /* width: 65%; */
+    width: 100%;
     text-align: justify;
     border-radius: 10px;
     margin: 2px;

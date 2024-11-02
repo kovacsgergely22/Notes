@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+    <ident>3348498</ident>
+    <name>
+        <lastname>Peterson</lastname>
+        <firstname>Sam</firstname>
+        <title>Dr.</title>
+    </name>
+    <phonedetails>
+        <extension>8221</extension>
+        <companyprefix>700</companyprefix>
+        <regionprefix>1</regionprefix>
+        <intprefix>+353</intprefix>
+    </phonedetails>
+    <department>
+        <title>Software Development</title>
+        <depid>8</depid>
+    </department>
+    <location>
+        <building>Aston Quay</building>
+        <room>A142</room>
+    </location>
+</employee>
