@@ -2,6 +2,7 @@
 
 1. [Abszolút kezdő](1-Abszolut_kezdo/readme.md)
 2. [Minimumszint](2-Minimumszint/readme.md)
+3. [Alapozó](3-Alapozo/readme.md)
 
 ## Jegyzetek
 
