@@ -1,0 +1,3 @@
+# Mesterséges intelligencia alapjai - ME
+
+## 
