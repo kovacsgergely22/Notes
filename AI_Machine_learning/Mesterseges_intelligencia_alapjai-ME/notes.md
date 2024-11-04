@@ -100,18 +100,55 @@
     * Pragmatikus
     * Intencionális
 10. **Korlátozás kielégítés**
-  * 
+  * Ilyen feladat a benne szereplő változók értékeit korlátozza (pl. 8 vezér probléma)
+    * értékek felsorolásával
+    * explicit módon,
+    * kifejezéssel implicit módon
+  * Változók által felvehető értékek száma véges
+  * megoldás -> változók olyan értékhalmaza, mely kielégíti az összes korlátozást 
+  * Megoldó módszerek:
+    * lehetőségtér állapotait tartalmazó fagráf "mélységben először" technikával bejárása
+    * korlátozás propagáló, megoldást biztosan nem adó pontok kizárásával
 11. **Cselekvési tervek generálása**
-  * 
+  * Célirányos tevékenységsorozat generálása feladat megoldására
+  * Megoldási módszerek:
+    * keresés -> nagy elágazási tényező
+    * szituációkakulus -> elsőrendű logika módszerével
+  * Cselekvési terv a két módszer együttes alkalmazásával
+  * Végeredmény -> végrehajtható cselekvésegyüttes, megadott korlátokat kielégítő új állapotba visz át
 12. **Szakértőrendszerek**
-  * 
+  * Olyan eszköz, amely 
+    * problémaspecifikus ismeret megértésére képes
+    * és intelligensen használja a tématerület ismeretanyagát egy tevékenység különböző megvalósítási útjainak felvezetéséhez.
+  * Technikák alkalmazása:
+    * ismeretátadás technikái
+    * analitikus, elemző eszközök ismeret kiértékelésére
+    * tanulási technikák
+  * Heurisztikus magyarázat
+  * Felhasználókkal interakció: természetes nyelven és megfelelő módon
+  * bizonytalanság kezelése
+  * mérlegelés
+  * indokol
+  * alapja: tudásbázis + következtetési mechanizmus
+  * előnyök:
+    * emberi hibák minimalizálása
+    * idő költség megtakarítása
+    * tudás megőrzése és megosztása
+  * NAVEX, POMME, DENDRAL, DECGUIDE, GURU, MYCIN, stb.
+  * DENDRAL -> hipotézis felállítása egy vegyület lehetséges molekuláris felépítésére
+    * Szerkezetgeneráló rész
+    * Spektrumjósló
+    * Szerkezetjósló
 
 ***Hol találkozhatunk a mesterséges intelligenciával?***
 * E-kereskedelem
   * Személyre szabott vásárlás
   * Mesterséges intelligencia alapú asszisztensek
-  * Csalásmegelőzés
+  * Csalásmegelőzés -> hitelkártyacsalás megelőzése használati minták alapján
 * Önvezető járművek
 * Spam szűrő
 * Arcfelismerés
+  * Eszközök arcfelismerési technikák
+  * Megfigyelőkamerák képei alapján azonosítás
 * Robotika 
+  * ipari robotok, robotporszívó, stb.
