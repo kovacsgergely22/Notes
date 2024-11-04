@@ -38,8 +38,8 @@
 * Kritikák
 
 ***A mesterséges intelligencia alkalmazási területei***
-* **Logikai játékok** (logical games)
-* **Tételbizonyítás**
+1. **Logikai játékok** (logical games)
+2. **Tételbizonyítás**
   * Matematikai tételek bizonyítása az alapaxiómákból kiindulva
   * **Rezolúció:** lássuk be, hogy
     * a tényekből, 
@@ -50,3 +50,68 @@
     * **logika** (kiinduló ismeretek, tények és szabályok) megadása
     * **vezérlés** (következtetés, bizonyítás menetének) módszere
     * Konkrét alkalmazások: QA1, QA2, QA3 programnyelvek, QA4 procedurális reprezentáció is
+3. **Automatikus programozás**
+  * Szoftverkészítés automatizálása -> elég feladatot specifikálni, megoldás algoritmusa és programja automatikusan készül el.
+4. **Szimbolikus számítás**
+  * Matematikai levezetések, algebrai manipulációk, deriválás stb. azonosságok alkalmazása adott feladatok megoldására
+  * szimbolikus algebrai szoftverek: MACSYMA, REDUCE, CAMAL, LAM, ALTRAN, FORMAC, SYMBOL, MATHEMATICA
+  * MATHEMATICA:
+    * numerikus és szimbolikus számítások
+    * automatikus alapvető egyszerűsítések
+    * összetett kifejezések legegyszerűbb alakra hozása
+5. **Gépi látás, képfeldolgozás**
+  * mesterséges látás
+  * adott kétdimenziós bittérkép -> kép leírása (alakzatok, méretek, színek, helyek paramétereivel)
+  * emberi látás modellezése
+  * **elektronikus recehártya** -> megkönnyíti mesterséges neurális hálók bemenő jeleinek előállítását
+  * input: kétdimenziós bitmap fálj -> output: felismert objektumok és térbeli viszonyuk, fizikai jellemzőik
+  * Képfeldolgozás lépései:
+    * élek detektálása
+    * mélység meghatározása
+    * alak meghatározása az árnyékoltságból
+    * vonalak címkézése
+    * objektum beazonosítás, helyzet meghatározás
+6. **Robotika**
+  * Mit értünk alatta:
+    * önálló tevékenységre képes
+    * mozgásra képes
+    * többnyire nyílt kinematikai láncú gép
+    * a környezetével interakcióban van 
+    * ismétlődő, az ember számára fáradságos és veszélyes munkát végez
+  * cél -> ember helyettesítése
+  * gépi intelligencia hasznosíthatósága és veszélyessége megnő
+7. **Beszédfelismerés**
+  * cél: emberi beszéd szöveges formára alakítása
+  * szegmentálás, szavakra bontás -> gond: a beszéd szavai egybefolynak
+  * fonémák és szavak leírására használt betűk között nincs egyértelmű megfeleltetés
+8. **A hangjel feldolgozása**
+  * cél: az információ csökkentése és a jellemzők kiemelése
+  * Lépések:
+    * mintavételezés, kvantálás
+    * jellemzők kinyerése, keretekben, azonos időintervallumokban
+    * vektorkvantálás: a keretek jellemzővektorainak a jellemzők hiperterének régióihoz rendelése
+    * **beszédfelismerés** 
+    * **beszélőfelismerés**
+    * **statisztikai, valószínűségi adatok** felhasználása -> szavak egyértelmű felismeréséhez
+9. **Számítógépes fordítás**
+  * Értelmezés 4 szintje:
+    * Szintaktikai
+    * Szemantikai
+    * Pragmatikus
+    * Intencionális
+10. **Korlátozás kielégítés**
+  * 
+11. **Cselekvési tervek generálása**
+  * 
+12. **Szakértőrendszerek**
+  * 
+
+***Hol találkozhatunk a mesterséges intelligenciával?***
+* E-kereskedelem
+  * Személyre szabott vásárlás
+  * Mesterséges intelligencia alapú asszisztensek
+  * Csalásmegelőzés
+* Önvezető járművek
+* Spam szűrő
+* Arcfelismerés
+* Robotika 
