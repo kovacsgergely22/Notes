@@ -42,10 +42,10 @@
 2. **Tételbizonyítás**
   * Matematikai tételek bizonyítása az alapaxiómákból kiindulva
   * **Rezolúció:** lássuk be, hogy
-    * a tényekből, 
-    * szabályállításokból és a 
-    * bizonyítandó állítás negáltjából álló halmaz kielégíthetetlen, ellentmondásos
-    * Ha sikerül -> a bizonyítandó állítás csak igaz lehet
+    - a tényekből, 
+    - szabályállításokból és a 
+    - bizonyítandó állítás negáltjából álló halmaz kielégíthetetlen, ellentmondásos
+    - Ha sikerül -> a bizonyítandó állítás csak igaz lehet
   * **Tételbizonyítók** esetében (szemben a programozási nyelvekkel) a **felhasználó feladata:**
     * **logika** (kiinduló ismeretek, tények és szabályok) megadása
     * **vezérlés** (következtetés, bizonyítás menetének) módszere
