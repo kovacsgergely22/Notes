@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CLIENTS [
+    <!ENTITY ninthFloorAdress "2345 Broadway St Floor 9">
+    <!ENTITY eightFloorAdress "2345 Broadway St Floor 8">
+    <!ENTITY seventhFloorAdress "2345 Broadway St Floor 7">
+]>
+<CLIENTS>
+    <CLIENT>
+        <NAME>Fred Jenkins</NAME>
+        <ADRESS>&ninthFloorAdress;</ADRESS>
+        <PHONE>x345</PHONE>
+    </CLIENT>
+    <CLIENT>
+        <NAME>Ravi Gupta</NAME>
+        <ADRESS>&ninthFloorAdress;</ADRESS>
+        <PHONE>x111</PHONE>
+    </CLIENT>
+    <CLIENT>
+        <NAME>Natalia Kinski</NAME>
+        <ADRESS>&ninthFloorAdress;</ADRESS>
+        <PHONE>x346</PHONE>
+    </CLIENT>
+    <CLIENT>
+        <NAME>Mary Smith</NAME>
+        <ADRESS>&seventhFloorAdress;</ADRESS>
+        <PHONE>x289</PHONE>
+    </CLIENT>
+    <CLIENT>
+        <NAME>Kristin Mancuso</NAME>
+        <ADRESS>&eightFloorAdress;</ADRESS>
+        <PHONE>x945</PHONE>
+    </CLIENT>
+</CLIENTS>
