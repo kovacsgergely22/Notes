@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE tutorials [
+    <!ELEMENT tutorials (tutorial)+>
+    <!ELEMENT tutorial (name, url)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+    <!ATTLIST tutorials> <!--type CDATA #REQUIRED-->
+]>
+<tutorials>
+    <tutorial>
+        <name>XML Tutorial</name>
+        <url>http://www.abc.com/xml/tutorial</url>
+    </tutorial>
+    <tutorial>
+        <name>HTML Tutorial</name>
+        <url>http://www.abc.com/html/tutorial</url>
+    </tutorial>
+</tutorials>

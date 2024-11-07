@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="fragment_style.css" type="text/css"?>
+<quote>
+    <title>
+        The quick brown fox jumps over the lazy dog.
+    </title>
+    <comment>
+        This quote has <property>all the alphabets</property> of the English language.
+    </comment>
+</quote>

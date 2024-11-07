@@ -1,0 +1,14 @@
+property {
+  display: inline; 
+  font-style: italic; 
+  color: rgb(000,000,128);
+}
+
+quote, title, comment {
+    display: block;
+    margin: 0,5em;
+}
+
+title {
+    font-size: 1.5em;
+}
