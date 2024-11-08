@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -108,7 +107,7 @@ main {
 
 .content {
     float: inline-end;
-    /* width: 65%; */
+    max-width: 1200px;
     width: 100%;
     text-align: justify;
     border-radius: 10px;
@@ -120,8 +119,8 @@ footer {
     float:end;
     text-align: center;
     width: 100%;
-    border-radius: 0px;
 }
+
 footer h5 {
     background-color: lightgrey;
     margin: 10px;
@@ -131,8 +130,8 @@ footer h5 {
 
 footer ul {
     list-style-type: none;
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
     overflow: hidden;
 }
 
