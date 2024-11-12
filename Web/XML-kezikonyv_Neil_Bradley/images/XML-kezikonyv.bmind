@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "427d11a6-d48a-4d6d-9047-0c17dc46b773",
       "editorRootTopicKey": "427d11a6-d48a-4d6d-9047-0c17dc46b773",
-      "focusKey": "6f009d0d-a8ba-43ac-9299-31fee2d76084",
+      "focusKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
       "topics": [
         {
           "key": "cb2e3117-0a8a-4b8f-ad51-2ce9464df776",
@@ -180,13 +180,46 @@
         {
           "key": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
           "parentKey": "6f009d0d-a8ba-43ac-9299-31fee2d76084",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "018de250-dcfb-41cb-9b22-3d9b64848503",
+            "a20d3ba1-ceed-42e1-8d7a-0921744fc5fc",
+            "359860fd-8f65-4486-9656-e3b613a92f10",
+            "3cdebb40-f13a-4965-adb6-b7c6f0821d6a",
+            "f573ffe9-e306-469c-bf02-cfaea68b8af2",
+            "23d22a4d-fd1b-481f-afb1-c89d341c3e3e"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
               "data": "1.3.2. Egyedmeghatározás"
+            }
+          ]
+        },
+        {
+          "key": "4143e36c-950c-4372-8acb-905b2f6bbdbc",
+          "parentKey": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.3.4. Szöveg"
+            }
+          ]
+        },
+        {
+          "key": "018de250-dcfb-41cb-9b22-3d9b64848503",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.1. Belső szöveg egyedek"
             }
           ]
         },
@@ -200,6 +233,19 @@
             {
               "type": "CONTENT",
               "data": "3.4.9. DTD-kezelők"
+            }
+          ]
+        },
+        {
+          "key": "153a8673-7b2c-45fe-9d21-14b5f406bd5e",
+          "parentKey": "e11530d5-43dc-4942-9739-fecb81ace23c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.8.2. Külső DTD feldolgozása"
             }
           ]
         },
@@ -231,6 +277,19 @@
             {
               "type": "CONTENT",
               "data": "4. Kapcsolódó szabványok"
+            }
+          ]
+        },
+        {
+          "key": "60370e82-06bd-4ef3-9919-dcbdcbcb5717",
+          "parentKey": "bfe292a5-ec6c-4249-932d-63b7ece4b9cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.4.3. Paraméter egyedre való hivatkozások"
             }
           ]
         },
@@ -270,6 +329,32 @@
             {
               "type": "CONTENT",
               "data": "4.3.7. A HTML és az XML vegyes használata"
+            }
+          ]
+        },
+        {
+          "key": "ecf9c7a4-5c59-4454-ac10-302977a6b62d",
+          "parentKey": "5fe32625-4cef-4ef3-ba62-a3b414e8a8f5",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.5.1. Nyelvek"
+            }
+          ]
+        },
+        {
+          "key": "a0745553-3226-4ecc-82be-1d7a455b5f8d",
+          "parentKey": "bfe292a5-ec6c-4249-932d-63b7ece4b9cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.4.1. Hivatkozás általános szöveg egyedekre"
             }
           ]
         },
@@ -370,8 +455,15 @@
         {
           "key": "72cc24c2-74dc-4604-8825-1485eb8c869d",
           "parentKey": "7ca04211-413a-4a6b-ae17-6049d7a62b68",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "cce8295b-af40-4a7f-a75e-484a93f2fb24",
+            "77ad4eb9-6c1b-4f8c-b62a-801066d1e4fd",
+            "cda61753-ac56-4fd9-a3bf-d4caec093e70",
+            "afcf8529-a1b6-4848-9999-ceeaf9379728",
+            "9c5027bd-4589-4fb7-940a-65d2d042b01f",
+            "6d1fa56a-16df-4d01-afcc-09a6ac13d45a"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -451,15 +543,46 @@
           ]
         },
         {
-          "key": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
-          "parentKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
+          "key": "2ea31af0-bc6a-46d9-8b8f-12a1851dff0b",
+          "parentKey": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
           "subKeys": [],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.4. Jellemzők megadása"
+              "data": "1.4.3.5. Modell-csoport félreérthetőség"
+            }
+          ]
+        },
+        {
+          "key": "e76a3501-264c-4a49-9793-af870433a304",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Egyedek létrehozásához szükséges követelmények"
+            }
+          ]
+        },
+        {
+          "key": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
+          "parentKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
+          "subKeys": [
+            "085aa8db-9527-4d5e-b477-9e839b9184be",
+            "7fb2c189-723d-4e0a-8672-449b9aafbf6b",
+            "9f3381c2-6cb0-4bbc-ac9e-6189cc039fb0",
+            "c74ca823-12e6-4c04-92bd-bdae1b715f06"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4. Jellemzők megadása"
             }
           ]
         },
@@ -473,6 +596,19 @@
             {
               "type": "CONTENT",
               "data": "1.3.3. Karakter egyedek meghatározása"
+            }
+          ]
+        },
+        {
+          "key": "6d1fa56a-16df-4d01-afcc-09a6ac13d45a",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.6. Jellemzők"
             }
           ]
         },
@@ -520,7 +656,7 @@
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.7. Jelzések megadása"
+              "data": "1.4.7. Jelzések megadása"
             }
           ]
         },
@@ -551,6 +687,19 @@
           ]
         },
         {
+          "key": "45b542a8-ee2d-4a71-85d3-ebfd84e54b10",
+          "parentKey": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.3.1. Modell csoportok"
+            }
+          ]
+        },
+        {
           "key": "834996b2-9ce9-4083-afdc-cb41a1cc4161",
           "parentKey": "7122298b-07d4-4c9c-a7ab-9d40ffb38691",
           "subKeys": [],
@@ -564,6 +713,19 @@
           ]
         },
         {
+          "key": "85109aa4-9e8c-4bdf-9b28-d341fade78fb",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Szöveges formában nem tárolható információ"
+            }
+          ]
+        },
+        {
           "key": "04aee4d3-ffb7-44cd-8372-7cd18848f850",
           "parentKey": "826e7f28-747c-490c-8655-9afb3e0bd4f0",
           "subKeys": [],
@@ -573,6 +735,19 @@
             {
               "type": "CONTENT",
               "data": "3.1.2. Hivatkozás XML-dokumentumon belül (XPath)"
+            }
+          ]
+        },
+        {
+          "key": "b6563573-453d-457c-93fa-71f5ec70fae8",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Paraméter egyed"
             }
           ]
         },
@@ -642,6 +817,19 @@
           ]
         },
         {
+          "key": "87aa0c43-0ac3-4f29-ad22-b2a3c6ec6f42",
+          "parentKey": "5fe32625-4cef-4ef3-ba62-a3b414e8a8f5",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.5.2. Fontos térközök"
+            }
+          ]
+        },
+        {
           "key": "a34719c0-906f-4c64-82cf-a7c4cc7a58cc",
           "parentKey": "91930836-1707-45ed-a6b4-7344cac65148",
           "subKeys": [],
@@ -668,6 +856,19 @@
           ]
         },
         {
+          "key": "cda61753-ac56-4fd9-a3bf-d4caec093e70",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.3. Elemek"
+            }
+          ]
+        },
+        {
           "key": "2b461c04-9f4c-4cf5-b68e-0f9ad0f0956f",
           "parentKey": "9828d343-ee26-401e-85b5-b47e42ad1126",
           "subKeys": [],
@@ -677,6 +878,19 @@
             {
               "type": "CONTENT",
               "data": "4.1.1. Karakterek"
+            }
+          ]
+        },
+        {
+          "key": "afcf8529-a1b6-4848-9999-ceeaf9379728",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.4. Tartalomtípusok"
             }
           ]
         },
@@ -720,10 +934,25 @@
           ]
         },
         {
+          "key": "c74ca823-12e6-4c04-92bd-bdae1b715f06",
+          "parentKey": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4.4. Többszörös deklaráció"
+            }
+          ]
+        },
+        {
           "key": "96fb4bd8-da4c-4fb8-9ccf-35ef15afd348",
           "parentKey": "7ca04211-413a-4a6b-ae17-6049d7a62b68",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "92c949ae-58af-43fa-9082-25a7e31b6dd3"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -735,8 +964,19 @@
         {
           "key": "4ac75daf-6b13-4342-854d-83075f3bc400",
           "parentKey": "6f009d0d-a8ba-43ac-9299-31fee2d76084",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "35db19d8-909c-41f1-ba46-2be611259882",
+            "def62c07-0f53-4cea-9d00-0ce30cfcd29a",
+            "879a222f-7aa4-41ee-b7e5-12451be4694f",
+            "58a237c4-d6d6-4d22-8740-1a054c6f5b0f",
+            "e76a3501-264c-4a49-9793-af870433a304",
+            "adc7c0e1-518a-477c-9ae2-fb151039d6ea",
+            "85109aa4-9e8c-4bdf-9b28-d341fade78fb",
+            "be7fda1a-9c1f-4adf-9825-51a235672df4",
+            "b6563573-453d-457c-93fa-71f5ec70fae8",
+            "7ff72d20-6cf9-4e16-a2f2-9f3b1a771f0b"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -824,6 +1064,19 @@
           ]
         },
         {
+          "key": "3cdebb40-f13a-4965-adb6-b7c6f0821d6a",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.4. Paraméter egyedek"
+            }
+          ]
+        },
+        {
           "key": "d82fe3cb-4ddf-4783-8909-2a435116b1a7",
           "parentKey": "faef6d4e-a73a-44bc-8155-20c64c256a0a",
           "subKeys": [],
@@ -833,6 +1086,19 @@
             {
               "type": "CONTENT",
               "data": "3.5.16. DOM-megvalósítás"
+            }
+          ]
+        },
+        {
+          "key": "f573ffe9-e306-469c-bf02-cfaea68b8af2",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.5. Külső szöveg egyedek"
             }
           ]
         },
@@ -852,13 +1118,45 @@
         {
           "key": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
           "parentKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "45b542a8-ee2d-4a71-85d3-ebfd84e54b10",
+            "fa1a3a64-a119-40c7-ab73-eb0d3ea6df00",
+            "de896dca-9b9a-46a6-9f0a-0d41aacb3f12",
+            "4143e36c-950c-4372-8acb-905b2f6bbdbc",
+            "2ea31af0-bc6a-46d9-8b8f-12a1851dff0b"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.3. Elemek megadása"
+              "data": "1.4.3. Elemek megadása"
+            }
+          ]
+        },
+        {
+          "key": "62923b8a-5f5f-4fdc-8087-b057c2cc427a",
+          "parentKey": "a0daff32-a711-4c0e-bb32-101cc31bb0cd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.6.3. Karakter-adatrészek - egyedek"
+            }
+          ]
+        },
+        {
+          "key": "fa1a3a64-a119-40c7-ab73-eb0d3ea6df00",
+          "parentKey": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.3.2. A sorrend szabályozása"
             }
           ]
         },
@@ -940,6 +1238,32 @@
           ]
         },
         {
+          "key": "879a222f-7aa4-41ee-b7e5-12451be4694f",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Egyed deklaráció"
+            }
+          ]
+        },
+        {
+          "key": "b414a062-774e-4dc6-9e7a-b340c7c59634",
+          "parentKey": "e11530d5-43dc-4942-9739-fecb81ace23c",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.8.1. Belső DTD feldolgozása"
+            }
+          ]
+        },
+        {
           "key": "da2bba03-747a-443d-b07a-271cb8302664",
           "parentKey": "4bc37ca3-3565-48d4-9cdf-7b01d3f1ca86",
           "subKeys": [],
@@ -953,6 +1277,19 @@
           ]
         },
         {
+          "key": "92c949ae-58af-43fa-9082-25a7e31b6dd3",
+          "parentKey": "96fb4bd8-da4c-4fb8-9ccf-35ef15afd348",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.7.1. XML deklaráció"
+            }
+          ]
+        },
+        {
           "key": "6cce86b4-817f-476e-806e-26d71ae16c5a",
           "parentKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
           "subKeys": [],
@@ -961,7 +1298,7 @@
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.6. Feltételes részek"
+              "data": "1.4.6. Feltételes részek"
             }
           ]
         },
@@ -974,7 +1311,7 @@
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.2. A DTD felépítése"
+              "data": "1.4.2. A DTD felépítése"
             }
           ]
         },
@@ -1174,6 +1511,19 @@
           ]
         },
         {
+          "key": "2816c341-8931-46b4-8e0e-b111856a962c",
+          "parentKey": "bfe292a5-ec6c-4249-932d-63b7ece4b9cb",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.4.2. Bináris (ki nem értékelt) egyedre való hivatkozás"
+            }
+          ]
+        },
+        {
           "key": "dad9f01b-69a6-45a8-8111-73fbd9025bff",
           "parentKey": "db391502-cab1-4115-be0b-c693aa86840b",
           "subKeys": [
@@ -1221,6 +1571,19 @@
           ]
         },
         {
+          "key": "58a237c4-d6d6-4d22-8740-1a054c6f5b0f",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Egyed hivatkozás"
+            }
+          ]
+        },
+        {
           "key": "826e7f28-747c-490c-8655-9afb3e0bd4f0",
           "parentKey": "59f7e629-93b8-4487-9a4a-1fd955d8fcdb",
           "subKeys": [
@@ -1240,6 +1603,19 @@
           ]
         },
         {
+          "key": "cce8295b-af40-4a7f-a75e-484a93f2fb24",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.1. Speciális utasítások"
+            }
+          ]
+        },
+        {
           "key": "66d57926-b64e-4b65-be0b-e78ae3058a1a",
           "parentKey": "68adb31e-6b51-44b2-9255-5ac2f5443d3c",
           "subKeys": [],
@@ -1249,6 +1625,19 @@
             {
               "type": "CONTENT",
               "data": "2.1.1. Elemzés"
+            }
+          ]
+        },
+        {
+          "key": "7fb2c189-723d-4e0a-8672-449b9aafbf6b",
+          "parentKey": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4.2. Jellemzők alapételmezett értékei"
             }
           ]
         },
@@ -1274,7 +1663,7 @@
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.5. Paraméter egyedek"
+              "data": "1.4.5. Paraméter egyedek"
             }
           ]
         },
@@ -1444,12 +1833,25 @@
             "b84b0f1c-372e-4c9a-9a49-ca507a010101",
             "bfe292a5-ec6c-4249-932d-63b7ece4b9cb"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
               "data": "1.3. Fizikai felépítés (egyedek) [4.]"
+            }
+          ]
+        },
+        {
+          "key": "022714c3-ba71-4651-9393-29f11e963339",
+          "parentKey": "a0daff32-a711-4c0e-bb32-101cc31bb0cd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.6.1. Dokumentumtípus-deklaráció"
             }
           ]
         },
@@ -1528,13 +1930,29 @@
         {
           "key": "e11530d5-43dc-4942-9739-fecb81ace23c",
           "parentKey": "3fb4989f-6c28-4a20-bddb-2573a5744914",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "b414a062-774e-4dc6-9e7a-b340c7c59634",
+            "153a8673-7b2c-45fe-9d21-14b5f406bd5e"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.8. A DTD feldolgozása"
+              "data": "1.4.8. A DTD feldolgozása"
+            }
+          ]
+        },
+        {
+          "key": "9f3381c2-6cb0-4bbc-ac9e-6189cc039fb0",
+          "parentKey": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4.3. Fenntartott jellemzők"
             }
           ]
         },
@@ -1769,10 +2187,39 @@
           ]
         },
         {
+          "key": "adc7c0e1-518a-477c-9ae2-fb151039d6ea",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Értelmezett egyed"
+            }
+          ]
+        },
+        {
+          "key": "77ad4eb9-6c1b-4f8c-b62a-801066d1e4fd",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.2. Hagyományos jelölés"
+            }
+          ]
+        },
+        {
           "key": "5fe32625-4cef-4ef3-ba62-a3b414e8a8f5",
           "parentKey": "7ca04211-413a-4a6b-ae17-6049d7a62b68",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "ecf9c7a4-5c59-4454-ac10-302977a6b62d",
+            "87aa0c43-0ac3-4f29-ad22-b2a3c6ec6f42"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -1821,6 +2268,19 @@
           ]
         },
         {
+          "key": "de896dca-9b9a-46a6-9f0a-0d41aacb3f12",
+          "parentKey": "6b19a870-e797-4db8-b1f1-e2e7afbf8c70",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.3.3. Mennyiségi szabályozás"
+            }
+          ]
+        },
+        {
           "key": "3e6d092a-2762-417b-9d23-a7acdb92fb62",
           "parentKey": "9828d343-ee26-401e-85b5-b47e42ad1126",
           "subKeys": [],
@@ -1860,10 +2320,27 @@
           ]
         },
         {
+          "key": "359860fd-8f65-4486-9656-e3b613a92f10",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.3. Karakter egyedek"
+            }
+          ]
+        },
+        {
           "key": "a0daff32-a711-4c0e-bb32-101cc31bb0cd",
           "parentKey": "7ca04211-413a-4a6b-ae17-6049d7a62b68",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "022714c3-ba71-4651-9393-29f11e963339",
+            "723ff938-5133-4adb-af6a-5b242bb8fa9c",
+            "62923b8a-5f5f-4fdc-8087-b057c2cc427a"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -1917,6 +2394,32 @@
           ]
         },
         {
+          "key": "23d22a4d-fd1b-481f-afb1-c89d341c3e3e",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.6. Bináris egyedek"
+            }
+          ]
+        },
+        {
+          "key": "def62c07-0f53-4cea-9d00-0ce30cfcd29a",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Dokumentum egyed"
+            }
+          ]
+        },
+        {
           "key": "b8ff92e3-3ad1-415a-bb87-e9d9f46aa065",
           "parentKey": "faef6d4e-a73a-44bc-8155-20c64c256a0a",
           "subKeys": [],
@@ -1926,6 +2429,19 @@
             {
               "type": "CONTENT",
               "data": "3.5.10. Megjegyzések"
+            }
+          ]
+        },
+        {
+          "key": "7ff72d20-6cf9-4e16-a2f2-9f3b1a771f0b",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Karakterhivatkozás"
             }
           ]
         },
@@ -1969,6 +2485,32 @@
           ]
         },
         {
+          "key": "085aa8db-9527-4d5e-b477-9e839b9184be",
+          "parentKey": "3bf11ed9-cf82-450c-b790-e65f39ffd784",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.4.4.1. Jellemzők nevei és értéktípusai"
+            }
+          ]
+        },
+        {
+          "key": "a20d3ba1-ceed-42e1-8d7a-0921744fc5fc",
+          "parentKey": "872e9024-00d0-4bea-aff2-4c56c5d126c9",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.3.2.2. Beépített egyedek"
+            }
+          ]
+        },
+        {
           "key": "8a2d6605-e6eb-4a19-8e8e-adac5ae199e8",
           "parentKey": "faef6d4e-a73a-44bc-8155-20c64c256a0a",
           "subKeys": [],
@@ -1990,7 +2532,20 @@
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.5.1. Fogalmak"
+              "data": "1.4.1. Fogalmak"
+            }
+          ]
+        },
+        {
+          "key": "be7fda1a-9c1f-4adf-9825-51a235672df4",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Általános egyed"
             }
           ]
         },
@@ -2103,10 +2658,27 @@
           ]
         },
         {
+          "key": "9c5027bd-4589-4fb7-940a-65d2d042b01f",
+          "parentKey": "72cc24c2-74dc-4604-8825-1485eb8c869d",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.4.5. Áthúzódó szerkezetek"
+            }
+          ]
+        },
+        {
           "key": "bfe292a5-ec6c-4249-932d-63b7ece4b9cb",
           "parentKey": "6f009d0d-a8ba-43ac-9299-31fee2d76084",
-          "subKeys": [],
-          "collapse": true,
+          "subKeys": [
+            "a0745553-3226-4ecc-82be-1d7a455b5f8d",
+            "2816c341-8931-46b4-8e0e-b111856a962c",
+            "60370e82-06bd-4ef3-9919-dcbdcbcb5717"
+          ],
+          "collapse": false,
           "style": null,
           "blocks": [
             {
@@ -2168,6 +2740,32 @@
             {
               "type": "CONTENT",
               "data": "3.5.14. Csomópontnév-térképek"
+            }
+          ]
+        },
+        {
+          "key": "723ff938-5133-4adb-af6a-5b242bb8fa9c",
+          "parentKey": "a0daff32-a711-4c0e-bb32-101cc31bb0cd",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1.2.6.2. Megjegyzések"
+            }
+          ]
+        },
+        {
+          "key": "35db19d8-909c-41f1-ba46-2be611259882",
+          "parentKey": "4ac75daf-6b13-4342-854d-83075f3bc400",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "Egyed"
             }
           ]
         },
