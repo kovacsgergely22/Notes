@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
       "editorRootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
-      "focusKey": "29c2c97b-093f-4dd0-a289-f02de0e1ec3d",
+      "focusKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
       "topics": [
         {
           "key": "1538df52-0003-431e-a359-b28398d50223",
@@ -124,6 +124,19 @@
           ]
         },
         {
+          "key": "35e77b4a-dc46-4d90-93a6-7baeafe20df4",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. A folyamatos múlt idő használata"
+            }
+          ]
+        },
+        {
           "key": "f571d601-a0e1-46a2-9ba0-76b4104bb273",
           "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
           "subKeys": [],
@@ -133,6 +146,19 @@
             {
               "type": "CONTENT",
               "data": "1.3.7. Egyszerű jelen idő - állító mondatok"
+            }
+          ]
+        },
+        {
+          "key": "2a33a284-a08e-40b4-8735-9bf744e1ecd9",
+          "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. Munkában"
             }
           ]
         },
@@ -181,6 +207,19 @@
           ]
         },
         {
+          "key": "f6506b6a-9816-4ea0-91a7-42e0b43233fc",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "6. Hogyan beszéljünk az időjárásról"
+            }
+          ]
+        },
+        {
           "key": "03cede3b-2282-4bc4-b000-29b0d5948971",
           "parentKey": "55c9cbc5-b47b-44b0-9727-dd36b8bacd86",
           "subKeys": [],
@@ -190,6 +229,32 @@
             {
               "type": "CONTENT",
               "data": "2.1.6. Dátumok - évek és napok"
+            }
+          ]
+        },
+        {
+          "key": "51ea60e3-5304-469b-9523-5ebfc09ff4bb",
+          "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. Persely"
+            }
+          ]
+        },
+        {
+          "key": "27b733d0-3db8-43c8-a50e-8f1b795edad4",
+          "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. Étkezés"
             }
           ]
         },
@@ -249,6 +314,58 @@
             {
               "type": "CONTENT",
               "data": "1.1. Start"
+            }
+          ]
+        },
+        {
+          "key": "cfb32d51-522f-4863-99e6-e06509618476",
+          "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Divat"
+            }
+          ]
+        },
+        {
+          "key": "70d90a66-5848-4170-8b83-c6aca02a3b76",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. A \"V-ing\" igei szerkezet használata"
+            }
+          ]
+        },
+        {
+          "key": "e60494eb-d2a0-4cc6-96d4-be3f905d19ef",
+          "parentKey": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. A \"way\" szó használata"
+            }
+          ]
+        },
+        {
+          "key": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. A szállodában"
             }
           ]
         },
@@ -339,6 +456,19 @@
           ]
         },
         {
+          "key": "b5cf3895-c013-42bd-aad8-d00d032229b2",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Megszámlálhatatlan főnevek"
+            }
+          ]
+        },
+        {
           "key": "1866fd7b-57c8-4f30-a9f2-e7df06b8f49e",
           "parentKey": "f9015519-f8db-4f4e-a8cb-7ac4eeb34702",
           "subKeys": [],
@@ -408,7 +538,7 @@
             "d6ffa9ce-3929-4cd1-b469-39e45abec8ac",
             "29c2c97b-093f-4dd0-a289-f02de0e1ec3d"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -440,6 +570,28 @@
             {
               "type": "CONTENT",
               "data": "2.4.2. Helyre és irányra vonatkozó legfontosabb elöljárószók"
+            }
+          ]
+        },
+        {
+          "key": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "subKeys": [
+            "da5bcd20-720f-423e-9877-d71423c5d0b9",
+            "70d90a66-5848-4170-8b83-c6aca02a3b76",
+            "b5cf3895-c013-42bd-aad8-d00d032229b2",
+            "35e77b4a-dc46-4d90-93a6-7baeafe20df4",
+            "46e80ea7-ea0a-4f53-8faa-2757412c4c77",
+            "f6506b6a-9816-4ea0-91a7-42e0b43233fc",
+            "a954a02a-5c44-4f63-999c-6f03d98ef0c4",
+            "6bca36a1-063b-4011-9b45-b7199637c73a"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. Időjárás"
             }
           ]
         },
@@ -509,6 +661,19 @@
           ]
         },
         {
+          "key": "8796d5f3-25b8-4bf5-8a76-fcbf35e0a770",
+          "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Mindennapjaink"
+            }
+          ]
+        },
+        {
           "key": "2710334c-a326-480f-b80b-13093dfcda5c",
           "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
           "subKeys": [],
@@ -535,6 +700,19 @@
           ]
         },
         {
+          "key": "77279d92-5896-4636-80c4-fb59e9279197",
+          "parentKey": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. Udvariasan angolul"
+            }
+          ]
+        },
+        {
           "key": "4455e758-2a69-473e-adb0-373908affda9",
           "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
           "subKeys": [],
@@ -544,6 +722,19 @@
             {
               "type": "CONTENT",
               "data": "1.3.10. Birtoklás kifejezése a \"have got\" szerkezettel"
+            }
+          ]
+        },
+        {
+          "key": "da5bcd20-720f-423e-9877-d71423c5d0b9",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Mennyiség meghatározása az every szóval"
             }
           ]
         },
@@ -596,6 +787,19 @@
             {
               "type": "CONTENT",
               "data": "1.1.2. Ez/Az - Mi ez?"
+            }
+          ]
+        },
+        {
+          "key": "e2123453-0378-48ce-8078-97a5a07eb6db",
+          "parentKey": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. Feltételes mód - 1. típus"
             }
           ]
         },
@@ -665,6 +869,32 @@
           ]
         },
         {
+          "key": "edb8d918-4074-4006-8b6d-af4caacc3259",
+          "parentKey": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Határozatlan számnevek - kevés, néhány"
+            }
+          ]
+        },
+        {
+          "key": "46e80ea7-ea0a-4f53-8faa-2757412c4c77",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. Vonzatos igék: \"Get on\"-\"Get up\""
+            }
+          ]
+        },
+        {
           "key": "e2909fc9-3c7f-4a52-8cd5-6691bcc1d57b",
           "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
           "subKeys": [],
@@ -674,6 +904,19 @@
             {
               "type": "CONTENT",
               "data": "1.3.1. Kérdőszavak I."
+            }
+          ]
+        },
+        {
+          "key": "1fcab55f-30db-4cc7-a33f-7e6b0eb429a9",
+          "parentKey": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Szeretne, szüksége van rá"
             }
           ]
         },
@@ -702,6 +945,19 @@
           ]
         },
         {
+          "key": "6bca36a1-063b-4011-9b45-b7199637c73a",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8. Egyszerű jövő idő - tagadás, kérdések"
+            }
+          ]
+        },
+        {
           "key": "2b3f8727-1af2-41b1-a106-0f5ef2a6152a",
           "parentKey": "d6ffa9ce-3929-4cd1-b469-39e45abec8ac",
           "subKeys": [],
@@ -724,6 +980,25 @@
             {
               "type": "CONTENT",
               "data": "2.4.7. Birtoklás kifejezése a \"have\" igével"
+            }
+          ]
+        },
+        {
+          "key": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "parentKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+          "subKeys": [
+            "dd9af398-83fe-4915-948f-59fa728096d7",
+            "dc0c5b48-d62d-4be8-8d19-aecaea5044a9",
+            "8796d5f3-25b8-4bf5-8a76-fcbf35e0a770",
+            "2a33a284-a08e-40b4-8735-9bf744e1ecd9",
+            "51ea60e3-5304-469b-9523-5ebfc09ff4bb"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. A2 - Alapszint"
             }
           ]
         },
@@ -758,7 +1033,9 @@
           "parentKey": null,
           "subKeys": [
             "5c9b32b2-6b1b-401e-99cc-9f9223e37283",
-            "4430c301-e99e-42e5-b27a-e907832872a8"
+            "4430c301-e99e-42e5-b27a-e907832872a8",
+            "ae1d270d-632a-435b-9527-a675a9bb6913",
+            "993ac210-c597-4cd8-99f6-39e81823c03a"
           ],
           "collapse": false,
           "style": null,
@@ -766,6 +1043,38 @@
             {
               "type": "CONTENT",
               "data": "Xeropan"
+            }
+          ]
+        },
+        {
+          "key": "a954a02a-5c44-4f63-999c-6f03d98ef0c4",
+          "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7. Melléknevek képzése"
+            }
+          ]
+        },
+        {
+          "key": "dd9af398-83fe-4915-948f-59fa728096d7",
+          "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "subKeys": [
+            "1fcab55f-30db-4cc7-a33f-7e6b0eb429a9",
+            "e2123453-0378-48ce-8078-97a5a07eb6db",
+            "edb8d918-4074-4006-8b6d-af4caacc3259",
+            "77279d92-5896-4636-80c4-fb59e9279197",
+            "e60494eb-d2a0-4cc6-96d4-be3f905d19ef"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Tájékozódás"
             }
           ]
         },
@@ -827,6 +1136,19 @@
           ]
         },
         {
+          "key": "dc0c5b48-d62d-4be8-8d19-aecaea5044a9",
+          "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. Egészség"
+            }
+          ]
+        },
+        {
           "key": "859e1c9a-f76e-4738-9872-ef0b791732d6",
           "parentKey": "4430c301-e99e-42e5-b27a-e907832872a8",
           "subKeys": [
@@ -846,6 +1168,25 @@
           ]
         },
         {
+          "key": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "parentKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
+          "subKeys": [
+            "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+            "08a00d72-dfa3-4e02-b17e-05dd0778a4a8",
+            "cfb32d51-522f-4863-99e6-e06509618476",
+            "27b733d0-3db8-43c8-a50e-8f1b795edad4",
+            "be8b4adc-60c8-4351-9c94-3962e1acc56e"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. A2 - Alapozó"
+            }
+          ]
+        },
+        {
           "key": "d2e6fa0c-117a-4413-98f9-d387e6a27e7e",
           "parentKey": "71d3a370-254f-48cb-9d37-c846c739c075",
           "subKeys": [],
@@ -855,6 +1196,19 @@
             {
               "type": "CONTENT",
               "data": "2.2.7. Engedély kifejezése a \"can\" segédigével"
+            }
+          ]
+        },
+        {
+          "key": "08a00d72-dfa3-4e02-b17e-05dd0778a4a8",
+          "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. Selfie"
             }
           ]
         },
