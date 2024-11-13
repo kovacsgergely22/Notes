@@ -25,6 +25,10 @@
 
 A könyv fejezetei felsorolásánál, a szögletes zárójelben lévő szám a könyv fejezetszámát tartalmazza. A tartalomjegyzék és a mindmap számozását a struktúra érzékeltetése miatt írtam át.
 
+## Hasznos linkek
+
+[XML Coverpages](https://xml.coverpages.org/xml.html)
+
 ## Jegyzetek a jegyzeteléshez
 * ~~1.md Bevezetés~~
 * ~~1.md Dokumentumjelölések (3.)~~
