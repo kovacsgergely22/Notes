@@ -5,4 +5,5 @@
 
 ## Jegyzetek
 
-* linkeket kijavítani (mappák neve megváltozott)
+* ~~linkeket kijavítani (mappák neve megváltozott)~~
+* 2.4.1 - Through -> leckehivatkozás hiányzik
