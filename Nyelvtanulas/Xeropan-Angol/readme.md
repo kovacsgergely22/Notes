@@ -16,3 +16,5 @@
 * ~~1.3.10. Birtoklás kifejezése have got szerkezettel~~
 * ~~2.Minimumszint következik~~
 * ~~Lábjegyzetben, vagy valamilyen információban beírni, hogy a Xeropanban melyik lecke~~
+* ~~linkeket kijavítani (mappák neve megváltozott)~~
+* 2.4.1 - Through -> leckehivatkozás hiányzik
