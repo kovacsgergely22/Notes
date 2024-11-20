@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml document with an internal dtd-->
+ <!DOCTYPE Employees [
+    <!ELEMENT Employees (Employee*)>
+    <!ELEMENT Employee (Empcode, Empname, Empsal, Dept)>
+    <!ELEMENT Dept (#PCDATA|Deptno)*>
+    <!ELEMENT Empcode (#PCDATA)>
+    <!ELEMENT Empname (#PCDATA)>
+    <!ELEMENT Empsal (#PCDATA)>
+    <!ELEMENT Deptno (#PCDATA)>
+ ]>
+ <Employees>
+    <Employee>
+        <Empcode>101</Empcode>
+        <Empname>abc</Empname>
+        <Empsal>20000</Empsal>
+        <Dept>This is a mixed Element
+            <Deptno>10</Deptno>
+        </Dept>
+    </Employee>
+    <Employee>
+        <Empcode>102</Empcode>
+        <Empname>PQR</Empname>
+        <Empsal>15000</Empsal>
+        <Dept>
+            <Deptno>20</Deptno>
+        </Dept>
+    </Employee>
+ </Employees>
