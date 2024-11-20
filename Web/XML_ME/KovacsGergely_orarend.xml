@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orarend SYSTEM "KovacsGergely_orarend.dtd">
 <?xml-stylesheet href="style.css" type="text/css"?>
-<?xml-model href="KovacsGergely_orarend.dtd" type="application/xml-dtd"?>
 
 <orarend xml:lang="hu">
 	<ora id="GEIAL30F-BL2" tipus="tantermi">
