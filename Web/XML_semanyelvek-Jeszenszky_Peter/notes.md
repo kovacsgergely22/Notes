@@ -61,6 +61,7 @@
    6. [D. Sémadokumentumok manipulálása](#d-sémadokumentumok-manipulálása)
    7. [Könyv elérhetősége](#könyv-elérhetősége)
 
+
 ## I. W3C XML Schema
 
 ***W3C***
