@@ -2,31 +2,76 @@
   "sheetModels": [
     {
       "title": "Sheet1",
-      "rootTopicKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
-      "editorRootTopicKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
-      "focusKey": "c437dfec-eb97-4593-8334-e6014d4af8f1",
+      "rootTopicKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+      "editorRootTopicKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+      "focusKey": "60e34218-eaa8-4fb3-b571-5c0a61329fc5",
       "topics": [
         {
-          "key": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
-          "parentKey": null,
-          "subKeys": [
-            "140ea599-f10e-4fa0-be7d-8429049fa60a"
-          ],
+          "key": "60e34218-eaa8-4fb3-b571-5c0a61329fc5",
+          "parentKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+          "subKeys": [],
           "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "XML sémanyelvek"
+              "data": "D. Sémadokumentumok manipulálása"
             }
           ]
         },
         {
-          "key": "140ea599-f10e-4fa0-be7d-8429049fa60a",
-          "parentKey": "53545572-ecd9-4d66-afb2-1a8e94ee4309",
+          "key": "38e9df74-f86a-4cf1-9923-ec09a48b5e66",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">6. Azonossági megszorítások</span>"
+            }
+          ]
+        },
+        {
+          "key": "ce4bd002-7d21-4538-8caf-37d77bf0485e",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">5. Komplex típusok</span>"
+            }
+          ]
+        },
+        {
+          "key": "f0ec587e-848f-4c07-88d5-6b306da0487b",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">4. Egyszerű típusok (adattípusok) használata és származtatása</span>"
+            }
+          ]
+        },
+        {
+          "key": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "parentKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
           "subKeys": [
-            "3e78bbc3-36db-4d24-ae84-392829a68934",
-            "c437dfec-eb97-4593-8334-e6014d4af8f1"
+            "f4cbc96a-786e-461c-89a9-c82e8da5793a",
+            "0568a613-8d65-47c0-9d08-64e8ff21d887",
+            "8c98cc82-c22d-43de-9ae0-e934119a91a9",
+            "f0ec587e-848f-4c07-88d5-6b306da0487b",
+            "ce4bd002-7d21-4538-8caf-37d77bf0485e",
+            "38e9df74-f86a-4cf1-9923-ec09a48b5e66",
+            "552085a1-b2b5-4e67-84d1-8dd2392a790c",
+            "8d3a5342-3acd-4927-afdb-343717d427c2",
+            "c835fe39-fabd-4ad6-a8a3-2620c8982995",
+            "66d1d484-8eb3-422e-a292-e14a0cdcdf84"
           ],
           "collapse": false,
           "style": null,
@@ -38,28 +83,151 @@
           ]
         },
         {
-          "key": "3e78bbc3-36db-4d24-ae84-392829a68934",
-          "parentKey": "140ea599-f10e-4fa0-be7d-8429049fa60a",
+          "key": "66d1d484-8eb3-422e-a292-e14a0cdcdf84",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
           "subKeys": [],
           "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.0. Bevezetés"
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">10. Esettanulmány</span>"
             }
           ]
         },
         {
-          "key": "c437dfec-eb97-4593-8334-e6014d4af8f1",
-          "parentKey": "140ea599-f10e-4fa0-be7d-8429049fa60a",
+          "key": "15445c4a-c451-4e12-8c30-884b2a21e956",
+          "parentKey": null,
+          "subKeys": [
+            "05ed5986-9a34-4305-a904-9574b4d18b13",
+            "b32f0140-c6ef-466f-b6e8-b22788378512",
+            "7c3d4ae4-fba5-429e-8b8f-078bbd3f2380",
+            "09cf4628-984e-432b-9052-11e5ab15e8a0",
+            "60e34218-eaa8-4fb3-b571-5c0a61329fc5"
+          ],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "XML sémanyelvek"
+            }
+          ]
+        },
+        {
+          "key": "c835fe39-fabd-4ad6-a8a3-2620c8982995",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
           "subKeys": [],
           "collapse": false,
           "style": null,
           "blocks": [
             {
               "type": "CONTENT",
-              "data": "1.1. Alapfogalmak"
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">9. További lehetőségek</span>"
+            }
+          ]
+        },
+        {
+          "key": "b32f0140-c6ef-466f-b6e8-b22788378512",
+          "parentKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "A. Beépített adattípusok"
+            }
+          ]
+        },
+        {
+          "key": "f4cbc96a-786e-461c-89a9-c82e8da5793a",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">1. Alapfogalmak</span>"
+            }
+          ]
+        },
+        {
+          "key": "0568a613-8d65-47c0-9d08-64e8ff21d887",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">2. Egyszerű típusok (adattípusok) fogalmai</span>"
+            }
+          ]
+        },
+        {
+          "key": "552085a1-b2b5-4e67-84d1-8dd2392a790c",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">7. Névterek</span>"
+            }
+          ]
+        },
+        {
+          "key": "09cf4628-984e-432b-9052-11e5ab15e8a0",
+          "parentKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "C. Dokumentumok az Esettanulmány című fejezethez"
+            }
+          ]
+        },
+        {
+          "key": "7c3d4ae4-fba5-429e-8b8f-078bbd3f2380",
+          "parentKey": "15445c4a-c451-4e12-8c30-884b2a21e956",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "B. Korlátozó adattípus-tulajdonságok"
+            }
+          ]
+        },
+        {
+          "key": "8d3a5342-3acd-4927-afdb-343717d427c2",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">8. Példányok</span>"
+            }
+          ]
+        },
+        {
+          "key": "8c98cc82-c22d-43de-9ae0-e934119a91a9",
+          "parentKey": "05ed5986-9a34-4305-a904-9574b4d18b13",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "<span style=\"color: rgb(255, 255, 255); font-size: 14px; background-color: rgb(51, 51, 51);\">3. Elemek és tulajdonságok deklarálása</span>"
             }
           ]
         }
@@ -70,57 +238,57 @@
         "allowUndo": true,
         "layoutDir": 0,
         "theme": {
-          "name": "random-color-round",
-          "randomColor": true,
-          "background": "rgba(255,255,255,1)",
-          "highlightColor": "#50C9CE",
-          "marginH": 60,
-          "marginV": 20,
+          "name": "defaultTheme",
+          "randomColor": false,
+          "background": "#DDDDDD",
+          "highlightColor": "#C31004",
+          "marginH": 50,
+          "marginV": 5,
           "contentStyle": {
-            "lineHeight": "1.5",
-            "color": "#262626"
+            "lineHeight": "1"
           },
           "linkStyle": {
             "lineRadius": 5,
-            "lineType": "curve",
-            "lineWidth": "3px"
+            "lineWidth": "2px",
+            "lineColor": "#595959",
+            "lineType": "curve"
           },
           "rootTopic": {
             "contentStyle": {
+              "background": "#C31004",
+              "color": "#fff",
               "fontSize": "34px",
-              "borderRadius": "35px",
-              "padding": "5px 10px"
+              "borderRadius": "5px",
+              "padding": "16px 18px 16px 18px"
             },
             "subLinkStyle": {
-              "lineType": "curve",
-              "lineWidth": "3px",
-              "lineColor": "rgb(113, 203, 45)"
+              "lineType": "curve"
             }
           },
           "primaryTopic": {
             "contentStyle": {
-              "borderWidth": "1px",
-              "borderStyle": "solid",
-              "borderRadius": "10px",
-              "fontSize": "20px",
-              "padding": "0px 5px"
+              "background": "#333",
+              "borderRadius": "5px",
+              "color": "#fff",
+              "fontSize": "14px",
+              "padding": "6px 10px 5px 10px"
             },
             "subLinkStyle": {
-              "lineType": "curve",
-              "lineWidth": "2px",
-              "lineColor": "rgb(113, 203, 45)"
+              "hasUnderline": true,
+              "lineType": "round"
             }
           },
           "normalTopic": {
             "contentStyle": {
-              "borderRadius": "10px",
+              "borderRadius": "5px",
+              "background": "#fff0",
+              "color": "#383833",
               "fontSize": "13px",
-              "padding": "0"
+              "padding": "1px"
             },
             "subLinkStyle": {
-              "lineType": "curve",
-              "lineWidth": "2px",
-              "lineColor": "white"
+              "hasUnderline": true,
+              "lineType": "round"
             }
           }
         }
