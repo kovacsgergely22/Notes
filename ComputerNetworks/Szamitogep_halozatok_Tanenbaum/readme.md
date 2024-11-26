@@ -39,6 +39,7 @@ A társszerző, David J. Wetherall által készített videók elérhetők a link
 
 ## Jegyzetek
 
+* [Útválasztó algoritmusokhoz Mammoth Online kurzus](https://training.mammothinteractive.com/courses/enrolled/2571339)
 * ~~3-4.md fájlokban nincsenek videók linkelve~~
 * ~~4.md hiányos, 4.3. Ethernet következik~~
 * ~~5.md következik~~
