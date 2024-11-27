@@ -7,6 +7,12 @@
 - [] [Modern HTML and CSS From The Beginning (Including Sass) [Video]](https://subscription.packtpub.com/video/web-development/9781838822828/113179/113180/welcome-to-the-course)
 - [] [The Complete 2024 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=BFCPSALE24)
 
+## PHP
+
+### Online kurzusok
+
+- [] [Object Oriented PHP & MVC](https://www.udemy.com/course/object-oriented-php-mvc/?couponCode=BFCPSALE24)
+
 ## Spring
 
 ## Webfejlesztés AI-al
