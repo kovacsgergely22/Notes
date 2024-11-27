@@ -16,3 +16,7 @@
 - [] [Python Programming Fundamentals - The Ultimate Learning Path](https://training.mammothinteractive.com/courses/enrolled/2418912)
 - [] [The Complete Pathfinding Algorithms Masterclass](https://training.mammothinteractive.com/courses/enrolled/2562766)
 - [] [Ultimate Python File Mastery - Handling Data Like a Pro](https://training.mammothinteractive.com/courses/enrolled/2633196)
+
+## Hasznos linkek
+
+* [NumPy documentation](https://numpy.org/doc/stable/)
