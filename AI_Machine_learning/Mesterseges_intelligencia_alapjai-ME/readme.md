@@ -12,6 +12,7 @@
 - [] [Deep Dive into Recursive Algorithms - Exploring Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2567328)
 - [] [Machine Learning Algorithms Demystified - From Basics to Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2569760)
 - [] [Python Algorithm Mastery - Harness the Power of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611499)
+- [] [Python Data Science Fundamentals - Comprehensive Bundle](https://training.mammothinteractive.com/courses/enrolled/2419257)
 - [] [Python Programming Fundamentals - The Ultimate Learning Path](https://training.mammothinteractive.com/courses/enrolled/2418912)
 - [] [The Complete Pathfinding Algorithms Masterclass](https://training.mammothinteractive.com/courses/enrolled/2562766)
 - [] [Ultimate Python File Mastery - Handling Data Like a Pro](https://training.mammothinteractive.com/courses/enrolled/2633196)
