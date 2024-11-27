@@ -566,7 +566,7 @@ Recommended Course Order
 - Dynamic Programming Demystified - Solving Complex Problems with Ease
 - Advanced Greedy Algorithms - Innovative and Powerful Strategies
 - Shortest Path Algorithms Revealed - Discovering Optimal Routes
-- [] [Deep Dive into Recursive Algorithms - Exploring Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2567328)
+- [ ] [Deep Dive into Recursive Algorithms - Exploring Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2567328)
 - Hashing Algorithms Explored - Cutting-Edge Techniques and Applications
 
 ### Advanced Algorithms
