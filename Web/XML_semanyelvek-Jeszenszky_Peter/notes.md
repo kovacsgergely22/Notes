@@ -1303,7 +1303,8 @@ Az elem lehetséges előfordulása
 
 ***Példák***
 
-```<xs:simpleType name="myDecimal">
+```
+<xs:simpleType name="myDecimal">
     <xs:restriction base="xs:decimal">
         <xs:minInclusive value="0"/>
         <xs:fractionDigits value="2"/>
