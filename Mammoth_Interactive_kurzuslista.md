@@ -99,7 +99,7 @@ Recommended Course Order
 
 ### Large Language Models Learning Path
 
-- [] [Python Programming Fundamentals - The Ultimate Learning Path](https://training.mammothinteractive.com/courses/enrolled/2418912)
+- [ ] [Python Programming Fundamentals - The Ultimate Learning Path](https://training.mammothinteractive.com/courses/enrolled/2418912)
 - OpenAI Vision AI Image Generation - The Complete Bundle
 - Advanced Video Analysis and AI Python App Development with OpenAI Vision
 - Build a Screenshot to Code OpenAI Python App - Step-by-Step Mastery
@@ -111,9 +111,9 @@ Recommended Course Order
 
 ### Python Machine Learning Path
 
-- [] [Python Data Science Fundamentals - Comprehensive Bundle](https://training.mammothinteractive.com/courses/enrolled/2419257)
+- [ ] [Python Data Science Fundamentals - Comprehensive Bundle](https://training.mammothinteractive.com/courses/enrolled/2419257)
 - Introduction to Machine Learning and Python Data Science - Total Overview
-- [] [Build Machine Learning Models and Neural Networks - Total Mastery Bundle](https://training.mammothinteractive.com/courses/enrolled/2419867)
+- [ ] [Build Machine Learning Models and Neural Networks - Total Mastery Bundle](https://training.mammothinteractive.com/courses/enrolled/2419867)
 
 ### Game Development Path
 
@@ -504,20 +504,20 @@ Recommended Course Order
 
 ### Educational and Document Management Prompt Engineering
 
-- [] [Automating Education with Gemini](https://training.mammothinteractive.com/courses/enrolled/2530698)
+- [ ] [Automating Education with Gemini](https://training.mammothinteractive.com/courses/enrolled/2530698)
 - Automating Education with Gemini - PRACTICE EXAM
-- [] [Claude AI as an Advanced Personal Assistant](https://training.mammothinteractive.com/courses/enrolled/2530688)
+- [ ] [Claude AI as an Advanced Personal Assistant](https://training.mammothinteractive.com/courses/enrolled/2530688)
 - Claude AI as an Advanced Personal Assistant - PRACTICE EXAM
-- [] [Claude AI in Document Analysis and Management](https://training.mammothinteractive.com/courses/enrolled/2530687)
+- [ ] [Claude AI in Document Analysis and Management](https://training.mammothinteractive.com/courses/enrolled/2530687)
 - Claude AI in Document Analysis and Management - PRACTICE EXAM
-- [] [Claude AI's Role in Revolutionizing Education - Comprehensive Training](https://training.mammothinteractive.com/courses/enrolled/2529051)
+- [ ] [Claude AI's Role in Revolutionizing Education - Comprehensive Training](https://training.mammothinteractive.com/courses/enrolled/2529051)
 - Claude AI's Role in Revolutionizing Education - Comprehensive Training - PRACTICE EXAM
-- [] [Mastering Gemini - Transform It Into Your Personal Assistant with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2526659)
+- [ ] [Mastering Gemini - Transform It Into Your Personal Assistant with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2526659)
 
 ### Creative and Multimedia Applications
 
 - Build Your Own Viral AI Music with Udio Prompt Engineering
-- [] [Building Modern Websites with ChatGPT - Techniques in React, JavaScript, and CSS](https://training.mammothinteractive.com/courses/enrolled/2518307)
+- [ ] [Building Modern Websites with ChatGPT - Techniques in React, JavaScript, and CSS](https://training.mammothinteractive.com/courses/enrolled/2518307)
 - Mastering Image Generation with Midjourney AI and Python: A Comprehensive Masterclass with Certification Exam
   - Practice Exam - The Complete Midjourney and Python Image Generation Masterclass (25 Hours)
   - Practice Exam - Generate Video Game Pixel Art with OpenAI DALL-E Experiments
@@ -571,13 +571,13 @@ Recommended Course Order
 
 ### Advanced Algorithms
 
-- [] [The Complete Pathfinding Algorithms Masterclass](https://training.mammothinteractive.com/courses/enrolled/2562766)
+- [ ] [The Complete Pathfinding Algorithms Masterclass](https://training.mammothinteractive.com/courses/enrolled/2562766)
 - Collision Detection Algorithms - Advanced Methods for Modern Games
 - Recommendation Algorithms - Advanced Techniques from Billion Dollar Software
 - Masterclass in Probabilistic Algorithms - Leveraging Randomness for Efficient Computation
 - Complete Game Theory Algorithms - Strategic Mastery for Victory
-- [] [Machine Learning Algorithms Demystified - From Basics to Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2569760)
-- [] [Deep Learning Algorithms - Cutting-Edge Techniques for Modern AI](https://training.mammothinteractive.com/courses/enrolled/2569759)
+- [ ] [Machine Learning Algorithms Demystified - From Basics to Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2569760)
+- [ ] [Deep Learning Algorithms - Cutting-Edge Techniques for Modern AI](https://training.mammothinteractive.com/courses/enrolled/2569759)
 
 ### Deep Dive into Algorithm Theory
 
@@ -617,8 +617,8 @@ Recommended Course Order
 
 ### Start here! Learn to code.
 
-- [] [Comprehensive Python Foundations - A Beginner's Guide to Coding](https://training.mammothinteractive.com/courses/enrolled/2648952)
-- [] [Python Coding Essentials Bundle - Build Projects and Learn to Code](https://training.mammothinteractive.com/courses/enrolled/2611301)
+- [ ] [Comprehensive Python Foundations - A Beginner's Guide to Coding](https://training.mammothinteractive.com/courses/enrolled/2648952)
+- [ ] [Python Coding Essentials Bundle - Build Projects and Learn to Code](https://training.mammothinteractive.com/courses/enrolled/2611301)
 
 ### Ultimate Python Developer’s Toolkit (Codebases)
 
@@ -660,19 +660,19 @@ Make your dreams reality. Build the next big app using our templates as your acc
 - Data Analysis for Everyone - Beginner’s Guide to Pandas and Python Essentials
 - Explore Data Like a Pro - Fun with Python, Seaborn, and Pandas for Analysis
 - Visual Mastery - Stunning Image Manipulation and Data Visualization with NumPy, PyPlot, and Seaborn
-- [] [Data Science Powerhouse - Dive Deep, Analyze, and Transform Data with Python and Pandas](https://training.mammothinteractive.com/courses/enrolled/2612551)
+- [ ] [Data Science Powerhouse - Dive Deep, Analyze, and Transform Data with Python and Pandas](https://training.mammothinteractive.com/courses/enrolled/2612551)
 - Data Visualization Mastery - Unlock Stunning Graphs with Python and PyPlot
 - Data Science Foundations - Dive into Python and NumPy for Powerful Insights
 - Image Transformation Secrets - Unleash the Power of OpenCV and Python for Mind-Blowing Edits
 - SQL Secrets Unveiled - Python’s Guide to Databases
 - Crack the Code - Unlock Python Regular Expressions
-- [] [Ultimate Python File Mastery - Handling Data Like a Pro](https://training.mammothinteractive.com/courses/enrolled/2633196)
+- [ ] [Ultimate Python File Mastery - Handling Data Like a Pro](https://training.mammothinteractive.com/courses/enrolled/2633196)
 
  
 ### Machine Learning Pathway
 
-- [] [Data Engineering Excellence - Unlock the Secrets of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611506)
-- [] [Python Algorithm Mastery - Harness the Power of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611499)
+- [ ] [Data Engineering Excellence - Unlock the Secrets of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611506)
+- [ ] [Python Algorithm Mastery - Harness the Power of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611499)
 
 
 ### Advanced Mastery: Conquering Complex Challenges
