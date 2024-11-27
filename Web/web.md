@@ -1,16 +1,25 @@
 # Web témakörök
 
+## Hasznos linkek
+
+- https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
+
 ## HTML, CSS, JavaScrip
 
 ### Online kurzusok
 
+- [ ] [30+ Web Projects with HTML, CSS, and JavaScript [Video]](https://subscription.packtpub.com/video/web-development/9781803235806/p1/video1_1/promo-video)
+- [ ] [HTML CSS and JavaScript for Beginners - A Web Design Course [Video]](https://subscription.packtpub.com/video/web-development/9781838551278/p1/video1_1/introduction-to-web-development)
+- [ ] [HTML5 Canvas Graphics and Animations [Video]](https://subscription.packtpub.com/video/web-development/9781836202578/p1/video1_1/overview)
 - [ ] [Modern HTML and CSS From The Beginning (Including Sass) [Video]](https://subscription.packtpub.com/video/web-development/9781838822828/113179/113180/welcome-to-the-course)
+- [ ] [Modern JavaScript from The Beginning [Second Edition] - Second Edition [Video]](https://subscription.packtpub.com/video/programming/9781805127826/p1/video1_1/welcome-to-the-course)
 - [ ] [The Complete 2024 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=BFCPSALE24)
 
 ## PHP
 
 ### Online kurzusok
 
+- [ ] [Intro to PHP [Video]](https://subscription.packtpub.com/video/web-development/9781836202394/p1/video1_1/php-overview-and-getting-started)
 - [ ] [Object Oriented PHP & MVC](https://www.udemy.com/course/object-oriented-php-mvc/?couponCode=BFCPSALE24)
 
 ## Spring
