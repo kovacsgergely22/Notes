@@ -39,18 +39,18 @@ header li {
     padding: 5px;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-}
-
 header li:hover {
     background-color:gray;
     border-radius: 10px;
     margin: 5px;
     padding: 5px;
     border-radius: 10px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
 }
 
 main {
@@ -103,6 +103,20 @@ body main .content ul li {
     text-decoration: none;
     margin: 0px;
     padding: 5px 0px;
+}
+
+body main .content a {
+    background-color:whitesmoke;
+    color: black;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+body main .content a:hover {
+    background-color: navy;
+    color: white;
 }
 
 /* .sidebar {
