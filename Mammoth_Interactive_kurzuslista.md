@@ -517,7 +517,7 @@ Recommended Course Order
 ### Creative and Multimedia Applications
 
 - Build Your Own Viral AI Music with Udio Prompt Engineering
-- Building Modern Websites with ChatGPT - Techniques in React, JavaScript, and CSS
+- [] [Building Modern Websites with ChatGPT - Techniques in React, JavaScript, and CSS](https://training.mammothinteractive.com/courses/enrolled/2518307)
 - Mastering Image Generation with Midjourney AI and Python: A Comprehensive Masterclass with Certification Exam
   - Practice Exam - The Complete Midjourney and Python Image Generation Masterclass (25 Hours)
   - Practice Exam - Generate Video Game Pixel Art with OpenAI DALL-E Experiments
@@ -618,7 +618,7 @@ Recommended Course Order
 ### Start here! Learn to code.
 
 - [] [Comprehensive Python Foundations - A Beginner's Guide to Coding](https://training.mammothinteractive.com/courses/enrolled/2648952)
-- Python Coding Essentials Bundle - Build Projects and Learn to Code
+- [] [Python Coding Essentials Bundle - Build Projects and Learn to Code](https://training.mammothinteractive.com/courses/enrolled/2611301)
 
 ### Ultimate Python Developer’s Toolkit (Codebases)
 
