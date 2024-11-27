@@ -602,7 +602,37 @@ http://www.w3.org/2001/SMLSchema
       * list (listaképzés)
       * union (unióképzés)
 
-[Példák](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e1260)
+```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="grade">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="grade" type="grade"/>
+    ...
+</xs:schema>
+```
+
+Névtelen adattípus definíciója és felhasználása:
+
+```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:attribute name="currency">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="EUR"/>
+                <xs:enumeration value="HUF"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    ...
+</xs:schema>
+```
 
 #### Adattípusok származtatása megszorítással
 
