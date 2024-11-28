@@ -9,8 +9,9 @@
    4. [Webfejlesztés AI-al](#webfejlesztés-ai-al)
    5. [XML](#xml)
       1. [Jegyzeteim](#jegyzeteim)
-      2. [Online kurzusok](#online-kurzusok-2)
-      3. [Hasznos linkek](#hasznos-linkek)
+      2. [Online könyvek](#online-könyvek)
+      3. [Online kurzusok](#online-kurzusok-2)
+      4. [Hasznos linkek](#hasznos-linkek)
 
 
 ## HTML, CSS, JavaScrip
@@ -45,6 +46,10 @@
 1. [Az XML kézikönyv - Neil Bradley](XML-kezikonyv_Neil_Bradley/readme.md)
 2. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
 3. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
+
+### Online könyvek
+
+[XML sémanyelvek - Jeszenszky Péter](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/)
 
 ### Online kurzusok
 

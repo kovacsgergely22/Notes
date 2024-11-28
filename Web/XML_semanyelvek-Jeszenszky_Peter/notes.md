@@ -79,6 +79,12 @@
          9. [Az anyType típus](#az-anytype-típus)
          10. [Helyettesítők](#helyettesítők)
       6. [6. Azonossági megszorítások](#6-azonossági-megszorítások)
+         1. [Azonossági megszorítások definiálása](#azonossági-megszorítások-definiálása)
+            1. [XPath elérési útvonalak](#xpath-elérési-útvonalak)
+         2. [Szematika](#szematika)
+            1. [key](#key)
+            2. [keyref](#keyref)
+            3. [unique](#unique)
       7. [7. Névterek](#7-névterek)
       8. [8. Példányok](#8-példányok)
       9. [9. További lehetőségek](#9-további-lehetőségek)
@@ -1381,23 +1387,542 @@ Példa a `point` elem előfrodulására előbbi alapján
 <point x="-0.459372" y="0.046004"/>
 ```
 
+```
+<xs:element name="newline">
+    <xs:complexType/>
+</xs:element>
+```
+
+Példa az elem előfordulására:
+
+```
+<newline/>
+```
+
 #### Komplex típusok megszorítása és kiterjesztése
 
 ##### Komplex típus definíciójának kiterjesztése
 
+* Egy komplex típus definíciója lehet egy másik komplex típus definíciójának kiterjesztése
+* származtatott új típus örökli az alaptípus tartalommodelljét és tulajdonságait, amelyeket bővíthet
+
+```
+<xs:complexType name="név">
+    <xs:complexContent>
+        <xs:extension base="alaptípus">
+            tartalommodellt megadó elem
+            tulajdonságok használatára vonatkozó elemek
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+```
+
+* A származtatott típus tartalommodellje egy olyan `sequence` modellcsoportként tekinthető, amelyben az alaptípus tartalommodelljét az `extension` elemben megadott tartalommodell követi.
+
+```
+<xs:complexType name="eventType">
+    <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="place" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="birth" type="eventType"/>
+
+<xs:element name="death">
+    <xs:complexType>
+        <xs:complexContent>
+            <xs:extension base="eventType">
+                <xs:sequence>
+                    <xs:element name="cause" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="person">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element ref="birth"/>
+            <xs:element ref="death" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+`person` elem lehetséges előfordulása:
+
+```
+<person>
+    <name>John F. Kennedy</name>
+    <birth>
+        <date>1917-05-29</date>
+        <place>Brookline, Massachusetts, U.S.</place>
+    </birth>
+    <death>
+        <date>1963-11-22</date>
+        <place>Dallas, Texas, U.S.</place>
+        <cause>assassination</cause>
+    </death>
+</person>
+```
+
+A halál idejét, helyét és okát tartalmazó opcionális death elemhez egy olyan névtelen típusdefiníciót adunk meg, amelyben az eventType típus definícióját terjesztjük ki, tartalommodelljét egy opcionális cause elemmel bővítve. Az új típus tartalommodelljét a:
+
+```
+<xs:sequence>
+    <xs:sequence>
+        <xs:element name="date" type="xs:date"/>
+        <xs:element name="place" type="xs:string"/>
+    </xs:sequence>
+    <xs:sequence>
+        <xs:element name="cause" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+</xs:sequence>
+```
+
+modellcsoport írja le.
+
+***Példák***
+
+```
+<xs:complexType name="CelestialObjectType">
+    <xs:sequence>
+        <xs:element name="mass" type="xs:double"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="PlanetType">
+    <xs:complexContent>
+        <xs:extension base="CelestialObjectType">
+            <xs:sequence>
+                <xs:element name="hasMoon" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="ref" type="xs:IDREF" use="required"/>
+                   </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="SolarSystem">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="CelestialObject" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="CelestialObject" type="CelestialObjectType"/>
+
+<xs:element name="Planet" type="PlanetType" substitutionGroup="CelestialObject"/>
+```
+
+`SolarSystem` lehetséges előfordulása:
+
+```
+<SolarSystem>
+
+    <Planet id="MARS">
+        <mass>6.421e+23</mass>
+        <hasMoon ref="PHOBOS"/>
+        <hasMoon ref="DEIMOS"/>
+    </Planet>
+
+    <CelestialObject id="PHOBOS">
+        <mass>1.08e+16</mass>
+    </CelestialObject>
+
+    <CelestialObject id="DEIMOS">
+        <mass>1.80e+15</mass>
+    </CelestialObject>
+
+</SolarSystem>
+```
+
 ##### Komplex típus definíciójának megszorítása
+
+* Egy komplex típus definíciója lehet egy másik komplex típus definíciójának megszorítása
+* alaptípus tartalommodellje és tulajdonságainak használata korlátozható
+
+```
+<xs:complexType name="név">
+    <xs:complexContent>
+        <xs:restriction base="alaptípus">
+            tartalommodellt megadó elem
+            tulajdonságok használatára vonatkozó elemek
+        </xs:restriction>
+    </xs:complexContent>
+</xs:complexType>
+```
+
+***kiterjesztéstől eltérően***
+* származtatott típus nem örökli az alaptípus tartalommodelljét
+* `restriction`elemben az alaptípus tartalommodelljének egy módosított változata adható meg
+* Csak olyan módosítások, amelyek szűkítik az alaptípus által megengedett tartalmak halmazát
+
+***Lehetséges módosítások***
+* A `minOccurs` és `maxOccurs` tulajdonságok értékének módosítása. (Például az alaptípusnál opcionális elem elhagyása vagy kötelezővé tétele.)
+* Ha az alaptípusnál ezek hiányoznak, akkor alapértelmezett vagy rögzített érték megadása egyszerű típusú elemekhez.
+* Lokális elemdeklarációban szereplő típus helyettesítése egy szűkebb (az eredeti típusból megszorítással származtatott) típussal.
+
+***kiterjesztéshez hasonlóan***
+* származtatott típus örökli az alaptípus tulajdonságait
+* `restriction` elemben a tartalommodellt követően elhelyezhetők az alaptípus tulajdonság-deklarációinak módosított változatai
+* Csak olyan módosítás végezhető, amely a tulajdonságok használatát szűkíti
+
+***Lehetséges módosítások***
+* Alapértelmezett vagy rögzített érték megadása ezek hiányában.
+* Az `use` tulajdonság értékének módosítása. (Például opcionális tulajdonság használatának kötelezővé tétele vagy megtiltása.)
+* Lokális tulajdonság-deklarációban szereplő egyszerű típus helyettesítése egy szűkebb (az eredeti típusból megszorítással származtatott) egyszerű típussal.
+
+***Példák***
+
+```
+<xs:complexType name="PersonType">
+    <xs:sequence>
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="givenName" type="xs:string"/>
+                <xs:element name="surname" type="xs:string"/>
+            </xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:choice>
+        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="homePage" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="nick" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<xs:element name="Person" type="PersonType"/>
+```
+
+Érvényes előfordulások:
+
+```
+<Person nick="TimBL">
+    <givenName>Timothy John</givenName>
+    <surname>Berners-Lee</surname>
+    <email>timbl@w3.org</email>
+    <homePage>http://www.w3.org/People/Berners-Lee/</homePage>
+</Person>
+
+<Person>
+    <givenName>Mark</givenName>
+    <surname>Zuckerberg</surname>
+</Person>
+
+<Person nick="DOS">
+    <name>Daniel O’Sullivan</name>
+    <email>mothlite@gmail.com</email>
+    <homePage>http://www.myspace.com/danielohsullivan</homePage>
+    <homePage>http://www.mothlite.org/</homePage>
+    <homePage>http://mothlite.blogspot.com/</homePage>
+</Person>
+```
+
+Köveketző módon szorítható meg a PersonType típus:
+
+```
+<xs:complexType name="SimplePersonType">
+    <xs:complexContent>
+        <xs:restriction base="PersonType">
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="email" type="xs:string" minOccurs="1"/>
+                <xs:element name="homePage" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="nick" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:restriction>
+    </xs:complexContent>
+</xs:complexType>
+```
 
 ##### Származtatás korlátozása
 
+A típusdefinícióhoz megadható final tulajdonság révén korlátozható a származtatás, amelynek lehetséges értékei és ezek jelentése:
+* `extension`
+  * származtatható a típusdefinícióból kiterjesztéssel új típusdefiníció.
+* `restriction`
+  * nem származtatható a típusdefinícióból megszorítással új típusdefiníció.
+* `#all`
+  * nem származtatható a típusdefinícióból kiterjesztéssel és megszorítással sem új típusdefiníció.
+
+ A schema elemhez megadható finalDefault tulajdonsággal határozható meg a típusok final tulajdonságának alapértelmezett értéke.
+
 #### Polimorfizmus
+
+* objektumorientált programozásban használt fogalom -> egy osztály egy objektuma objektuma egyben az öröklődési hierarchiában valamennyi elődosztálynak
+* XML Schemában -> a típusok megfeleltethetők az osztályoknak, a típussal rendelkező elemek pedig az objektumoknak
+* Polimorfizmus két formája
+  * helyettesítési csoportok képviselik a polimorfizmus egyik formáját, amelyek lehetővé teszik adott elemek más elemekkel történő helyettesítését a példányokban.
+  * másik formája az, hogy a példányokban egy elem előfordulásaihoz használható az elem típusából származtatott bármely típus
+
+***Példák***
+
+```
+<xs:complexType name="eventType">
+    <xs:sequence>
+        <xs:element name="date" type="xs:date"/>
+        <xs:element name="place" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="birth" type="eventType"/>
+
+<xs:complexType name="DeathType">
+    <xs:complexContent>
+        <xs:extension base="eventType">
+            <xs:sequence>
+                <xs:element name="cause" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="death" type="DeathType"/>
+```
+
+Felhasználható:
+
+```
+<birth xsi:type="DeathType">
+    <date>1981-12-02</date>
+    <place>McComb, Mississippi, U.S.</place>
+    <cause>OOPS</cause>
+</birth>
+```
+
+***Polimorfizmus korlátozása***
+* típusdefinícióhoz megadható block tulajdonság révén korlátozható
+  * `extension`
+    * a típus helyett nem használható belőle kiterjesztéssel származtatott típus
+  * `restriction`
+    * a típus helyett nem használható belőle megszorítással származtatott típus
+  * `#all`
+    * a típus helyett nem használható belőle kiterjesztéssel és megszorítással származtatott típus sem.
+* a schema elemhez megadható `blockDefault` tulajdonsággal határozható meg a típusok block tulajdonságának alapértelmezett értéke.
 
 #### Absztrakt típusok
 
+* Típusdefiníciókhoz megadható a logikai értékű `abstract` tulajdonság
+* `true` értéke esetén a típusdefiníció csupán alaptípusként szolgálhat más típusok származtatásához, de nem használható fel közvetlenül elemek típusaként
+
+```
+<xs:simpleType name="isbn">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{13}"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="issn">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{4}-\d{3}[\dX]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="PublicationType" abstract="true">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="publisher" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BookType">
+    <xs:complexContent>
+        <xs:extension base="PublicationType">
+            <xs:sequence>
+                <xs:element name="isbn" type="isbn"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="PeriodicalType">
+    <xs:complexContent>
+        <xs:extension base="PublicationType">
+            <xs:sequence>
+                <xs:element name="issn" type="issn"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="Publication" type="PublicationType"/>
+
+<xs:element name="Publications">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Publication" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+***Nem megengedett***
+
+```
+<Publication>
+    <title>...</title>
+    <publisher>...<publisher>
+</Publication>
+
+<Publication xsi:type="PublicationType">
+    <title>...</title>
+    <publisher>...<publisher>
+</Publication>
+```
+
+***Megengedett***
+
+```
+<Publication xsi:type="PeriodicalType">
+    <title>Journal of Statistical Software</title>
+    <publisher>American Statistical Association</publisher>
+    <issn>1548-7660</issn>
+</Publication>
+
+<Publication xsi:type="BookType">
+    <title>World War Z &#8211; Zombiháború</title>
+    <publisher>Könyvmolyképző Kiadó</publisher>
+    <isbn>9789632452753</isbn>
+</Publication>
+```
+
+***Definiálható így is:***
+
+```
+<xs:complexType name="PublicationType" abstract="true">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="publisher" type="xs:string"/>
+        <xs:choice>
+            <xs:element name="isbn" type="isbn"/>
+            <xs:element name="issn" type="issn"/>
+        </xs:choice>
+    </xs:sequence>
+</xs:complexType>
+```
+
 #### Az anyType típus
+
+* A típusdefiníciók hierarchiájának gyökerét reprezentáló anyType típus szabadon használható fel elemek típusaként, akár a többi közönséges komplex típus
+* Tartalommodellje kötetlen, amely semmiféle megszorítást nem ír elő a tartalomra és a tulajdonságokra
+* Tetszőleges számban és sorrendben engedi meg gyermekként szöveg és tetszőleges elemek előfordulását, tetszőleges tulajdonságok használatát lehetővé teszi
+* A tartalomban gyermekként vagy leszármazottként megjelő elemek tartalmára sem vonatkozik megkötés, amelyekhez tetszőlegesen adhatók meg tulajdonságok is. Kivételt képeznek a deklarált elemek, amelyek használata csak a deklarációknak megfelelően történhet.
+
+```
+<xs:element name="anything" type="xs:anyType"/>
+```
+
+***Érényes:***
+
+```
+<anything>
+    Ez az <elem> megengedi, hogy tartalomként <tetszőleges/> sok tetszőleges </elem>
+    és szöveg forduljon elő benne.
+ </anything>
+ ```
 
 #### Helyettesítők
 
+* A `sequence` és `choice` modellcsoportokban rendelkezésre álló **elemhelyettesítő** tetszőleges nevű elemek előfordulását engedi meg
+  * `any` elem
+* A komplex típusok definícióiban és tulajdonságcsoport-definíciókban a **tulajdonság-helyettesítők** tetszőleges nevű tulajdonságok használatát engedik meg
+  * `anyAttribute` elem
+    * *típusdefiníciókban* és *modellcsoport-definíciókban* egyaránt csak a tulajdonság-deklarációkat követően szerepelhet legfeljebb egyszer
+
+***Mindkét elemhez megadható***
+* `namespace` - opcionális tulajdonság -> lehetséges értékei:
+  * `##any`
+    * Minden elem (tulajdonság) megengedése (ez az alapértelmezés).
+  * `##local`
+    * Csak névtérbe nem tartozó nevű elemek (tulajdonságok) megengedése.
+  * `##other`
+    * Csak a cél-névtértől különböző névtérbe tartozó nevű elemek (tulajdonságok) megengedése (nem megengedettek azonban névtérbe nem tartozó nevű elemek és tulajdonságok).
+  * `##targetNamespace`
+    * Csak a cél-névtérbe tartozó nevű elemek (tulajdonságok) megengedése.
+  * `URI`
+    * Az adott URI által azonosított névtérbe tartozó nevű elemek (tulajdonságok) megengedése.
+* `processContents` - opcionális tulajdonság -> lehetséges értékei:
+  * `skip`
+    * ezeken az elemeken (tulajdonságokon) nem kell érvényesítést végezni (csak a jólformázottsági megszorításoknak kell megfelelniük).
+* `lax`
+  * csak akkor kell érvényesítést végezni ezeken az elemeken (tulajdonságokon), ha deklaráltak (azaz nem deklarált elemek és tulajdonságok korlátozás nélkül használhatók).
+* `strict`
+* mindenképpen érvényesítést kell végezni ezeken az elemeken (tulajdonságokon) (nem deklarált elemek és tulajdonságok használatának kizárása).
+
+***Elemhelyettesítők használata***
+
+```
+<xs:element name="note">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:any namespace="http://www.w3.org/1999/xhtml" minOccurs="0"
+                maxOccurs="unbounded" processContents="lax"/>
+	       </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+A `comment` elem egy lehetséges előfordulása:
+
+```
+<note>
+    <p xmlns="http://www.w3.org/1999/xhtml">See
+        <a href="http://www.w3.org/XML/Schema">http://www.w3.org/XML/Schema</a>
+        for more information.</p>
+</note>
+```
+
+***Tulajdonság-helyettesítő használata***
+
+```
+<xs:element name="myLink">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:anyAttribute namespace="http://www.w3.org/1999/xlink"
+                    processContents="lax"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+```
+
+A myLink elem egy lehetséges előfordulása:
+
+
+```
+<myLink xmlns:xlink="http://www.w3.org/1999/xlink"
+    xlink:type="simple" xlink:href="http://www.w3.org/">
+    World Wide Web Consortium (W3C)
+</myLink>
+```
+
 ### 6. Azonossági megszorítások
+
+#### Azonossági megszorítások definiálása
+
+##### XPath elérési útvonalak
+
+#### Szematika
+
+##### key
+
+##### keyref
+
+##### unique
 
 ### 7. Névterek
 
