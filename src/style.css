@@ -101,16 +101,16 @@ body main .content ul {
 
 body main .content ul li {
     text-decoration: none;
-    margin: 0px;
-    padding: 5px 0px;
+    margin: 10px;
+    padding: 10px;
 }
 
 body main .content a {
     background-color:whitesmoke;
     color: black;
-    padding: 8px;
-    margin: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 15px;
     text-decoration: none;
 }
 
