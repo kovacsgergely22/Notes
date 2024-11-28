@@ -95,18 +95,20 @@ body main .notes h2 {
 }
 
 body main .content ul {
+    float: center;
     list-style-type: none;
     overflow: hidden;
 }
 
 body main .content ul li {
-    float: center;
+    
     text-decoration: none;
     margin: 10px;
     padding: 10px;
 }
 
 body main .content a {
+    display:block;
     background-color:whitesmoke;
     color: black;
     padding: 15px;
