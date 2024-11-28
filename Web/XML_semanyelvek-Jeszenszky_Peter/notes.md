@@ -79,9 +79,10 @@
          9. [Az anyType típus](#az-anytype-típus)
          10. [Helyettesítők](#helyettesítők)
       6. [6. Azonossági megszorítások](#6-azonossági-megszorítások)
-         1. [Azonossági megszorítások definiálása](#azonossági-megszorítások-definiálása)
+         1. [Bevezetés](#bevezetés-4)
+         2. [Azonossági megszorítások definiálása](#azonossági-megszorítások-definiálása)
             1. [XPath elérési útvonalak](#xpath-elérési-útvonalak)
-         2. [Szematika](#szematika)
+         3. [Szematika](#szematika)
             1. [key](#key)
             2. [keyref](#keyref)
             3. [unique](#unique)
@@ -1912,33 +1913,283 @@ A myLink elem egy lehetséges előfordulása:
 
 ### 6. Azonossági megszorítások
 
+#### Bevezetés
+
+* A **DTD-ben** rendelkezésre álló `ID`, `IDREF` és `IDREFS` tulajdonságtípusok hivatkozható egyedi azonosítók használatát teszik lehetővé XML dokumentumokban -> alkalmazásuk:
+  * Kizárólag tulajdonságokhoz biztosított egyedi azonosítók ellenőrzött használata.
+  * Minden azonosító kötelezően egy XML név.
+  * Minden azonosító globális a teljes dokumentumra nézve.
+  * Minden elemhez legfeljebb egy ID típusú tulajdonság deklarálható.
+* **XML sémákban** -> azonossági megszorítások -> az azonossági megszorítások előnyei:
+  * Az azonosítók egyediségének követelménye adott hatáskörre korlátozható.
+  * Tetszőleges adattípusokkal használhatók.
+  * Azonosítók egyezésének vizsgálatánál nem egyszerűen karakterláncok hasonlítása történik, hanem az értéktér megfelelő elemeinek hasonlítása.
+  * Egyszerű típusú elemekhez és tulajdonságokhoz is használhatók.
+  * Nem csak egyedi elemekhez és tulajdonságokhoz alkalmazhatóak, hanem ezek tetszőleges kombinációihoz is.
+
+***Azonossági megszorítások fajtái***
+* key -> egyediség előírására
+* unique -> egyediség előírására
+* keyref -> hivatkozási megszorítás
+
 #### Azonossági megszorítások definiálása
+
+* elemdeklarációkban -> tetszőleges számú azonossági megszorítást definiáló sémakomponens adható meg, amelyek az opcionális kommentárt és típusdefiníciót követik
+* **kontextus elem:** az az elemet, amelynek deklarációja a megszorítást definiáló sémakomponenst tartalmazza.
+* `name` tulajdonság értékeként -> olyan egyedi azonosító, amely egy kettőspont karaktert nem tartalmazó XML név
+
+***Mindhárom azonossági megszorításban***
+* Egy `selector` elemmel ki kell választani a kontextus elemhez képest bizonyos elemeket.
+* A `selector` elem által kijelölt elemekhez képest egy-egy `field` elemben kell kiválasztani minden, a megszorításban résztvevő elemet és tulajdonságot.
+* Ehhez a selector és field elemekben az `xpath` tulajdonság értékeként **XPath** elérési útvonalakat kell megadni.
 
 ##### XPath elérési útvonalak
 
+* csak **relatív elérési útvonalak** használhatók korlátozott módon
+* A `selector` és `field` elemekhez tartozó elérési útvonalakban az alábbi lépések szerepelhetnek:
+  * `.`
+  * `*`
+  * `minősített_név`
+  * `előtag:*`
+* A `field` elemekhez tartozó elérési útvonalak kiválaszthatnak tulajdonságokat is, ezért ezek utolsó lépése lehet az alábbiak valamelyike is:
+  * `@*`
+  * `@minősített_név`
+  * `@előtag:*`
+* A lépésekben minősített_név egy tetszőleges, de legfeljebb egy kettőspont karaktert tartalmazó XML név, előtag pedig kettőspont karaktert nem tartalmazó tetszőleges XML név.
+* Minden elérési útvonal elején megadható a `.//` rövidítés, a `selector` elemeknél pedig rendelkezésre áll a `|` operátor elérési útvonalak kombinálásához.
+* Formailag helyes, de szemantikailag hibás elérési útvonalak az érvényesítés során hibát eredményezhetnek.
+
 #### Szematika
+
+* Mindhárom azonossági megszorítás esetén kötelező az érvényességhez, hogy minden field elérési útvonal minden kiértékelése során (relatív útvonal) legfeljebb egy egyszerű típusú elem vagy tulajdonság kerüljön kiválasztásra.
 
 ##### key
 
+* a `selector` által kiválasztott elemekhez a `field` elemek olyan **elemeket és tulajdonságokat** választanak ki, amelyek páronként különböző értékkombinációkat határoznak meg, és hogy ezek az értékombinációk minden, a `selector` által kiválasztott elemhez hiánytalanul rendelkezésre állnak.
+  * A `selector` által kiválasztott elemekhez a `field` elemek mindegyike pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki.
+  * A `field` elemek által kiválasztott elemek egyikének deklarációjához sem tartozik `true` értékű `nillable` tulajdonság.
+  * A `selector` által kiválasztott elemekhez a `field` elemek olyan értékkombinációkat választanak ki, amelyek páronként különböznek.
+* A `selector` által kiválasztott elemekhez a `field` elemek által kiválasztott értékkombinációkat kulcssorozatoknak nevezzük
+
+***Példák***
+
+```
+<xs:element name="books">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="book" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:key name="book-key">
+        <xs:selector xpath="book"/>
+        <xs:field xpath="isbn"/>
+    </xs:key>
+</xs:element>
+
+<xs:element name="book">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="author" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="isbn">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{13}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+***books elem lehetséges előfordulása:***
+
+```
+<books>
+    <book>
+        <author>Mihail Bulgakov</author>
+        <title>A Mester és Margarita</title>
+        <isbn>9789630787208</isbn>
+    </book>
+    <book>
+        <author>George Orwell</author>
+        <title>1984</title>
+        <isbn>9789630788120</isbn>
+    </book>
+    <book>
+        <author>Umberto Eco</author>
+        <title>A rózsa neve</title>	
+        <isbn>9789630785785</isbn>
+    </book>
+    <book>
+        <author>Bram Stoker</author>
+        <title>Drakula</title>
+        <isbn>9879630789448</isbn>
+    </book>
+</books>
+```
+
 ##### keyref
+
+* A `keyref` azonossági megszorítás ellenőrzött hivatkozást tesz lehetővé az adott `key` vagy `unique` azonossági megszorításhoz tartozó kulcssorozatokra.
+  * A `keyref` azonossági megszorítás definícióját tartalmazó elemdeklaráció gyermekként vagy leszármazottként tartalmazza a `refer` tulajdonságban megnevezett `key` vagy `unique` azonossági megszorítás definícióját.
+  * Ha valamely, a `selector` által kiválasztott elemhez minden `field` elem pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki, akkor az általuk meghatározott kulcssorozat megegyezik a `keyref` tulajdonságban adott `key` vagy `unique` azonossági megszorítás által meghatározott valamely kulcssorozattal.
+* Egy `keyref` megszorításhoz a `refer` tulajdonságban megnevezett `key` vagy `unique` azonossági megszorítás viszonya megfelel a DTD-ben rendelkezésre álló `ID` és `IDREF` tulajdonságtípusok kapcsolatának.
+
+***Példák***
+
+```
+<xs:element name="dictionary">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="entry" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:key name="entry-key">
+        <xs:selector xpath="entry"/>
+        <xs:field xpath="term"/>
+    </xs:key>
+    <xs:keyref name="entry-ref" refer="entry-key">
+        <xs:selector xpath="entry/see"/>
+        <xs:field xpath="."/>
+    </xs:keyref>
+</xs:element>
+
+<xs:element name="entry">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="term" type="xs:string"/>
+            <xs:element name="definition" type="xs:string"/>
+            <xs:element name="see" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+***dictionary*** elem lehetséges előfordulása
+
+```
+<dictionary>
+    <entry>
+        <term>Internet</term>
+        <definition>A TCP/IP protokollra épülő globális számítógép-hálózat.</definition>
+    </entry>
+    <entry>
+        <term>World Wide Web (WWW)</term>
+        <definition>Az Interneten működő globális hipertext rendszer.</definition>
+        <see>Internet</see>
+        <see>World Wide Web Consortium (W3C)</see>
+    </entry>
+    <entry>
+        <term>World Wide Web Consortium (W3C)</term>
+        <definition>WWW szabványokért felelős nemzetközi szervezet.</definition>
+        <see>World Wide Web (WWW)</see>
+    </entry>
+</dictionary>
+```
 
 ##### unique
 
+* A `unique` a selector által kiválasztott elemekhez nem teszi kötelezővé a kulcsokként funkcionáló kulcssorozatok létezését a dokumentumokban. 
+* A `unique` esetén a `field` elemekhez tartozó elérési útvonalak kiértékelésének eredményeként megengedett az üres halmaz. Az egyediség követelménye csak a hiánytalanul rendelkezésre álló kulcssorozatokra vonatkozik. A unique azonossági megszorítások is használhatók a keyref azonossági megszorításokhoz a kulcsokra történő ellenőrzött hivatkozások megvalósításához
+* Páronként különböznek azokhoz a `selector` által kiválasztott elemekhez tartozó kulcssorozatok, amelyekhez minden `field` elem pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki
+
+***Példák***
+
+```
+<xs:element name="books">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="book" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="book-key">
+        <xs:selector xpath="book"/>
+        <xs:field xpath="isbn"/>
+    </xs:unique>
+</xs:element>
+
+<xs:element name="book">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="author" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="isbn" minOccurs="0" maxOccurs="1" nillable="true">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{13}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+***books*** elem lehetséges előfordulása
+
+```
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<book>
+        <author>Mihail Bulgakov</author>
+        <title>A Mester és Margarita</title>
+        <isbn>9789630787208</isbn>
+    </book>
+    <book>
+        <author>George Orwell</author>
+        <title>1984</title>
+        <isbn>9789630788120</isbn>
+    </book>
+    <book>
+        <author>Umberto Eco</author>
+        <title>A rózsa neve</title>	
+        <isbn xsi:nil="true"/>
+    </book>
+    <book>
+        <author>Bram Stoker</author>
+        <title>Drakula</title>
+    </book>
+    <book>
+        <author>Steven Saylor</author>
+        <title>Egy gladiátor csak egyszer hal meg</title>
+    </book>
+</books>
+```
+
+[Példák](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e2764)
+
 ### 7. Névterek
+
+[Névterek](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e3028)
 
 ### 8. Példányok
 
+[Példányok](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#instances)
+
 ### 9. További lehetőségek
+
+[További lehetőségek](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#further-options)
 
 ### 10. Esettanulmány
 
+[Esettanulmány](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#case-study)
+
 ## A. Beépített adattípusok
+
+[Beépített adattípusok](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#builtin-datatypes)
 
 ## B. Korlátozó adattípus-tulajdonságok
 
+[Korlátozó adattípus-tulajdonságok](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#constraining-facets)
+
 ## C. Dokumentumok az Esettanulmány című fejezethez
 
+[Dokumentumok az Esettanulmány című fejezethez](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#case-study-appendix)
+
 ## D. Sémadokumentumok manipulálása
+
+[Sémadokumentumok manipulálása](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#schema-editing)
 
 [Tartalomjegyzék](#tartalomjegyzék)
 
