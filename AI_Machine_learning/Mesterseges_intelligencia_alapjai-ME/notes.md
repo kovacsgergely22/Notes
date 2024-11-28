@@ -1,8 +1,8 @@
 # Mesterséges intelligencia alapjai - ME
 
-## Hogy mérik és mire használják?
+## 1. Hogy mérik és mire használják?
 
-***Az intelligencia mérése***
+### Az intelligencia mérése
 * Egzakt mérés igénye -> tesztek
 * Tesztek fajtái
   * Teljesítménytesztek
@@ -12,7 +12,7 @@
   * Megbízhatóság
 * Kortól kultúrától való függés
 
-***Intelligencia tesztek készítése***
+### Intelligencia tesztek készítése
 * **Sir Francis Galton**
   * **Intelligencia:** Öröklött, kivételes érzékelési és észlelési készségek -> mérései nem igazolták
   * **Korrelációs együttható**
@@ -32,12 +32,12 @@
   * Mentális kor fogalma, mentális kor skála
   * Legelterjedtebb tesztek egyike
 
-***A Turing teszt "Imitation Game"***
+### A Turing teszt "Imitation Game"
 * Alan Turing -> mesterséges intelligencia minősítésére
 * Bíráló kérdéseket tesz fel a két tesztalanynak (gép és ember) -> ha 5 perc után sem tudja melyik a gép -> gép sikeresen teljesítette a tesztet
 * Kritikák
 
-***A mesterséges intelligencia alkalmazási területei***
+### A mesterséges intelligencia alkalmazási területei
 1. **Logikai játékok** (logical games)
 2. **Tételbizonyítás**
   * Matematikai tételek bizonyítása az alapaxiómákból kiindulva
@@ -140,7 +140,7 @@
     * Spektrumjósló
     * Szerkezetjósló
 
-***Hol találkozhatunk a mesterséges intelligenciával?***
+### Hol találkozhatunk a mesterséges intelligenciával?
 * E-kereskedelem
   * Személyre szabott vásárlás
   * Mesterséges intelligencia alapú asszisztensek
@@ -152,3 +152,79 @@
   * Megfigyelőkamerák képei alapján azonosítás
 * Robotika 
   * ipari robotok, robotporszívó, stb.
+
+## 2. Mesterséges intelligencia alapjai - Tudásbázis
+
+### Tudás
+
+* tudás = az elvégzendő feladat végrehajtásában hasznosnak bizonyuló bármely ismeret
+* az emberi intelligenciával összemérhető képességű gépi intelligenciának rendelkeznie kell az ember általános tudásával.
+* Az ilyen tudással, ismerethalmazzal bíró mesterséges rendszer intelligenciája ezen ismerethalmaz szervezésétől függ
+
+### A tudásszemléltetés szükségessége
+
+* ismeret -> ritkán áll rendelkezésre számítógép által kezelhető formában -> kódolás => számítógép tárolni, kezelni tudja
+* kódolás módja -> gépi feldolgozás gyorsasága, hatékonysága, tárolt tudáson alkalmazható gépi műveletekre
+* A megfelelő ismeretstruktúrát alkalmazó tudásszemléltetés az MI kulcskérdése
+* Megfelelő szintű működés párhuzamos hardverrendszerektől várható
+* Statikus tudásszemléltetés, tudásszemléltető modellek megalkotása és használata helyett -> Dinamikus, önszervező ismeretábrázolási modellek
+  * Automatikus ismeretszerző és ismeretstrukturáló tevékenység
+  * Öntanuló
+* Szimbolikus jelleg
+* A fogalom jelentése: mindaz, ami hozzá szocializálódott (térbeli, időbeli, minőségi stb. vonatkozásban)
+
+### A tudásszemléltetés elvárt jellemzői
+
+1. A **fontos dolgokat világosan adja meg**.
+2. Fedje fel a **természetes korlátokat**, megkönnyítve a számítások néhány fajtáját.
+3. Legyen **teljes**.
+4. Legyen **tömör**.
+5. Legyen **átlátható** számunkra.
+6. Legyen **alkalmas gyors feldolgozásra**.
+7. **Rejtse el a részleteket**, de tegye elérhetővé azokat szükség esetén.
+8. **Létezzen rá számítógépi eljárás**.
+
+### A tudásfeldolgozási folyamat vízesésmodellje
+
+![A tudásfeldolgozási folyamat vízesésmodellje](img/waterfall.png)
+
+### Tudásfeldolgozás
+
+* az a folyamat, amelyben a **szintetizált tudást a számítógépbe juttatjuk** abból a célból, hogy a problémákat a **tudásbázison végzett elektronikus szimbolikus manipulációval és következtetéssel** megoldjuk
+* Szakterület **szakértője** együttműködik a **"tudásmérnökkel"** (knowledge engineer) -> szakértőrendszer számára fogyasztható tudásreprezentáció => tudásfeldolgozás -> kulcskérdés
+* első teendő -> **tudásgyűjtés** (Knowledge Acquisition)
+
+### Tudásgyűjtés
+
+* az a folyamat, amelynek feladata beazonosítani, kinyerni, dokumentálni és elemezni a szakterület szakértőjének információ-feldolgozó tevékenységét -> cél: szakértőrendszer tudásbázisának és következtető automatájának meghatározása
+
+***A tudáskinyerés négy fő szakasza:***
+1. Az előzetes tudás és problématartomány feltárása
+2. Az információforrások beazonosítása
+3. A részletes tudás kinyerése a forrásokból
+4. A kinyert tudás elemzése, kódolása és dokumentálása.
+
+### Előzetes tudásfeltárás
+
+### Tudás kézikönyv
+
+### Információforrások
+
+### Tudáskinyerés
+
+### Részletes tudás
+
+### Tudáskinyerési technikák
+
+### Kinyert tudás elemzése, kódolása, dokumentálása
+
+### Gépi tanulás
+
+### Előállító szabályok, szabályalapú tudásszemléltetés
+
+### Szabályláncolás
+
+### Szabályalapú tudásszemléltetést és következtető automatát alkalmazó szakértőrendszer felépítése
+
+### Szabályalapú következtetés működése előrehaladó láncolásnál
+
