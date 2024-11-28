@@ -1,8 +1,17 @@
 # Web témakörök
 
-## Hasznos linkek
+1. [Web témakörök](#web-témakörök)
+   1. [HTML, CSS, JavaScrip](#html-css-javascrip)
+      1. [Online kurzusok](#online-kurzusok)
+   2. [PHP](#php)
+      1. [Online kurzusok](#online-kurzusok-1)
+   3. [Spring](#spring)
+   4. [Webfejlesztés AI-al](#webfejlesztés-ai-al)
+   5. [XML](#xml)
+      1. [Jegyzeteim](#jegyzeteim)
+      2. [Online kurzusok](#online-kurzusok-2)
+      3. [Hasznos linkek](#hasznos-linkek)
 
-- https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
 
 ## HTML, CSS, JavaScrip
 
@@ -43,3 +52,7 @@
 - [ ] [XML and XSD: a complete W3C-content based course (+10 hours)](https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/)
 - [ ] [XML Essentials: Structure and Share Data Efficiently](https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/)
 - [ ] [XML Mastery: Unleashing the Power of Data Markup](https://www.udemy.com/course/xml-novice-to-ninja/)
+
+### Hasznos linkek
+
+- https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
