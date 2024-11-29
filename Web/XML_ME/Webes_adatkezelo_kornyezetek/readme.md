@@ -11,7 +11,7 @@
 ### Féléves feladat
 
 - [x] ER modell
-- [ ] XDM modell
+- [x] XDM modell
 - [ ] XML dokumentum
 - [ ] XML Schema
 - [ ] DOMParse
