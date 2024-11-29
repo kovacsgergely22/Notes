@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendelesek xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="">
+    <rendeles>
+        <etterem ekod="1">
+            <nev>Példa restaurant</nev>
+            <cim>
+                <varos>Budapest</varos>
+                <utca>Példa utca</utca>
+                <hazszam>4</hazszam>
+            </cim>
+            <csillag>0</csillag>
+            <fizmod>bankkártya</fizmod>
+            <foszakacs fkod="1">
+                <nev>Kiss Géza</nev>
+                <eletkor>35</eletkor>
+                <vegzettseg>szakács</vegzettseg>
+                <vegzettseg>mesterszakács</vegzettseg>
+                <vegzettseg>mesterszakács továbbképző</vegzettseg>
+            </foszakacs>
+            <szakacs szkod="1">
+                <nev>Nagy Béla</nev>
+                <reszleg>rostlap részleg</reszleg>
+                <vegzettseg>szakács</vegzettseg>
+                <vegzettseg>mesterszakács</vegzettseg>
+            </szakacs>
+            <szakacs szkod="2">
+                <nev>Tóth Gizella</nev>
+                <reszleg>pizzaszakács</reszleg>
+                <vegzettseg>szakács</vegzettseg>
+                <vegzettseg>mesterszakács</vegzettseg>
+            </szakacs>
+            <gyakornok gykod="1">
+                <nev>Kovács József</nev>
+                <gyakorlat>
+                    <kezdete>2021-09-01</kezdete>
+                    <idotartam>4 hónap</idotartam>
+                </gyakorlat>
+            </gyakornok>
+            <gyakornok gykod="1">
+                <nev>Somogyi Klára</nev>
+                <gyakorlat>
+                    <kezdete>2021-06-01</kezdete>
+                    <idotartam>8 hónap</idotartam>
+                </gyakorlat>
+            </gyakornok>
+        </etterem>
+        <vendeg vkod="1">
+            <nev>Rendelő Ödön</nev>
+            <eletkor>54</eletkor>
+            <cim>
+                <varos>Budapest</varos>
+                <utca>Rendelő utca</utca>
+                <hazszam>1</hazszam>
+            </cim>
+        </vendeg>
+    </rendeles>
+</rendelesek>

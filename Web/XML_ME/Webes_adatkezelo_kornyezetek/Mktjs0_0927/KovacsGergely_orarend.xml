@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="style.css" type="text/css"?>
 <orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Mktjs0_orarend.xsd">
-
 	<ora id="GEIAL30F-BL2" tipus="tantermi">
 		<kurzusnev>UNIX rendszergazda</kurzusnev>
 		<idopont>

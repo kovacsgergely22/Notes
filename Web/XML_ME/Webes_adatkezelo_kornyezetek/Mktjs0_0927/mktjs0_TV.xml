@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vasarlasok xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+<vasarlasok xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="XMLSchemamktjs0">
     <vasarlas id="1" darab="1" datum="2024-11-21">
         <termek id="1">
             <nev>papucs</nev>
