@@ -1,6 +1,7 @@
 # Jegyzetek a Mesterséges Intelligencia alapjai tárgyhoz - Miskolci Egyetem
 
 [Jegyzetek](notes.md)
+[Órai jegyzetek](classnotes.md)
 
 ## Teendők
 

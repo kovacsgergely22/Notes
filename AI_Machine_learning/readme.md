@@ -1,8 +1,8 @@
 # AI, Machine Learning jegyzetek
 
-## Mesterséges intelligencia alapjai tárgy jegyzetei
+## Mesterséges intelligencia alapjai tárgy jegyzetei - ME
 
-[Mesterséges intelligencia alapjai jegyzet](Mesterseges_intelligencia_alapjai-ME/readme.md)
+[Mesterséges intelligencia alapjai - ME jegyzet](Mesterseges_intelligencia_alapjai-ME/readme.md)
 
 ## Google Colab
 
