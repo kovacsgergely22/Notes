@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vasarlasok xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <vasarlas id="1" darab="1" datum="2024-11-21">
+        <termek id="1">
+            <nev>papucs</nev>
+            <ar>3000</ar>
+            <meret>45</meret>
+        </termek>
+        <vasarlo id="001">
+            <nev>Kiss József</nev>
+            <cim>
+                <irsz>1111</irsz>
+                <varos>Budapest</varos>
+                <utca>Példa utca</utca>
+                <hazszam>1</hazszam>
+            </cim>
+            <fizmod>bankkártya</fizmod>
+        </vasarlo>
+    </vasarlas>
+    <vasarlas id="2" darab="1" datum="2024-10-13">
+        <termek id="1">
+            <nev>cipő</nev>
+            <ar>30000</ar>
+            <meret>42</meret>
+        </termek>
+        <vasarlo id="002">
+            <nev>Nagy Béla</nev>
+            <cim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca</utca>
+                <hazszam>13</hazszam>
+            </cim>
+            <fizmod>bankkártya</fizmod>
+        </vasarlo>
+    </vasarlas>
+    <vasarlas id="3" darab="2" datum="2024-10-13">
+        <termek id="1">
+            <nev>zokni</nev>
+            <ar>2000</ar>
+            <meret>42</meret>
+        </termek>
+        <vasarlo id="003">
+            <nev>Tóth János</nev>
+            <cim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Avasalja utca</utca>
+                <hazszam>3</hazszam>
+            </cim>
+            <fizmod>készpénz</fizmod>
+        </vasarlo>
+    </vasarlas>
+    <vasarlas id="4" darab="3" datum="2024-10-13">
+        <termek id="1">
+            <nev>nadrág</nev>
+            <ar>13000</ar>
+            <meret>42</meret>
+        </termek>
+        <vasarlo id="004">
+            <nev>Nagy Kálmán</nev>
+            <cim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca</utca>
+                <hazszam>13</hazszam>
+            </cim>
+            <fizmod>bankkártya</fizmod>
+        </vasarlo>
+    </vasarlas>
+</vasarlasok>

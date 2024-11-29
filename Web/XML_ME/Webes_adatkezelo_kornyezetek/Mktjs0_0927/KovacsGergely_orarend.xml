@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+<orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Mktjs0_orarend.xsd">
+
+	<ora id="GEIAL30F-BL2" tipus="tantermi">
+		<kurzusnev>UNIX rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-09-13</nap>
+			<tol>12:30</tol>
+			<ig>15:50</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr Mileff Péter</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAK130-BL2" tipus="online">
+		<kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+		<idopont>
+			<nap>2024-09-13</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Kunné Dr Tamás Judit</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL32K-BL2" tipus="online">
+		<kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+		<idopont>
+			<nap>2024-09-20</nap>
+			<tol>12:30</tol>
+			<ig>15:50</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAK130-BL2" tipus="online">
+		<kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+		<idopont>
+			<nap>2024-09-20</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL331-BL2" tipus="online">
+		<kurzusnev>Web technológiák 1-</kurzusnev>
+		<idopont>
+			<nap>2024-09-21</nap>
+			<tol>08:30</tol>
+			<ig>15:10</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL32K-BL2" tipus="online">
+		<kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+		<idopont>
+			<nap>2024-09-27</nap>
+			<tol>12:30</tol>
+			<ig>15:50</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30F-BL2" tipus="tantermi">
+		<kurzusnev>UNIX rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-09-27</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Mileff Péter</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL331-BL2" tipus="tantermi">
+		<kurzusnev>Web technológiák 1-</kurzusnev>
+		<idopont>
+			<nap>2024-09-28</nap>
+			<tol>08:30</tol>
+			<ig>15:10</ig>
+		</idopont>
+		<helyszin>In/103</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL335-BL2" tipus="tantermi">
+		<kurzusnev>Mobil programozási alapok</kurzusnev>
+		<idopont>
+			<nap>2024-10-05</nap>
+			<tol>08:30</tol>
+			<ig>15:10</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL32K-BL2" tipus="online">
+		<kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+		<idopont>
+			<nap>2024-10-11</nap>
+			<tol>12:30</tol>
+			<ig>15:50</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEVEE050-BL2" tipus="tantermi">
+		<kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+		<idopont>
+			<nap>2024-10-11</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>III</helyszin>
+		<oktato>Szabó Norbert</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL335-BL2" tipus="tantermi">
+		<kurzusnev>Mobil programozási alapok</kurzusnev>
+		<idopont>
+			<nap>2024-10-12</nap>
+			<tol>08:30</tol>
+			<ig>15:10</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30F-BL2" tipus="tantermi">
+		<kurzusnev>UNIX rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-11-08</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>In/202</helyszin>
+		<oktato>Dr. Mileff Péter</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30A-BL2" tipus="tantermi">
+		<kurzusnev>Windows rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-11-09</nap>
+			<tol>08:30</tol>
+			<ig>11:50</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wágner György</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEVEE050-BL2" tipus="tantermi">
+		<kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+		<idopont>
+			<nap>2024-11-15</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>X</helyszin>
+		<oktato>Szabó Norbert</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAK130-BL2" tipus="tantermi">
+		<kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+		<idopont>
+			<nap>2024-11-16</nap>
+			<tol>08:30</tol>
+			<ig>11:50</ig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEVEE050-BL2" tipus="tantermi">
+		<kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+		<idopont>
+			<nap>2024-11-22</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>X</helyszin>
+		<oktato>Szabó Norbert</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30A-BL2" tipus="tantermi">
+		<kurzusnev>Windows rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-11-23</nap>
+			<tol>08:30</tol>
+			<ig>11:50</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wágner György</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30F-BL2" tipus="tantermi">
+		<kurzusnev>UNIX rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-11-29</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>In/202</helyszin>
+		<oktato>Dr. Mileff Péter</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAK130-BL2" tipus="tantermi">
+		<kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+		<idopont>
+			<nap>2024-11-30</nap>
+			<tol>08:30</tol>
+			<ig>11:50</ig>
+		</idopont>
+		<helyszin>In/114</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL32K-BL2" tipus="online">
+		<kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+		<idopont>
+			<nap>2024-12-06</nap>
+			<tol>12:30</tol>
+			<ig>15:50</ig>
+		</idopont>
+		<helyszin>Online</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30A-BL2" tipus="tantermi">
+		<kurzusnev>Windows rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-12-06</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wágner György</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEVEE050-BL2" tipus="tantermi">
+		<kurzusnev>Elektrotechnika-elektronika</kurzusnev>
+		<idopont>
+			<nap>2024-12-07</nap>
+			<tol>12:20</tol>
+			<ig>15:40</ig>
+		</idopont>
+		<helyszin>XXX</helyszin>
+		<oktato>Szabó Norbert</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+	<ora id="GEIAL30A-BL2" tipus="tantermi">
+		<kurzusnev>Windows rendszergazda</kurzusnev>
+		<idopont>
+			<nap>2024-12-13</nap>
+			<tol>16:00</tol>
+			<ig>19:20</ig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wágner György</oktato>
+		<szak>3. évfolyam, Mérnökinformatikus, Levelező</szak>
+	</ora>
+</orarend>
