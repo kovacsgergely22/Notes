@@ -19,3 +19,4 @@
 - [ ] DOMQuery
 - [ ] DOMModify
 - [ ] DOM API - adatírás
+- [ ] Jegyzőkönyv
