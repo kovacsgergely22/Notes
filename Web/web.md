@@ -49,10 +49,11 @@
 ### Jegyzeteim
 
 1. [Az XML kézikönyv - Neil Bradley](XML-kezikonyv_Neil_Bradley/readme.md)
-2. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
-3. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
-4. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
-5. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
+2. [Fejlett adatbázis technológiák - Adamkó Attila](Fejlett_adatbazis_technologiak-Adamko_Attila/notes.md)
+3. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
+4. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
+5. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
+6. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
 
 ### Online könyvek
 
