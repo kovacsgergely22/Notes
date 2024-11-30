@@ -134,19 +134,19 @@ Alapfogalmak + jelentésük
 ##### Sémakomponensek
 
 1. Elsődleges sémakomponensek
-  1. elemdeklarációk
-  2. tulajdonság-deklarációk
-  3. típusdefiníciók
+  * elemdeklarációk
+  * tulajdonság-deklarációk
+  * típusdefiníciók
 2. Másodlagos sémakomponensek
-  1. modellcsoport-definíciók
-  2. tulajdonságcsoport definíciók
-  3. azonossági megszorítások definíciói
-  4. jelölésdeklarációk
+  * modellcsoport-definíciók
+  * tulajdonságcsoport definíciók
+  * azonossági megszorítások definíciói
+  * jelölésdeklarációk
 3. Segédkomponensek
-  1. kommentárok
-  2. modellcsoportok
-  3. részecskék
-  4. helyettesítők
+  * kommentárok
+  * modellcsoportok
+  * részecskék
+  * helyettesítők
 
 * Minden komponenst egy elem ábrázol a sémadokumentumban.
 * Deklarációknak és definícióknak lehet azonosítóként szolgáló neve -> hivatkozható
