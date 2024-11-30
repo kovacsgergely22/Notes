@@ -12,6 +12,7 @@
 
 - [x] ER modell
 - [x] XDM modell
+- [ ] ER modell -> kapcsolatok elnevezése
 - [ ] XML dokumentum
 - [ ] XML Schema
 - [ ] DOMParse

@@ -1,4 +1,16 @@
-# 1. Bevezetés
+# Dr. Adamkó Attila - Fejlett Adatbázis technológiák
+
+![0](images/0.png)
+
+![0v1](images/0v1.png)
+
+---
+
+[Könyv elérhetősége](https://gyires.inf.unideb.hu/GyBITT/12/)
+
+---
+
+## Bevezetés
 
 ![0](images/0.png)
 

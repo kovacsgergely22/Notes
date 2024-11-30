@@ -51,6 +51,7 @@
 1. [Az XML kézikönyv - Neil Bradley](XML-kezikonyv_Neil_Bradley/readme.md)
 2. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
 3. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
+4. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
 
 ### Online könyvek
 

@@ -57,8 +57,7 @@
          5. [Adattípusok származtatása megszorítással](#adattípusok-származtatása-megszorítással)
          6. [Adattípusok származtatása listaképzéssel](#adattípusok-származtatása-listaképzéssel)
          7. [Adattípusok származtatása unióképzéssel](#adattípusok-származtatása-unióképzéssel)
-         8. [Származtatás korlátozása](#származtatás-korlátozása)
-         9. [Az anySimpleType adattípus](#az-anysimpletype-adattípus)
+         8. [Az anySimpleType adattípus](#az-anysimpletype-adattípus)
       5. [5. Komplex típusok](#5-komplex-típusok)
          1. [Komplex típusok definiálása](#komplex-típusok-definiálása)
          2. [Csak elmeket tartalmazó elemek](#csak-elmeket-tartalmazó-elemek)
@@ -73,7 +72,7 @@
          6. [Komplex típusok megszorítása és kiterjesztése](#komplex-típusok-megszorítása-és-kiterjesztése)
             1. [Komplex típus definíciójának kiterjesztése](#komplex-típus-definíciójának-kiterjesztése)
             2. [Komplex típus definíciójának megszorítása](#komplex-típus-definíciójának-megszorítása)
-            3. [Származtatás korlátozása](#származtatás-korlátozása-1)
+            3. [Származtatás korlátozása](#származtatás-korlátozása)
          7. [Polimorfizmus](#polimorfizmus)
          8. [Absztrakt típusok](#absztrakt-típusok)
          9. [Az anyType típus](#az-anytype-típus)
@@ -422,44 +421,6 @@ http://www.w3.org/2001/SMLSchema
 <xs:element name="név"> típusdefiníció </xs:element>
 ```
 
-***Globális és lokális elemdeklarációk***
-
-```
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:element name="athlete">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="dateOfBirth" type="xs:date"/>
-                <xs:element name="gender">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="female"/>
-                            <xs:enumeration value="male"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    ...
-
-</xs:schema>
-```
-
-* Globális elem: `athlete`
-* Lokális elemek: `name`, `dateOfBirth` és `gender`
-* Az `athlete` elem egy lehetséges előfordulása:
-
-```
-<athlete>
-    <name>Usain Bolt</name>
-    <dateOfBirth>1986-08-21</dateOfBirth>
-    <gender>male</gender>
-</athlete>
-```
-
 * Globális elemdeklarációkra hivatkozni lehet komplex típus-definíciók és modellcsoport-definíciók részeként előforduló modellcsoportokban. A hivatkozást egy olyan `element` elem ábrázolja, amely `ref` tulajdonságának értéke egy globális elemdeklaráció neve:
 
 ```
@@ -467,21 +428,6 @@ http://www.w3.org/2001/SMLSchema
 ```
 
 * Az `element` elem fenti előfordulása a `ref` tulajdonság révén hivatkozott elemdeklaráció felhasználását jelenti.
-
-***Globális elemdeklarációkra történő hivatkozás***
-
-```
-<xs:element name="message">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="header" />
-            <xs:element ref="body" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-* A `message` elemhez tartozó típusdefinícióban hivatkozott `header` és `body` elemdeklarációk globálisak kell, hogy legyenek.
 
 ***`element` elem tulajdonságai és előfordulásuk***
 
@@ -508,16 +454,6 @@ http://www.w3.org/2001/SMLSchema
   * alapértelmezett: 1
   * `minOccurs` értékénél kisebb nem lehet
 
-```
-<xs:element name="keywords">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="keyword" type="xs:string" minOccurs="1" maxOccurs="10"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
 ##### Alapértelmezett érték
 
 * DTD deklarációkban, XML Schema elemekhez is
@@ -543,22 +479,7 @@ http://www.w3.org/2001/SMLSchema
 * Helyettesítési csoport mechanizmus -> lehetővé teszi a példányokba adott globális elem más globális elemekkel történő helyettesítését
 * Globális deklarációban adatt `element` elemekhez `substitutionGroup` tulajdonság
 * Értékeként globális elemdeklaráció nevét kell megadni
-
-```
-<xs:element name="familyName" type="xs:string" />
-
-<xs:element name="surname" type="xs:string" substitutionGroup="familyName" />
-
-<xs:element name="lastName" type="xs:string" substitutionGroup="familyName" />
-```
-
 * Nem megengedett a körkörös helyettesíthetőség -> elemek nem helyettesíthetők egymással (pl egy "citizenship" nevű "nationalityval" ha egyszerre akarjuk helyettesíteni mindkettőt a másikkal)
-
-```
-<xs:element name="citizenship" type="xs:string" substitutionGroup="nationality" />
-
-<xs:element name="nationality" type="xs:string" substitutionGroup="citizenship" />
-```
 
 ##### Absztrakt elemek
 
@@ -566,49 +487,6 @@ http://www.w3.org/2001/SMLSchema
 * Alapértelmezett értéke: `false`
 * Absztrakt az elem, ha értéke `true`
 * Nem fordulhatnak elő példányokban -> helyettesítési csoportot használunk hozzá, tagjai helyettesíthetik az absztrakt elemet.
-
-```
-<xs:element name="uri" type="xs:anyURI" abstract="true"/>
-
-<xs:element name="http-uri" substitutionGroup="uri">
-    <xs:simpleType>
-        <xs:restriction base="xs:anyURI">
-            <xs:pattern value="http://.*"/>
-        </xs:restriction>
-    </xs:simpleType>
-</xs:element>
-
-<xs:element name="ftp-uri" substitutionGroup="uri">
-    <xs:simpleType>
-        <xs:restriction base="xs:anyURI">
-            <xs:pattern value="ftp://.*"/>
-        </xs:restriction>
-    </xs:simpleType>
-</xs:element>
-```
-
-```
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://cars.example.com/schema"
-           xmlns:target="http://cars.example.com/schema">
-
-  <complexType name="Vehicle" abstract="true"/>
-
-  <complexType name="Car">
-    <complexContent>
-      <extension base="target:Vehicle"/>
-    </complexContent>
-  </complexType>
-
-  <complexType name="Plane">
-    <complexContent>
-      <extension base="target:Vehicle"/>
-    </complexContent>
-  </complexType>
-
-  <element name="transport" type="target:Vehicle"/>
-</schema>
-```
 
 #### Tulajdonságok deklarálása
 
@@ -635,46 +513,6 @@ http://www.w3.org/2001/SMLSchema
 
 * Globális tulajdonságdeklarációk nevei egyediek kell legyenek
 * Lokálisnál nem kell egyedi név
-
-***Lokális tulajdonságdeklarációk***
-
-```
-<xs:element name="size">
-    <xs:complexType>
-        <xs:attribute name="width" type="xs:nonNegativeInteger" use="required"/>
-        <xs:attribute name="height" type="xs:nonNegativeInteger" use="required"/>
-    </xs:complexType>
-</xs:element>
-```
-
-***Globális tulajdonságdeklarációra történő hivatkozás***
-
-```
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:attribute name="priority">
-        <xs:simpleType>
-            <xs:restriction base="xs:token">
-                <xs:enumeration value="low"/>
-                <xs:enumeration value="normal"/>
-                <xs:enumeration value="high"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-
-    <xs:element name="message">
-        <xs:complexType>
-            <xs:simpleContent>
-                <xs:extension base="xs:string">
-                    <xs:attribute ref="priority" default="normal"/>
-                </xs:extension>
-            </xs:simpleContent>
-        </xs:complexType>
-    </xs:element>
-    ...
-
-</xs:schema>
-```
 
 ***`attribute` elem tulajdonságai
 
@@ -734,48 +572,6 @@ http://www.w3.org/2001/SMLSchema
 <xs:attributeGroup ref="név"/>
 ```
 
-***Tulajdonságcsoport-definíció*** -> két lokális tulajdonság-deklarációval
-
-```
-<xs:attributeGroup name="alignAtts">
-    <xs:attribute name="halign">
-        <xs:simpleType>
-            <xs:restriction base="xs:token">
-                <xs:enumeration value="left"/>
-                <xs:enumeration value="center"/>
-                <xs:enumeration value="right"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-    <xs:attribute name="valign">
-        <xs:simpleType>
-            <xs:restriction base="xs:token">
-                <xs:enumeration value="top"/>
-                <xs:enumeration value="middle"/>
-                <xs:enumeration value="bottom"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-</xs:attributeGroup>
-```
-
-***Felhasználás komplex típus-definícióban***
-
-```
-<xs:element name="column">
-    <xs:complexType>
-        <xs:attribute name="title" type="xs:string"/>
-        <xs:attributeGroup ref="alignAtts"/>
-    </xs:complexType>
-</xs:element>
-```
-
-***`column` lehetséges előfordulása***
-
-```
-<column title="name" halign="center" valign="top"/>
-```
-
 ### 4. Egyszerű típusok (adattípusok) használata és származtatása
 
 #### Bevezetés
@@ -811,37 +607,6 @@ http://www.w3.org/2001/SMLSchema
       * `list` (listaképzés)
       * `union` (unióképzés)
 
-```
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:simpleType name="grade">
-        <xs:restriction base="xs:integer">
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="5"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:element name="grade" type="grade"/>
-    ...
-</xs:schema>
-```
-
-***Névtelen adattípus definíciója és felhasználása:***
-
-```
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:attribute name="currency">
-        <xs:simpleType>
-            <xs:restriction base="xs:token">
-                <xs:enumeration value="EUR"/>
-                <xs:enumeration value="HUF"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-    ...
-</xs:schema>
-```
 
 #### Adattípusok származtatása megszorítással
 
@@ -852,92 +617,18 @@ http://www.w3.org/2001/SMLSchema
 
 [Korlátozó adattípus-tulajdonságok](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e1260)
 
-```
-<xs:simpleType name="név">
-    <xs:restriction base="alaptípus">  (felső szintű típusdefiníció használata)
-        korlátozó adattípus-tulajdonságok értékeit meghatározó elemek
-    </xs:restriction>
-</xs:simpleType>
-```
-
-```
-<xs:simpleType name="név">
-    <xs:restriction>
-        <xs:simpleType>  (névtelen típusdefiníció használata)
-            ...
-        </xs:simpleType>
-        korlátozó adattípus-tulajdonságok értékeit meghatározó elemek
-    </xs:restriction>
-</xs:simpleType>
-```
-
-***Alaptípusként használható adattípusok***
-* **atomi**
-* **lista** -> csak a következők
+Alaptípusként használható adattípusok
+* atomi
+* lista -> csak a következők
   * [`enumeration`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#enumeration-facet)
   * [`length`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#length-facet)
   * [`maxLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxLength-facet)
   * [`minLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minLength-facet)
   * [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet)
   * [`whitespace`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#whiteSpace-facet)
-* **unió**
+* unió
   * [`enumeration`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#enumeration-facet)
   * [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet)
-
-***Példák:***
-
-* [`integer`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#datatypes-derived-from-decimal) adattípusra
-
-```
-<xs:simpleType name="percent">
-    <xs:restriction base="xs:integer">
-        <xs:minInclusive value="1"/>
-        <xs:maxInclusive value="100"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-* [`decimal`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#decimal-datatype) adattípusra
-
-```
-<xs:simpleType name="price">
-    <xs:restriction base="xs:decimal">
-        <xs:minInclusive value="0"/>
-        <xs:fractionDigits value="2"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-* [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet) adattípus tulajdonságok [`string`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#string-datatype) adattípusra
-
-```
-<xs:simpleType name="isbn13">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="[0-9]{13}"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-* [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet) adattípus tulajdonságok [`anyURI`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#anyURI-datatype) típusra
-
-```
-<xs:simpleType name="myURI">
-    <xs:restriction base="xs:anyURI">
-        <xs:pattern value="ftp://.*"/>
-        <xs:pattern value="http(s)?://.*"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-***Egyenlő ezzel:***
-
-```
-<xs:simpleType name="myURI">
-    <xs:restriction base="xs:anyURI">
-        <xs:pattern value="(ftp://.*)|(http(s)?://.*)"/>
-    </xs:restriction>
-</xs:simpleType>
-```
 
 * Minden megszorítás révén származtatott típusdefiníció **örökli** alaptípusdefiníciójának korlátozó adattípus tulajdonságait.
 
@@ -1021,34 +712,6 @@ http://www.w3.org/2001/SMLSchema
 ```
 
 (névtelen típusdefinícióban a `name` elemet üresen kell hagyni)
-
-***Példa:*** 
-* `LotteryNumbers` elemben tetszőleges számú whitespace karakterrel elválasztott, 1 és 90 közötti egész szám -> `integer`
-* `WinnigNumberList` elemben pont 5 ilyen literál
-
-```
-<xs:simpleType name="LotteryNumber">
-    <xs:restriction base="xs:integer">
-        <xs:minInclusive value="1"/>
-        <xs:maxInclusive value="90"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="LotteryNumberList">
-    <xs:list itemType="LotteryNumber"/>
-</xs:simpleType>
-
-<xs:simpleType name="WinningNumberList">
-    <xs:restriction base="LotteryNumberList">
-        <xs:length value="5"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:element name="LotteryNumbers" type="LotteryNumberList"/>
-
-<xs:element name="WinningNumbers" type="WinningNumberList"/>
-```
-
 * Elemtípusként előfordulhat olyan adattípus, amelynek lexikális tere megengedi a whitespace karaktereket a literálokban, mint például a `string` adattípus. Ilyen adattípusok használata elemtípusként azért problémás, mert a lista adattípusok literáljaiban a whitespace karakterek az elemeket választják el.
 
 #### Adattípusok származtatása unióképzéssel
@@ -1056,97 +719,6 @@ http://www.w3.org/2001/SMLSchema
 * Ey vagy több tag-típusdefinícióból unióképzéssel -> `simpleType` elemben `union` elem
   * `union` elem `memberTypes` tulajdonságának értéke -> tígtípusok neveinek listája
   * `union` elem gyermekeként tetszőleges számú `simpleType` elem
-
-***Példák***
-
-```
-<xs:simpleType name="dateOrYear">
-    <xs:union memberTypes="xs:date xs:gYear"/>
-</xs:simpleType>
-```
-
-```
-<xs:simpleType name="CardValue">
-    <xs:union>
-        <xs:simpleType>
-            <xs:restriction base="xs:integer">
-                <xs:minInclusive value="2"/>
-                <xs:maxInclusive value="10"/>
-            </xs:restriction>
-        </xs:simpleType>
-        <xs:simpleType>
-            <xs:restriction base="xs:token">
-                <xs:enumeration value="Jack"/>
-                <xs:enumeration value="Queen"/>
-                <xs:enumeration value="King"/>
-                <xs:enumeration value="Ace"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:union>
-</xs:simpleType>
-```
-
-```
-<xs:simpleType name="isbn10">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="\d{9}[\dX]"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="isbn13">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="\d{13}"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="isbn">
-    <xs:union memberTypes="isbn10 isbn13"/>
-</xs:simpleType>
-```
-
-#### Származtatás korlátozása
-
-* Felső szintű típusdefiníciókban `simpleType` elemekhez `final` tulajdonság korlátozható a típusdefiníció származtatáshoz történő felhasználása
-  * `restriction` -> nem származtatható a típusdefinícióból megszorítással új típusdefiníció
-  * `list` -> nem megengedett a típusdefiníció listaképzéshez elem-típusdefinícióként való használata
-  * `union` -> nem megengedett a típusdefiníció unióképzéshez tag-típusdefinícióként való használata
-  * `#all` -> semmilyen módon sem származtatható a típusdefinícióból új típusdefiníció
-
-***Példák***
-
-```
-<xs:simpleType name="shortString" final="#all">
-    <xs:restriction base="xs:string">
-        <xs:maxLength value="10"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-* Származtatás-korlátozás másik módja -> adattípus-tulajdonságok értékeinek rögzítése
-  * Opcionálisan adható meg a korlátozó adattípus-tulajdonságokat ábrázoló elemekhez -> `fixed` tulajdonság -> alapértelmezett = `false`
-  * ha `true` -> a típusdefinícióból megszorítással történő származtatás során az adott korlátozó adattípus-tulajdonság értékeként csak az alap-típusdefinícióban meghatározott érték fordulhat elő
-
-***Példák***
-
-```
-<xs:simpleType name="unitIntervalValue">
-    <xs:restriction base="xs:decimal">
-        <xs:minInclusive value="0" fixed="true"/>
-        <xs:maxInclusive value="1" fixed="true"/>
-    </xs:restriction>
-</xs:simpleType>
-```
-
-***Érvényes a következő származtatás***
-
-```
-<xs:simpleType>
-    <xs:restriction base="unitIntervalValue">
-        <xs:fractionDigits value="2"/>
-        <xs:maxInclusive value="1"/>
-    </xs:restriction>
-</xs:simpleType>
-```
 
 #### Az anySimpleType adattípus
 
@@ -1173,37 +745,6 @@ http://www.w3.org/2001/SMLSchema
   * Elemdeklaráció részeként -> tilos név megadása
     * névtelen típusdefiníció -> névtelen típus
 
-***Példák***
-
-```
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:complexType name="event">
-        <xs:sequence>
-            <xs:element name="date" type="xs:date"/>
-            <xs:element name="place" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:element name="birth" type="event"/>
-    <xs:element name="death" type="event"/>
-    ...
-</xs:schema>
-```
-
-Névtelen:
-
-```
-<xs:element name="param">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="value" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
 #### Csak elmeket tartalmazó elemek
 
 ```
@@ -1219,8 +760,8 @@ Névtelen:
 [Komplex típus definíciójának megszorítása](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#complex-type-restriction)
 
 Lehet:
-* modellcsoport
-* modellcsoport-definícióra történő hivatkozás
+* **modellcsoport**
+* **modellcsoport-definícióra történő hivatkozás**
 
 ##### Tartalommodellek
 
@@ -1292,118 +833,11 @@ Lehet:
 * Alternatívák egy csoportja
 * Valamennyi részecske megengedett benne -> nem számít a sorrend -> tartalomérvényesítéshez a részecskék egyikét használja
 
-***Példák***
-
-```
-<xs:element name="value">
-    <xs:complexType>
-        <xs:choice>
-            <xs:element name="float" type="xs:float"/>
-            <xs:element name="int" type="xs:int"/>
-            <xs:element name="string" type="xs:string"/>
-        </xs:choice>
-    </xs:complexType>
-</xs:element>
-```
-
-***Érvényes***
-
-```
-<value><float>1E-5</float></value>
-<value><int>1024</int></value>
-<value><string>C-3PO</string></value>
-```
-
-```
-<xs:element name="array">
-    <xs:complexType>
-        <xs:choice>
-            <xs:element name="float" type="xs:float" maxOccurs="unbounded"/>
-            <xs:element name="int" type="xs:int" maxOccurs="unbounded"/>
-            <xs:element name="string" type="xs:string" maxOccurs="unbounded"/>
-        </xs:choice>
-    </xs:complexType>
-</xs:element>
-```
-
-***Érvényes***
-
-```
-<array>
-    <string>George</string>
-    <string>John</string>
-    <string>Paul</string>
-    <string>Ringo</string>
-</array>
-```
-
-***2***
-
-```
-<xs:element name="array">
-    <xs:complexType>
-        <xs:choice maxOccurs="unbounded">
-            <xs:element name="float" type="xs:float"/>
-            <xs:element name="int" type="xs:int"/>
-            <xs:element name="string" type="xs:string"/>
-        </xs:choice>
-    </xs:complexType>
-</xs:element>
-```
-
-***Érvényes***
-
-```
-<array>
-    <string>Mace Windu</string>
-    <int>42</int>
-    <string>Obi-Wan Kenobi</string>
-    <float>123.0</float>
-    <string>Qui-Gon Jinn</string>
-</array>
-```
 
 ***Az `all` modellcsoport***
 * részecskeként olyan lokális elemdeklarációk és globális elemdeklarációkra történő hivatkozások megengedettek csak, ahol a minOccurs és maxOccurs tulajdonságok értéke 0 vagy 1
 * az adott elemek tetszőleges sorrendben fordulhatnak elő
 * A sequence és choice modellcsoport sem tartalmazhatja az all modellcsoportot -> csak legfelső szinten
-
-***Példák***
-
-```
-<xs:element name="address">
-    <xs:complexType>
-        <xs:all>
-            <xs:element name="street" type="xs:string"/>
-            <xs:element name="city" type="xs:string"/>
-            <xs:element name="state" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="postalCode" type="xs:string"/>
-            <xs:element name="country" type="xs:string"/>
-        </xs:all>
-	</xs:complexType>
-</xs:element>
-```
-
-* Az address elemben pontosan egy street, city, postalCode és country elem kötelező, megengedett továbbá egy opcionális state elem. Ezek az elemek tetszőleges sorrendben fordulhatnak elő.
-
-***Érvényes***
-
-```
-<address>
-    <city>Debrecen</city>
-    <street>Egyetem tér 1.</street>
-    <postalCode>4032</postalCode>
-    <country>Hungary</country>
-</address>
-
-<address>	
-    <street>456 Kent Street</street>
-    <city>Sydney</city>
-    <state>NSW</state>
-    <postalCode>2000</postalCode>
-    <country>Australia</country>
-</address>
-```
 
 ##### Modellcsoportokra vonatkozó korlátozások
 
@@ -1479,31 +913,6 @@ Lehet:
 <xs:group ref="név"/>
 ```
 
-***Példák***
-
-```
-<xs:group name="startAndEndDate">
-    <xs:sequence>
-        <xs:element name="startDate" type="xs:date"/>
-        <xs:element name="endDate" type="xs:date"/>
-    </xs:sequence>
-</xs:group>
-```
-
-***Felhasználása egy komplex típus tartalommodelljéhez:***
-
-```
-<xs:element name="event">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="title" type="xs:string"/>
-            <xs:group ref="startAndEndDate"/>
-            <xs:element name="location" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
 #### Vegyes tartalmú elemek
 
 ***DTD-ben***
@@ -1528,41 +937,6 @@ Lehet:
 </xs:element>
 ```
 
-***Példák***
-
-```
-<xs:element name="letter">
-    <xs:complexType mixed="true">
-        <xs:sequence>
-            <xs:element name="salutation" type="mixedContent"/>
-            <xs:element name="valediction" type="mixedContent"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-
-<xs:complexType name="mixedContent" mixed="true">
-    <xs:sequence>
-        <xs:element name="name" type="xs:string"/>
-    </xs:sequence>
-</xs:complexType>
-```
-
-***Érvényes***
-
-```
-<letter>
-    <salutation>Szeretve tisztelt <name>uram</name>,</salutation>
-    üdvözlöm a Kárpátok peremén. Már igen várom. Aludjon jól az éjszaka.
-    Holnap háromkor indul a delizsánsz Bukovinába. Helyet foglaltattam
-    rajta. A Borgói-szorosban kocsim várni fogja és elhozza énhozzám.
-    Remélem, jól utazott Londonból, és kellemesen tölti majd napjait az
-    én kies vidékemen.
-    <valediction>Szolgája
-        <name>Drakula</name>
-    </valediction>
-</letter>
-```
-
 #### Tulajdonságok használata
 
 * **Tartalommodellt meghatározó modellcsoport után** adhatók meg -> lehet:
@@ -1571,30 +945,6 @@ Lehet:
   * **tulajdonságcsoport definícióra történő hivatkozás**
   * **tulajdonság-helyettesítő**
 * A tulajdonság-helyettesítő kivételével a fentiek tetszőleges számban és sorrendben fordulhatnak elő, azonban adott nevű tulajdonság csak egyszer deklarálható
-
-```
-<xs:element name="bookmark">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="tag" type="xs:token" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="uri" type="xs:anyURI" use="required"/>
-        <xs:attribute name="title" type="xs:string" use="required"/>
-    </xs:complexType>
-</xs:element>
-```
-
-***Érvényes***
-
-```
-<bookmark uri="http://www.porcupinetree.com/" title="Porcupine Tree - Official Website">
-    <tag>progressive</tag>
-    <tag>rock</tag>
-    <tag>metal</tag>
-    <tag>music</tag>
-    <tag>band</tag>
-</bookmark>
-```
 
 ##### Szövegtartalmú elemek tulajdonságokkal
 
@@ -1611,88 +961,11 @@ Lehet:
 </xs:complexType>
 ```
 
-***Tulajdonsággal rendelkező szövegtartalmú elem használata***
-
-```
-<xs:element name="image">
-    <xs:complexType>
-        <xs:simpleContent>
-            <xs:extension base="xs:anyURI">
-                <xs:attribute name="width" type="xs:nonNegativeInteger" use="optional"/>
-                <xs:attribute name="height" type="xs:nonNegativeInteger" use="optional"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-</xs:element>
-```
-
-Az elem lehetséges előfordulása
-
-```
-<image width="72" height="48">http://www.w3.org/Icons/w3c_home.png</image>
-```
-
-***Példák***
-
-```
-<xs:simpleType name="myDecimal">
-    <xs:restriction base="xs:decimal">
-        <xs:minInclusive value="0"/>
-        <xs:fractionDigits value="2"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:element name="price">
-    <xs:complexType>
-        <xs:simpleContent>
-            <xs:extension base="myDecimal">
-                <xs:attribute name="currency" use="optional" default="EUR">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                            <xs:enumeration value="CHF"/>
-                            <xs:enumeration value="EUR"/>
-                            <xs:enumeration value="USD"/>
-                        </xs:restriction>
-                    </xs:simpleType>    
-                </xs:attribute>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-</xs:element>
-```
-
 #### Üreselemek
 
 * Komplex típusdefiníció szükséges az üreselemekhez, amelyeknek nincs tartalmuk.
 * `complexType` elem, amely nem határoz meg tartalommodellt
 * Tulajdonságai lehetnek, a szokásos módon adjuk meg
-
-```
-<xs:element name="point">
-    <xs:complexType>
-        <xs:attribute name="x" type="xs:double" use="required"/>
-        <xs:attribute name="y" type="xs:double" use="required"/>
-    </xs:complexType>
-</xs:element>
-```
-
-Példa a `point` elem előfrodulására előbbi alapján
-
-```
-<point x="-0.459372" y="0.046004"/>
-```
-
-```
-<xs:element name="newline">
-    <xs:complexType/>
-</xs:element>
-```
-
-Példa az elem előfordulására:
-
-```
-<newline/>
-```
 
 #### Komplex típusok megszorítása és kiterjesztése
 
@@ -1713,129 +986,6 @@ Példa az elem előfordulására:
 ```
 
 * A származtatott típus tartalommodellje egy olyan `sequence` modellcsoportként tekinthető, amelyben az alaptípus tartalommodelljét az `extension` elemben megadott tartalommodell követi.
-
-```
-<xs:complexType name="eventType">
-    <xs:sequence>
-            <xs:element name="date" type="xs:date"/>
-            <xs:element name="place" type="xs:string"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:element name="birth" type="eventType"/>
-
-<xs:element name="death">
-    <xs:complexType>
-        <xs:complexContent>
-            <xs:extension base="eventType">
-                <xs:sequence>
-                    <xs:element name="cause" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-</xs:element>
-
-<xs:element name="person">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element ref="birth"/>
-            <xs:element ref="death" minOccurs="0"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-`person` elem lehetséges előfordulása:
-
-```
-<person>
-    <name>John F. Kennedy</name>
-    <birth>
-        <date>1917-05-29</date>
-        <place>Brookline, Massachusetts, U.S.</place>
-    </birth>
-    <death>
-        <date>1963-11-22</date>
-        <place>Dallas, Texas, U.S.</place>
-        <cause>assassination</cause>
-    </death>
-</person>
-```
-
-***Új típus tartalommodellje***
-
-```
-<xs:sequence>
-    <xs:sequence>
-        <xs:element name="date" type="xs:date"/>
-        <xs:element name="place" type="xs:string"/>
-    </xs:sequence>
-    <xs:sequence>
-        <xs:element name="cause" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-</xs:sequence>
-```
-
-***Példák***
-
-```
-<xs:complexType name="CelestialObjectType">
-    <xs:sequence>
-        <xs:element name="mass" type="xs:double"/>
-    </xs:sequence>
-    <xs:attribute name="id" type="xs:ID" use="required"/>
-</xs:complexType>
-
-<xs:complexType name="PlanetType">
-    <xs:complexContent>
-        <xs:extension base="CelestialObjectType">
-            <xs:sequence>
-                <xs:element name="hasMoon" minOccurs="0" maxOccurs="unbounded">
-                    <xs:complexType>
-                        <xs:attribute name="ref" type="xs:IDREF" use="required"/>
-                   </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:extension>
-    </xs:complexContent>
-</xs:complexType>
-
-<xs:element name="SolarSystem">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="CelestialObject" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-
-<xs:element name="CelestialObject" type="CelestialObjectType"/>
-
-<xs:element name="Planet" type="PlanetType" substitutionGroup="CelestialObject"/>
-```
-
-`SolarSystem` lehetséges előfordulása:
-
-```
-<SolarSystem>
-
-    <Planet id="MARS">
-        <mass>6.421e+23</mass>
-        <hasMoon ref="PHOBOS"/>
-        <hasMoon ref="DEIMOS"/>
-    </Planet>
-
-    <CelestialObject id="PHOBOS">
-        <mass>1.08e+16</mass>
-    </CelestialObject>
-
-    <CelestialObject id="DEIMOS">
-        <mass>1.80e+15</mass>
-    </CelestialObject>
-
-</SolarSystem>
-```
 
 ##### Komplex típus definíciójának megszorítása
 
@@ -1873,74 +1023,6 @@ Példa az elem előfordulására:
 * Az `use` tulajdonság értékének módosítása. (Például opcionális tulajdonság használatának kötelezővé tétele vagy megtiltása.)
 * Lokális tulajdonság-deklarációban szereplő egyszerű típus helyettesítése egy szűkebb (az eredeti típusból megszorítással származtatott) egyszerű típussal.
 
-***Példák***
-
-```
-<xs:complexType name="PersonType">
-    <xs:sequence>
-        <xs:choice>
-            <xs:sequence>
-                <xs:element name="givenName" type="xs:string"/>
-                <xs:element name="surname" type="xs:string"/>
-            </xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-        </xs:choice>
-        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="homePage" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-    <xs:attribute name="nick" type="xs:string" use="optional"/>
-</xs:complexType>
-
-<xs:element name="Person" type="PersonType"/>
-```
-
-***Érvényes előfordulások:***
-
-```
-<Person nick="TimBL">
-    <givenName>Timothy John</givenName>
-    <surname>Berners-Lee</surname>
-    <email>timbl@w3.org</email>
-    <homePage>http://www.w3.org/People/Berners-Lee/</homePage>
-</Person>
-
-<Person>
-    <givenName>Mark</givenName>
-    <surname>Zuckerberg</surname>
-</Person>
-
-<Person nick="DOS">
-    <name>Daniel O’Sullivan</name>
-    <email>mothlite@gmail.com</email>
-    <homePage>http://www.myspace.com/danielohsullivan</homePage>
-    <homePage>http://www.mothlite.org/</homePage>
-    <homePage>http://mothlite.blogspot.com/</homePage>
-</Person>
-```
-
-***`PersonType` típus megszorítása***
-
-```
-<xs:complexType name="SimplePersonType">
-    <xs:complexContent>
-        <xs:restriction base="PersonType">
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="email" type="xs:string" minOccurs="1"/>
-                <xs:element name="homePage" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-            <xs:attribute name="nick" use="required">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="10"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
-        </xs:restriction>
-    </xs:complexContent>
-</xs:complexType>
-```
-
 ##### Származtatás korlátozása
 
 A típusdefinícióhoz megadható `final` tulajdonság révén korlátozható a származtatás, amelynek lehetséges értékei és ezek jelentése:
@@ -1961,41 +1043,6 @@ A típusdefinícióhoz megadható `final` tulajdonság révén korlátozható a 
   * **helyettesítési csoportok** -> lehetővé teszik adott elemek más elemekkel történő helyettesítését a példányokban.
   * a példányokban **egy elem előfordulásaihoz használható az elem típusából származtatott bármely típus**
 
-***Példák***
-
-```
-<xs:complexType name="eventType">
-    <xs:sequence>
-        <xs:element name="date" type="xs:date"/>
-        <xs:element name="place" type="xs:string"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:element name="birth" type="eventType"/>
-
-<xs:complexType name="DeathType">
-    <xs:complexContent>
-        <xs:extension base="eventType">
-            <xs:sequence>
-                <xs:element name="cause" type="xs:string" minOccurs="0"/>
-            </xs:sequence>
-        </xs:extension>
-    </xs:complexContent>
-</xs:complexType>
-
-<xs:element name="death" type="DeathType"/>
-```
-
-***Felhasználható:***
-
-```
-<birth xsi:type="DeathType">
-    <date>1981-12-02</date>
-    <place>McComb, Mississippi, U.S.</place>
-    <cause>OOPS</cause>
-</birth>
-```
-
 ***Polimorfizmus korlátozása***
 * típusdefinícióhoz megadható `block` tulajdonság révén korlátozható
   * `extension`
@@ -2011,102 +1058,6 @@ A típusdefinícióhoz megadható `final` tulajdonság révén korlátozható a 
 * Típusdefiníciókhoz megadható a logikai értékű `abstract` tulajdonság
 * `true` értéke esetén a típusdefiníció csupán alaptípusként szolgálhat más típusok származtatásához, de nem használható fel közvetlenül elemek típusaként
 
-```
-<xs:simpleType name="isbn">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="\d{13}"/>
-	</xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="issn">
-    <xs:restriction base="xs:string">
-        <xs:pattern value="\d{4}-\d{3}[\dX]"/>
-    </xs:restriction>
-</xs:simpleType>
-
-<xs:complexType name="PublicationType" abstract="true">
-    <xs:sequence>
-        <xs:element name="title" type="xs:string"/>
-        <xs:element name="publisher" type="xs:string"/>
-    </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="BookType">
-    <xs:complexContent>
-        <xs:extension base="PublicationType">
-            <xs:sequence>
-                <xs:element name="isbn" type="isbn"/>
-            </xs:sequence>
-        </xs:extension>
-    </xs:complexContent>
-</xs:complexType>
-
-<xs:complexType name="PeriodicalType">
-    <xs:complexContent>
-        <xs:extension base="PublicationType">
-            <xs:sequence>
-                <xs:element name="issn" type="issn"/>
-            </xs:sequence>
-        </xs:extension>
-    </xs:complexContent>
-</xs:complexType>
-
-<xs:element name="Publication" type="PublicationType"/>
-
-<xs:element name="Publications">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="Publication" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-***Nem megengedett***
-
-```
-<Publication>
-    <title>...</title>
-    <publisher>...<publisher>
-</Publication>
-
-<Publication xsi:type="PublicationType">
-    <title>...</title>
-    <publisher>...<publisher>
-</Publication>
-```
-
-***Megengedett***
-
-```
-<Publication xsi:type="PeriodicalType">
-    <title>Journal of Statistical Software</title>
-    <publisher>American Statistical Association</publisher>
-    <issn>1548-7660</issn>
-</Publication>
-
-<Publication xsi:type="BookType">
-    <title>World War Z &#8211; Zombiháború</title>
-    <publisher>Könyvmolyképző Kiadó</publisher>
-    <isbn>9789632452753</isbn>
-</Publication>
-```
-
-***Definiálható így is:***
-
-```
-<xs:complexType name="PublicationType" abstract="true">
-    <xs:sequence>
-        <xs:element name="title" type="xs:string"/>
-        <xs:element name="publisher" type="xs:string"/>
-        <xs:choice>
-            <xs:element name="isbn" type="isbn"/>
-            <xs:element name="issn" type="issn"/>
-        </xs:choice>
-    </xs:sequence>
-</xs:complexType>
-```
-
 #### Az anyType típus
 
 * A típusdefiníciók hierarchiájának gyökerét reprezentáló `anyType` típus szabadon használható fel elemek típusaként, akár a többi közönséges komplex típus
@@ -2121,15 +1072,6 @@ A típusdefinícióhoz megadható `final` tulajdonság révén korlátozható a 
 ```
 <xs:element name="anything" type="xs:anyType"/>
 ```
-
-***Érvényes:***
-
-```
-<anything>
-    Ez az <elem> megengedi, hogy tartalomként <tetszőleges/> sok tetszőleges </elem>
-    és szöveg forduljon elő benne.
- </anything>
- ```
 
 #### Helyettesítők
 
@@ -2267,65 +1209,6 @@ A `myLink` elem egy lehetséges előfordulása:
   * A `selector` által kiválasztott elemekhez a `field` elemek olyan értékkombinációkat választanak ki, amelyek páronként különböznek.
 * A `selector` által kiválasztott elemekhez a `field` elemek által kiválasztott értékkombinációkat kulcssorozatoknak nevezzük
 
-***Példák***
-
-```
-<xs:element name="books">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="book" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:key name="book-key">
-        <xs:selector xpath="book"/>
-        <xs:field xpath="isbn"/>
-    </xs:key>
-</xs:element>
-
-<xs:element name="book">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="author" type="xs:string"/>
-            <xs:element name="title" type="xs:string"/>
-            <xs:element name="isbn">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="\d{13}"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-***books elem lehetséges előfordulása:***
-
-```
-<books>
-    <book>
-        <author>Mihail Bulgakov</author>
-        <title>A Mester és Margarita</title>
-        <isbn>9789630787208</isbn>
-    </book>
-    <book>
-        <author>George Orwell</author>
-        <title>1984</title>
-        <isbn>9789630788120</isbn>
-    </book>
-    <book>
-        <author>Umberto Eco</author>
-        <title>A rózsa neve</title>	
-        <isbn>9789630785785</isbn>
-    </book>
-    <book>
-        <author>Bram Stoker</author>
-        <title>Drakula</title>
-        <isbn>9879630789448</isbn>
-    </book>
-</books>
-```
-
 ##### `keyref`
 
 * A `keyref` azonossági megszorítás ellenőrzött hivatkozást tesz lehetővé az adott `key` vagy `unique` azonossági megszorításhoz tartozó kulcssorozatokra.
@@ -2333,125 +1216,11 @@ A `myLink` elem egy lehetséges előfordulása:
   * Ha valamely, a `selector` által kiválasztott elemhez minden `field` elem pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki, akkor az általuk meghatározott kulcssorozat megegyezik a `keyref` tulajdonságban adott `key` vagy `unique` azonossági megszorítás által meghatározott valamely kulcssorozattal.
 * Egy `keyref` megszorításhoz a `refer` tulajdonságban megnevezett `key` vagy `unique` azonossági megszorítás viszonya megfelel a DTD-ben rendelkezésre álló `ID` és `IDREF` tulajdonságtípusok kapcsolatának.
 
-***Példák***
-
-```
-<xs:element name="dictionary">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="entry" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:key name="entry-key">
-        <xs:selector xpath="entry"/>
-        <xs:field xpath="term"/>
-    </xs:key>
-    <xs:keyref name="entry-ref" refer="entry-key">
-        <xs:selector xpath="entry/see"/>
-        <xs:field xpath="."/>
-    </xs:keyref>
-</xs:element>
-
-<xs:element name="entry">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="term" type="xs:string"/>
-            <xs:element name="definition" type="xs:string"/>
-            <xs:element name="see" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-***dictionary*** elem lehetséges előfordulása
-
-```
-<dictionary>
-    <entry>
-        <term>Internet</term>
-        <definition>A TCP/IP protokollra épülő globális számítógép-hálózat.</definition>
-    </entry>
-    <entry>
-        <term>World Wide Web (WWW)</term>
-        <definition>Az Interneten működő globális hipertext rendszer.</definition>
-        <see>Internet</see>
-        <see>World Wide Web Consortium (W3C)</see>
-    </entry>
-    <entry>
-        <term>World Wide Web Consortium (W3C)</term>
-        <definition>WWW szabványokért felelős nemzetközi szervezet.</definition>
-        <see>World Wide Web (WWW)</see>
-    </entry>
-</dictionary>
-```
-
 ##### `unique`
 
 * A `unique` a selector által kiválasztott elemekhez nem teszi kötelezővé a kulcsokként funkcionáló kulcssorozatok létezését a dokumentumokban. 
 * A `unique` esetén a `field` elemekhez tartozó elérési útvonalak kiértékelésének eredményeként megengedett az üres halmaz. Az egyediség követelménye csak a hiánytalanul rendelkezésre álló kulcssorozatokra vonatkozik. A unique azonossági megszorítások is használhatók a keyref azonossági megszorításokhoz a kulcsokra történő ellenőrzött hivatkozások megvalósításához
 * Páronként különböznek azokhoz a `selector` által kiválasztott elemekhez tartozó kulcssorozatok, amelyekhez minden `field` elem pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki
-
-***Példák***
-
-```
-<xs:element name="books">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="book" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:unique name="book-key">
-        <xs:selector xpath="book"/>
-        <xs:field xpath="isbn"/>
-    </xs:unique>
-</xs:element>
-
-<xs:element name="book">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="author" type="xs:string"/>
-            <xs:element name="title" type="xs:string"/>
-            <xs:element name="isbn" minOccurs="0" maxOccurs="1" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[0-9]{13}"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-```
-
-***books*** elem lehetséges előfordulása
-
-```
-<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<book>
-        <author>Mihail Bulgakov</author>
-        <title>A Mester és Margarita</title>
-        <isbn>9789630787208</isbn>
-    </book>
-    <book>
-        <author>George Orwell</author>
-        <title>1984</title>
-        <isbn>9789630788120</isbn>
-    </book>
-    <book>
-        <author>Umberto Eco</author>
-        <title>A rózsa neve</title>	
-        <isbn xsi:nil="true"/>
-    </book>
-    <book>
-        <author>Bram Stoker</author>
-        <title>Drakula</title>
-    </book>
-    <book>
-        <author>Steven Saylor</author>
-        <title>Egy gladiátor csak egyszer hal meg</title>
-    </book>
-</books>
-```
 
 [Példák](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e2764)
 
