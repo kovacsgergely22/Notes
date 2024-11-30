@@ -6,6 +6,22 @@
 
 ---
 
+1. [Dr. Adamkó Attila - Fejlett Adatbázis technológiák](#dr-adamkó-attila---fejlett-adatbázis-technológiák)
+   1. [Bevezetés](#bevezetés)
+   2. [XML alapok](#xml-alapok)
+      1. [A névterek és az újrafelhasználhatóság](#a-névterek-és-az-újrafelhasználhatóság)
+      2. [Érvényes XML dokumentumok](#érvényes-xml-dokumentumok)
+         1. [XML dialektusok: DTD és XML séma](#xml-dialektusok-dtd-és-xml-séma)
+            1. [Legfontosabb XML Schema elemek](#legfontosabb-xml-schema-elemek)
+      3. [Információtartalom és feldolgozási stratégiák](#információtartalom-és-feldolgozási-stratégiák)
+         1. [Nyelvfüggetlen feldolgozási stratégiák: DOM és SAX](#nyelvfüggetlen-feldolgozási-stratégiák-dom-és-sax)
+      4. [A dokumentumtervezés alapjai](#a-dokumentumtervezés-alapjai)
+   3. [XML adatbázisok](#xml-adatbázisok)
+   4. [XDM: az XPath és XQuery adatmodellje](#xdm-az-xpath-és-xquery-adatmodellje)
+   5. [XPath](#xpath)
+   6. [XQuery](#xquery)
+
+
 [Könyv elérhetősége](https://gyires.inf.unideb.hu/GyBITT/12/)
 
 ---
@@ -97,9 +113,9 @@
   * attribútomokhoz alapértelmezett érték rendelésére stb.
 * A sémanyelvek **megóvják az alkalmazásokat** a váratlan/értelmezhetetlen formátumoktól, információktól
 * A sémanyelvek egyfajta **osztályozása**
-  * Szabályalapú nyelvek– pl. Schematron
-  * Nyelvtanalapú nyelvek– pl. DTD, RELAX NG
-  * Objektumorientált nyelvek– pl. XML Schema
+  * Szabályalapú nyelvek – pl. Schematron
+  * Nyelvtanalapú nyelvek – pl. DTD, RELAX NG
+  * Objektumorientált nyelvek – pl. XML Schema
 * **Validálás során** vizsgálat:
   * szerkezet: az elemek, attribútumok szerkezete ( markupok szintjén)
   * tartalom: a szöveges csomópontok és attribútumok tartalma
