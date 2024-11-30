@@ -68,4 +68,4 @@
 
 ### Hasznos linkek
 
-- https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
+- [Java DOM Parse](https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm)
