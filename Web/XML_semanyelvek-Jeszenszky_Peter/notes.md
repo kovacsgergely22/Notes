@@ -399,7 +399,7 @@ http://www.w3.org/2001/SMLSchema
 
 * Egy névhez rendelnek:
   * **egyszerű vagy komplex típusdefiníciót**
-  * **opcionálisan további dokumentum érvényesítését és feldolgozását befolyásoló információkat** (pl. alpértelmezett vagy rögzített érték)
+  * **opcionálisan további dokumentum érvényesítését és feldolgozását befolyásoló információkat** (pl. alapértelmezett vagy rögzített érték)
 * `element` elem használata:
   * **felső szinten**, *közvetlenül a `schema` elem gyermekeként* -> **globális elemdeklarációk**
     * neveinek egyedinek kell lenni a sémában
