@@ -28,10 +28,10 @@
             2. [Lexikális tér](#lexikális-tér)
             3. [Adattípus-tulajdonságok](#adattípus-tulajdonságok)
          4. [Adattípus-alaptulajdonságok](#adattípus-alaptulajdonságok)
-            1. [bounded](#bounded)
-            2. [cardinality](#cardinality)
-            3. [numeric](#numeric)
-            4. [ordered](#ordered)
+            1. [`bounded`](#bounded)
+            2. [`cardinality`](#cardinality)
+            3. [`numeric`](#numeric)
+            4. [`ordered`](#ordered)
          5. [Lista adattípusok](#lista-adattípusok)
          6. [Unió adattípusok](#unió-adattípusok)
          7. [Példa: a decimal adattípus](#példa-a-decimal-adattípus)
@@ -83,9 +83,9 @@
          2. [Azonossági megszorítások definiálása](#azonossági-megszorítások-definiálása)
             1. [XPath elérési útvonalak](#xpath-elérési-útvonalak)
          3. [Szematika](#szematika)
-            1. [key](#key)
-            2. [keyref](#keyref)
-            3. [unique](#unique)
+            1. [`key`](#key)
+            2. [`keyref`](#keyref)
+            3. [`unique`](#unique)
       7. [7. Névterek](#7-névterek)
       8. [8. Példányok](#8-példányok)
       9. [9. További lehetőségek](#9-további-lehetőségek)
@@ -314,7 +314,7 @@ http://www.w3.org/2001/SMLSchema
 * sémában rögzíti minden beépített adattípusra minden adattípus tulajdonság értékét
 * új adattípus származtatása során adattípus-alaptulajdonságok meghatározása
 
-##### bounded
+##### `bounded`
 
 * logikai értékű `bounded` adattípus-tulajdonság -> adattípus korlátos-e
   * `true` -> **korlátos**
@@ -323,16 +323,16 @@ http://www.w3.org/2001/SMLSchema
       * nagyobb vagy egyenlő vagy szigorúan nagyobb
     * atomi származtatott adattípus esetén, ha alaptípus-tulajdonságai között van:
       * [`minInclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minInclusive-facet)
-      * `minExclusive`
-      * `maxInclusive`
-      * `maxExclusive`
+      * [`minExclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minExclusive-facet)
+      * [`maxInclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxInclusive-facet)
+      * [`maxExclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxExclusive-facet)
     * lista adattípus esetén, ha alaptípus-tulajdonságai között van:
-      * length
-      * minLength
-      * maxLength
+      * [`length`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#length-facet)
+      * [`minLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minLength-facet)
+      * [`maxLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxLength-facet)
     * unió adattípusnál:
-      * true minden tagtípusnál
-      * van anySimpleType-tól különböző adattípus, mely őse minden adattípusnak
+      * `true` minden tagtípusnál
+      * van [`anySimpleType`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#anySimpleType)-tól különböző adattípus, mely őse minden adattípusnak
     * beépített adattípusok közül:
       * double
       * float
@@ -342,27 +342,36 @@ http://www.w3.org/2001/SMLSchema
       * date
       * positiveInteger
 
-##### cardinality
+##### `cardinality`
 
 * Adattípus értékterének számosságát jelző adattípus-alaptulajdonság -> adattípus számossága
   * finite (véges)
   * countably infinite (megszámlálhatóan végtelen)
+* Atomi származtatott típusok
+  * Az adattípus-tulajdonságok között van a [`length`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#length-facet), [`maxLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxLength-facet) és [`totalDigits`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#totalDigits-facet) közül valamelyik.
+    * Teljesül az alábbiak mindegyike:
+      * Az adattípus-tulajdonságok között van a [`minInclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minInclusive-facet) vagy a [`minExclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minExclusive-facet).
+      * Az adattípus-tulajdonságok között van a [`maxInclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxInclusive-facet) vagy a [`maxExclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxExclusive-facet).
+      * Teljesül az alábbiak valamelyike:
+        * Az adattípus-tulajdonságok között van a [`fractionDigits`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#fractionDigits-facet).
+        * Az alaptípus a [`date`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#date-datatype), [`gYearMonth`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#gYearMonth-datatype), [`gYear`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#gYear-datatype), [`gMonthDay`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#gMonthDay-datatype), [`gDay`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#gDay-datatype), [`gMonth`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#gMonth-datatype) adattípusok valamelyike, vagy ezekből származtatott adattípus.
 
-##### numeric
+##### `numeric`
 
 * Azok az adattípusok, amelyek értékterének elemei számok
-  * true -> numerikus
-  * false -> nem
+  * `true` -> numerikus
+  * `false` -> nem
+* A beépített adattípusok közül numerikus például a [`long`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#datatypes-derived-from-decimal), [`double`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#double-datatype) és [`float`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#float-datatype), nem numerikus a [`date`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#date-datatype), [`duration`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#duration-datatype) és a [`string`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#string-datatype) adattípus.
 
-##### ordered
+##### `ordered`
 
 * Rendezést értelmez az értéktér elemei között -> rendezett adattípusok
-  * szigorú részbenrendezés: szigorúan kisebb, szigorúan nagyobb értékek, nem feltétlenül összehasonlítható bármely két elem
-  * szigorú teljes rendezés -> részbenrendezés, ahol bármely két elem összehasonlítható
+  * **szigorú részbenrendezés**: szigorúan kisebb, szigorúan nagyobb értékek, nem feltétlenül összehasonlítható bármely két elem
+  * **szigorú teljes rendezés** -> részbenrendezés, ahol bármely két elem összehasonlítható
 * Lehetséges értékek:
-  * false -> értéktéren nem értelmezett rendezés
-  * partial -> szigorú részbenrendezés
-  * total -> szigorú teljes rendezés
+  * `false` -> értéktéren nem értelmezett rendezés
+  * `partial` -> szigorú részbenrendezés
+  * `total` -> szigorú teljes rendezés
 
 #### Lista adattípusok
 
@@ -380,6 +389,7 @@ http://www.w3.org/2001/SMLSchema
 #### Példa: a decimal adattípus
 
 * Atomi beépített primitív adattípus
+* [Decimal adattípus](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e632)
 
 ### 3. Elemek és tulajdonságok deklarálása
 
@@ -388,29 +398,75 @@ http://www.w3.org/2001/SMLSchema
 #### Elemek deklarálása
 
 * Egy névhez rendelnek:
-  * egyszerű vagy komplex típusdefiníciót
-  * opcionálisan további dokumentum érvényesítését és feldolgozását befolyásoló információkat (pl. alpértelmezett vagy rögzített érték)
+  * **egyszerű vagy komplex típusdefiníciót**
+  * **opcionálisan további dokumentum érvényesítését és feldolgozását befolyásoló információkat** (pl. alpértelmezett vagy rögzített érték)
 * `element` elem használata:
-  * felső szinten, közvetlenül a `schema` elem gyermekeként -> globális elemdeklarációk
-    * neveinek egyinek kell lenni a sémában
+  * **felső szinten**, *közvetlenül a `schema` elem gyermekeként* -> **globális elemdeklarációk**
+    * neveinek egyedinek kell lenni a sémában
     * csak ezek fordulhatnak elő a példányokban gyökérelemként
     * hivatkozni lehet rájuk
     * `name` kötelező
-    * `type` -> típusdef adható meg (egyszerű vagy komplex), vagy
+    * `type` -> típusdefiníció adható meg (egyszerű vagy komplex), vagy
     * `element` elem gyermekeként megadható egy névtelen típusdefiníció
-  * modellcsoportokban -> komplex típus-definíciók és modellcsoport-definíciók részeként
-    * lokális elemdeklarációk ->
+  * **modellcsoportokban** -> *komplex típus-definíciók és modellcsoport-definíciók részeként*
+    * **lokális elemdeklarációk** ->
       * nem kell egyedi név
       * `name` kötelező
-      * `type` -> típusdef adható meg (egyszerű vagy komplex), vagy
-    * `element` elem gyermekeként megadható egy névtelen típusdefiníció
-    * globális elemdeklarációkra történő hivatkozások -> 
+        * `type` -> **típusdefiníció** adható meg (egyszerű vagy komplex), vagy
+        * *`element` elem gyermekeként* megadható egy **névtelen típusdefiníció**
+    * **globális elemdeklarációkra történő hivatkozások** -> 
 
 ```
 <xs:element name="név" type="típus"/>
 
 <xs:element name="név"> típusdefiníció </xs:element>
 ```
+
+***Globális és lokális elemdeklarációk***
+
+```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="athlete">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="dateOfBirth" type="xs:date"/>
+                <xs:element name="gender">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="female"/>
+                            <xs:enumeration value="male"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    ...
+
+</xs:schema>
+```
+
+* Globális elem: `athlete`
+* Lokális elemek: `name`, `dateOfBirth` és `gender`
+* Az `athlete` elem egy lehetséges előfordulása:
+
+```
+<athlete>
+    <name>Usain Bolt</name>
+    <dateOfBirth>1986-08-21</dateOfBirth>
+    <gender>male</gender>
+</athlete>
+```
+
+* Globális elemdeklarációkra hivatkozni lehet komplex típus-definíciók és modellcsoport-definíciók részeként előforduló modellcsoportokban. A hivatkozást egy olyan `element` elem ábrázolja, amely `ref` tulajdonságának értéke egy globális elemdeklaráció neve:
+
+```
+<xs:element ref="név"/>
+```
+
+* Az `element` elem fenti előfordulása a `ref` tulajdonság révén hivatkozott elemdeklaráció felhasználását jelenti.
 
 ***Globális elemdeklarációkra történő hivatkozás***
 
@@ -424,6 +480,8 @@ http://www.w3.org/2001/SMLSchema
     </xs:complexType>
 </xs:element>
 ```
+
+* A `message` elemhez tartozó típusdefinícióban hivatkozott `header` és `body` elemdeklarációk globálisak kell, hogy legyenek.
 
 ***`element` elem tulajdonságai és előfordulásuk***
 
@@ -450,17 +508,35 @@ http://www.w3.org/2001/SMLSchema
   * alapértelmezett: 1
   * `minOccurs` értékénél kisebb nem lehet
 
+```
+<xs:element name="keywords">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="keyword" type="xs:string" minOccurs="1" maxOccurs="10"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
 ##### Alapértelmezett érték
 
 * DTD deklarációkban, XML Schema elemekhez is
 * Globális és lokális elemdeklarációként előforuló `element` elemekhez adható meg a `default` tulajdonság
 * Egyszerű vagy vegyes tartalmú elemeknél, amelyek megengedik csak szöveg előfordulását
 
+```
+<xs:element name="numberOfChildren" type="xs:nonNegativeInteger" default="0"/>
+```
+
 ##### Rögzített érték
 
 * DTD tulajdonságlista deklarációkban, XML Schema elemekhez is
 * Globális és lokális elemdeklarációknál `element` elemhez `fixed` tulajdonság -> kizárólag a rögzített érték megengedett
 * Egyszerű típusú, vagy vegyes tartalmú elemekhez használható, amelyek megengedik csak szöveg előfordulását
+
+```
+<xs:element name="content-type" type="xs:string" fixed="text/html"/>
+```
 
 ##### Helyettesítési csoportok
 
@@ -490,6 +566,26 @@ http://www.w3.org/2001/SMLSchema
 * Alapértelmezett értéke: `false`
 * Absztrakt az elem, ha értéke `true`
 * Nem fordulhatnak elő példányokban -> helyettesítési csoportot használunk hozzá, tagjai helyettesíthetik az absztrakt elemet.
+
+```
+<xs:element name="uri" type="xs:anyURI" abstract="true"/>
+
+<xs:element name="http-uri" substitutionGroup="uri">
+    <xs:simpleType>
+        <xs:restriction base="xs:anyURI">
+            <xs:pattern value="http://.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="ftp-uri" substitutionGroup="uri">
+    <xs:simpleType>
+        <xs:restriction base="xs:anyURI">
+            <xs:pattern value="ftp://.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+```
 
 ```
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
@@ -540,6 +636,48 @@ http://www.w3.org/2001/SMLSchema
 * Globális tulajdonságdeklarációk nevei egyediek kell legyenek
 * Lokálisnál nem kell egyedi név
 
+***Lokális tulajdonságdeklarációk***
+
+```
+<xs:element name="size">
+    <xs:complexType>
+        <xs:attribute name="width" type="xs:nonNegativeInteger" use="required"/>
+        <xs:attribute name="height" type="xs:nonNegativeInteger" use="required"/>
+    </xs:complexType>
+</xs:element>
+```
+
+***Globális tulajdonságdeklarációra történő hivatkozás***
+
+```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:attribute name="priority">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="low"/>
+                <xs:enumeration value="normal"/>
+                <xs:enumeration value="high"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="message">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="priority" default="normal"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    ...
+
+</xs:schema>
+```
+
+***`attribute` elem tulajdonságai
+
 | Tulajdonság | Globális tulajdonság-deklaráció | Lokális tulajdonság-deklaráció | Hivatkozás globális tulajdonság-deklarációra |
 | --- | --- | --- | --- |
 | default | X | X | X |
@@ -577,6 +715,66 @@ http://www.w3.org/2001/SMLSchema
 #### Tulajdonságcsoport definíciók
 
 * Másodlagos sémakomponensek, amelyek tulajdonság-deklarációk egy csoportjának elnevezését teszik lehetővé többszöri felhasználás céljából
+* `schema` elem gyermekeként:
+
+```
+<xs:attributeGroup name="név">
+    tulajdonságok használatára vonatkozó elemek
+</xs:attributeGroup>
+```
+
+* Az elem gyermekeiként az alábbiak fordulhatnak elő:
+  * lokális tulajdonság-deklaráció,
+  * globális tulajdonság-deklarációra történő hivatkozás,
+  * tulajdonságcsoport-definícióra történő hivatkozás
+  * tulajdonság-helyettesítő.
+* Egy tulajdonságcsoport-definícióra más tulajdonságcsoport-definíciókban és komplex típusok definícióiban lehet hivatkozni az alábbi módon:
+
+```
+<xs:attributeGroup ref="név"/>
+```
+
+***Tulajdonságcsoport-definíció*** -> két lokális tulajdonság-deklarációval
+
+```
+<xs:attributeGroup name="alignAtts">
+    <xs:attribute name="halign">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="left"/>
+                <xs:enumeration value="center"/>
+                <xs:enumeration value="right"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="valign">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="top"/>
+                <xs:enumeration value="middle"/>
+                <xs:enumeration value="bottom"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:attributeGroup>
+```
+
+***Felhasználás komplex típus-definícióban***
+
+```
+<xs:element name="column">
+    <xs:complexType>
+        <xs:attribute name="title" type="xs:string"/>
+        <xs:attributeGroup ref="alignAtts"/>
+    </xs:complexType>
+</xs:element>
+```
+
+***`column` lehetséges előfordulása***
+
+```
+<column title="name" halign="center" valign="top"/>
+```
 
 ### 4. Egyszerű típusok (adattípusok) használata és származtatása
 
@@ -604,14 +802,14 @@ http://www.w3.org/2001/SMLSchema
 #### Adattípusok definiálása
 
 * `simpleType` -> két helyen helyezhető el a sémában
-  * Felső szinten -> schema elem gyermekeként
+  * **Felső szinten** -> `schema` elem gyermekeként
     * kötelező `name`
-  * Elem- és tulajdonság-deklaráció, vagy típusdefiníció részeként -> tilos név megadása
-    * névtelen típusdefiníció -> névtelen típus
+  * **Elem- és tulajdonság-deklaráció**, vagy **típusdefiníció** részeként -> tilos név megadása
+    * **névtelen típusdefiníció** -> *névtelen típus*
     * Származtatás módját meghatározó egyik elem kell:
-      * restriction(megszorítás)
-      * list (listaképzés)
-      * union (unióképzés)
+      * `restriction`(megszorítás)
+      * `list` (listaképzés)
+      * `union` (unióképzés)
 
 ```
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -647,9 +845,9 @@ Névtelen adattípus definíciója és felhasználása:
 
 #### Adattípusok származtatása megszorítással
 
-* Alap típusdefinícióból megszorítással
+* **Alap típusdefinícióból megszorítással**
   * `restriction` elem `base` tulajdonságának értékeként egyszerű típusdefiníció adható meg
-  * `restriction` elem geyrmekeként névtelen `simpleType` elem
+  * `restriction` elem gyermekeként névtelen `simpleType` elem
 * `restriction` elemben korlátozó adattípus tulajdonságok -> alaptípus értéktere szűkíthető -> `value` tulajdonságban
 
 [Korlátozó adattípus-tulajdonságok](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e1260)
@@ -676,19 +874,19 @@ Névtelen adattípus definíciója és felhasználása:
 Alaptípusként használható adattípusok
 * atomi
 * lista -> csak a következők
-  * enumeration
-  * length
-  * maxLength
-  * minLength
-  * pattern
-  * whitespace
+  * [`enumeration`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#enumeration-facet)
+  * [`length`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#length-facet)
+  * [`maxLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#maxLength-facet)
+  * [`minLength`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minLength-facet)
+  * [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet)
+  * [`whitespace`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#whiteSpace-facet)
 * unió
-  * enumeration
-  * pattern
+  * [`enumeration`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#enumeration-facet)
+  * [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet)
 
 Példák:
 
-* Integer adattípusra
+* [`nnteger`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#datatypes-derived-from-decimal) adattípusra
 
 ```
 <xs:simpleType name="percent">
@@ -699,7 +897,7 @@ Példák:
 </xs:simpleType>
 ```
 
-* decimal adattípusra
+* [`decimal`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#decimal-datatype) adattípusra
 
 ```
 <xs:simpleType name="price">
@@ -710,7 +908,7 @@ Példák:
 </xs:simpleType>
 ```
 
-* `pattern` adattípus tulajdonságok `string` adattípusra
+* [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet) adattípus tulajdonságok [`string`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#string-datatype) adattípusra
 
 ```
 <xs:simpleType name="isbn13">
@@ -720,7 +918,7 @@ Példák:
 </xs:simpleType>
 ```
 
-* `pattern` adattípus tulajdonságok `anyURI` típusra
+* [`pattern`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#pattern-facet) adattípus tulajdonságok [`anyURI`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#anyURI-datatype) típusra
 
 ```
 <xs:simpleType name="myURI">
@@ -741,7 +939,7 @@ Egyenlő ezzel:
 </xs:simpleType>
 ```
 
-* Minden megszorítás révén származtatott típusdefiníció örökli alaptípusdefiníciójának korlátozó adattípus tulajdonságait.
+* Minden megszorítás révén származtatott típusdefiníció **örökli** alaptípusdefiníciójának korlátozó adattípus tulajdonságait.
 
 ***Adattípus tulajdonságok öröklése***
 
@@ -939,6 +1137,17 @@ Egyenlő ezzel:
 </xs:simpleType>
 ```
 
+***Érvényes a következő származtatás***
+
+```
+<xs:simpleType>
+    <xs:restriction base="unitIntervalValue">
+        <xs:fractionDigits value="2"/>
+        <xs:maxInclusive value="1"/>
+    </xs:restriction>
+</xs:simpleType>
+```
+
 #### Az anySimpleType adattípus
 
 * Az anySimpleType adattípus valamennyi beépített primitív adattípus alaptípusa 
@@ -1015,13 +1224,13 @@ Lehet:
 
 ##### Tartalommodellek
 
-DTD-ben:
+***DTD-ben:***
 
 ```
 <!ELEMENT d ((a,b,c)|(a,c,b)|(b,a,c)|(b,c,a)|(c,a,b)|(c,b,a))>
 ```
 
-Az XML Schema megoldása:
+***Az XML Schema megoldása:***
 
 ```
 <xs:element name="d">
@@ -1079,7 +1288,7 @@ Az XML Schema megoldása:
 </xs:element>
 ```
 
-***A choice modellcsoport***
+***A `choice` modellcsoport***
 * Alternatívák egy csoportja
 * Valamennyi részecske megengedett benne -> nem számít a sorrend -> tartalomérvényesítéshez a részecskék egyikét használja
 
@@ -1097,6 +1306,14 @@ Az XML Schema megoldása:
 </xs:element>
 ```
 
+***Érvényes***
+
+```
+<value><float>1E-5</float></value>
+<value><int>1024</int></value>
+<value><string>C-3PO</string></value>
+```
+
 ```
 <xs:element name="array">
     <xs:complexType>
@@ -1107,6 +1324,43 @@ Az XML Schema megoldása:
         </xs:choice>
     </xs:complexType>
 </xs:element>
+```
+
+***Érvényes***
+
+```
+<array>
+    <string>George</string>
+    <string>John</string>
+    <string>Paul</string>
+    <string>Ringo</string>
+</array>
+```
+
+***2***
+
+```
+<xs:element name="array">
+    <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="float" type="xs:float"/>
+            <xs:element name="int" type="xs:int"/>
+            <xs:element name="string" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:element>
+```
+
+***Érvényes***
+
+```
+<array>
+    <string>Mace Windu</string>
+    <int>42</int>
+    <string>Obi-Wan Kenobi</string>
+    <float>123.0</float>
+    <string>Qui-Gon Jinn</string>
+</array>
 ```
 
 ***Az `all` modellcsoport***
@@ -1130,7 +1384,26 @@ Az XML Schema megoldása:
 </xs:element>
 ```
 
-Az address elemben pontosan egy street, city, postalCode és country elem kötelező, megengedett továbbá egy opcionális state elem. Ezek az elemek tetszőleges sorrendben fordulhatnak elő.
+* Az address elemben pontosan egy street, city, postalCode és country elem kötelező, megengedett továbbá egy opcionális state elem. Ezek az elemek tetszőleges sorrendben fordulhatnak elő.
+
+***Érvényes***
+
+```
+<address>
+    <city>Debrecen</city>
+    <street>Egyetem tér 1.</street>
+    <postalCode>4032</postalCode>
+    <country>Hungary</country>
+</address>
+
+<address>	
+    <street>456 Kent Street</street>
+    <city>Sydney</city>
+    <state>NSW</state>
+    <postalCode>2000</postalCode>
+    <country>Australia</country>
+</address>
+```
 
 ##### Modellcsoportokra vonatkozó korlátozások
 
@@ -1200,6 +1473,11 @@ Az address elemben pontosan egy street, city, postalCode és country elem kötel
 ```
 
 * Az elemben pontosan egy `sequence`, `choice` vagy `all` modellcsoport kötelező -> nem adható meg sem `minOccurs` sem `maxOccurs` tulajdonság
+* Egy modellcsoport-definícióra a `sequence` és `choice` modellcsoportokban lehet hivatkozni:
+
+```
+<xs:group ref="név"/>
+```
 
 ***Példák***
 
@@ -1269,7 +1547,7 @@ Az address elemben pontosan egy street, city, postalCode és country elem kötel
 </xs:complexType>
 ```
 
-Érvényes a következő elemben:
+***Érvényes***
 
 ```
 <letter>
@@ -1287,11 +1565,11 @@ Az address elemben pontosan egy street, city, postalCode és country elem kötel
 
 #### Tulajdonságok használata
 
-* Tartalommodellt meghatározó modellcsoport után adhatók meg -> lehet:
-  * lokális tulajdonság-deklaráció
-  * globális tulajdonság-deklarációra történő hivatkozás
-  * tulajdonságcsoport definícióra történő hivatkozás
-  * tulajdonság-helyettesítő
+* **Tartalommodellt meghatározó modellcsoport után** adhatók meg -> lehet:
+  * **lokális tulajdonság-deklaráció**
+  * **globális tulajdonság-deklarációra történő hivatkozás**
+  * **tulajdonságcsoport definícióra történő hivatkozás**
+  * **tulajdonság-helyettesítő**
 * A tulajdonság-helyettesítő kivételével a fentiek tetszőleges számban és sorrendben fordulhatnak elő, azonban adott nevű tulajdonság csak egyszer deklarálható
 
 ```
@@ -1304,6 +1582,18 @@ Az address elemben pontosan egy street, city, postalCode és country elem kötel
         <xs:attribute name="title" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:element>
+```
+
+***Érvényes***
+
+```
+<bookmark uri="http://www.porcupinetree.com/" title="Porcupine Tree - Official Website">
+    <tag>progressive</tag>
+    <tag>rock</tag>
+    <tag>metal</tag>
+    <tag>music</tag>
+    <tag>band</tag>
+</bookmark>
 ```
 
 ##### Szövegtartalmú elemek tulajdonságokkal
@@ -1474,7 +1764,7 @@ Példa az elem előfordulására:
 </person>
 ```
 
-A halál idejét, helyét és okát tartalmazó opcionális death elemhez egy olyan névtelen típusdefiníciót adunk meg, amelyben az eventType típus definícióját terjesztjük ki, tartalommodelljét egy opcionális cause elemmel bővítve. Az új típus tartalommodelljét a:
+***Új típus tartalommodellje***
 
 ```
 <xs:sequence>
@@ -1487,8 +1777,6 @@ A halál idejét, helyét és okát tartalmazó opcionális death elemhez egy ol
     </xs:sequence>
 </xs:sequence>
 ```
-
-modellcsoport írja le.
 
 ***Példák***
 
@@ -1606,7 +1894,7 @@ modellcsoport írja le.
 <xs:element name="Person" type="PersonType"/>
 ```
 
-Érvényes előfordulások:
+***Érvényes előfordulások:***
 
 ```
 <Person nick="TimBL">
@@ -1630,7 +1918,7 @@ modellcsoport írja le.
 </Person>
 ```
 
-Köveketző módon szorítható meg a PersonType típus:
+***`PersonType` típus megszorítása***
 
 ```
 <xs:complexType name="SimplePersonType">
@@ -1655,7 +1943,7 @@ Köveketző módon szorítható meg a PersonType típus:
 
 ##### Származtatás korlátozása
 
-A típusdefinícióhoz megadható final tulajdonság révén korlátozható a származtatás, amelynek lehetséges értékei és ezek jelentése:
+A típusdefinícióhoz megadható `final` tulajdonság révén korlátozható a származtatás, amelynek lehetséges értékei és ezek jelentése:
 * `extension`
   * származtatható a típusdefinícióból kiterjesztéssel új típusdefiníció.
 * `restriction`
@@ -1663,15 +1951,15 @@ A típusdefinícióhoz megadható final tulajdonság révén korlátozható a sz
 * `#all`
   * nem származtatható a típusdefinícióból kiterjesztéssel és megszorítással sem új típusdefiníció.
 
- A schema elemhez megadható finalDefault tulajdonsággal határozható meg a típusok final tulajdonságának alapértelmezett értéke.
+ A `schema` elemhez megadható `finalDefault` tulajdonsággal határozható meg a típusok `final` tulajdonságának alapértelmezett értéke.
 
 #### Polimorfizmus
 
-* objektumorientált programozásban használt fogalom -> egy osztály egy objektuma objektuma egyben az öröklődési hierarchiában valamennyi elődosztálynak
-* XML Schemában -> a típusok megfeleltethetők az osztályoknak, a típussal rendelkező elemek pedig az objektumoknak
-* Polimorfizmus két formája
-  * helyettesítési csoportok képviselik a polimorfizmus egyik formáját, amelyek lehetővé teszik adott elemek más elemekkel történő helyettesítését a példányokban.
-  * másik formája az, hogy a példányokban egy elem előfordulásaihoz használható az elem típusából származtatott bármely típus
+* **objektumorientált programozásban** használt fogalom -> *egy osztály egy objektuma objektuma egyben az öröklődési hierarchiában valamennyi elődosztálynak*
+* **XML Schemában** -> a *típusok megfeleltethetők az osztályoknak, a típussal rendelkező elemek pedig az objektumoknak*
+* **Polimorfizmus két formája**
+  * **helyettesítési csoportok** -> lehetővé teszik adott elemek más elemekkel történő helyettesítését a példányokban.
+  * a példányokban **egy elem előfordulásaihoz használható az elem típusából származtatott bármely típus**
 
 ***Példák***
 
@@ -1698,7 +1986,7 @@ A típusdefinícióhoz megadható final tulajdonság révén korlátozható a sz
 <xs:element name="death" type="DeathType"/>
 ```
 
-Felhasználható:
+***Felhasználható:***
 
 ```
 <birth xsi:type="DeathType">
@@ -1709,14 +1997,14 @@ Felhasználható:
 ```
 
 ***Polimorfizmus korlátozása***
-* típusdefinícióhoz megadható block tulajdonság révén korlátozható
+* típusdefinícióhoz megadható `block` tulajdonság révén korlátozható
   * `extension`
     * a típus helyett nem használható belőle kiterjesztéssel származtatott típus
   * `restriction`
     * a típus helyett nem használható belőle megszorítással származtatott típus
   * `#all`
     * a típus helyett nem használható belőle kiterjesztéssel és megszorítással származtatott típus sem.
-* a schema elemhez megadható `blockDefault` tulajdonsággal határozható meg a típusok block tulajdonságának alapértelmezett értéke.
+* a `schema` elemhez megadható `blockDefault` tulajdonsággal határozható meg a típusok `block` tulajdonságának alapértelmezett értéke.
 
 #### Absztrakt típusok
 
@@ -1821,10 +2109,14 @@ Felhasználható:
 
 #### Az anyType típus
 
-* A típusdefiníciók hierarchiájának gyökerét reprezentáló anyType típus szabadon használható fel elemek típusaként, akár a többi közönséges komplex típus
-* Tartalommodellje kötetlen, amely semmiféle megszorítást nem ír elő a tartalomra és a tulajdonságokra
-* Tetszőleges számban és sorrendben engedi meg gyermekként szöveg és tetszőleges elemek előfordulását, tetszőleges tulajdonságok használatát lehetővé teszi
-* A tartalomban gyermekként vagy leszármazottként megjelő elemek tartalmára sem vonatkozik megkötés, amelyekhez tetszőlegesen adhatók meg tulajdonságok is. Kivételt képeznek a deklarált elemek, amelyek használata csak a deklarációknak megfelelően történhet.
+* A típusdefiníciók hierarchiájának gyökerét reprezentáló `anyType` típus szabadon használható fel elemek típusaként, akár a többi közönséges komplex típus
+* **Tartalommodellje kötetlen**, semmiféle megszorítást nem ír elő a tartalomra és a tulajdonságokra
+* **Tetszőleges számban és sorrendben** engedi meg 
+  * **gyermekként szöveg és tetszőleges elemek előfordulását**, 
+  * **tetszőleges tulajdonságok használatát**
+* A **tartalomban gyermekként vagy leszármazottként megjelenő elemek** tartalmára sem vonatkozik megkötés,
+  * **tetszőlegesen adhatók meg tulajdonságok** 
+  * **kivétel**: a deklarált elemek, amelyek használata csak a deklarációknak megfelelően történhet.
 
 ```
 <xs:element name="anything" type="xs:anyType"/>
@@ -1905,7 +2197,7 @@ A `comment` elem egy lehetséges előfordulása:
 </xs:element>
 ```
 
-A myLink elem egy lehetséges előfordulása:
+A `myLink` elem egy lehetséges előfordulása:
 
 
 ```
@@ -1920,21 +2212,21 @@ A myLink elem egy lehetséges előfordulása:
 #### Bevezetés
 
 * A **DTD-ben** rendelkezésre álló `ID`, `IDREF` és `IDREFS` tulajdonságtípusok hivatkozható egyedi azonosítók használatát teszik lehetővé XML dokumentumokban -> alkalmazásuk:
-  * Kizárólag tulajdonságokhoz biztosított egyedi azonosítók ellenőrzött használata.
-  * Minden azonosító kötelezően egy XML név.
-  * Minden azonosító globális a teljes dokumentumra nézve.
-  * Minden elemhez legfeljebb egy ID típusú tulajdonság deklarálható.
-* **XML sémákban** -> azonossági megszorítások -> az azonossági megszorítások előnyei:
-  * Az azonosítók egyediségének követelménye adott hatáskörre korlátozható.
-  * Tetszőleges adattípusokkal használhatók.
-  * Azonosítók egyezésének vizsgálatánál nem egyszerűen karakterláncok hasonlítása történik, hanem az értéktér megfelelő elemeinek hasonlítása.
-  * Egyszerű típusú elemekhez és tulajdonságokhoz is használhatók.
-  * Nem csak egyedi elemekhez és tulajdonságokhoz alkalmazhatóak, hanem ezek tetszőleges kombinációihoz is.
+  * Kizárólag **tulajdonságokhoz** biztosított *egyedi azonosítók ellenőrzött használata*.
+  * Minden **azonosító kötelezően egy XML név**.
+  * Minden **azonosító globális** a teljes dokumentumra nézve.
+  * **Minden elemhez legfeljebb egy ID típusú tulajdonság deklarálható**.
+* **XML sémákban** -> **azonossági megszorítások** -> az azonossági megszorítások előnyei:
+  * Az azonosítók **egyediségének követelménye adott hatáskörre korlátozható**.
+  * **Tetszőleges adattípusokkal használhatók**.
+  * **Azonosítók egyezésének vizsgálatánál** nem egyszerűen karakterláncok hasonlítása történik, hanem az *értéktér megfelelő elemeinek hasonlítása*.
+  * **Egyszerű típusú elemekhez és tulajdonságokhoz** is használhatók.
+  * Nem csak egyedi elemekhez és tulajdonságokhoz alkalmazhatóak, hanem **ezek tetszőleges kombinációihoz is**.
 
 ***Azonossági megszorítások fajtái***
-* key -> egyediség előírására
-* unique -> egyediség előírására
-* keyref -> hivatkozási megszorítás
+* `key` -> egyediség előírására
+* `unique` -> egyediség előírására
+* `keyref` -> hivatkozási megszorítás
 
 #### Azonossági megszorítások definiálása
 
@@ -1967,7 +2259,7 @@ A myLink elem egy lehetséges előfordulása:
 
 * Mindhárom azonossági megszorítás esetén kötelező az érvényességhez, hogy minden field elérési útvonal minden kiértékelése során (relatív útvonal) legfeljebb egy egyszerű típusú elem vagy tulajdonság kerüljön kiválasztásra.
 
-##### key
+##### `key`
 
 * a `selector` által kiválasztott elemekhez a `field` elemek olyan **elemeket és tulajdonságokat** választanak ki, amelyek páronként különböző értékkombinációkat határoznak meg, és hogy ezek az értékombinációk minden, a `selector` által kiválasztott elemhez hiánytalanul rendelkezésre állnak.
   * A `selector` által kiválasztott elemekhez a `field` elemek mindegyike pontosan egy egyszerű típusú elemet vagy tulajdonságot választ ki.
@@ -2034,7 +2326,7 @@ A myLink elem egy lehetséges előfordulása:
 </books>
 ```
 
-##### keyref
+##### `keyref`
 
 * A `keyref` azonossági megszorítás ellenőrzött hivatkozást tesz lehetővé az adott `key` vagy `unique` azonossági megszorításhoz tartozó kulcssorozatokra.
   * A `keyref` azonossági megszorítás definícióját tartalmazó elemdeklaráció gyermekként vagy leszármazottként tartalmazza a `refer` tulajdonságban megnevezett `key` vagy `unique` azonossági megszorítás definícióját.
@@ -2093,7 +2385,7 @@ A myLink elem egy lehetséges előfordulása:
 </dictionary>
 ```
 
-##### unique
+##### `unique`
 
 * A `unique` a selector által kiválasztott elemekhez nem teszi kötelezővé a kulcsokként funkcionáló kulcssorozatok létezését a dokumentumokban. 
 * A `unique` esetén a `field` elemekhez tartozó elérési útvonalak kiértékelésének eredményeként megengedett az üres halmaz. Az egyediség követelménye csak a hiánytalanul rendelkezésre álló kulcssorozatokra vonatkozik. A unique azonossági megszorítások is használhatók a keyref azonossági megszorításokhoz a kulcsokra történő ellenőrzött hivatkozások megvalósításához
