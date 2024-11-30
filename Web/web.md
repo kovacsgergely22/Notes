@@ -52,6 +52,7 @@
 2. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
 3. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
 4. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
+5. 4. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
 
 ### Online könyvek
 

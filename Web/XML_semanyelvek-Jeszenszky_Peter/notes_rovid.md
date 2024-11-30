@@ -716,7 +716,7 @@ Alaptípusként használható adattípusok
 
 #### Adattípusok származtatása unióképzéssel
 
-* Ey vagy több tag-típusdefinícióból unióképzéssel -> `simpleType` elemben `union` elem
+* Egy vagy több tag-típusdefinícióból unióképzéssel -> `simpleType` elemben `union` elem
   * `union` elem `memberTypes` tulajdonságának értéke -> tígtípusok neveinek listája
   * `union` elem gyermekeként tetszőleges számú `simpleType` elem
 
