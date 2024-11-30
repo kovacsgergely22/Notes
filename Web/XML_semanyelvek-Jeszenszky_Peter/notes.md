@@ -7,13 +7,13 @@
 1. [Jeszenszky Péter - XML sémanyelvek \[^1\]](#jeszenszky-péter---xml-sémanyelvek-1)
    1. [Tartalomjegyzék](#tartalomjegyzék)
    2. [I. W3C XML Schema](#i-w3c-xml-schema)
-      1. [1. Alapfogalmak](#1-alapfogalmak)
          1. [Bevezetés](#bevezetés)
-         2. [Sémák és démadokumentumok](#sémák-és-démadokumentumok)
+      1. [1. Alapfogalmak](#1-alapfogalmak)
+         1. [Sémák és démadokumentumok](#sémák-és-démadokumentumok)
             1. [Sémakomponensek](#sémakomponensek)
             2. [Sémák ábrázolása sémadokumentumokban](#sémák-ábrázolása-sémadokumentumokban)
-         3. [Deklarációk és definíciók](#deklarációk-és-definíciók)
-         4. [Típusrendszer](#típusrendszer)
+         2. [Deklarációk és definíciók](#deklarációk-és-definíciók)
+         3. [Típusrendszer](#típusrendszer)
             1. [Típusdefiníciók](#típusdefiníciók)
             2. [Egyszerű és komplex típusok](#egyszerű-és-komplex-típusok)
             3. [Típushierarchia](#típushierarchia)
@@ -108,13 +108,15 @@
   * Adattípusok külön tárgyalása - szabvány többi részétől függetlenül is használható
 * továbbá még [XML Names](https://www.w3.org/TR/xml-names/) -> névterek
 
+#### Bevezetés
+
 ***Sémanyelv legfontosabb jellemzői***
-* XML szintaxis használata
-* Önleíró (létezik a sémákhoz séma)
-* Primitív adattípusok biztosítása
-* Felhasználói típusok létrehozását támogató típusrendszer
-* XML névterek támogatása
-* Alkalmazások széles köre által használható
+* **XML szintaxis** használata
+*** Önleíró** (létezik a sémákhoz séma)
+* **Primitív adattípusok** biztosítása
+* **Felhasználói típusok** létrehozását támogató típusrendszer
+* **XML névterek** támogatása
+* **Alkalmazások széles köre által használható**
 
 ***Hátrányai***
 * Nehezen érthetőség
@@ -122,27 +124,25 @@
 
 ### 1. Alapfogalmak
 
-#### Bevezetés
-
 Alapfogalmak + jelentésük
 
 #### Sémák és démadokumentumok
 
-* A sémák sémakomponensekből álló objektumok
+* A sémák sémakomponensekből álló absztrakt objektumok
 * XML formátum a sémák ábrázolásához -> sémák XML reprezentációi: sémadokumentumok
 
 ##### Sémakomponensek
 
-1. Elsődleges sémakomponensek
+1. **Elsődleges sémakomponensek**
   * elemdeklarációk
   * tulajdonság-deklarációk
   * típusdefiníciók
-2. Másodlagos sémakomponensek
+2. **Másodlagos sémakomponensek**
   * modellcsoport-definíciók
   * tulajdonságcsoport definíciók
   * azonossági megszorítások definíciói
   * jelölésdeklarációk
-3. Segédkomponensek
+3. **Segédkomponensek**
   * kommentárok
   * modellcsoportok
   * részecskék
@@ -150,10 +150,10 @@ Alapfogalmak + jelentésük
 
 * Minden komponenst egy elem ábrázol a sémadokumentumban.
 * Deklarációknak és definícióknak lehet azonosítóként szolgáló neve -> hivatkozható
-* Elsődleges - deklarációk -> kötelező név, típusdefiníciókhoz -> opcionális
-* Másodlagos -> mindenhol kötelező név
-* Segédkomp -> név sehol
-* Sémakomp név: kekttőspont karaktert nem tartalmazó érvényes XML név -> `name` tulajdonság értékeként
+* Elsődleges sémakomponensek - deklarációk -> kötelező név, típusdefiníciókhoz -> opcionális
+* Másodlagos sémakompnensek -> mindenhol kötelező név
+* Segédkomponensek -> egyiknek sincs neve -> más komponensek részei
+* Sémakomponens név: kettőspont karaktert nem tartalmazó érvényes XML név -> `name` tulajdonság értékeként
 * Cél-névtér -> opcionális, megadásakor sémakomponensek nevei ezzel meghatározott névtérbe tartoznak (ha nincs nem tartoznak névtérbe)
 
 ##### Sémák ábrázolása sémadokumentumokban
@@ -167,6 +167,8 @@ http://www.w3.org/2001/SMLSchema
 * `schema` nevű elem -> gyökér
 * `xs` vagy `xsd` előtaggal névtérhez kötés
 
+***Sémadokumentumok alakja általánosan***
+
 ```
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/SMLSchema" targetNamespace="URI">
@@ -176,24 +178,24 @@ http://www.w3.org/2001/SMLSchema
 
 * `targetNamespace` opcionális -> gyerekként tartalmazhat:
   * minden elsődleges sémakomponenst
-  * másodlagosból: modellcsoport-def, tulajdonságcsoport-def, jelölésdekl
-  * segédkompból: kommentárok
+  * másodlagosból: modellcsoport-definíció, tulajdonságcsoport-definíció, jelölésdeklaráció
+  * segédkomponensekből: kommentárok
 
 #### Deklarációk és definíciók
 
-* Deklarációk
+* **Deklarációk**
   * Érvényesítés során megfeleltethetők a dokumentumok azon alkotórészeinek, amelyeken érvényesítést kell végezni
   * Megfeleltetés név alapján
-  * Elem és tulajdonságdekl -> 
-    * típusdefiníciót rendel hozzá egy névhez
-    * dokumentumok érvényesítésére, feldolgozására vonatkozó további infók (pl alapértelmezett értékek)
-* Definíciók
+  * Elem és tulajdonságdeklaráció -> 
+    * *típusdefiníciót* rendel hozzá egy névhez
+    * dokumentumok *érvényesítésére, feldolgozására* vonatkozó további infók (pl alapértelmezett értékek)
+* **Definíciók**
   * Más sémakomponensek használhatják fel
 
 #### Típusrendszer
 
 * Elemekhez és tulajdonságokhoz kötődnek
-* Minden deklarált elemhez és tulajdonsághoz egy típusdef
+* Minden deklarált elemhez és tulajdonsághoz egy típusdefiníció
 
 ##### Típusdefiníciók
 
@@ -203,10 +205,10 @@ http://www.w3.org/2001/SMLSchema
 
 ##### Egyszerű és komplex típusok
 
-* Típusdefiníciókkal elemekre és tulajdonságokra vonatkozó érvényességi megszorítások
+* Típusdefiníciókkal *elemekre és tulajdonságokra vonatkozó érvényességi megszorítások*
 
 ***Egyszerű típusok***
-* Egy olyan értékhalmaz, amelynek elemeit szövegel literálok ábrázolják
+* Egy olyan értékhalmaz, amelynek elemeit szöveges literálok ábrázolják
 * Beépített egyszerű típusok -> programozási nyelvek és adatbáziskezelő rendszerek adattípusai
   * boolean
   * date
@@ -217,21 +219,21 @@ http://www.w3.org/2001/SMLSchema
 
 ***Komplex típusok***
 * Kizárólag elemekhez
-* Tartalomként elemek és tulajdonságok
+* Tartalomként elemek és tulajdonságok használata
 * Nincsenek beépített komplex típusok
 
 ##### Típushierarchia
 
 ![Típushierarchia](images/typehierarchy.png)
 
-* Komplex típus-definíciók a hierarchiában
-  * egy egyszerű típus-definíciók kiterjesztése
+* **Komplex típus-definíciók a hierarchiában**
+  * egy egyszerű típus-definíció kiterjesztése
   * egy másik komplex típus-definíció kiterjesztése
   * egy másik komplex típus-definíció megszorítása
-* Egyszerű típus-definíciók a hierarchiában
+* **Egyszerű típus-definíciók a hierarchiában**
   * egy másik egyszerű típus-definíció megszorítása
-  * egy másik egyszerű típus-definíció felhasználásával listaképzéssel származtatott
-  * más egyszerű típus-definíciók felhasználásával unióképzéssel származtatott
+  * egy másik egyszerű típus-definíció felhasználásával listaképzéssel származtatott -> (a másik típusdefiníció = elem-típusdefiníció)
+  * más egyszerű típus-definíciók felhasználásával unióképzéssel származtatott -> (többi típusdefiníció = tag-típusdefiníció)
 
 ### 2. Egyszerű típusok (adattípusok) fogalmai
 
@@ -241,40 +243,42 @@ http://www.w3.org/2001/SMLSchema
 
 ##### Primitív és származtatott adattípusok
 
-* Primitív adattípusok -> definiálásukhoz nem kell más adattípus pl
+* **Primitív adattípusok** -> definiálásukhoz nem kell más adattípus pl
   * boolean
   * double
   * string
   * decimal
-* Származtatott adattípusok -> definiálásuk más adattípus felhasználásával (megszorítással, lista vagy unióképzéssel) pl
+* **Származtatott adattípusok** -> definiálásuk más adattípus felhasználásával (megszorítással, lista vagy unióképzéssel) pl
   * integer
   * normalizedString
 
 ##### Beépített és felhasználói származtatott adattípusok
 
-* Beépített adattípusok -> az [XML Schema: Datatypes](https://www.w3.org/TR/xmlschema-2/) specifikál pl
+* **Beépített adattípusok** -> az [XML Schema: Datatypes](https://www.w3.org/TR/xmlschema-2/) specifikál pl
   * boolean
   * integer
   * time
+* **Felhasználói származtatott adattípusok** -> felhasználók által definiált adattípusok
 
 ##### Atomi, lista és unió adattípusok
 
-* Atomi
+* **Atomi**
   * Értékei oszthatatlanok pl. double, string
-* Lista
+* **Lista**
   * atomi adattípus értékeiből álló véges sorozatok
     * IDREF
     * ENTITIES
     * NMTOKENS
-* Unió
+* **Unió**
   * más tagtípus adattípus értékhalmazainak uniója
+  * a beépített adattípusok egyike sem unió adattípus
 
 #### Adattípus fogalma
 
 ***Adattípust meghatározza***
-* Értéktér -> értékek halmaza
-* Lexikális tér -> értékeket ábrázoló literálok halmaza
-* Értékteret, egyedi értékeket, vagy literálokat jellemző adattípus tulajdonságok
+* **Értéktér** -> értékek halmaza
+* **Lexikális tér** -> értékeket ábrázoló literálok halmaza
+* Értékteret, egyedi értékeket, vagy literálokat jellemző **adattípus tulajdonságok**
 
 ##### Értéktér
 
@@ -312,16 +316,16 @@ http://www.w3.org/2001/SMLSchema
 
 ##### bounded
 
-* logikai értékű -> adattípus korlátos-e
-  * true -> korlátos
+* logikai értékű `bounded` adattípus-tulajdonság -> adattípus korlátos-e
+  * `true` -> **korlátos**
     * létezik olyan érték, amely értéktér minden értékénél
       * kisebb vagy egyenlő vagy szigorúan kisebb
       * nagyobb vagy egyenlő vagy szigorúan nagyobb
     * atomi származtatott adattípus esetén, ha alaptípus-tulajdonságai között van:
-      * minInclusive
-      * minExclusive
-      * maxInclusive
-      * maxExclusive
+      * [`minInclusive`](https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#minInclusive-facet)
+      * `minExclusive`
+      * `maxInclusive`
+      * `maxExclusive`
     * lista adattípus esetén, ha alaptípus-tulajdonságai között van:
       * length
       * minLength
