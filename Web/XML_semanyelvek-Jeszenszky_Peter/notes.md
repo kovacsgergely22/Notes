@@ -676,7 +676,7 @@ http://www.w3.org/2001/SMLSchema
 </xs:schema>
 ```
 
-***`attribute` elem tulajdonságai
+***`attribute` elem tulajdonságai***
 
 | Tulajdonság | Globális tulajdonság-deklaráció | Lokális tulajdonság-deklaráció | Hivatkozás globális tulajdonság-deklarációra |
 | --- | --- | --- | --- |
