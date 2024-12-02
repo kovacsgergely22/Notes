@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oktatas>
+    <tanulok>
+        <tanulo felhID="1">
+            <nev>Kovács Gergely</nev>
+            <szulIdo>1990-01-01</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca 3.</utca>
+            </lakcim>
+            <olvasas>
+                <konyv kID="1"></konyv>
+            </olvasas>
+            <eolvasas>
+                <ebook eID="1"></ebook>
+            </eolvasas>
+            <tk>
+                <onkurzus oID="1"></onkurzus>
+            </tk>
+        </tanulo>
+        <tanulo felhID="2">
+            <nev>Kiss János</nev>
+            <szulIdo>1991-02-02</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Deák utca 5.</utca>
+            </lakcim>
+            <olvasas>
+                <konyv kID="2"></konyv>
+            </olvasas>
+            <eolvasas>
+                <ebook eID="2"></ebook>
+            </eolvasas>
+            <tk>
+                <onkurzus oID="2"></onkurzus>
+            </tk>
+        </tanulo>
+        <tanulo felhID="3">
+            <nev>Nagy Péter</nev>
+            <szulIdo>1992-03-03</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Erzsébet utca 7.</utca>
+            </lakcim>
+            <olvasas>
+                <konyv kID="3"></konyv>
+            </olvasas>
+            <eolvasas>
+                <ebook eID="3"></ebook>
+            </eolvasas>
+            <tk>
+                <onkurzus oID="3"></onkurzus>
+            </tk>
+        </tanulo>
+        <tanulo felhID="4">
+            <nev>Kis Gizella</nev>
+            <szulIdo>1995-01-01</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca 3.</utca>
+            </lakcim>
+            <olvasas>
+                <konyv kID="4"></konyv>
+            </olvasas>
+            <eolvasas>
+                <ebook eID="4"></ebook>
+            </eolvasas>
+            <tk>
+                <onkurzus oID="4"></onkurzus>
+            </tk>
+        </tanulo>
+    </tanulok>
+    <konyvek>
+        <konyv kID="1" nyID="1">
+            <szerzo>Neil Bradley</szerzo>
+            <cim>Az XML-kézikönyv</cim>
+            <kiado>Szak kiadó</kiado>
+            <megjelenEv>2000</megjelenEv>
+            <kategoria>Adatkezelés</kategoria>
+            <kategoria>Web</kategoria>
+            <kategoria>XML</kategoria>
+        </konyv>
+        <konyv kID="2" nyID="1">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <kategoria></kategoria>
+        </konyv>
+        <konyv kID="3" nyID="1">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <kategoria></kategoria>
+        </konyv>
+        <konyv kID="4" nyID="1">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <kategoria></kategoria>
+        </konyv>
+    </konyvek>
+    <ebooks>
+        <ebook eID="1" nyID="2">
+            <szerzo>Sashi Banzal</szerzo>
+            <cim>XML Basics</cim>
+            <kiado>Mercury Learning and Information</kiado>
+            <megjelenEv>2020</megjelenEv>
+            <link>https://www.packtpub.com/en-hu/product/xml-basics-9781836648741</link>
+        </ebook>
+        <ebook eID="2" nyID="2">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <link></link>
+        </ebook>
+        <ebook eID="3" nyID="2">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <link></link>
+        </ebook>
+        <ebook eID="4" nyID="2">
+            <szerzo></szerzo>
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <link></link>
+        </ebook>
+    </ebooks>
+    <onkurzusok>
+        <onkurzus oID="1" nyID="2">
+            <cim>XML Mastery: Unleashing the Power of Data Markup</cim>
+            <kiado>EDUCBA Bridging the Gap</kiado>
+            <megjelenEv>2024</megjelenEv>
+            <link>https://www.udemy.com/course/xml-novice-to-ninja/</link>
+            <ko>
+                <oktato>
+                    <nev></nev>
+                    <email></email>
+                    <weboldal></weboldal>
+                </oktato>
+            </ko>
+        </onkurzus>
+        <onkurzus oID="2" nyID="2">
+            <cim>XML Essentials: Structure and Share Data Efficiently.</cim>
+            <kiado></kiado>
+            <megjelenEv>Faris Azam</megjelenEv>
+            <link>https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/</link>
+            <ko>
+                <oktato>
+                    <nev>Faris Azam</nev>
+                    <email></email>
+                    <weboldal></weboldal>
+                </oktato>
+            </ko>
+        </onkurzus>
+        <onkurzus oID="3" nyID="2">
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <link></link>
+            <ko>
+                <oktato>
+                    <nev></nev>
+                    <email></email>
+                    <weboldal></weboldal>
+                </oktato>
+            </ko>
+        </onkurzus>
+        <onkurzus oID="4" nyID="2">
+            <cim></cim>
+            <kiado></kiado>
+            <megjelenEv></megjelenEv>
+            <link></link>
+            <ko>
+                <oktato>
+                    <nev></nev>
+                    <email></email>
+                    <weboldal></weboldal>
+                </oktato>
+            </ko>
+        </onkurzus>
+    </onkurzusok>
+    <nyelvek>
+        <nyelv nyID="1" nev="magyar"></nyelv>
+        <nyelv nyID="2" nev="angol"></nyelv>
+        <nyelv nyID="3" nev="német"></nyelv>
+    </nyelvek>
+</oktatas>
