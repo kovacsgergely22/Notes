@@ -9,11 +9,11 @@
         <Salary>50000</Salary>
     </Employee>
     <Employee EmpID="E002" Design="Tester">
-    <Name>Schweta</Name>
-    <Age>29</Age>
-    <Gender>Female</Gender>
-    <City>Bangalore</City>
-    <PhNo>9865467864</PhNo>
-    <Salary>8787.9</Salary>
+        <Name>Schweta</Name>
+        <Age>29</Age>
+        <Gender>Female</Gender>
+        <City>Bangalore</City>
+        <PhNo>9865467864</PhNo>
+        <Salary>8787.9</Salary>
     </Employee>
 </EmployeeDetails>
