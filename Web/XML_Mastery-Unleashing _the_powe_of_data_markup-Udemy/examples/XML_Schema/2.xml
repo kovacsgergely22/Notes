@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmployeeDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="2.xsd">
+    <Employee EmpID="E001" Design="Software">
+        <Name>Mr. John</Name>
+        <Age>25</Age>
+        <Gender>Male</Gender>
+        <City>Mumbai</City>
+        <PhNo>1234567890</PhNo>
+        <Salary>50000</Salary>
+    </Employee>
+    <Employee EmpID="E002" Design="Tester">
+    <Name>Schweta</Name>
+    <Age>29</Age>
+    <Gender>Female</Gender>
+    <City>Bangalore</City>
+    <PhNo>9865467864</PhNo>
+    <Salary>8787.9</Salary>
+    </Employee>
+</EmployeeDetails>

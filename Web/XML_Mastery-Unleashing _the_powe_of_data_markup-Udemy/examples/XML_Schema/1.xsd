@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EmloyeeDetails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Employee" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="Name" type="xs:string"></xs:element>
+                            <xs:element name="Age" type="xs:int"></xs:element>
+                            <xs:element name="Sex" type="xs:string"></xs:element>
+                            <xs:element name="City" type="xs:string"></xs:element>
+                            <xs:element name="PhNo" type="xs:decimal"></xs:element>
+                            <xs:element name="Salary" type="xs:decimal"></xs:element>
+                        </xs:all>
+                        <xs:attribute name="EmpId" type="xs:ID" use="required"></xs:attribute>
+                        <xs:attribute name="Desig" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
