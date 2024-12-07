@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<oktatas>
+<oktatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSDmktjs0.xsd">
     <tanulok>
-        <tanulo felhID="1">
+        <tanulo felhID="1" felhnev="kovacsgergely" olvID="1" eolvID="1" onkurzusID="1">
             <nev>Kovács Gergely</nev>
             <szulIdo>1990-01-01</szulIdo>
             <lakcim>
@@ -9,17 +9,8 @@
                 <varos>Miskolc</varos>
                 <utca>Béla utca 3.</utca>
             </lakcim>
-            <olvasas>
-                <konyv kID="1"></konyv>
-            </olvasas>
-            <eolvasas>
-                <ebook eID="1"></ebook>
-            </eolvasas>
-            <tk>
-                <onkurzus oID="1"></onkurzus>
-            </tk>
         </tanulo>
-        <tanulo felhID="2">
+        <tanulo felhID="2" felhnev="kissjanos" olvID="2" eolvID="2" onkurzusID="2">
             <nev>Kiss János</nev>
             <szulIdo>1991-02-02</szulIdo>
             <lakcim>
@@ -27,17 +18,8 @@
                 <varos>Miskolc</varos>
                 <utca>Deák utca 5.</utca>
             </lakcim>
-            <olvasas>
-                <konyv kID="2"></konyv>
-            </olvasas>
-            <eolvasas>
-                <ebook eID="2"></ebook>
-            </eolvasas>
-            <tk>
-                <onkurzus oID="2"></onkurzus>
-            </tk>
         </tanulo>
-        <tanulo felhID="3">
+        <tanulo felhID="3" felhnev="nagypeter" olvID="3" eolvID="3" onkurzusID="3">
             <nev>Nagy Péter</nev>
             <szulIdo>1992-03-03</szulIdo>
             <lakcim>
@@ -45,17 +27,8 @@
                 <varos>Miskolc</varos>
                 <utca>Erzsébet utca 7.</utca>
             </lakcim>
-            <olvasas>
-                <konyv kID="3"></konyv>
-            </olvasas>
-            <eolvasas>
-                <ebook eID="3"></ebook>
-            </eolvasas>
-            <tk>
-                <onkurzus oID="3"></onkurzus>
-            </tk>
         </tanulo>
-        <tanulo felhID="4">
+        <tanulo felhID="4" felhnev="kisgizi" olvID="4" eolvID="4" onkurzusID="4">
             <nev>Kis Gizella</nev>
             <szulIdo>1995-01-01</szulIdo>
             <lakcim>
@@ -63,15 +36,6 @@
                 <varos>Miskolc</varos>
                 <utca>Béla utca 3.</utca>
             </lakcim>
-            <olvasas>
-                <konyv kID="4"></konyv>
-            </olvasas>
-            <eolvasas>
-                <ebook eID="4"></ebook>
-            </eolvasas>
-            <tk>
-                <onkurzus oID="4"></onkurzus>
-            </tk>
         </tanulo>
     </tanulok>
     <konyvek>
@@ -85,13 +49,14 @@
             <kategoria>XML</kategoria>
         </konyv>
         <konyv kID="2" nyID="1">
-            <szerzo></szerzo>
-            <cim></cim>
-            <kiado></kiado>
-            <megjelenEv></megjelenEv>
+            <szerzo>Jeffrey D. Ullmann</szerzo>
+            <szerzo>Jennifer Widom</szerzo>
+            <cim>Adatbázis-rendszerek - Alapvetés</cim>
+            <kiado>Panem</kiado>
+            <megjelenEv>2009</megjelenEv>
             <kategoria></kategoria>
         </konyv>
-        <konyv kID="3" nyID="1">
+        <!-- <konyv kID="3" nyID="1">
             <szerzo></szerzo>
             <cim></cim>
             <kiado></kiado>
@@ -104,9 +69,27 @@
             <kiado></kiado>
             <megjelenEv></megjelenEv>
             <kategoria></kategoria>
-        </konyv>
+        </konyv> -->
     </konyvek>
-    <ebooks>
+    <olvasas>
+        <olvas olvasID="1" felhID="1" kID="1">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas olvasID="2" felhID="2" kID="1">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas olvasID="3" felhID="3" kID="1">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas olvasID="4" felhID="4" kID="1">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+    </olvasas>
+    <eolvasas>
         <ebook eID="1" nyID="2">
             <szerzo>Sashi Banzal</szerzo>
             <cim>XML Basics</cim>
@@ -114,7 +97,7 @@
             <megjelenEv>2020</megjelenEv>
             <link>https://www.packtpub.com/en-hu/product/xml-basics-9781836648741</link>
         </ebook>
-        <ebook eID="2" nyID="2">
+        <!-- <ebook eID="2" nyID="2">
             <szerzo></szerzo>
             <cim></cim>
             <kiado></kiado>
@@ -134,65 +117,65 @@
             <kiado></kiado>
             <megjelenEv></megjelenEv>
             <link></link>
-        </ebook>
-    </ebooks>
+        </ebook> -->
+    </eolvasas>
     <onkurzusok>
         <onkurzus oID="1" nyID="2">
             <cim>XML Mastery: Unleashing the Power of Data Markup</cim>
             <kiado>EDUCBA Bridging the Gap</kiado>
             <megjelenEv>2024</megjelenEv>
             <link>https://www.udemy.com/course/xml-novice-to-ninja/</link>
-            <ko>
-                <oktato>
-                    <nev></nev>
-                    <email></email>
-                    <weboldal></weboldal>
-                </oktato>
-            </ko>
         </onkurzus>
         <onkurzus oID="2" nyID="2">
             <cim>XML Essentials: Structure and Share Data Efficiently.</cim>
-            <kiado></kiado>
-            <megjelenEv>Faris Azam</megjelenEv>
+            <kiado>Faris Azam</kiado>
+            <megjelenEv>2024</megjelenEv>
             <link>https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/</link>
-            <ko>
-                <oktato>
-                    <nev>Faris Azam</nev>
-                    <email></email>
-                    <weboldal></weboldal>
-                </oktato>
-            </ko>
         </onkurzus>
-        <onkurzus oID="3" nyID="2">
+        <!-- <onkurzus oID="3" nyID="2">
             <cim></cim>
             <kiado></kiado>
             <megjelenEv></megjelenEv>
             <link></link>
-            <ko>
-                <oktato>
-                    <nev></nev>
-                    <email></email>
-                    <weboldal></weboldal>
-                </oktato>
-            </ko>
         </onkurzus>
         <onkurzus oID="4" nyID="2">
             <cim></cim>
             <kiado></kiado>
             <megjelenEv></megjelenEv>
             <link></link>
-            <ko>
-                <oktato>
-                    <nev></nev>
-                    <email></email>
-                    <weboldal></weboldal>
-                </oktato>
-            </ko>
-        </onkurzus>
+        </onkurzus> -->
     </onkurzusok>
+    <oktatok>
+        <oktato oktID="1">
+            <nev></nev>
+            <email></email>
+            <weboldal></weboldal>
+        </oktato>
+        <oktato oktID="2">
+            <nev></nev>
+            <email></email>
+            <weboldal></weboldal>
+        </oktato>
+        <oktato oktID="3">
+            <nev></nev>
+            <email></email>
+            <weboldal></weboldal>
+        </oktato>
+        <oktato oktID="4">
+            <nev></nev>
+            <email></email>
+            <weboldal></weboldal>
+        </oktato>
+    </oktatok>
     <nyelvek>
-        <nyelv nyID="1" nev="magyar"></nyelv>
-        <nyelv nyID="2" nev="angol"></nyelv>
-        <nyelv nyID="3" nev="német"></nyelv>
+        <nyelv nyID="1">
+            <nev>Magyar</nev>
+        </nyelv>
+        <nyelv nyID="2">
+            <nev>Angol</nev>
+        </nyelv>
+        <nyelv nyID="3">
+            <nev>Német</nev>
+        </nyelv>
     </nyelvek>
 </oktatas>

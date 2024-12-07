@@ -1,4 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    
+
+    <!-- Egyszerű típusok deklarálása (sajátTípus) -->
+    <xs:simpleType name="nevtipus">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="eletkortipus">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kodtipus">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="osszegtipus">
+        <xs:restriction base="xs:decimal"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="varostipus">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="utcanevtipus">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="hazszamtipus">
+        <xs:restriction base="xs:int"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="idotartamtipus">
+        <xs:restriction base="xs:int"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="muszaktipus">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
 </xs:schema>

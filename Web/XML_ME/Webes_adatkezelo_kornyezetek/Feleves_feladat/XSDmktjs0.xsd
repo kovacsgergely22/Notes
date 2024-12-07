@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="oktatas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tanulok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tanulo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nev" type="xs:string"></xs:element>
+                                        <xs:element name="szulIdo" type="xs:date"></xs:element>
+                                        <xs:element name="lakcim">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="irsz" type="xs:int"></xs:element>
+                                                    <xs:element name="varos" type="xs:string"></xs:element>
+                                                    <xs:element name="utca" type="xs:string"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="felhID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="felhnev" type="xs:string" use="required"></xs:attribute>
+                                    <xs:attribute name="olvID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="eolvID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="onkurzusID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="felh-key">
+                        <xs:selector xpath="tanulo"></xs:selector>
+                        <xs:field xpath="@felhID"></xs:field>
+                    </xs:key>
+                    <xs:key name="olvas-key">
+                        <xs:selector xpath="tanulo"></xs:selector>
+                        <xs:field xpath="@olvID"></xs:field>
+                    </xs:key>
+                    <xs:unique name="felhnev-un">
+                        <xs:selector xpath="tanulo"></xs:selector>
+                        <xs:field xpath="@felhnev"></xs:field>
+                    </xs:unique>
+                </xs:element>
+                <xs:element name="konyvek">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="konyv" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="szerzo" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                                        <xs:element name="cim" type="xs:string"></xs:element>
+                                        <xs:element name="kiado" type="xs:string"></xs:element>
+                                        <xs:element name="megjelenEv" type="xs:gYear"></xs:element>
+                                        <xs:element name="kategoria" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="kID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="konyv-key">
+                        <xs:selector xpath="konyvek"></xs:selector>
+                        <xs:field xpath="@kID"></xs:field>
+                    </xs:key>
+                    <xs:keyref name="konyvnyelv-ref" refer="nyelv-key">
+                        <xs:selector xpath="oktatas/nyelvek/nyelv"></xs:selector>
+                        <xs:field xpath="@nyID"></xs:field>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="olvasas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="olvas" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="kezdete" type="xs:date"></xs:element>
+                                        <xs:element name="vege" type="xs:date"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="olvasID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="felhID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="kID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="olvasas-key">
+                        <xs:selector xpath="olvas"></xs:selector>
+                        <xs:field xpath="@olvasID"></xs:field>
+                    </xs:key>
+                    <xs:keyref name="felh-olvas-ref" refer="felh-key">
+                        <xs:selector xpath="oktatas/tanulok/tanulo"></xs:selector>
+                        <xs:field xpath="@felhID"></xs:field>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="eolvasas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ebook" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="szerzo" type="xs:string"></xs:element>
+                                        <xs:element name="cim" type="xs:string"></xs:element>
+                                        <xs:element name="kiado" type="xs:string"></xs:element>
+                                        <xs:element name="megjelenEv" type="xs:gYear" minOccurs="0" maxOccurs="1"></xs:element>
+                                        <xs:element name="link" type="xs:anyURI"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="eID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="e-key">
+                        <xs:selector xpath="eolvasas"></xs:selector>
+                        <xs:field xpath="@eID"></xs:field>
+                    </xs:key>
+                    <xs:keyref name="enyelv-ref" refer="nyelv-key">
+                        <xs:selector xpath="oktatas/nyelvek/nyelv"></xs:selector>
+                        <xs:field xpath="@nyID"></xs:field>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="onkurzusok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="onkurzus" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cim" type="xs:string"></xs:element>
+                                        <xs:element name="kiado" type="xs:string"></xs:element>
+                                        <xs:element name="megjelenEv" type="xs:gYear" minOccurs="0" maxOccurs="1"></xs:element>
+                                        <xs:element name="link" type="xs:anyURI"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="oID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="onkurzus-key">
+                        <xs:selector xpath="onkurzus"></xs:selector>
+                        <xs:field xpath="@oID"></xs:field>
+                    </xs:key>
+                    <xs:keyref name="onkurzusnyelv-ref" refer="nyelv-key">
+                        <xs:selector xpath="oktatas/nyelvek/nyelv"></xs:selector>
+                        <xs:field xpath="@nyID"></xs:field>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="oktatok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="oktato" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nev" type="xs:string"></xs:element>
+                                        <xs:element name="email" type="xs:string"></xs:element>
+                                        <xs:element name="weboldal" type="xs:anyURI"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="oktID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="oktato-key">
+                     <xs:selector xpath="oktato"></xs:selector>
+                     <xs:field xpath="@oktID"></xs:field>
+                    </xs:key>
+                </xs:element>
+                <xs:element name="nyelvek">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nyelv" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nev" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:key name="nyelv-key">
+                        <xs:selector xpath="nyelv"></xs:selector>
+                        <xs:field xpath="@nyID"></xs:field>
+                    </xs:key>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
