@@ -164,8 +164,8 @@
                         </xs:sequence>
                     </xs:complexType>
                     <xs:key name="oktato-key">
-                     <xs:selector xpath="oktato"></xs:selector>
-                     <xs:field xpath="@oktID"></xs:field>
+                        <xs:selector xpath="oktato"></xs:selector>
+                        <xs:field xpath="@oktID"></xs:field>
                     </xs:key>
                 </xs:element>
                 <xs:element name="nyelvek">
