@@ -206,25 +206,135 @@
 
 ### Előzetes tudásfeltárás
 
+* Célja:
+	* kezelendő problémák behatárolása
+	* problématartomány jellemzőinek behatárolása
+	* tudásmennyiség behatárolása
+	* felhasználók elvárásai
+	* néhány tipikus következtetési fordulat
+ * szakértők szakterülettel kapcsolatos elképzelései
+	* fő szabályok és koncepciók
+
+* Eszközei:
+	* előzetes archívumkutatások
+	* konzultációk szakértőkkel
+
 ### Tudás kézikönyv
+
+* kezdeti feltáró munka -> tudástechnológus dokumentuma
+	* általános problémaleírás
+	* felhasználók és elvárásaik
+	* alproblémák és résztartományokra való lebontás
+	* részletesebb leírás a résztartományokról
+	* referencia dokumentumok nyilvántartása
+	* szakterület terminológiája, elvei, szakkifejezései
+	* prototípus kifejlesztésében közreműködő szakértők
+	* néhány ésszerű teljesítménymutató (a rendszer számára)
+	* tipikus következtetési módszer leírása 
 
 ### Információforrások
 
+* szakterület szakértőjének kiválasztása
+* szakértők -> rutinszerű munka
+* tapasztalatok heurisztikaként
+* tartomány szakértőjének hitelessége
+	* felhasználók
+	* projekt team
+	* szakértők közössége
+	* szervezet vezetése
+* szakértő fajtái:
+	* akadémikus
+	* gyakorlati szakértő
+	* szamuráj (végrehajtás szakértője)
+* a szakértő motiválása
+
 ### Tudáskinyerés
+
+* Előzetes tudás
+	* Bevezető interjúk és konzultációk alatt
+		* terminusok és elvek beazonosítása 
+		* tipikus input és outputok behatárolása
+		* tipikus megoldások,megoldási osztályok
+		* kezdeti implementációhoz problémakezelő stratégiák
+	
+* Részletes tudás
 
 ### Részletes tudás
 
+* A szakértő privát tudása
+	* adatok és szabályok közötti viszonyok
+	* szabályok hierarchiája
+	* adatok relatív értéke, fontossága
+	* adatok bizonyossága, relatív valószínűsége
+
 ### Tudáskinyerési technikák
+
+* Interjú
+	* struktúrálatlan
+	* nyitott végű
+* Protokoll elemzés -> részletes tudás kinyerésére
+	* online -> önbeszámoló vagy árnyékbeszámoló
+	* offline
+* Végigvezetés
+* Kérdőívek
+	* szabad végű
+	* rövid válaszos
+	* erőltetett válaszos
+* Szakértői beszámoló
+	* saját írásos összegzése
+		* a szakértő megadja a részeteket
+		* formálisan, folyamatábrával
 
 ### Kinyert tudás elemzése, kódolása, dokumentálása
 
+* Tudás kézikönyv
+	* Átírás 
+	* szövegrész-indexelés
+	* tudáskódolás
+		* descriptív (leiró)
+		* procedurális (eljárásokra vonatkozó)
+	* dokumentálás
+
 ### Gépi tanulás
+
+* feleslegessé válik a szakértő
+* online adatbázisok
+* automatikus tudáskinyerés előnyei
+	* jobb eredmények mint emberek -> nagyobb információkeletkezés, egyre komplexebb információ
+	* kisebb költség mint emberi munkaerő, kevesebb idő
 
 ### Előállító szabályok, szabályalapú tudásszemléltetés
 
+* Előállító szabály (production rule) -> IF-THEN szerkezet
+* Deklaratív következmény: kikövetkeztetett tény
+* Procedurális következmény: akció
+* pl: IF hőmérséklet>30 THEN hűtés
+
 ### Szabályláncolás
+
+* következtetési folyamat megvalósulása
+* szabály következményrésze illeszkedik más szabály feltételrészére
+* összes kapcsolódásfa megvalósítása lehetetlen -> következtető automaták
+* szabályláncolás
+	* előrehaladó láncolás (forward chaining) -> konklúzió megtalálása (nagyszámú gyűjtött adat)
+	* hátrafelé haladó láncolás (backward chaining) - deduktív rendszer -> elérendő cél adott (több hipotézisnél)
 
 ### Szabályalapú tudásszemléltetést és következtető automatát alkalmazó szakértőrendszer felépítése
 
+ábra
+
 ### Szabályalapú következtetés működése előrehaladó láncolásnál
+
+* lépések
+	* mintaillesztés (szabálybázis)
+	* konfliktusfeloldás (szabályokból a felhasználható)
+	* szabályalkalmazás
+	* célállapot tesztelése
+* szabályalapú rendszerek előnyei
+	* modularitás
+	* egyöntetűség
+	* természetesség
+* szabályalapú rendszerek hátrányai	
+	* merevek
+	* nem hatékonyak: ténybázis-szabálybázis illesztés, kombinatorikus robbanás
 
