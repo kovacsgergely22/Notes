@@ -338,3 +338,159 @@
 	* merevek
 	* nem hatékonyak: ténybázis-szabálybázis illesztés, kombinatorikus robbanás
 
+## 5. Mesterséges neurális hálózatok
+
+### Motiváció
+
+#### Mesterséges neurális hálók
+
+#### Mesterséges neurális hálók által megoldható feladatok
+
+* Statisztikai feladatok
+* Operációkutatás
+* Analízis
+
+#### Mesterséges neurális hálók fő működési jellemzői
+
+* Tanulás 
+* Általánosítóképesség
+* Zajos és hiányos adatok elfogadása
+* Gyors működés
+* Szövevényes viszonylatok kezelése
+* Önszervezés
+* Hatalmas adatmennyiség elemzése
+* Rugalmasság
+
+#### Hol használnak neurális hálót - példák
+
+### Mesterséges neuron
+
+* Rosenblatt 1957
+* Biológiai neuronokhoz való hasonlóság
+  * Sok input - dendritek
+  * Egy output - axon
+  * Ingerek (súlyozott) összege küszöbszinten -> neuron tüzel
+
+#### Mesterséges neuronok kapcsolata
+
+* u - a háló mesterséges neuronja
+* o - a másik neurontól érkező jel az u neuron bemenetére
+* w - neuronok közötti kapcsolat súlya
+* a - neuron aktivációs potenciálja -> bemenetek súlyozott összegéből aggregációs függvény állít elő
+* o - aktivációs függvény által generált aktivációs potenciálból számított u neuron kimenő jele
+
+#### Aktivációs függvények
+
+##### Lineáris aktivációs függvény
+
+##### Küszöb aktivációs függvény
+
+##### Szignum aktivációs függvény
+
+##### Darabonként-lineáris aktivációs függvény
+
+##### ReLU aktivációs függvény (Rectified linear unit)
+
+##### Leaky ReLU (Szivárgó ReLU)
+
+#### Nem lineáris aktivációs függvények
+
+##### Gauss aktivációs függvény
+
+##### Szigmoid/logisztikus aktivációs függvény
+
+##### Swish
+
+##### Tangens-hiperbolikus aktivációs függvény (tanh)
+
+##### Exponential linear unit (ELU)
+
+#### Hálózati topológiák
+
+* Neuronok összeköttetési rendszere, hálózat bemeneteinek és kimeneteinek helye 
+* Neuronokat egymáshoz kapcsolják, rendszer általános viselkedését kapcsolatok strukútája és erőssége, súlya (w) adja meg
+* Neuronok csoportokban vagy rétegekben -> egyetlen réteget alkotó neuronok hálózata: CAM, Content Addressable Memory - címezhető memória
+
+#### Neuronok fajtái
+
+* Bemeneti neuron:
+  * Egybemenet, egykimenet
+  * buffer jellegű
+  * Jelfeldolgozó feladatuk nincs 
+  * Bemenetük a hálózat bemenete 
+  * Kimenetük más neuronok meghajtására szolgál
+* Kimeneti neuron
+  * Kimenete környezete felé továbbítja az információt 
+* Rejtett (hidden) neuron
+  * Bemeneteikkel és kimeneteikkel kizárólag más neuronokhoz kapcsolódnak
+
+#### Előrecsatolt hálózatok
+
+#### Hátracsatolt/Visszacsatolt hálózatok
+
+#### Hálózati topológia választása
+
+#### Hálózat neuronjainak száma
+
+#### McCulloch - Pitts-neuron (MP neuron)
+
+#### Rosenblatt perceptron
+
+##### Perceptron jellemzők
+
+##### Perceptron tanulása
+
+##### Widrow-Hoff delta szabály a perceptron vonatkozásában
+
+##### Perceptron hibája
+
+#### Adaline (Adaptive Linear Neuron)
+
+#### Többrétegű perceptron (Multilayer Perceptron MLP)
+
+##### Többrétegű perceptron tanulási hibája
+
+#### Neurális hálók betanítása
+
+##### Neurális hálók tanulási módszerei
+
+##### Felügyelt tanulás
+
+##### Minősítés, hibamérték
+
+##### Felügyelt tanulási módszerek
+
+* hiba-javító tanulás
+* megerősítő tanulás
+* sztochasztikus tanulás
+
+##### Felügyelet nélküli tanulás
+
+##### Kritériumfüggvények
+
+##### Tanulási alapelvek
+
+* Hebb-féle szabály
+* Delta szabály
+
+##### Gradiens-alapú csökkentés módszer (gradient descent)
+
+##### Derivált számítása egyetlen neruon esetén
+
+##### Back-propagation/visszafelé terjesztés
+
+#### Neurális háló modellek jellemzői
+
+#### Neurális hálót definiáló összetevők
+
+#### Tervezési szempontok
+
+#### Előrecsatolt neurális hálókat minősítő jellemzők
+
+#### Neurális hálók teljesítményének fejlesztői szempontjai
+
+#### A mesterséges neurális hálók mechanizmusai
+
+##### Betanításnál figyelembe veendő szempontok
+
+##### Neurális hálók teljesítményének összetevői
