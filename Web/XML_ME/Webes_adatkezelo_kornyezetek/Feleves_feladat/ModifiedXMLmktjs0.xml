@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><oktatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSDmktjs0.xsd">
+    <tanulok>
+        <tanulo felhID="FELH0001" felhnev="kovacsgergely">
+            <nev>Kovács Gergely</nev>
+            <szulIdo>1990-01-01</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca 3.</utca>
+            </lakcim>
+        </tanulo>
+        <tanulo felhID="FELH0002" felhnev="kissjanos">
+            <nev>Kiss János</nev>
+            <szulIdo>1991-02-02</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Deák utca 5.</utca>
+            </lakcim>
+        </tanulo>
+        <tanulo felhID="FELH0003" felhnev="nagypeter">
+            <nev>Nagy Péter</nev>
+            <szulIdo>1992-03-03</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Erzsébet utca 7.</utca>
+            </lakcim>
+        </tanulo>
+        <tanulo felhID="FELH0004" felhnev="kisgizi">
+            <nev>Kis Gizella</nev>
+            <szulIdo>1995-01-01</szulIdo>
+            <lakcim>
+                <irsz>3500</irsz>
+                <varos>Miskolc</varos>
+                <utca>Béla utca 3.</utca>
+            </lakcim>
+        </tanulo>
+    </tanulok>
+    <konyvek>
+        <konyv kID="K0001" nyID="NY0001">
+            <szerzo>Neil Bradley</szerzo>
+            <cim>Az XML-kézikönyv</cim>
+            <kiado>Szak kiadó</kiado>
+            <megjelenEv>2000</megjelenEv>
+            <kategoria>Adatkezelés</kategoria>
+            <kategoria>Web</kategoria>
+            <kategoria>XML</kategoria>
+        </konyv>
+        <konyv kID="K0002" nyID="NY0001">
+            <szerzo>Jeffrey D. Ullmann</szerzo>
+            <szerzo>Jennifer Widom</szerzo>
+            <cim>Adatbázis-rendszerek - Alapvetés</cim>
+            <kiado>Panem</kiado>
+            <megjelenEv>2009</megjelenEv>
+            <kategoria/>
+        </konyv>
+        <konyv kID="K0003" nyID="NY0001">
+            <szerzo>Kövesdán Gábor</szerzo>
+            <cim>Szoftverfejlesztés Java SE platformon</cim>
+            <kiado/>
+            <megjelenEv>2014</megjelenEv>
+            <kategoria>Java</kategoria>
+        </konyv>
+        <konyv kID="K0004" nyID="NY0001">
+            <szerzo>Thomas H. Cormen</szerzo>
+            <szerzo>Charles E. Leiserson</szerzo>
+            <szerzo>Ronald L. Rivest</szerzo>
+            <cim>Algoritmusok</cim>
+            <kiado>Műszaki Könyvkiadó</kiado>
+            <megjelenEv>2003</megjelenEv>
+            <kategoria>Algoritmusok</kategoria>
+        </konyv>
+    </konyvek>
+    <olvasas>
+        <olvas felhID="FELH0001" kID="K0001" olvasID="OLVAS0001">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas felhID="FELH0002" kID="K0001" olvasID="OLVAS0002">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas felhID="FELH0003" kID="K0001" olvasID="OLVAS0003">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+        <olvas felhID="FELH0004" kID="K0001" olvasID="OLVAS0004">
+            <kezdete>2021-01-01</kezdete>
+            <vege>2021-01-31</vege>
+        </olvas>
+    </olvasas>
+    <eolvasas>
+        <ebook eID="E0001" nyID="NY0002">
+            <szerzo>Sashi Banzal</szerzo>
+            <cim>XML Basics</cim>
+            <kiado>Mercury Learning and Information</kiado>
+            <megjelenEv>2020</megjelenEv>
+            <link>https://www.packtpub.com/en-hu/product/xml-basics-9781836648741</link>
+        </ebook>
+        <ebook eID="E0002" nyID="NY0002">
+            <szerzo>Dr Adamkó Attila</szerzo>
+            <cim>Fejlett adatbázis technológiák</cim>
+            <kiado/>
+            <megjelenEv>2013</megjelenEv>
+            <link>https://dtk.tankonyvtar.hu/handle/123456789/12049</link>
+        </ebook>
+        <ebook eID="E0003" nyID="NY0002">
+            <szerzo>Jeszenszky Péter</szerzo>
+            <cim>XML sémanyelvek</cim>
+            <kiado>Debreceni Egyetem</kiado>
+            <megjelenEv>2010</megjelenEv>
+            <link>https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e30</link>
+        </ebook>
+        <ebook eID="E0004" nyID="NY0002">
+            <szerzo>Kovács László</szerzo>
+            <cim>XML technikák</cim>
+            <kiado>Miskolci Egyetem</kiado>
+            <megjelenEv>2011</megjelenEv>
+            <link>https://dtk.tankonyvtar.hu/handle/123456789/12928</link>
+        </ebook>
+    </eolvasas>
+    <onkurzusok>
+        <onkurzus nyID="NY0002" oID="O0001">
+            <cim>XML Mastery: Unleashing the Power of Data Markup</cim>
+            <kiado>EDUCBA Bridging the Gap</kiado>
+            <megjelenEv>2024</megjelenEv>
+            <link>https://www.udemy.com/course/xml-novice-to-ninja/</link>
+        </onkurzus>
+        <onkurzus nyID="NY0002" oID="O0002">
+            <cim>XML Essentials: Structure and Share Data Efficiently.</cim>
+            <kiado>Faris Azam</kiado>
+            <megjelenEv>2024</megjelenEv>
+            <link>https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/</link>
+        </onkurzus>
+        <onkurzus nyID="NY0002" oID="O0003">
+            <cim>XML and XSD: a complete W3C-content based course (+10 hours)</cim>
+            <kiado>Daniel Pinheiro Maia</kiado>
+            <megjelenEv>2019</megjelenEv>
+            <link>https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/</link>
+        </onkurzus>
+        <onkurzus nyID="NY0002" oID="O0004">
+            <cim>Data Representation and Serialization</cim>
+            <kiado>ITPro TV</kiado>
+            <megjelenEv>2019</megjelenEv>
+            <link>https://www.udemy.com/course/data-representation-and-serialization/?couponCode=KEEPLEARNING</link>
+        </onkurzus>
+    </onkurzusok>
+    <oktatok>
+        <oktato oktID="OKT0001">
+            <nev>Dr. Kovács Gergely</nev>
+            <email/>
+            <weboldal/>
+        </oktato>
+        <oktato oktID="OKT0002">
+            <nev/>
+            <email>kovacs.gergely@example.com</email>
+            <weboldal/>
+        </oktato>
+        
+        <oktato oktID="OKT0004">
+            <nev/>
+            <email/>
+            <weboldal/>
+        </oktato>
+    </oktatok>
+    <nyelvek>
+        <nyelv nyID="NY0001">
+            <nev>Spanyol</nev>
+        </nyelv>
+        <nyelv nyID="NY0002">
+            <nev>Angol</nev>
+        </nyelv>
+        <nyelv nyID="NY0003">
+            <nev>Német</nev>
+        </nyelv>
+    <nyelv nyID="NY0004"><nev>Francia</nev></nyelv></nyelvek>
+</oktatas>

@@ -1,0 +1,652 @@
+Element: oktatas, Value: 
+    
+        
+            Kovács Gergely
+            1990-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+        
+            Kiss János
+            1991-02-02
+            
+                3500
+                Miskolc
+                Deák utca 5.
+            
+        
+        
+            Nagy Péter
+            1992-03-03
+            
+                3500
+                Miskolc
+                Erzsébet utca 7.
+            
+        
+        
+            Kis Gizella
+            1995-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+    
+    
+        
+            Neil Bradley
+            Az XML-kézikönyv
+            Szak kiadó
+            2000
+            Adatkezelés
+            Web
+            XML
+        
+        
+            Jeffrey D. Ullmann
+            Jennifer Widom
+            Adatbázis-rendszerek - Alapvetés
+            Panem
+            2009
+            
+        
+        
+            Kövesdán Gábor
+            Szoftverfejlesztés Java SE platformon
+            
+            2014
+            Java
+        
+        
+            Thomas H. Cormen
+            Charles E. Leiserson
+            Ronald L. Rivest
+            Algoritmusok
+            Műszaki Könyvkiadó
+            2003
+            Algoritmusok
+        
+    
+    
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+    
+    
+        
+            Sashi Banzal
+            XML Basics
+            Mercury Learning and Information
+            2020
+            https://www.packtpub.com/en-hu/product/xml-basics-9781836648741
+        
+        
+            Dr Adamkó Attila
+            Fejlett adatbázis technológiák
+            
+            2013
+            https://dtk.tankonyvtar.hu/handle/123456789/12049
+        
+        
+            Jeszenszky Péter
+            XML sémanyelvek
+            Debreceni Egyetem
+            2010
+            https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e30
+        
+        
+            Kovács László
+            XML technikák
+            Miskolci Egyetem
+            2011
+            https://dtk.tankonyvtar.hu/handle/123456789/12928
+        
+    
+    
+        
+            XML Mastery: Unleashing the Power of Data Markup
+            EDUCBA Bridging the Gap
+            2024
+            https://www.udemy.com/course/xml-novice-to-ninja/
+        
+        
+            XML Essentials: Structure and Share Data Efficiently.
+            Faris Azam
+            2024
+            https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/
+        
+        
+            XML and XSD: a complete W3C-content based course (+10 hours)
+            Daniel Pinheiro Maia
+            2019
+            https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/
+        
+        
+            Data Representation and Serialization
+            ITPro TV
+            2019
+            https://www.udemy.com/course/data-representation-and-serialization/?couponCode=KEEPLEARNING
+        
+    
+    
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+    
+    
+        
+            Magyar
+        
+        
+            Angol
+        
+        
+            Német
+        
+    
+
+Element: tanulok, Value: 
+        
+            Kovács Gergely
+            1990-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+        
+            Kiss János
+            1991-02-02
+            
+                3500
+                Miskolc
+                Deák utca 5.
+            
+        
+        
+            Nagy Péter
+            1992-03-03
+            
+                3500
+                Miskolc
+                Erzsébet utca 7.
+            
+        
+        
+            Kis Gizella
+            1995-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+    
+Element: tanulo, Value: 
+            Kovács Gergely
+            1990-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+Element: nev, Value: Kovács Gergely
+Element: szulIdo, Value: 1990-01-01
+Element: lakcim, Value: 
+                3500
+                Miskolc
+                Béla utca 3.
+            
+Element: irsz, Value: 3500
+Element: varos, Value: Miskolc
+Element: utca, Value: Béla utca 3.
+Element: tanulo, Value: 
+            Kiss János
+            1991-02-02
+            
+                3500
+                Miskolc
+                Deák utca 5.
+            
+        
+Element: nev, Value: Kiss János
+Element: szulIdo, Value: 1991-02-02
+Element: lakcim, Value: 
+                3500
+                Miskolc
+                Deák utca 5.
+            
+Element: irsz, Value: 3500
+Element: varos, Value: Miskolc
+Element: utca, Value: Deák utca 5.
+Element: tanulo, Value: 
+            Nagy Péter
+            1992-03-03
+            
+                3500
+                Miskolc
+                Erzsébet utca 7.
+            
+        
+Element: nev, Value: Nagy Péter
+Element: szulIdo, Value: 1992-03-03
+Element: lakcim, Value: 
+                3500
+                Miskolc
+                Erzsébet utca 7.
+            
+Element: irsz, Value: 3500
+Element: varos, Value: Miskolc
+Element: utca, Value: Erzsébet utca 7.
+Element: tanulo, Value: 
+            Kis Gizella
+            1995-01-01
+            
+                3500
+                Miskolc
+                Béla utca 3.
+            
+        
+Element: nev, Value: Kis Gizella
+Element: szulIdo, Value: 1995-01-01
+Element: lakcim, Value: 
+                3500
+                Miskolc
+                Béla utca 3.
+            
+Element: irsz, Value: 3500
+Element: varos, Value: Miskolc
+Element: utca, Value: Béla utca 3.
+Element: konyvek, Value: 
+        
+            Neil Bradley
+            Az XML-kézikönyv
+            Szak kiadó
+            2000
+            Adatkezelés
+            Web
+            XML
+        
+        
+            Jeffrey D. Ullmann
+            Jennifer Widom
+            Adatbázis-rendszerek - Alapvetés
+            Panem
+            2009
+            
+        
+        
+            Kövesdán Gábor
+            Szoftverfejlesztés Java SE platformon
+            
+            2014
+            Java
+        
+        
+            Thomas H. Cormen
+            Charles E. Leiserson
+            Ronald L. Rivest
+            Algoritmusok
+            Műszaki Könyvkiadó
+            2003
+            Algoritmusok
+        
+    
+Element: konyv, Value: 
+            Neil Bradley
+            Az XML-kézikönyv
+            Szak kiadó
+            2000
+            Adatkezelés
+            Web
+            XML
+        
+Element: szerzo, Value: Neil Bradley
+Element: cim, Value: Az XML-kézikönyv
+Element: kiado, Value: Szak kiadó
+Element: megjelenEv, Value: 2000
+Element: kategoria, Value: Adatkezelés
+Element: kategoria, Value: Web
+Element: kategoria, Value: XML
+Element: konyv, Value: 
+            Jeffrey D. Ullmann
+            Jennifer Widom
+            Adatbázis-rendszerek - Alapvetés
+            Panem
+            2009
+            
+        
+Element: szerzo, Value: Jeffrey D. Ullmann
+Element: szerzo, Value: Jennifer Widom
+Element: cim, Value: Adatbázis-rendszerek - Alapvetés
+Element: kiado, Value: Panem
+Element: megjelenEv, Value: 2009
+Element: kategoria, Value: 
+Element: konyv, Value: 
+            Kövesdán Gábor
+            Szoftverfejlesztés Java SE platformon
+            
+            2014
+            Java
+        
+Element: szerzo, Value: Kövesdán Gábor
+Element: cim, Value: Szoftverfejlesztés Java SE platformon
+Element: kiado, Value: 
+Element: megjelenEv, Value: 2014
+Element: kategoria, Value: Java
+Element: konyv, Value: 
+            Thomas H. Cormen
+            Charles E. Leiserson
+            Ronald L. Rivest
+            Algoritmusok
+            Műszaki Könyvkiadó
+            2003
+            Algoritmusok
+        
+Element: szerzo, Value: Thomas H. Cormen
+Element: szerzo, Value: Charles E. Leiserson
+Element: szerzo, Value: Ronald L. Rivest
+Element: cim, Value: Algoritmusok
+Element: kiado, Value: Műszaki Könyvkiadó
+Element: megjelenEv, Value: 2003
+Element: kategoria, Value: Algoritmusok
+Element: olvasas, Value: 
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+        
+            2021-01-01
+            2021-01-31
+        
+    
+Element: olvas, Value: 
+            2021-01-01
+            2021-01-31
+        
+Element: kezdete, Value: 2021-01-01
+Element: vege, Value: 2021-01-31
+Element: olvas, Value: 
+            2021-01-01
+            2021-01-31
+        
+Element: kezdete, Value: 2021-01-01
+Element: vege, Value: 2021-01-31
+Element: olvas, Value: 
+            2021-01-01
+            2021-01-31
+        
+Element: kezdete, Value: 2021-01-01
+Element: vege, Value: 2021-01-31
+Element: olvas, Value: 
+            2021-01-01
+            2021-01-31
+        
+Element: kezdete, Value: 2021-01-01
+Element: vege, Value: 2021-01-31
+Element: eolvasas, Value: 
+        
+            Sashi Banzal
+            XML Basics
+            Mercury Learning and Information
+            2020
+            https://www.packtpub.com/en-hu/product/xml-basics-9781836648741
+        
+        
+            Dr Adamkó Attila
+            Fejlett adatbázis technológiák
+            
+            2013
+            https://dtk.tankonyvtar.hu/handle/123456789/12049
+        
+        
+            Jeszenszky Péter
+            XML sémanyelvek
+            Debreceni Egyetem
+            2010
+            https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e30
+        
+        
+            Kovács László
+            XML technikák
+            Miskolci Egyetem
+            2011
+            https://dtk.tankonyvtar.hu/handle/123456789/12928
+        
+    
+Element: ebook, Value: 
+            Sashi Banzal
+            XML Basics
+            Mercury Learning and Information
+            2020
+            https://www.packtpub.com/en-hu/product/xml-basics-9781836648741
+        
+Element: szerzo, Value: Sashi Banzal
+Element: cim, Value: XML Basics
+Element: kiado, Value: Mercury Learning and Information
+Element: megjelenEv, Value: 2020
+Element: link, Value: https://www.packtpub.com/en-hu/product/xml-basics-9781836648741
+Element: ebook, Value: 
+            Dr Adamkó Attila
+            Fejlett adatbázis technológiák
+            
+            2013
+            https://dtk.tankonyvtar.hu/handle/123456789/12049
+        
+Element: szerzo, Value: Dr Adamkó Attila
+Element: cim, Value: Fejlett adatbázis technológiák
+Element: kiado, Value: 
+Element: megjelenEv, Value: 2013
+Element: link, Value: https://dtk.tankonyvtar.hu/handle/123456789/12049
+Element: ebook, Value: 
+            Jeszenszky Péter
+            XML sémanyelvek
+            Debreceni Egyetem
+            2010
+            https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e30
+        
+Element: szerzo, Value: Jeszenszky Péter
+Element: cim, Value: XML sémanyelvek
+Element: kiado, Value: Debreceni Egyetem
+Element: megjelenEv, Value: 2010
+Element: link, Value: https://arato.inf.unideb.hu/jeszenszky.peter/xml/book/#d6e30
+Element: ebook, Value: 
+            Kovács László
+            XML technikák
+            Miskolci Egyetem
+            2011
+            https://dtk.tankonyvtar.hu/handle/123456789/12928
+        
+Element: szerzo, Value: Kovács László
+Element: cim, Value: XML technikák
+Element: kiado, Value: Miskolci Egyetem
+Element: megjelenEv, Value: 2011
+Element: link, Value: https://dtk.tankonyvtar.hu/handle/123456789/12928
+Element: onkurzusok, Value: 
+        
+            XML Mastery: Unleashing the Power of Data Markup
+            EDUCBA Bridging the Gap
+            2024
+            https://www.udemy.com/course/xml-novice-to-ninja/
+        
+        
+            XML Essentials: Structure and Share Data Efficiently.
+            Faris Azam
+            2024
+            https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/
+        
+        
+            XML and XSD: a complete W3C-content based course (+10 hours)
+            Daniel Pinheiro Maia
+            2019
+            https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/
+        
+        
+            Data Representation and Serialization
+            ITPro TV
+            2019
+            https://www.udemy.com/course/data-representation-and-serialization/?couponCode=KEEPLEARNING
+        
+    
+Element: onkurzus, Value: 
+            XML Mastery: Unleashing the Power of Data Markup
+            EDUCBA Bridging the Gap
+            2024
+            https://www.udemy.com/course/xml-novice-to-ninja/
+        
+Element: cim, Value: XML Mastery: Unleashing the Power of Data Markup
+Element: kiado, Value: EDUCBA Bridging the Gap
+Element: megjelenEv, Value: 2024
+Element: link, Value: https://www.udemy.com/course/xml-novice-to-ninja/
+Element: onkurzus, Value: 
+            XML Essentials: Structure and Share Data Efficiently.
+            Faris Azam
+            2024
+            https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/
+        
+Element: cim, Value: XML Essentials: Structure and Share Data Efficiently.
+Element: kiado, Value: Faris Azam
+Element: megjelenEv, Value: 2024
+Element: link, Value: https://www.udemy.com/course/xml-essentials-structure-and-share-data-efficiently/
+Element: onkurzus, Value: 
+            XML and XSD: a complete W3C-content based course (+10 hours)
+            Daniel Pinheiro Maia
+            2019
+            https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/
+        
+Element: cim, Value: XML and XSD: a complete W3C-content based course (+10 hours)
+Element: kiado, Value: Daniel Pinheiro Maia
+Element: megjelenEv, Value: 2019
+Element: link, Value: https://www.udemy.com/course/xml-and-xsd-a-complete-w3c-content-based-course/
+Element: onkurzus, Value: 
+            Data Representation and Serialization
+            ITPro TV
+            2019
+            https://www.udemy.com/course/data-representation-and-serialization/?couponCode=KEEPLEARNING
+        
+Element: cim, Value: Data Representation and Serialization
+Element: kiado, Value: ITPro TV
+Element: megjelenEv, Value: 2019
+Element: link, Value: https://www.udemy.com/course/data-representation-and-serialization/?couponCode=KEEPLEARNING
+Element: oktatok, Value: 
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+        
+            
+            
+            
+        
+    
+Element: oktato, Value: 
+            
+            
+            
+        
+Element: nev, Value: 
+Element: email, Value: 
+Element: weboldal, Value: 
+Element: oktato, Value: 
+            
+            
+            
+        
+Element: nev, Value: 
+Element: email, Value: 
+Element: weboldal, Value: 
+Element: oktato, Value: 
+            
+            
+            
+        
+Element: nev, Value: 
+Element: email, Value: 
+Element: weboldal, Value: 
+Element: oktato, Value: 
+            
+            
+            
+        
+Element: nev, Value: 
+Element: email, Value: 
+Element: weboldal, Value: 
+Element: nyelvek, Value: 
+        
+            Magyar
+        
+        
+            Angol
+        
+        
+            Német
+        
+    
+Element: nyelv, Value: 
+            Magyar
+        
+Element: nev, Value: Magyar
+Element: nyelv, Value: 
+            Angol
+        
+Element: nev, Value: Angol
+Element: nyelv, Value: 
+            Német
+        
+Element: nev, Value: Német
