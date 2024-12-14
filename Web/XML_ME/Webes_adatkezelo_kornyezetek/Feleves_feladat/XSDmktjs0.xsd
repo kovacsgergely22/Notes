@@ -21,11 +21,8 @@
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="felhID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="felhID" type="xs:ID" use="required"></xs:attribute>
                                     <xs:attribute name="felhnev" type="xs:string" use="required"></xs:attribute>
-                                    <xs:attribute name="olvID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="eolvID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="onkurzusID" type="xs:decimal" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -33,10 +30,6 @@
                     <xs:key name="felh-key">
                         <xs:selector xpath="tanulo"></xs:selector>
                         <xs:field xpath="@felhID"></xs:field>
-                    </xs:key>
-                    <xs:key name="olvas-key">
-                        <xs:selector xpath="tanulo"></xs:selector>
-                        <xs:field xpath="@olvID"></xs:field>
                     </xs:key>
                     <xs:unique name="felhnev-un">
                         <xs:selector xpath="tanulo"></xs:selector>
@@ -55,8 +48,8 @@
                                         <xs:element name="megjelenEv" type="xs:gYear"></xs:element>
                                         <xs:element name="kategoria" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="kID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="kID" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:IDREF" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -79,9 +72,9 @@
                                         <xs:element name="kezdete" type="xs:date"></xs:element>
                                         <xs:element name="vege" type="xs:date"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="olvasID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="felhID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="kID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="olvasID" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="felhID" type="xs:IDREF" use="required"></xs:attribute>
+                                    <xs:attribute name="kID" type="xs:IDREF" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -107,8 +100,8 @@
                                         <xs:element name="megjelenEv" type="xs:gYear" minOccurs="0" maxOccurs="1"></xs:element>
                                         <xs:element name="link" type="xs:anyURI"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="eID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="eID" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:IDREF" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -133,8 +126,8 @@
                                         <xs:element name="megjelenEv" type="xs:gYear" minOccurs="0" maxOccurs="1"></xs:element>
                                         <xs:element name="link" type="xs:anyURI"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="oID" type="xs:decimal" use="required"></xs:attribute>
-                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="oID" type="xs:ID" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:IDREF" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -158,7 +151,7 @@
                                         <xs:element name="email" type="xs:string"></xs:element>
                                         <xs:element name="weboldal" type="xs:anyURI"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="oktID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="oktID" type="xs:ID" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -176,7 +169,7 @@
                                     <xs:sequence>
                                         <xs:element name="nev" type="xs:string"></xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="nyID" type="xs:decimal" use="required"></xs:attribute>
+                                    <xs:attribute name="nyID" type="xs:ID" use="required"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
