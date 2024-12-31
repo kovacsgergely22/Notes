@@ -4,7 +4,7 @@
       "title": "Sheet1",
       "rootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
       "editorRootTopicKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
-      "focusKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
+      "focusKey": "2218d895-f0ab-4b19-87cd-7e23026f441c",
       "topics": [
         {
           "key": "1538df52-0003-431e-a359-b28398d50223",
@@ -68,6 +68,19 @@
           ]
         },
         {
+          "key": "42611a29-d735-4e97-9319-18488202aae8",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "5. Kétszótagú melléknevek felsőfokú alakja"
+            }
+          ]
+        },
+        {
           "key": "b2107e94-25cd-475e-b4cc-7f3eabeb2aba",
           "parentKey": "317a36c9-68ca-4e25-950d-76a18b238e6d",
           "subKeys": [],
@@ -120,6 +133,19 @@
             {
               "type": "CONTENT",
               "data": "2.5.4. Legfontosabb időhatározók"
+            }
+          ]
+        },
+        {
+          "key": "d0abaeea-6cdb-4222-961d-867d7dcda39c",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "4. Egyszótagú melléknevek felsőfokú alakja"
             }
           ]
         },
@@ -216,6 +242,19 @@
             {
               "type": "CONTENT",
               "data": "6. Hogyan beszéljünk az időjárásról"
+            }
+          ]
+        },
+        {
+          "key": "b87f9dd6-0f68-4b72-8b9f-550aa1fe786a",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "8. Egy kicsit többet az időről"
             }
           ]
         },
@@ -331,6 +370,19 @@
           ]
         },
         {
+          "key": "f5092116-6e9f-4be3-8cb5-fb1f9e6f14ea",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "7. Szeretnék - \"would like to\""
+            }
+          ]
+        },
+        {
           "key": "70d90a66-5848-4170-8b83-c6aca02a3b76",
           "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
           "subKeys": [],
@@ -359,7 +411,17 @@
         {
           "key": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
           "parentKey": "ae1d270d-632a-435b-9527-a675a9bb6913",
-          "subKeys": [],
+          "subKeys": [
+            "06fb1194-0d98-4b3a-9ea6-197d2679bd4e",
+            "55cde4a0-2e0c-47c0-8ffb-cab5566fb3ce",
+            "bad21dbd-c53a-4c55-89e9-0fc1cd028993",
+            "d0abaeea-6cdb-4222-961d-867d7dcda39c",
+            "42611a29-d735-4e97-9319-18488202aae8",
+            "2438bb4e-9a51-42dc-a5fe-024252e3900c",
+            "f5092116-6e9f-4be3-8cb5-fb1f9e6f14ea",
+            "b87f9dd6-0f68-4b72-8b9f-550aa1fe786a",
+            "2218d895-f0ab-4b19-87cd-7e23026f441c"
+          ],
           "collapse": false,
           "style": null,
           "blocks": [
@@ -586,7 +648,7 @@
             "a954a02a-5c44-4f63-999c-6f03d98ef0c4",
             "6bca36a1-063b-4011-9b45-b7199637c73a"
           ],
-          "collapse": false,
+          "collapse": true,
           "style": null,
           "blocks": [
             {
@@ -661,6 +723,19 @@
           ]
         },
         {
+          "key": "06fb1194-0d98-4b3a-9ea6-197d2679bd4e",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "1. Középfokú melléknevek - alapok"
+            }
+          ]
+        },
+        {
           "key": "8796d5f3-25b8-4bf5-8a76-fcbf35e0a770",
           "parentKey": "993ac210-c597-4cd8-99f6-39e81823c03a",
           "subKeys": [],
@@ -670,6 +745,19 @@
             {
               "type": "CONTENT",
               "data": "3. Mindennapjaink"
+            }
+          ]
+        },
+        {
+          "key": "2438bb4e-9a51-42dc-a5fe-024252e3900c",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "6. Gyakoriságot kifejező határozók"
             }
           ]
         },
@@ -726,6 +814,19 @@
           ]
         },
         {
+          "key": "55cde4a0-2e0c-47c0-8ffb-cab5566fb3ce",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "2. A \"want\" ige használata"
+            }
+          ]
+        },
+        {
           "key": "da5bcd20-720f-423e-9877-d71423c5d0b9",
           "parentKey": "be8b4adc-60c8-4351-9c94-3962e1acc56e",
           "subKeys": [],
@@ -774,6 +875,19 @@
             {
               "type": "CONTENT",
               "data": "2.2.3. Az egyszerű múlt idő - kérdés és tagadás"
+            }
+          ]
+        },
+        {
+          "key": "2218d895-f0ab-4b19-87cd-7e23026f441c",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "9. Eldöntendő kérdések - áttekintés"
             }
           ]
         },
@@ -1168,6 +1282,19 @@
           ]
         },
         {
+          "key": "bad21dbd-c53a-4c55-89e9-0fc1cd028993",
+          "parentKey": "98287b4b-a3e3-484e-bc7b-7c98fc922885",
+          "subKeys": [],
+          "collapse": false,
+          "style": null,
+          "blocks": [
+            {
+              "type": "CONTENT",
+              "data": "3. Rövid melléknevek középfokú alakja"
+            }
+          ]
+        },
+        {
           "key": "ae1d270d-632a-435b-9527-a675a9bb6913",
           "parentKey": "d7146ffc-5a4b-4c4e-b68a-caa96d4e8b0a",
           "subKeys": [
@@ -1177,7 +1304,7 @@
             "27b733d0-3db8-43c8-a50e-8f1b795edad4",
             "be8b4adc-60c8-4351-9c94-3962e1acc56e"
           ],
-          "collapse": true,
+          "collapse": false,
           "style": null,
           "blocks": [
             {
