@@ -15,6 +15,7 @@
       3. [Online könyvek](#online-könyvek)
       4. [Online kurzusok](#online-kurzusok-2)
       5. [Hasznos linkek](#hasznos-linkek)
+   6. [Jegyzetek](#jegyzetek)
 
 
 ## HTML, CSS, JavaScrip
@@ -71,3 +72,8 @@
 ### Hasznos linkek
 
 - [Java DOM Parse](https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm)
+
+## Jegyzetek
+
+* A Markdown szerkesztőben a VSCode-ban az F1 gomb lenyomása után
+  * Markdown All in One: Create Table of Contents parancs kiválasztásával automatikusan tartalomjegyzéket generál a különböző szintű headerek alapján. Szükséges hozzá a VSCode-ban a Markdown All in One bővítmény!
