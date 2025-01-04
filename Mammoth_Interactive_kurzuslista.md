@@ -79,6 +79,14 @@
       7. [Advanced Mastery: Conquering Complex Challenges](#advanced-mastery-conquering-complex-challenges)
       8. [Build Games with Python](#build-games-with-python)
       9. [Build User Interface Applications with Python](#build-user-interface-applications-with-python)
+   8. [The Complete Crush Your New Year's Resolution Learn to Code Bundle](#the-complete-crush-your-new-years-resolution-learn-to-code-bundle)
+      1. [Start Your Game Development Journey](#start-your-game-development-journey)
+      2. [Start Your Web Development Journey](#start-your-web-development-journey)
+      3. [Build Modern Web Projects](#build-modern-web-projects)
+      4. [Advanced Software Development](#advanced-software-development)
+      5. [Start Your 3D Modeling Journey](#start-your-3d-modeling-journey)
+      6. [Start Your Python Journey](#start-your-python-journey)
+      7. [Build Projects Fast with Assets](#build-projects-fast-with-assets)
 
 
 ## Complete Learn to Code Bundle - New Years Resolution Success Bundle
@@ -693,3 +701,111 @@ Make your dreams reality. Build the next big app using our templates as your acc
 
 - Python GUI Essentials - From Beginner Apps to Multi-Project Mastery
 - Python Tkinter Database Mastery - Building Full-Stack and Multi-Table Applications
+
+---
+
+## The Complete Crush Your New Year's Resolution Learn to Code Bundle
+
+### Start Your Game Development Journey
+
+- Unreal Engine 5 Mastery for Beginners - Start Building Games Today
+
+- Unreal Engine 5.5 Game Creation Bootcamp - Build Your First Game Fast (First-Time Exclusive Humble Bundle Release)
+
+- Unreal Engine 5.5 Unlocked - Master the Latest Tools and Updates
+
+- Unreal Engine 5 Multiplayer Mastery - Build and Launch Thrilling Online Games - All-in-One Bundle
+
+- Unity and C# Complete Beginner’s Guide - Build Games from Scratch
+
+- Unity 6 Game Development - Clone a Viral 2D Dress Up Game
+
+- Godot and GDScript Fundamentals - All-Ages Game Development Made Simple
+
+### Start Your Web Development Journey
+
+- Web Development for Absolute Beginners - HTML, CSS and Command Line
+
+- JavaScript for Beginners - Build Your First Websites and Applications
+
+- Advanced JavaScript Mastery - Build Dynamic, Interactive Websites
+
+- Complete Beginners React JS - Elevate Your Web Development Skills
+
+### Build Modern Web Projects
+
+- 3D Web Development Fundamentals - Jump into Three.js
+
+- Interactive 3D Data Visualization Mastery - Build THREE.JS Web Applications (First-Time Exclusive Humble Bundle Release)
+
+- AR on the Web - Build Immersive Augmented Reality Web Applications with AR.js (First-Time Exclusive Humble Bundle Release)
+
+- Build a 3D Product Viewer for E-Commerce - Profitable Web Development (First-Time Exclusive Humble Bundle Release)
+
+- WebVR Mastery - Create Immersive VR Experiences with A-Frame (First-Time Exclusive Humble Bundle Release)
+
+- TensorFlow.js AI Masterclass - Build Real-Time Machine Learning Web Applications (First-Time Exclusive Humble Bundle Release)
+
+- 3D Web Developer’s Handbook - Master React Three Fiber with Real Projects (First-Time Exclusive Humble Bundle Release)
+
+- Build an Interactive Audio Visualizer - Three.js and React Three Fiber Masterclass (First-Time Exclusive Humble Bundle Release)
+
+- Cursor IDE Pro Tips - Turbocharge Your Coding with Advanced Workflows and Shortcuts
+
+- Twitter Bot Development Masterclass - Automate Social Media with Cursor and JavaScript
+
+- API Integration Mastery - Build Interactive Apps with Cursor and Tkinter
+
+- Modern Frontend Mastery - Build AI-Enhanced Apps with React JS and Cursor
+
+- Build a Stunning Shoe Brand Website with React and AI
+
+- MERN Stack E-Commerce Masterclass - Build and Deploy Fullstack Online Stores
+
+- Advanced CSS Masterclass - Design Stunning, Responsive Websites
+
+### Advanced Software Development
+
+- Advanced React Native Mastery - Build Next-Level Mobile Apps
+
+- Ethical Hacking for Beginners - Master Cybersecurity Skills Fast
+
+### Start Your 3D Modeling Journey
+
+- 3D Modeling Made Easy - Master Blender from Scratch
+
+- Fantasy Asset Creation in Blender 4 - Complete Low Poly 3D Model Masterclass
+
+- Low Poly Knight 3D Modeling Mastery in Blender 4
+
+### Start Your Python Journey
+
+- Comprehensive Python Foundations - A Beginner's Guide to Coding
+
+- Python for Everyone - Learn Programming with Fun, Beginner-Friendly Projects
+
+- Python Project Mastery - Build Real-World Applications Step by Step
+
+- Data Science Fundamentals - Explore, Clean, and Analyze Data with Python and Pandas
+
+- Data Science Foundations - Dive into Python and NumPy for Powerful Insights
+
+- Data Visualization Mastery - Unlock Stunning Graphs with Python and PyPlot
+
+- Data Visualization and Image Processing Mastery - NumPy, PyPlot and Seaborn
+
+- Machine Learning with Python - From Basics to Advanced Models
+
+- OpenCV for Developers - Build Image Editing Applications with Python
+
+- Excel to Python Masterclass - Automate Your Data Workflows and Analytics
+
+### Build Projects Fast with Assets
+
+- Unreal Engine 5.5 Game Developer’s Toolbox - Essential Templates and Assets (First-Time Exclusive Humble Bundle Release)
+
+- Unity 6 Master Kit - Ready-to-Use Game Templates for Rapid Development (First-Time Exclusive Humble Bundle Release)
+
+- Godot 4 Game Creator's Pack - Essential Templates for Instant Game Development (First-Time Exclusive Humble Bundle Release)
+
+- Low Poly Master Pack - Create Game-Ready Assets for Roblox, Godot, Unity, and Unreal
