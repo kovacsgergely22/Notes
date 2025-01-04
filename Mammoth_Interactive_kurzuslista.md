@@ -768,7 +768,7 @@ Make your dreams reality. Build the next big app using our templates as your acc
 
 - Advanced React Native Mastery - Build Next-Level Mobile Apps
 
-- Ethical Hacking for Beginners - Master Cybersecurity Skills Fast
+- [ ] [Ethical Hacking for Beginners - Master Cybersecurity Skills Fast](https://training.mammothinteractive.com/courses/enrolled/2690237)
 
 ### Start Your 3D Modeling Journey
 
