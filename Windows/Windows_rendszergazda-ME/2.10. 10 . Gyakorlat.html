@@ -1,0 +1,259 @@
+
+<!-- saved from url=(0051)https://gyires.inf.unideb.hu/KMITT/c09/ch02s10.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      
+   <title>2.10. 10 . Gyakorlat</title><link rel="stylesheet" href="./2.10. 10 . Gyakorlat_files/style.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="up" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html" title="2. fejezet - Gyakorlatok"><link rel="prev" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s09.html" title="2.9. 9 . Gyakorlat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><th colspan="3" align="center">2.10. 10 . Gyakorlat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s09.html">El&#337;z&#337;</a>&nbsp;</td><th width="60%" align="center">2. fejezet - Gyakorlatok</th><td width="20%" align="right">&nbsp;</td></tr></tbody></table><hr></div><div class="sect1" title="2.10. 10 . Gyakorlat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e1456"></a>2.10. 10 . Gyakorlat</h2></div></div></div><p>Témakör Alkalmazások publikálása Remote Desktop Szervízen keresztül</p><p>Feladatok:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>	Jogosultságokéscsoportoklétrehozása</p></li><li class="listitem"><p>	Az RDS szerverszerepkörtelepítése a DC01-es szerverre</p></li><li class="listitem"><p>Az RDS01-es szerver létrehozása</p></li><li class="listitem"><p>Az RDS szerverszerepkörtelepítéseaz RDS01-es szerverre</p></li><li class="listitem"><p>Csoporttagságkonfigurálása a szervereken</p></li><li class="listitem"><p>A Remote Desktop Connection Broker</p></li><li class="listitem"><p>A Remote Desktop Web Access konfigurálása</p></li><li class="listitem"><p>A RemoteApp-ok tesztelése</p></li></ol></div><p>Megoldások:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>	Jogosultságokéscsoportoklétrehozása</p><pre class="programlisting">10.1.1.	Ha még nem fut, indítsuk el a DC01-es szervert és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben a DC01-et -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben a DC01-et-&gt; jobb gomb -&gt; Connect
+10.1.2.	Start -&gt; Adminstrative Tools -&gt; Active Directory Users and Computers -&gt; miskolc.hu -&gt; jobb gomb -&gt; New -&gt; Organizational Unit
+10.1.3.	Name: Remote Access
+OK
+
+10.1.4.	miskolc.hu -&gt; Remote Access -&gt; jobb gomb - &gt; New -&gt; User
+10.1.5.	First name: Remote
+Last name: User
+User login name: Ruser
+Next &gt;
+10.1.6.	Password: Password1
+Confirm password: Password1
+Vegyük ki a pipát a ’User must change password at next logon’ opció el&#337;l
+Pipáljuk ki a következ&#337; opciókat:
+User cannot change password
+Password never expires
+Next &gt;
+Finish
+
+10.1.7.	miskolc.hu -&gt; Remote Access -&gt; jobb gomb - &gt; New -&gt; Group
+10.1.8.	Group name: RD Users
+Group scope: Global
+Group type: Security
+OK
+10.1.9.	miskolc.hu -&gt; Remote Access -&gt; RD Users -&gt; jobb gomb - &gt; Properties -&gt; Members fül
+10.1.10.	Add -&gt; Enter the names to select (examples): ruser
+Check Names
+OK -&gt; OK
+10.1.11.	miskolc.hu -&gt; Remote Access -&gt; jobb gomb - &gt; New -&gt; Group
+10.1.12.	Group name: RD Web Computers
+Group scope: Global
+Group type: Security
+OK
+10.1.13.	miskolc.hu -&gt; Remote Access -&gt; RD Web Computers -&gt; jobb gomb - &gt; Properties -&gt; Members fül
+10.1.14.	Object Types... -&gt; Pipáljuk be a ’Computers’ opciót -&gt; OK
+10.1.15.	Add -&gt; Enter the names to select (examples): dc01
+Check Names
+OK
+10.1.16.	Add -&gt; Enter the names to select (examples): rds01
+Check Names
+OK
+10.1.17.	OK
+               
+            </pre></li><li class="listitem"><p>	Az RDS szerverszerepkörtelepítése a DC01-es szerverre</p><pre class="programlisting">   10.2.1.	Start -&gt; Adminstrative Tools -&gt; Server Manager
+10.2.2.	Server manager (DC01) -&gt; Roles -&gt; Add Roles
+10.2.3.	Select Server Roels: Remote Desktop Services
+Next &gt;
+10.2.4.	Remote Desktop Services: Next &gt;
+10.2.5.	Select Role Services:
+Remote Desktop Session Host-&gt; a felugró ablakban kattintsunk az ’Install Remote Desktop Session Host anyway (not recommended)’ opcióra
+Remote Desktop Connection Broker
+Remote Desktop Gateway -&gt; Add Roles Wiard: Add Required Roles Services
+Remote Desktop Web Acces -&gt; Add Roles Wiard: Add Required Roles Services
+Next &gt;
+10.2.6.	Uninstall and Reinstall Application for Compatibility: Next &gt;
+10.2.7.	Specify Authentication Method for Remote Desktop Session Host: Do not require Network Level Authentication
+Next &gt;y
+10.2.8.	Specify Licensing Mode: Configure later
+Next &gt;
+10.2.9.	Select Users Groups Allowed Access To This RD Session Host Server: Next &gt;
+10.2.10.	Configure Client Experience: Next &gt;
+10.2.11.	Choose a Server Authentication Certificate for SSL Encryption: Create a self-signed certificate for SSL encryption
+Next &gt;
+10.2.12.	Create Authorization Policies for RD Gateway: Now
+Next &gt;
+10.2.13.	Select Users Groups That Can Connect Through RD Gateway: Add
+Enter the names to select (examples): RD Users
+OK
+Next &gt;
+10.2.14.	Create an RD CAP for RD Gateway: Next &gt;
+10.2.15.	Create an RD RAP for RD Gateway: Browse...
+Enter the names to select (examples): RD Web Computers
+OK
+Next &gt;
+10.2.16.	Network Policy and Access Services: Next &gt;
+10.2.17.	Select Role Services: jelöljük be a ’Routing and Remote Access Services’ opciót
+Next &gt;
+10.2.18.	Web Server (IIS): Next &gt;
+10.2.19.	Select Role Services: Next &gt;
+10.2.20.	Confirm Installation Selections: Install
+10.2.21.	Installation Results: Close
+10.2.22.	Add Roles Wizard: Yes
+10.2.23.	Az újraindítás után ismét jelentkezzünk be a DC01-es szerverre:
+User name: miskolc\administrator
+Password: Password1
+10.2.24.	Automatikusan elindul a Resume Configuration Wizard
+10.2.25.	Resume Configuration Wizard: Close
+10.2.26.	Zárjuk be a Server Manager -t
+
+10.2.27.	Adjuk hozzá a számológépet és a paint-et a RemoteApp Programokhoz
+10.2.28.	Start -&gt; Admnistrative Tools -&gt; Remote Desktop Services -&gt;RemoteApp Manager
+10.2.29.	Action -&gt; Add RemoteApp Programs
+10.2.30.	Welcome to the RemoteApp Wizard: Next &gt;
+10.2.31.	Choose programs to add to the RemoteApp Programs list: válasszuk ki az alábbiakat:
+Calculator
+Paint
+Next &gt;
+10.2.32.	Review Settings: Finish
+10.2.33.	Zárjuk be a RemoteApp Manager–t
+</pre></li><li class="listitem"><p>Az RDS01-es szerver létrehozása</p><pre class="programlisting">10.3.1.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+10.3.2.	Choose Disk Type: Differencing
+Next &gt;
+10.3.3.	Specify Name and Location:
+Name: RDS01
+Location: meghajtó&gt;\VPC\RDS01\
+Next &gt;
+10.3.4.	Configure Disk: Location: meghajtó&gt;\VPC\W2k8_ENT_base.vhd
+Next &gt;
+10.3.5.	Completing the New Virtual Hard Disk Wizard: Finish
+
+10.3.6.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+10.3.7.	Choose Disk Type: Differencing
+Next &gt;
+10.3.8.	Specify Name and Location:
+Name: RDS01
+Location: meghajtó&gt;\VPC\RDS01\
+Next &gt;
+10.3.9.	Configure Disk: Location: meghajtó&gt;\VPC\W2k8_ENT_base.vhd
+Next &gt;
+10.3.10.	Completing the New Virtual Hard Disk Wizard: Finish
+               
+            </pre></li><li class="listitem"><p>Az RDS szerverszerepkörtelepítéseaz RDS01-es szerverre</p><pre class="programlisting">10.4.1.	Start -&gt; Adminstrative Tools -&gt; Server Manager
+10.4.2.	Server manager (RDS01) -&gt; Roles -&gt; Add Roles
+10.4.3.	Select Server Roels: Remote Desktop Services
+Next &gt;
+10.4.4.	Remote Desktop Services: Next &gt;
+10.4.5.	Select Role Services:
+Remote Desktop Session Host
+Remote Desktop Connection Broker
+Remote Desktop Gateway -&gt; Add Roles Wiard: Add Required Roles Services
+Remote Desktop Web Acces
+Next &gt;
+10.4.6.	Uninstall and Reinstall Application for Compatibility: Next &gt;
+10.4.7.	Specify Authentication Method for Remote Desktop Session Host: Do not require Network Level Authentication
+Next &gt;
+10.4.8.	Specify Licensing Mode: Configure later
+Next &gt;
+10.4.9.	Select Users Groups Allowed Access To This RD Session Host Server: Next &gt;
+10.4.10.	Configure Client Experience: Next &gt;
+10.4.11.	Choose a Server Authentication Certificate for SSL Encryption: Create a self-signed certificate for SSL encryption
+Next &gt;
+10.4.12.	Create Authorization Policies for RD Gateway: Now
+Next &gt;
+10.4.13.	Select Users Groups That Can Connect Through RD Gateway: Add
+Enter the names to select (examples): RD Users
+OK
+Next &gt;
+10.4.14.	Create an RD CAP for RD Gateway: Next &gt;
+10.4.15.	Create an RD RAP for RD Gateway: Browse...
+Enter the names to select (examples): RD Web Computers
+OK
+Next &gt;
+10.4.16.	Network Policy and Access Services: Next &gt;
+10.4.17.	Select Role Services: jelöljük be a ’Routing and Remote Access Services’ opciót
+Next &gt;
+10.4.18.	Web Server (IIS): Next &gt;
+10.4.19.	Select Role Services: Next &gt;
+10.4.20.	Confirm Installation Selections: Install
+10.4.21.	Installation Results: Close
+10.4.22.	Add Roles Wizard: Yes
+10.4.23.	Az újraindítás után ismét jelentkezzünk be a RDS01-es szerverre:
+User name: miskolc\administrator
+Password: Password1
+
+10.4.24.	Ha automatikusan elindul még a Resume Configuration Wizard, akkor várjuk meg a végét
+10.4.25.	Resume Configuration Wizard: Close
+10.4.26.	Zárjuk be a Server Manager -t
+
+10.4.27.	Adjuk hozzá a notepad.exe-t és a WordPad-et a RemoteApp Programokhoz
+10.4.28.	Start -&gt; Admnistrative Tools -&gt; Remote Desktop Services -&gt;RemoteApp Manager
+10.4.29.	Action -&gt; Add RemoteApp Programs
+10.4.30.	Welcome to the RemoteApp Wizard: Next &gt;
+10.4.31.	Choose programs to add to the RemoteApp Programs list: válasszuk ki az alábbiakat:
+WordPad
+Browse… -&gt;c:\windows\system32\notepad.exe -&gt; Open
+Next &gt;
+10.4.32.	Review Settings: Finish
+10.4.33.	Zárjuk be a RemoteApp Manager-t
+               
+            </pre></li><li class="listitem"><p>Csoporttagságkonfigurálása a szervereken</p><pre class="programlisting">10.5.1.	A DC01-es szerveren: Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers
+10.5.2.	Miskolc.hu -&gt; Users -&gt; TS Web Access Computers -&gt; jobb gomb -&gt; Properties -&gt; Members fül
+10.5.3.	Add… -&gt; Enter the names to select (examples): RD Web Computers
+Check Names
+OK
+OK
+10.5.4.	Miskolc.hu -&gt; Builtin -&gt; Remote Desktop users -&gt; jobb gomb -&gt; Properties -&gt; Members fül
+10.5.5.	Add… -&gt; Enter the names to select (examples): RD Users
+Check Names
+OK
+
+10.5.6.	Az RDS01-es szerveren: Start -&gt; Administrative Tools -&gt; Server Manager
+10.5.7.	Server Managers (RDS01) -&gt; Configuration -&gt; Local Users and Groups -&gt; Groups
+10.5.8.	TS Web Access Computers -&gt; jobb gomb -&gt; Properties
+10.5.9.	Add… -&gt; Enter the names to select (examples): RD Web Computers
+Check Names
+user name: administrator
+Password: Password1
+OK
+OK
+10.5.10.	Remote Desktop Users -&gt; jobb gomb -&gt; Properties
+10.5.11.	Add… -&gt; Enter the names to select (examples): RD Users
+Check Names
+user name: administrator
+Password: Password1
+OK
+OK
+               
+            </pre></li><li class="listitem"><p>A Remote Desktop Connection Broker</p><pre class="programlisting">10.6.1.	Az RDS01-es szerveren: Start -&gt; Administrative Tools -&gt; Remote Desktop Services -&gt;Remote Desktop Connection Manager
+10.6.2.	RemoteApp Sources -&gt; Add remoteApp Sources…
+10.6.3.	RemoteApp source name: dc01.miskolc.hu
+Add
+10.6.4.	RemoteApp Sources -&gt; Add remoteApp Sources…
+10.6.5.	RemoteApp source name: rds01.miskolc.hu
+Add
+10.6.6.	Zárjuk be a Remote Desktop Connection Manager -t                
+            </pre></li><li class="listitem"><p>A Remote Desktop Web Access konfigurálása</p><pre class="programlisting">   10.7.1.	Az RDS01-es szerveren: Start -&gt;Administrative Tools -&gt; Remote Desktop Services -&gt; Remote Desktop Web Access Configuration
+10.7.2.	A felugró ablakban: Add… -&gt; Add -&gt; Close
+10.7.3.	Az Internet Explorerben: Continue to this website (not recommended)
+10.7.4.	A felugró ablakban jelöljük be az ’In the future, do not show this warning’ opciót -&gt; OK
+10.7.5.	Az Internet Explorer ablakában a címsor mögött kattintsunk a ’Certificate Error’ szövegre
+10.7.6.	Majd a felugró kis ablakban a ’View Certificate’–re -&gt; Install Certificate…
+10.7.7.	Welcome to the Certiication Import Wizard: Next &gt;
+10.7.8.	Certificate Store: Place all certificate in the following store: Browse…
+10.7.9.	Select Certificate Store: Trusted Root Certification Authorities -&gt; OK
+Next &gt;
+10.7.10.	Completing the Certification Import Wizard: Finish
+10.7.11.	A felugró biztonsági figyelmeztetés ablakában: Yes
+10.7.12.	Certificate Import Wizard: OK
+10.7.13.	Most jelentkezzünk be az Internet Explorerben megnyitott Remote Desktop Services Deafault Connection oldalon:
+Domain\user name: miskolc\administrator
+Password: Password1
+Sign in
+10.7.14.	Válasszuk az ’An RD Conenction Broker server’ opciót
+Source name: rds01.miskolc.hu
+OK
+</pre></li><li class="listitem"><p>A RemoteApp-ok tesztelése</p><pre class="programlisting">10.8.1.	Ha még nem fut, indítsuk el a Client01-es szervert és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben a Client01-et -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben aClient01-et-&gt; jobb gomb -&gt; Connect
+User name: miskolc\ruser
+Password: Password1
+10.8.2.	Start -&gt; Internet Explorer
+10.8.3.	Nyissuk meg ezt az oldalt: https://rds01.miskolc.hu/rdweb
+10.8.4.	Continue to this website (not recommended)
+10.8.5.	Az Internet Explorer figyelmeztet&#337; sávjában jobb gomb az Active X control –on -&gt; Run Add-on
+10.8.6.	A felugró ablakban: Run
+10.8.7.	Jelentkezzünk be az Enterprise Remote Access oldalon:
+Domain\user name: miskolc\ruser
+Password: Password1
+Sign in
+10.8.8.	Gy&#337;z&#337;djünk meg hogy mind a 4 publikált alkalmazás látható.
+10.8.9.	Ha mégsem lennének ott, akkor indítsuk újra a DC01-et, az RDS01-et és a Client01-et is és ellen&#337;rizzük újra.
+               
+            </pre></li></ol></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s09.html">El&#337;z&#337;</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html">Fel</a></td><td width="40%" align="right">&nbsp;</td></tr><tr><td width="40%" align="left" valign="top">2.9. 9 . Gyakorlat&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html">Tartalom</a></td><td width="40%" align="right" valign="top">&nbsp;</td></tr></tbody></table></div></body></html>

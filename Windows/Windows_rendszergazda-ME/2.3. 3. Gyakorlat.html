@@ -1,0 +1,146 @@
+
+<!-- saved from url=(0051)https://gyires.inf.unideb.hu/KMITT/c09/ch02s03.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      
+   <title>2.3. 3. Gyakorlat</title><link rel="stylesheet" href="./2.3. 3. Gyakorlat_files/style.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="up" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html" title="2. fejezet - Gyakorlatok"><link rel="prev" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html" title="2.2. 2. Gyakorlat"><link rel="next" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s04.html" title="2.4. 4. Gyakorlat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><th colspan="3" align="center">2.3. 3. Gyakorlat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html">El&#337;z&#337;</a>&nbsp;</td><th width="60%" align="center">2. fejezet - Gyakorlatok</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s04.html">Következ&#337;</a></td></tr></tbody></table><hr></div><div class="sect1" title="2.3. 3. Gyakorlat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e1097"></a>2.3. 3. Gyakorlat</h2></div></div></div><p>Témakör Bevezetés a vbs script-be és a powershell-be, AD recycle bin</p><p>Feladatok:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Szervezetiegységeklétrehozásaaz AD-ban</p></li><li class="listitem"><p>Kötegelt user létrehozásvb script segítségével</p></li><li class="listitem"><p>Ismerkedés a powershell-lel</p></li><li class="listitem"><p>A remote powershell használata</p></li><li class="listitem"><p>Az Active Directory modul használata powershell-ben</p></li><li class="listitem"><p>Az AD kukaengedélyezéseéshasználata</p></li></ol></div><p>Megoldások:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Szervezetiegységeklétrehozásaaz AD-ban</p><pre class="programlisting">3.1.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: administrator
+password: Password1
+3.1.2.	Start -&gt; Administrative Tools -&gt;Active Directory Users and Computers (ADUC)
+3.1.3.	Jelöljük ki a miskolc.hu -t -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: Felhasznalok -&gt; ok
+3.1.4.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: IT -&gt; ok
+3.1.5.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: Sales -&gt; ok
+3.1.6.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: HR -&gt; ok
+3.1.7.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: Managers -&gt; ok
+3.1.8.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: SpecialAccounts -&gt; ok
+3.1.9.	Jelöljük ki a Felhasznalok -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: TestAccounts -&gt; ok
+               
+            </pre></li><li class="listitem"><p>Kötegelt user létrehozásvb script segítségével</p><pre class="programlisting">3.2.1.	Start -&gt;Control Panel -&gt; Folder Options -&gt;View fül-&gt;vegyük ki a pipát az alábbi opció el&#337;l:
+Hide extension for known file types
+Ok
+
+3.2.2.	Az asztalon jobb gomb -&gt; New -&gt; Text document -&gt;create.vbs -&gt; Yes
+3.2.3.	jelöljük ki az imént létrehozott fájlt -&gt; jobb gomb -&gt; edit
+3.2.4.	Gépeljük be az alábbi tartalmat és mentsük el:
+Set objContainer = GetObject(”LDAP://OU=IT,OU=Felhasznalok,DC=miskolc,DC=hu”)
+for i=1 to 1000
+Set objUser = objContainer.Create(”User”,”cn=IT_user” &amp; i)
+objUser.put ”sAMAccountName”, ”IT_user” &amp; i
+objUser.put ”description”, ”IT worker”
+objUser.put ”l”, ”Miskolc”
+objUser.setInfo
+Next
+Wscript.echo ”Az 1000db IT user sikeresen létrehozva!”
+3.2.5.	Start -&gt; Command Prompt
+3.2.6.	Navigáljunk el a scriptünkhöz: cd desktop
+3.2.7.	Futtassuk a scriptet az alábbi paranccsal:
+cscript create.vbs
+3.2.8.	Ellen&#337;rizzük le, hogy valóban létrejött-e az 1000db új felhasználó:
+Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers
+Nyissuk ki a Felhasznalok\IT szervezeti egységet és ellen&#337;rizzük a felhasználókat.
+3.2.9.	A scriptben vastagon kiemelt részek módosításával készíts&#369;nk újabb manager, sales, stb. felhasználókat.
+3.2.10.	Néhány fontosabb AD tulajdonság nevét vb scriptben az alábbi táblázat tartalmazza
+              
+               
+            </pre><div><img src="./2.3. 3. Gyakorlat_files/tabla_3_2_10.png"></div></li><li class="listitem"><p>Ismerkedés a powershell-lel</p><pre class="programlisting">3.3.1.	A tálcáról indítsuk el a powershell alkalmazást:
+ 
+3.3.2.	Adjuk ki az alábbi parancsokat:
+Set-ExecutionPolicy –ExecutionPolicy unrestricted
+Válaszoljunk igennel: Y
+cd \
+cls
+3.3.3.	Adjuk ki az alábbi parancsot és nézzük át az elérhet&#337; parancsok listáját és funkviójukat:
+Get-Command
+3.3.4.	Hasznos funkció a powershellben a parancsok rövidíthet&#337;sége, hogy melyik parancsot hgoyan rövidíthetjük, adjuk ki a következ&#337; parancsot:
+Get-Alias
+3.3.5.	A következ&#337; parancs segítségével átnézünk néhány fontosabb funkciót, ez a parancs az aktuálisan futó process-ekr&#337;l nyújt információkat:
+Get-Process
+3.3.6.	A kapott listát rendezzük sorba az ID alapján:
+Get-Process | Sort-Object –Property id
+3.3.7.	Az oszlopok közzül válasszunk kihármat és csak azokat irassuk ki, a rendezést tartsuk meg:
+Get-Process | Select-Object -Property id,Handles,ProcessName | Sort-Object –Property id | Format-Table -auto
+3.3.8.	A sorba rendezett listából csak az els&#337; 10 sort írassuk ki:
+Get-Process | Sort-Object –Property id | Select-Object –First 10
+3.3.9.	A process-ek listáját tároljuk el egy változóban, majd írassuk ki:
+$processes = Get-Process | Sort-Object –Property id
+$processes
+
+               
+            </pre></li><li class="listitem"><p>A remote powershell használata</p><pre class="programlisting">3.4.1.	Ha még nem fut az SRV01, akkor indítsuk el:
+Válasszuk ki a Hyper-V Manager-ben az SRV01virtuális gépet -&gt; jobb gomb -&gt; Start
+3.4.2.	Hogy lássuk alapból a remoteing nem m&#369;ködik, adjuk ki a következ&#337; parancsot még a DC01-en:
+Invoke-Command –ComputerName SRV01 {Get-Process}
+3.4.3.	Jelentkezzünk be az SRV01 szerverreésottpowershell-ben adjukkiazalábbiparancsot:
+Enable-PSRemoting -Force
+3.4.4.	Térjünkvissza a DC01-reésadjukkiazel&#337;z&#337;parancsotismét:
+Invoke-Command –ComputerName SRV01 {Get-Process}
+3.4.5.	Kérjük le a process-ekadatait ID alapjánsorbarendezveéscsakazels&#337; 10-et:
+Invoke-Command –ComputerName SRV01 {Get-Process | Sort-Object –Property id | Select-Object –First 10}
+               
+            </pre></li><li class="listitem"><p>Az Active Directory modul használata powershell-ben</p><pre class="programlisting">3.5.1.	Indítsuk el a Server Manager-t: Start -&gt; Administrative Tools -&gt; Server Manager vagy a tálcán kattintsunk erre az ikonra:
+ 
+3.5.2.	Bal oldlaon jelöljük ki a Features csomópontot, majd jobb oldalon kattintsunk az ’Add Features’ -re
+3.5.3.	A felugrólistábanpipáljuk be a ‘Windows PowerShell Integrated Scripting Environment (ISE)’-t
+Next &gt; -&gt;Install -&gt;Close
+3.5.4.	A Start men&#369; Search programs and files dobozbaírjuk be, hogypowerésa listábólkattintsunk a ‘Windows PowerShell ISE’ –re
+3.5.5.	Importáljuk be az Active Directory modult:
+Import-Module ActiveDirectory
+3.5.6.	Kérjünkinformációt a tartományról:
+Get-ADDomainmiskolc.hu
+és a tartományvezérl&#337;r&#337;l is:
+Get-ADDomainController
+3.5.7.	Számoljuk meg hánydarab user találhatóaz AD-ban:
+Get-AdObject –Filter {ObjectClass –eq “User”} –SearchBase ‘DC=Miskolc,DC=hu’ | Measue-Object
+3.5.8.	Hozzunklétreegyújusert:
+New-ADUsermanagerboss –path “OU=Managers,OU=Felhasznalok,DC=Miskolc,DC=hu” –AccountPassword (ConvertTo-SecureString –AsPlainText “Password1” -force) –enabled $true
+3.5.9.	Állítsunk be néhánytulajdonságotaziméntlétrehozottusernek:
+Set-ADUsermanagerboss –GivenName “Bela” –Surename “Nagy” –homepage “http://www.miskolc.hu” –description “Fonok”
+
+3.5.10.	Néhány fontosabb AD tulajdonság nevét powershell-ben az alábbi táblázat tartalmazza:
+(Feladat: a hiányzókat kikeresni)
+               
+            </pre><div><img src="./2.3. 3. Gyakorlat_files/tabla_3_5_10.png"></div></li><li class="listitem"><p>Az AD kukaengedélyezéseéshasználata</p><pre class="programlisting">3.6.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: administrator
+password: Password1
+3.6.2.	Indítsuk el az Active Directory Domain and Trusts-t:
+Start -&gt; Administrative Tools -&gt; Active Directory Domain and Trusts
+3.6.3.	Jobbgomb a Miskolc.hu-n -&gt; Raise domain functional level
+3.6.4.	Ellen&#337;rizzük, hogy a Current domain functional level az
+Windows Server 2008 R2
+Close
+3.6.5.	Indítsuk el az Active Directory Module for Windows PowerShell -t:
+Start -&gt; Administrative Tools -&gt; Active Directory Module for Windows PowerShell
+3.6.6.	A következ&#337; paranccsal ellen&#337;rizzük az AD kuka feature állapotát:
+Get-ADOptionalFeature –Filter *
+3.6.7.	AzEnabledScopestulajdonságüres, amiaztjelzi, hogyaz AD kukamégnemengedélyezett.
+3.6.8.	Adjukkiazalábbiparancsot, hogyengedélyezzükaz AD kukát:
+Enable-ADOptionalFeature “Recycle Bin Feature” –Scope ForestOrConfigurationSet –Target Miskolc.hu
+3.6.9.	A feltettkérésreválaszoljunkigennel: Y
+3.6.10.	Ismét ellen&#337;rizzük az AD kuka állapotát:
+Get-ADOptionalFeature –Filter *
+3.6.11.	Töröljünk 3 felhasználót, ehheznyissuk meg az Active Directory Administrative Center-t:
+Start -&gt; Administrative Tools -&gt; Active Directory Administrative Center
+3.6.12.	Baloldalonkattintsunk a miskolc (local) –ra, a középs&#337;ablakban a Felhasznalok –ra, majdazIT-re
+3.6.13.	Töröljük ezeket a felhasználókat: IT_user1, IT_user2, IT_user3. Jelöljük ki &#337;ket -&gt; jobb gomb -&gt; Delete -&gt; Yes
+3.6.14.	Most ellen&#337;rizzük az AD kuka tartalmát, ehhez térjünk vissza az Active Directory Module for Windows PowerShell –hezésadjukkiazalábbiparancsot:
+Get-ADObject –SearchBase ”CN=Deleted Objects,DC=miskolc,DC=hu” –ldapfilter ”(objectClass=*)”–includeDeletedObjects
+3.6.15.	A listában az objectGUID tulajdonságok a fontosak, az alapján lehet visszaállítani a felhasználó accountját.
+3.6.16.	Most állítsuk vissza az egyik törölt felhasználót, az alábbi parancs segítségével:
+Restore-ADObject –identity  az  IT_user1 objectGUID tulajdonságának értéke
+Például:
+Restore-ADObject –identity df55ac48-1045-47ce-b107-952e59b871a1
+3.6.17.	Ellen&#337;rizzük, hogy valóban újra látható-e az IT_user1 az ADUC-ban:
+Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers
+3.6.18.	Navigáljunk el a miskolc.hu\Felhasznalok\IT\ szervezeti egységbe és keressük ki az IT_user1-et.
+               
+            </pre></li></ol></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html">El&#337;z&#337;</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html">Fel</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s04.html">Következ&#337;</a></td></tr><tr><td width="40%" align="left" valign="top">2.2. 2. Gyakorlat&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html">Tartalom</a></td><td width="40%" align="right" valign="top">&nbsp;2.4. 4. Gyakorlat</td></tr></tbody></table></div></body></html>

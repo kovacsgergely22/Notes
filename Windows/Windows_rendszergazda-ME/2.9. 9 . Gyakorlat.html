@@ -1,0 +1,198 @@
+
+<!-- saved from url=(0051)https://gyires.inf.unideb.hu/KMITT/c09/ch02s09.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      
+   <title>2.9. 9 . Gyakorlat</title><link rel="stylesheet" href="./2.9. 9 . Gyakorlat_files/style.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="up" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html" title="2. fejezet - Gyakorlatok"><link rel="prev" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s08.html" title="2.8. 8 . Gyakorlat"><link rel="next" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s10.html" title="2.10. 10 . Gyakorlat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><th colspan="3" align="center">2.9. 9 . Gyakorlat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s08.html">El&#337;z&#337;</a>&nbsp;</td><th width="60%" align="center">2. fejezet - Gyakorlatok</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s10.html">Következ&#337;</a></td></tr></tbody></table><hr></div><div class="sect1" title="2.9. 9 . Gyakorlat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e1389"></a>2.9. 9 . Gyakorlat</h2></div></div></div><p>Témakör Network Load Balancing (NLB)</p><p>Feladatok:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>	AzNLB01 ésaz NLB02 szervereklétrehozása</p></li><li class="listitem"><p>	Az NLB01 szerverkonfigurálása</p></li><li class="listitem"><p>	Az NLB02 szerverkonfigurálása</p></li><li class="listitem"><p>	Tesztweboldallétrehozása</p></li><li class="listitem"><p>	Az NLB cluster létrehozása</p></li><li class="listitem"><p>	A webshop.miskolc.hu A record bejegyzése a DNS-be</p></li><li class="listitem"><p>	Az NLB tesztelése</p></li></ol></div><p>Megoldások:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>	AzNLB01 ésaz NLB02 szervereklétrehozása</p><pre class="programlisting">9.1.1.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+9.1.2.	Choose Disk Type: Differencing
+Next &gt;
+9.1.3.	Specify Name and Location:
+Name: NLB01
+Location: meghajtó&gt;\VPC\NLB01\
+Next &gt;
+9.1.4.	Configure Disk: Location: meghajtó&gt;\VPC\W2k8_ENT_base.vhd
+Next &gt;
+9.1.5.	Completing the New Virtual Hard Disk Wizard: Finish
+
+9.1.6.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+9.1.7.	Specify Name and Location:
+Name: NLB01
+Store the virtual machine in a different location
+Location: meghajtó&gt;\VPC\NLB01
+Next &gt;
+9.1.8.	Assign Memory: 512MB, Next &gt;
+9.1.9.	Configure Networking: Internal vagy Belso_halozat 
+Next &gt;
+9.1.10.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: nlb01.vhd
+Location: meghajtó&gt;\VPC\nlb01\nlb01.vhd
+Next &gt;
+9.1.11.	Completing the New Virtual Machine Wizard: Finish
+9.1.12.	Válasszuk ki a Hyper-V Manager-ben az NLB01-et -&gt; jobb gomb -&gt; Settings
+9.1.13.	Hardware -&gt; Network Adapter -&gt; MAC Address -&gt; jelöljük be az ’Enable spoofing of MAC addresses’ opciót
+9.1.14.	Apply -&gt; OK
+9.1.15.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+9.1.16.	Choose Disk Type: Differencing
+Next &gt;
+9.1.17.	Specify Name and Location:
+Name: NLB02
+Location: meghajtó&gt;\VPC\NLB02\
+Next &gt;
+9.1.18.	Configure Disk: Location: meghajtó&gt;\VPC\W2k8_ENT_base.vhd
+Next &gt;
+9.1.19.	Completing the New Virtual Hard Disk Wizard: Finish
+
+9.1.20.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+9.1.21.	Specify Name and Location:
+Name: NLB02
+Store the virtual machine in a different location
+Location: meghajtó&gt;\VPC\NLB02
+Next &gt;
+9.1.22.	Assign Memory: 512MB, Next &gt;
+9.1.23.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+9.1.24.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: nlb02.vhd
+Location: meghajtó&gt;\VPC\nlb02\nlb02.vhd
+Next &gt;
+9.1.25.	Completing the New Virtual Machine Wizard: Finish
+9.1.26.	Válasszuk ki a Hyper-V Manager-ben az NLB02-t -&gt; jobb gomb -&gt; Settings
+9.1.27.	Hardware -&gt; Network Adapter -&gt; MAC Address -&gt; jelöljük be az ’Enable spoofing of MAC addresses’ opciót
+9.1.28.	Apply -&gt; OK
+9.1.29.	Indítsuk el az NLB02-t:
+9.1.30.	Válasszuk ki a Hyper-V Manager-ben az NLB02-t -&gt; jobb gomb -&gt; Start
+9.1.31.	Válasszuk ki a Hyper-V Manager-ben az NLB02-t -&gt; jobb gomb -&gt; Connect
+
+9.1.32.	Miel&#337;tt tovább lépnénk, indítsuk el a DC01-es szervert
+9.1.33.	Válasszuk ki a Hyper-V Manager-ben a DC01-et -&gt; jobb gomb -&gt; Start
+9.1.34.	Válasszuk ki a Hyper-V Manager-ben a DC01-et-&gt; jobb gomb -&gt; Connect               
+            </pre></li><li class="listitem"><p>	Az NLB01 szerverkonfigurálása</p><pre class="programlisting">9.2.1.	Indítsuk el az NLB01-et(NLB02-t):
+9.2.2.	Válasszuk ki a Hyper-V Manager-ben az NLB01-et (NLB02-t)-&gt; jobb gomb -&gt; Start
+9.2.3.	Válasszuk ki a Hyper-V Manager-ben az NLB01-et (NLB02-t)-&gt; jobb gomb -&gt; Connect
+9.2.4.	Set Up Windows: Next
+9.2.5.	Jelöljük be az ’I accept the license terms’ opciót -&gt;Start
+9.2.6.	The user’s password must be changed before logging on the first time: OK
+New password: Password1
+Confirm password: Password1
+Enter -&gt; OK
+
+9.2.7.	A hálózat beállítása
+9.2.8.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Network and Sharing Center -&gt; Change adapter settings
+9.2.9.	Local Area Connection -&gt; jobb gomb: Properties -&gt; vegyük ki a pipát az IPv6 
+9.2.10.	Válasszuk ki az Internet Protocol Version 4-et: Properties: Use the following IP address
+IP address: 10.10.1.151(10.10.1.152)
+Subnet mask: 255.0.0.0
+Preferred DNS server: 10.10.1.1
+OK -&gt;OK
+
+9.2.11.	A szerver átnevezése és tartományba léptetése
+9.2.12.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; System -&gt; Change settings
+9.2.13.	System Properties: Change...
+9.2.14.	Computer Name/Domain Changes: 
+Computer name: NLB01(NLB02)
+Domain: miskolc
+OK
+9.2.15.	Computer Name/Domain Changes:
+User name: administrator
+Password: Password1
+OK
+9.2.16.	Computer Name/Domain Changes: Welcome to the miskolc domain. -&gt;OK
+9.2.17.	Computer Name/Domain Changes: You must restart your computer to apply these changes -&gt;OK
+9.2.18.	System Properties: Close
+9.2.19.	Restart now
+
+9.2.20.	A t&#369;zfal letiltása
+9.2.21.	Jelentkezzünk be azNLB01-es(NLB02-es)szerverre: Switch User -&gt; Other User
+User name:miskolc\Adminsitrator
+Jelszó: Password1
+Enter -&gt; OK
+9.2.22.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Windows Firewall -&gt; Turn Windows firewall on or off
+9.2.23.	Domain network location settings: Turn off Windows firewall (not recommended)
+9.2.24.	Home or work (private) network location settings: Turn off Windows firewall (not recommended)
+9.2.25.	Public network location settings: Turn off Windows firewall (not recommended)
+9.2.26.	A web szerver szerepkör telepítése
+9.2.27.	Start -&gt; Administrative Tools -&gt; Server Manager -&gt; Roles -&gt; Add Roles
+9.2.28.	Before You Begin: Next &gt;
+9.2.29.	Select Server Roles: Web Server (IIS) -&gt; Next &gt;
+9.2.30.	Web Server (IIS): Next &gt;
+9.2.31.	Select Role Services: válasszuk ki a következ&#337; szervízeket is:
+ISAPI Filters
+ISAPI Extensions
+ASP
+Next &gt;
+9.2.32.	Confirm Installation Selections: Install
+9.2.33.	Installation Results: Close
+
+9.2.34.	Az NLB feature telepítése
+9.2.35.	Start -&gt; Server Manager -&gt; Features -&gt; Add Features
+9.2.36.	Select Features -&gt; Network Load Balancing -&gt; Next &gt;
+9.2.37.	Confirm Installation Selections: Install
+9.2.38.	Installation Results: Close
+               
+            </pre></li><li class="listitem"><p>	Az NLB02 szerverkonfigurálása</p><pre class="programlisting">9.3.1.	Ismételjükmeg a 9.2. –eslépéseket a zárójelesadatokkal               
+            </pre></li><li class="listitem"><p>	Tesztweboldallétrehozása</p><pre class="programlisting">9.4.1.	Az NLB01-es szerveren hozzunk létre egy html fájlt
+9.4.2.	Start -&gt; Control Panel -&gt; Folder Options -&gt; View -&gt; Vegyük ki a pipát a ’Hide extensions for known file types’ el&#337;l -&gt; OK
+9.4.3.	Start -&gt; Computer -&gt; Local Disk (C:) -&gt; inetpub -&gt; wwwroot -&gt; jobb gomb -&gt; New -&gt; Text Document
+9.4.4.	Gépeljük be az alábbi tartalmat a fájlba és mentsük el:
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Köszöntjük cégünk WebShopjában!”&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;H1&gt;Hamarosan megnyitunk! – hosted by NLB01&lt;/H1&gt;&lt;/body&gt;
+&lt;/html&gt;
+
+9.4.5.	Nevezzük át az index.txt fájlt: index.html –re, a felugró figyelmeztet&#337; ablakban kattintsunk a Yes -re
+
+9.4.6.	Készítsünk egy másolatot err&#337;l a fájlról és másoljuk át az NLB02-re
+9.4.7.	Jelöljük ki az index.html –t -&gt; CTRL+C -&gt; CTRL+V
+9.4.8.	Editáljuk az index –Copy.html fájlt: jobb gomb -&gt; Open with… -&gt;Browse… -&gt; Computer -&gt; Local Disk (C:) -&gt; Windows -&gt; System32 -&gt; notepad.exe -&gt; Open -&gt; Vegyük ki a pipát az ’Always use the selected program to open this kind of file’ opció el&#337;l -&gt; OK
+9.4.9.	Cseréljük ki a ’hosted by NLB01’ szöveget erre: ’hosted by NLB02’ -&gt;File -&gt; Save
+
+Megjegyzés: a valóságban a cluster összes csomópontján azonos web tartalomnak kell lennie, itt a példában csak azért különböz&#337;ek az index.html –ek, hogy tesztelésnél könnyen azonosíthassuk éppen melyik szerver szolgálta ki a kérésünket.
+
+9.4.10.	Start -&gt; Computer -&gt; a címsorba írjuk be: \\nlb02\c$\inetpub\wwwroot\
+9.4.11.	Mozgassuk át ide az index – copy.html fájlt és nevezzük át az új helyén index.html -re
+9.4.12.	Ellen&#337;rizzük le az NLB01-en és az NLB02-n a weblap elérhet&#337;ségét:
+Start -&gt; Internet Explorer -&gt; Ask me later -&gt; nyisuk meg ezt az oldalt: http://localhost/
+
+í               
+            </pre></li><li class="listitem"><p>	Az NLB cluster létrehozása</p><pre class="programlisting">9.5.1.	Az NLB01-es szerveren: Start -&gt; Administrative Tools -&gt;Network Load Balancing Manager
+9.5.2.	Jobb gomb a ’Network Load Balancing Clusters’ –en -&gt; New Cluster
+9.5.3.	New Cluster: Connect: Host: NLB01-&gt; Connect
+9.5.4.	Válasszuk ki a ’Local Area Connection’ –t -&gt; Next &gt;
+9.5.5.	New Cluster: Host Parameters: Next &gt;
+9.5.6.	New Cluster: Cluster IP Addresses: Add… -&gt;
+9.5.7.	Add IP Address
+IPv4 address: 10.10.1.150
+Subnet mask: 255.0.0.0
+OK-&gt; Next &gt;
+9.5.8.	New Cluster: Cluster Parameters
+Full Internet name: webshop.miskolc.hu
+Next &gt;
+9.5.9.	New Cluster: Port Rules: Finish
+9.5.10.	Várjuk meg amíg véget ér a konfiguráció. Sikeres konfigurálás után a Network Load Balancing Clusters alatt megjelenik a webshop.miskolc.hu (10.10.1.150) ez alatt pedig az NLB01(Local Area Connection) zöld színnel.
+9.5.11.	Jelöljük ki a ’webshop.miskolc.hu’ –t -&gt; jobb gomb -&gt; Add Host To Cluster
+9.5.12.	Add Host to Cluster: Connect: NLB02 -&gt; Connect
+9.5.13.	Válasszuk ki a ’Local Area Connection’ –t -&gt; Next &gt;
+9.5.14.	New Cluster: Host Parameters: Next &gt;
+9.5.15.	New Cluster: Port Rules: Finish
+9.5.16.	Várjuk meg amíg az NLB02 is megjelnik zölden.
+               
+            </pre></li><li class="listitem"><p>	A webshop.miskolc.hu A record bejegyzése a DNS-be</p><pre class="programlisting">9.6.1.	Jelentkezzünk be a DC01-re:
+User name: Administrator
+Password: Password1
+9.6.2.	Start -&gt; Administrative Tools -&gt; DNS
+9.6.3.	DNS -&gt; DC01 -&gt; Forward Lookup Zones -&gt; miskolc.hu -&gt; jobb gomb -&gt; New Host (A or AAAA)…
+Name: webshop
+IP address: 10.10.1.150
+Add Host
+9.6.4.	A felugró ablakban kattintsunk az OK gombra.
+9.6.5.	New Host: Done               
+            </pre></li><li class="listitem"><p>	Az NLB tesztelése</p><pre class="programlisting">9.7.1.	A DC01-en indítsunk el egy böngész&#337;t: Start -&gt; All Programs -&gt; Internet Explorer
+9.7.2.	Nyissuk meg a következ&#337; weblapot: webshop.miskolc.hu
+9.7.3.	Most az NLB cluster egyik tagját mentsük el:
+Válasszuk ki a Hyper-V Manager-ben az NLB01-et -&gt; jobb gomb -&gt; Save
+9.7.4.	A DC01-en frissítsük a weblapot a böngész&#337;ben.
+9.7.5.	Indítsuk el az NLB01-et és állítsuk le az NLB02-t:
+Válasszuk ki a Hyper-V Manager-ben az NLB01-et -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben az NLB02-et -&gt; jobb gomb -&gt; Save
+9.7.6.	A DC01-en frissítsük a weblapot a böngész&#337;ben.
+9.7.7.	Megfigyelhettük a teszt alatt, hogy amint az egyik szerver kiesett a másik automatiksan átvette a kérések kiszolgálását.               
+            </pre></li></ol></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s08.html">El&#337;z&#337;</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html">Fel</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s10.html">Következ&#337;</a></td></tr><tr><td width="40%" align="left" valign="top">2.8. 8 . Gyakorlat&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html">Tartalom</a></td><td width="40%" align="right" valign="top">&nbsp;2.10. 10 . Gyakorlat</td></tr></tbody></table></div></body></html>

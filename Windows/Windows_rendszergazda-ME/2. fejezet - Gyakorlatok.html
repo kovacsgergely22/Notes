@@ -1,0 +1,366 @@
+
+<!-- saved from url=(0048)https://gyires.inf.unideb.hu/KMITT/c09/ch02.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      
+   <title>2. fejezet - Gyakorlatok</title><link rel="stylesheet" href="./2. fejezet - Gyakorlatok_files/style.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="up" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="prev" href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s09.html" title="1.9. Tartományvezérl&#337; létrehozása"><link rel="next" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html" title="2.2. 2. Gyakorlat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><th colspan="3" align="center">2. fejezet - Gyakorlatok</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s09.html">El&#337;z&#337;</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html">Következ&#337;</a></td></tr></tbody></table><hr></div><div class="chapter" title="2. fejezet - Gyakorlatok"><div class="titlepage"><div><div><h2 class="title"><a name="d0e925"></a>2. fejezet - Gyakorlatok</h2></div></div></div><div class="sect1" title="2.1. 1. Gyakorlat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e928"></a>2.1. 1. Gyakorlat</h2></div></div></div><p>Témakör Telepítés: Windows Server 2008 R2 Enterprise, Core, Windows 7</p><p>Feladatok:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Új virtuális gép és Windows Server 2008 R2 Enterprise alap lemez létrehozása</p></li><li class="listitem"><p>A differenciális lemezek és a két új virtuális gép létrehozása a szerverekhez</p></li><li class="listitem"><p>A két szerver alap konfigurálása (név, t&#369;zfal, hálózat)</p></li><li class="listitem"><p>Új virtuális gép létrehozása és Windows Server 2008 R2 Core telepítése</p></li><li class="listitem"><p>Új virtuális gép és Windows 7 Ultimate alap lemez létrehozása</p></li><li class="listitem"><p>A differenciális lemezek és a két új virtuális gép létrehozása a kliensekhez</p></li><li class="listitem"><p>A két kliens alap konfigurálása (név, t&#369;zfal, hálózat)</p></li></ol></div><p>Megoldások</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Új virtuális gép és Windows Server 2008 R2 Enterprise alap lemez létrehozása</p><pre class="programlisting">  1.1.1.	Start -&gt; Administrative Tools -&gt; Hyper-V manager
+  1.1.2.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+  1.1.3.	Specify Name and Location:
+     Name: W2k8_ent_base
+     Store the virtual machine in a different location
+     Location: [meghajtó]\VPC\
+     Next &gt;
+  1.1.4.	Assign Memory: 512MB, Next &gt;
+  1.1.5.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+  1.1.6.	Connect Virtual Hard Disk: Create a virtual hard disk: 
+     Name: w2k8_ent_base_disk
+     Location:[meghajtó]\VPC\
+     Size: 50GB
+     Next &gt;
+  1.1.7.	Installation Options: Install an operating system from a boot CD/DVD-ROM
+        Image file (.iso): [meghajtó]\install\en_windows_server_2008_r2_standard_enterprise_datacenter_and_web_x64_dvd_x15-59754.iso
+        Next &gt;
+   1.1.8.	Completing the New Virtual Machine Wizard: Finish
+                        
+   1.1.9.	Válasszuk ki a Hyper-V Manager-ben az imént létrehozott virtuális gépet -&gt; jobb gomb -&gt; Start
+   1.1.10.	Válasszuk ki a Hyper-V Manager-ben az imént létrehozott virtuális gépet -&gt; jobb gomb -&gt; Connect
+   1.1.11.	Install Windows:
+      Language: English
+      Time and currency format: Hungarian (Hungary)
+      Keyboard or input method: Hungarian
+      Next
+   1.1.12.	Install now
+   1.1.13.	Select the operating system you want to install
+      Windows Server 2008 R2 Enterprise (Full Installation)
+      Next
+   1.1.14.	I accept the license terms, Next
+   1.1.15.	Which type of installation do you want?
+       Custom (advanced)
+    1.1.16.	Where do you want to install Windows?
+        Disk 0 Unallocated Space 50.0GB
+       Next
+    1.1.17.	A telepítés során a virtuális gép kétszer újra fog indulni.
+    1.1.18.	Ha végzett a telepít&#337;, akkor a jelszó modosító üzenet fogad minket.
+    1.1.19.	The user’s Password must be changed before loging on the first time. 
+       OK
+     1.1.20.	New password: Password1
+       Confirm password: Password1
+       Enter
+    1.1.21.	Your password has been changed. 
+       OK
+    1.1.22.	Initial Configuration Tasks
+       Do not show this window at logon
+       Close
+   1.1.23.	Server Manager
+       Do not show me his console at logon
+       És zárjuk be ezt az ablakot
+    1.1.24.	Start -&gt; Shut down -&gt; Comment: kész
+    1.1.25.	A Hyper-V Manager-ben válasszuk ki a virtuális gépet majd jobb gomb -&gt; Delete -&gt; Delete
+    
+               </pre></li><li class="listitem"><p>A differenciális lemezek és a két új virtuális gép létrehozása a szerverekhez</p><pre class="programlisting">               1.2.1.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+1.2.2.	Choose Disk Type: Differencing
+Next &gt;
+1.2.3.	Specify Name and Location:
+Name: DC01
+Location: [meghajtó]\VPC\DC01\
+Next &gt;
+1.2.4.	Configure Disk: Location: [meghajtó]\VPC\W2k8_ENT_base.vhd
+Next &gt;
+1.2.5.	Completing the New Virtual Hard Disk Wizard: Finish
+
+
+1.2.6.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+1.2.7.	Choose Disk Type: Differencing
+Next &gt;
+1.2.8.	Specify Name and Location:
+Name: SRV01
+Location: [meghajtó]\VPC\SRV01\
+Next &gt;
+1.2.9.	Configure Disk: Location: [meghajtó]\VPC\W2k8_ENT_base.vhd
+Next &gt;
+1.2.10.	Completing the New Virtual Hard Disk Wizard: Finish
+
+1.2.11.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.2.12.	Specify Name and Location:
+Name: DC01
+Store the virtual machine in a different location
+Location: [meghajtó]\VPC\DC01
+Next &gt;
+1.2.13.	Assign Memory: 512MB, Next &gt;
+1.2.14.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.2.15.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: dc01.vhd
+Location: [meghajtó]\VPC\dc01\dc01.vhd
+Next &gt;
+1.2.16.	Completing the New Virtual Machine Wizard: Finish
+
+1.2.17.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.2.18.	Specify Name and Location:
+Name: SRV01
+Store the virtual machine in a different location
+Location: [meghajtó]\VPC\SRV01
+Next &gt;
+1.2.19.	Assign Memory: 512MB, Next &gt;
+1.2.20.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.2.21.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: srv01.vhd
+Location: [meghajtó]\VPC\srv01\srv01.vhd
+Next &gt;
+1.2.22.	Completing the New Virtual Machine Wizard: Finish
+               
+            </pre></li><li class="listitem"><p>A két szerver alap konfigurálása (név, t&#369;zfal, hálózat)</p><pre class="programlisting">1.3.1.	Indítsuk el a DC01-et:
+1.3.2.	Válasszuk ki a Hyper-V Manager-ben a DC01-et -&gt; jobb gomb -&gt; Start
+1.3.3.	Válasszuk ki a Hyper-V Manager-ben a DC01-et -&gt; jobb gomb -&gt; Connect
+1.3.4.	Indítsuk el a SRV01-et:
+1.3.5.	Válasszuk ki a Hyper-V Manager-ben a SRV01-et -&gt; jobb gomb -&gt; Start
+1.3.6.	Válasszuk ki a Hyper-V Manager-ben a SRV01-et -&gt; jobb gomb -&gt; Connect
+
+1.3.7.	Jelentkezzünk be a DC01 gépre
+Felhasználó: Adminsitrator
+Jelszó: Password1
+1.3.8.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Network and Sharing Center -&gt; Change adapter settings
+1.3.9.	Local Area Connection 2 -&gt; jobb gomb: Properties -&gt;vegyük ki a pipát az IPv6 
+1.3.10.	Válasszuk ki az Internet Protocol Version 4-et: Properties: Use the following IP address
+IP address: 10.10.1.1
+Subnet mask: 255.0.0.0
+Preferred DNS server: 10.10.1.1
+OK -&gt;Close
+
+1.3.11.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Windows Firewall -&gt; Turn Windows firewall on or off
+1.3.12.	Home or work (private) network location settings: Turn off Windows firewall (not recommended)
+1.3.13.	Public network location settings: Turn off Windows firewall (not recommended)
+
+1.3.14.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; System -&gt; Change settings
+1.3.15.	System Properties: Change...
+1.3.16.	Computer Name/Domain Changes: Computer name: DC01 -&gt; OK
+1.3.17.	Restart: OK
+1.3.18.	System Properties: Close
+1.3.19.	Restart now
+
+1.3.20.	Jelentkezzünk be az SRV01 gépre
+Felhasználó: Adminsitrator
+Jelszó: Password1
+1.3.21.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Network and Sharing Center -&gt; Change adapter settings
+1.3.22.	Local Area Connection 2 -&gt; jobb gomb: Properties -&gt; vegyük ki a pipát az IPv6 
+1.3.23.	Válasszuk ki az Internet Protocol Version 4-et: Properties: Use the following IP address
+IP address: 10.10.1.2
+Subnet mask: 255.0.0.0
+Preferred DNS server: 10.10.1.1
+OK -&gt;Close
+1.3.24.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Windows Firewall -&gt; Turn Windows firewall on or off
+1.3.25.	Home or work (private) network location settings: Turn off Windows firewall (not recommended)
+1.3.26.	Public network location settings: Turn off Windows firewall (not recommended)
+
+1.3.27.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; System -&gt; Change settings
+1.3.28.	System Properties: Change...
+1.3.29.	Computer Name/Domain Changes: Computer name: SRV01 -&gt; OK
+1.3.30.	Megjegyzés: A tartományt csak azután tudjuk megadni miután a DC01-en a tartományvezérl&#337; szerepkört hozzáadtuk. Lásd 2. Gyakorlat
+1.3.31.	Restart: OK
+1.3.32.	System Properties: Close
+1.3.33.	Restart now
+
+1.3.34.	Ha mind a két gép újra indult, mentsük el &#337;ket
+Válasszuk ki a Hyper-V Manager-ben a DC01-et -&gt; jobb gomb -&gt; Save
+Válasszuk ki a Hyper-V Manager-ben a SRV01-et -&gt; jobb gomb -&gt; Save
+               
+               
+            </pre></li><li class="listitem"><p>Új virtuális gép létrehozása és Windows Server 2008 R2 Core telepítése</p><pre class="programlisting">1.4.1.	Start -&gt; Administrative Tools -&gt; Hyper-V manager
+1.4.2.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.4.3.	Specify Name and Location:
+Name: Core01
+Store the virtual machine in a different location
+Location: [meghajtó]\VPC\core01
+Next &gt;
+1.4.4.	Assign Memory: 512MB, Next &gt;
+1.4.5.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.4.6.	Connect Virtual Hard Disk: Create a virtual hard disk: 
+Name: Core01.vhd
+Location: [meghajtó]\VPC\
+Size: 30GB
+Next &gt;
+1.4.7.	Installation Options: Install an operating system from a boot CD/DVD-ROM
+Image file (.iso): [meghajtó]\install\en_windows_server_2008_r2_standard_enterprise_datacenter_and_web_x64_dvd_x15-59754.iso
+Next &gt;
+1.4.8.	Completing the New Virtual Machine Wizard: Finish
+&#8195;
+1.4.9.	Válasszuk ki a Hyper-V Manager-ben a Core01-et -&gt; jobb gomb -&gt; Start
+1.4.10.	Válasszuk ki a Hyper-V Manager-ben a Core01-et -&gt; jobb gomb -&gt; Connect
+1.4.11.	Install Windows:Language: English
+Time and currency format: Hungarian (Hungary)
+Keyboard or input method: Hungarian
+Next
+1.4.12.	Install now
+1.4.13.	Select the operating system you want to install
+Windows Server 2008 R2 Enterprise (Server Core Installation)
+Next
+1.4.14.	I accept the license terms, Next
+1.4.15.	Which type of installation do you want?
+Custom (advanced)
+1.4.16.	Where do you want to install Windows?
+Disk 0 Unallocated Space 30.0GB
+Next
+1.4.17.	A telepítés során a virtuális gép kétszer újra fog indulni.
+1.4.18.	Ha végzett a telepít&#337;, akkor a jelszó modosító üzenet fogad minket.
+1.4.19.	The user’s Password must be changed before loging on the first time. 
+OK
+1.4.20.	New password: Password1
+Confirm password: Password1
+Enter
+1.4.21.	Your password has been changed. 
+OK
+1.4.22.	Ha a parancssor megjelent, ezt a gépet is mentsük el:
+Válasszuk ki a Hyper-V Manager-ben a Core01-et -&gt; jobb gomb -&gt; Save 
+               
+            </pre></li><li class="listitem"><p>Új virtuális gép és Windows 7 Ultimate alap lemez létrehozása</p><pre class="programlisting">1.5.1.	Start -&gt; Administrative Tools -&gt; Hyper-V manager
+1.5.2.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.5.3.	Specify Name and Location:
+Name: W7_base
+Store the virtual machine in a different location
+Location: meghajtó&gt;\VPC\w7
+Next &gt;
+1.5.4.	Assign Memory: 512MB, Next &gt;
+1.5.5.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.5.6.	Connect Virtual Hard Disk: Create a virtual hard disk: 
+Name: w7_base_disk
+Location: meghajtó&gt;\VPC\w7
+Size: 50GB
+Next &gt;
+1.5.7.	Installation Options: Install an operating system from a boot CD/DVD-ROM
+Image file (.iso): meghajtó&gt;\install\en_windows_7_ultimate_x86_dvd_x15-65921.iso
+Next &gt;
+1.5.8.	Completing the New Virtual Machine Wizard: Finish
+
+1.5.9.	Válasszuk ki a Hyper-V Manager-ben az imént létrehozott virtuális gépet -&gt; jobb gomb -&gt; Start
+1.5.10.	Válasszuk ki a Hyper-V Manager-ben az imént létrehozott virtuális gépet -&gt; jobb gomb -&gt; Connect
+1.5.11.	Install Windows:
+Language: English
+Time and currency format: Hungarian (Hungary)
+Keyboard or input method: Hungarian
+Next
+1.5.12.	Install now
+1.5.13.	I accept the license terms, Next
+1.5.14.	Which type of installation do you want?
+Custom (advanced)
+1.5.15.	Where do you want to install Windows?
+Disk 0 Unallocated Space 50.0GB
+Next
+1.5.16.	A telepítés során a virtuális gép kétszer újra fog indulni.
+1.5.17.	Ha végzett a telepít&#337;, akkor a felhasználónevet és gépnevet kell megadnunk, ez tetsz&#337;leges lehet, kés&#337;bb .
+1.5.18.	Type a user name: valaki
+Type a computer name: valaki-PC
+Next
+1.5.19.	Type a Password: Password1
+Retype your password: Password1
+Type a password hint: valami
+Next
+1.5.20.	Type your Windows product key
+Itt nem adunk meg kulcsot, hagyjuk üresen 
+Next
+1.5.21.	Help protect your computer and improve Windows automatically:
+Use recommended settings
+1.5.22.	Review your time and date settings: UTC +01:00
+Next
+1.5.23.	Select your computer’s current location: Home network
+1.5.24.	Start -&gt; Shut down
+1.5.25.	A Hyper-V Manager-ben válasszuk ki a virtuális gépet majd jobb gomb -&gt; Delete -&gt; Delete
+               
+            </pre></li><li class="listitem"><p>A differenciális lemezek és a két új virtuális gép létrehozása a kliensekhez</p><pre class="programlisting">1.6.1.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+1.6.2.	Choose Disk Type: Differencing
+Next &gt;
+1.6.3.	Specify Name and Location:
+Name: Client01
+Location: meghajtó&gt;\VPC\Client01\
+Next &gt;
+1.6.4.	Configure Disk: Location: meghajtó&gt;\VPC\W7_base_disk.vhd
+Next &gt;
+1.6.5.	Completing the New Virtual Hard Disk Wizard: Finish
+
+1.6.6.	Hyper-V Manager -&gt; Action -&gt; New -&gt; Hard Disk...
+1.6.7.	Choose Disk Type: Differencing
+Next &gt;
+1.6.8.	Specify Name and Location:
+Name: Client02
+Location: meghajtó&gt;\VPC\Client02\
+Next &gt;
+1.6.9.	Configure Disk: Location: meghajtó&gt;\VPC\W7_base_disk.vhd
+Next &gt;
+1.6.10.	Completing the New Virtual Hard Disk Wizard: Finish
+
+1.6.11.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.6.12.	Specify Name and Location:
+Name: Client01
+Store the virtual machine in a different location
+Location: meghajtó&gt;\VPC\Client01
+Next &gt;
+1.6.13.	Assign Memory: 512MB, Next &gt;
+1.6.14.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.6.15.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: Client01.vhd
+Location: meghajtó&gt;\VPC\dc01\client01.vhd
+Next &gt;
+1.6.16.	Completing the New Virtual Machine Wizard: Finish
+
+1.6.17.	Action men&#369; -&gt; New -&gt;  Virtual Machine...
+1.6.18.	Specify Name and Location:
+Name: Client02
+Store the virtual machine in a different location
+Location: meghajtó&gt;\VPC\Client02
+Next &gt;
+1.6.19.	Assign Memory: 512MB, Next &gt;
+1.6.20.	Configure Networking: Internal vagy Belso_halozat, Next &gt;
+1.6.21.	Connect Virtual Hard Disk: Use an existing hard disk: 
+Name: client02.vhd
+Location: meghajtó&gt;\VPC\client02.vhd
+Next &gt;
+1.6.22.	Completing the New Virtual Machine Wizard: Finish
+
+               
+            </pre></li><li class="listitem"><p>A két kliens alap konfigurálása (név, t&#369;zfal, hálózat)</p><pre class="programlisting">1.7.1.	Indítsuk el a Client01-et:
+1.7.2.	Válasszuk ki a Hyper-V Manager-ben a Client01-et -&gt; jobb gomb -&gt; Start
+1.7.3.	Válasszuk ki a Hyper-V Manager-ben a Client01-et -&gt; jobb gomb -&gt; Connect
+1.7.4.	Jelentkezzünk be a Client01gépre
+Felhasználó: Adminsitrator
+Jelszó: Password1
+
+1.7.5.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Network and Sharing Center -&gt; Change adapter settings
+1.7.6.	Local Area Connection 2 -&gt; jobb gomb: Properties -&gt; vegyük ki a pipát az IPv6 
+1.7.7.	Válasszuk ki az Internet Protocol Version 4-et: Properties: Use the following IP address
+IP address: 10.10.1.4
+Subnet mask: 255.0.0.0
+Preferred DNS server: 10.10.1.1
+OK -&gt;Close
+
+1.7.8.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Windows Firewall -&gt; Turn Windows firewall on or off
+1.7.9.	Home or work (private) network location settings: Turn off Windows firewall (not recommended)
+1.7.10.	Public network location settings: Turn off Windows firewall (not recommended)
+
+1.7.11.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; System -&gt; Change settings
+1.7.12.	System Properties: Change...
+1.7.13.	Computer Name/Domain Changes: Computer name: Client01-&gt; OK
+1.7.14.	Restart: OK
+1.7.15.	System Properties: Close
+1.7.16.	Restart now
+&#8195;
+1.7.17.	Indítsuk el a Client02-et:
+1.7.18.	Válasszuk ki a Hyper-V Manager-ben a Client02-et -&gt; jobb gomb -&gt; Start
+1.7.19.	Válasszuk ki a Hyper-V Manager-ben a Client02-et -&gt; jobb gomb -&gt; Connect
+1.7.20.	Jelentkezzünk be a Client02gépre
+Felhasználó: Adminsitrator
+Jelszó: Password1
+
+1.7.21.	Ezen a kliensen letiltjuk a hálózatot a következ&#337; gyakorlathoz:
+1.7.22.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Network and Sharing Center -&gt; Change adapter settings
+1.7.23.	Local Area Connection 2 -&gt; jobb gomb: Disable
+
+1.7.24.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; Windows Firewall -&gt; Turn Windows firewall on or off
+1.7.25.	Home or work (private) network location settings: Turn off Windows firewall (not recommended)
+1.7.26.	Public network location settings: Turn off Windows firewall (not recommended)
+
+1.7.27.	Start -&gt; Control Panel -&gt; View by: Small icons -&gt; System -&gt; Change settings
+1.7.28.	System Properties: Change...
+1.7.29.	Computer Name/Domain Changes: Computer name: Client02-&gt; OK
+1.7.30.	Restart: OK
+1.7.31.	System Properties: Close
+1.7.32.	Restart now
+               
+            </pre><div class="table"><a name="d0e995"></a><p class="title"><b>2.1. táblázat - gépcímek</b></p><div class="table-contents"><table summary="gépcímek" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; "><colgroup><col><col><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">gépneve</th><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">IP címe</th><th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">maszk</th><th style="border-bottom: 0.5pt solid ; ">DNS</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">DC01</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">	10.10.1.1</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "> 255.0.0.0</td><td style="border-bottom: 0.5pt solid ; ">10.10.1.1</td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">SRV01</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">	10.10.1.2</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">	255.0.0.0</td><td style="border-bottom: 0.5pt solid ; ">	10.10.1.1</td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">Core01</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">	10.10.1.3</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; ">	255.0.0.0</td><td style="border-bottom: 0.5pt solid ; ">	10.10.1.1</td></tr><tr><td style="border-right: 0.5pt solid ; ">Client01</td><td style="border-right: 0.5pt solid ; ">	10.10.1.4</td><td style="border-right: 0.5pt solid ; ">	255.0.0.0</td><td style="">	10.10.1.1</td></tr></tbody></table></div></div><br class="table-break"></li></ol></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s09.html">El&#337;z&#337;</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s02.html">Következ&#337;</a></td></tr><tr><td width="40%" align="left" valign="top">1.9. 
+      Tartományvezérl&#337; létrehozása&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html">Tartalom</a></td><td width="40%" align="right" valign="top">&nbsp;2.2. 2. Gyakorlat</td></tr></tbody></table></div></body></html>

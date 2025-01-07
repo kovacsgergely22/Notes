@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0051)https://gyires.inf.unideb.hu/KMITT/c09/ch02s04.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      
+   <title>2.4. 4. Gyakorlat</title><link rel="stylesheet" href="./2.4. 4. Gyakorlat_files/style.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html" title="A Windows Server 2008 R2 menedzselése"><link rel="up" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html" title="2. fejezet - Gyakorlatok"><link rel="prev" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s03.html" title="2.3. 3. Gyakorlat"><link rel="next" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s05.html" title="2.5. 5 . Gyakorlat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><th colspan="3" align="center">2.4. 4. Gyakorlat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s03.html">El&#337;z&#337;</a>&nbsp;</td><th width="60%" align="center">2. fejezet - Gyakorlatok</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s05.html">Következ&#337;</a></td></tr></tbody></table><hr></div><div class="sect1" title="2.4. 4. Gyakorlat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e1158"></a>2.4. 4. Gyakorlat</h2></div></div></div><p>Témakör Csoportházirend beállítások</p><p>Feladatok:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>A Default Domain Policy jelszóra vonatkozó beállításai</p></li><li class="listitem"><p>Parancsikon, mappa és hálózati meghajtó megjelenítése csoport házirend    segítségével</p></li><li class="listitem"><p>Alkalmazások tiltás/engedélyezése csoportházirend segítségével</p></li></ol></div><p>Megoldások:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>A Default Domain Policy jelszóra vonatkozó beállításai</p><pre class="programlisting">               4.1.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben aDC01 virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: administrator
+password: Password1
+4.1.2.	Nyissuk meg a Group Policy Management consol-t:
+Start -&gt; Administrative Tools -&gt; Group Policy Management
+4.1.3.	A bal oldali listában nyissuk ki a Forest: miskol.hu csomópontot
+4.1.4.	Nyissuk ki a Domains csomópontot
+4.1.5.	Nyissuk ki a miskolc.hu csomópontot
+4.1.6.	Kattintsunk a Default Domain Policy –ra
+4.1.7.	A felugró ablakban kattintsuk be a ’Do not show this message again’ el&#337;tti check boksz-ot és kattintsunk az OK-ra
+4.1.8.	A jobb oldali ablakban kattintsunk a Settings fülre
+4.1.9.	A felugró ablakban kattintsunk az Add… gombra majd Add és Close
+4.1.10.	A jobb fels&#337; sarokban kattintsunk a show all feliratra
+4.1.11.	Az egyik fontos beállítási csoport a jelszóházirendet szabályozza:
+Computer Configuration\Policies\Windows Settings\Security Settings\Account Policies/Password Policy
+4.1.12.	Ahhoz, hogy ezeket a beállításokat módosíthassuk kattintsunk a baloldali listában a Default Domain Policy –ra jobb gombbal -&gt; Edit…
+4.1.13.	A felugró ablakban navigáljunk el a 4.1.10-es pontban leírt csomóponthoz.
+4.1.14.	A jobb oldali ablakban állítsuk be az alábbi értékeket:
+Enforce password history: 10 passwords remembered
+Maximum password age: 30 days
+Minimum password age: 3 days
+Minimum password length: 8 characters
+4.1.15.	A policy módosítása az egyes értékek módosításával megtörténik és mentésre kerül, ezért külön menteni nem szükséges. A File -&gt; Exit menü segítségével lépjünk ki a policy editor-ból.
+4.1.16.	A Group Policy Management jobb oldali ablakában jelöljük ki a Default Domain Policy–t és kattintsunk a frissítés ikonra vagy nyomjuk meg az F5 billenty&#369;t.
+4.1.17.	A jobb fels&#337; sarokban kattintsunk ismét a show all feliratra.
+4.1.18.	Figyeljük meg, hogy itt is látszanak mostmár a módosítások.
+
+            </pre></li><li class="listitem"><p>Parancsikon, mappa és hálózati meghajtó megjelenítése csoport házirend    segítségével</p><pre class="programlisting">4.2.1.	Indítsuk el az Active Directory Users and Computers-t:
+Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers
+4.2.2.	Jelöljük ki a miskolc.hu -t -&gt; jobb gomb -&gt; New -&gt; Organization unit
+Name: Desktop Computers -&gt; ok
+4.2.3.	Bal oldalon kattintsunk a Computers tárolóra
+4.2.4.	A CLIENT01ésCLIENT02gépeketjelöljükki -&gt;jobbgomb -&gt; Move…
+4.2.5.	A felugróablakbanjelöljükki a Desktop Computers –t -&gt; OK
+
+4.2.6.	Hozzunk létre minden felhasználónak, akik a megadott gépre bejelentkeznek egy parancsikont az asztalra
+4.2.7.	Ha mégnemfutindítsuk el a Group Policy Management consol-t:
+Start -&gt; Administrative Tools -&gt; Group Policy Management
+Ha még fut akkor csak kattintsunk a frissítés ikonra vagy nyomjuk meg az F5 billenty&#369;t.
+4.2.8.	A bal oldali listában jelöljük ki a Desktop Computers –t -&gt; jobb gomb -&gt; Create a GPO in this domain, and Link it here…
+4.2.9.	Name: Desktop Configuration -&gt; OK
+4.2.10.	Nyissukkibaloldalon a Desktop Computers tárolót -&gt;jelöljükki a Desktop Configuration policy-t -&gt;jobbgomb -&gt; Edit…
+4.2.11.	A felugró Group Policy Management Editor –ban a bal oldali ablakban navigáljunk el erre a csomópontra:
+Computer Configuration\Preferences\Windows Settings
+4.2.12.	Jelöljük ki a Shortcuts –ot -&gt; jobb gomb -&gt; New -&gt; Shortcut
+4.2.13.	A felugró ablakban az Action –nél válasszuk ki a Create –et
+4.2.14.	Állítsuk be az alábbiakat:
+Name: Notepad
+Location:All Users Desktop
+Target Path: c:\windows\system32\notepad.exe
+4.2.15.	A Common fülön jelöljük be az ’Item-level targeting’ –et -&gt; Kattintsunk a Targeting… gombra
+4.2.16.	A felugró ablakban kattintsunk a New Item –re -&gt;Computer Name -&gt; Írjuk be a CLIENT01 –et
+4.2.17.	Ismételjük meg, New Item -&gt;Computer Name -&gt; Írjuk be a CLIENT02 –t -&gt; OK
+4.2.18.	OK
+
+4.2.19.	Hozzunk létre minden felhasználónak, akik a megadott operációs rendszer&#369; gépre bejelentkeznek egy mappát a C: meghajtóra:
+4.2.20.	A Group Policy Management Editor –ban a bal oldali ablakban navigáljunk el erre a csomópontra:
+Computer Configuration\Preferences\Windows Settings
+4.2.21.	Jelöljük ki a Folders –ot -&gt; jobb gomb -&gt; New -&gt;Folder
+4.2.22.	A felugró ablakban az Action –nél válasszuk ki a Create –et
+4.2.23.	A Path –hoz írjuk be: c:\test_folder
+4.2.24.	A Common fülön jelöljük be az ’Item-level targeting’ –et -&gt; Kattintsunk a Targeting… gombra
+4.2.25.	A felugró ablakban kattintsunk a New Item –re -&gt;Operating System -&gt; gy&#337;z&#337;djünk meg arról, hogy a Product-nál Windows 7 van kiválasztva -&gt;OK -&gt; OK
+4.2.26.	Hozzunk létre egy megosztott mappát: Start -&gt; Computer -&gt; Local Disk (C:)
+4.2.27.	Jobb gomb –&gt; New -&gt; Folder -&gt; nevezzük el: Share–nek
+4.2.28.	Jobb gomb az imént létrehozott mappán -&gt; Share with -&gt; Specific people… 
+4.2.29.	A felugró ablakban a legördül&#337; men&#369;b&#337;l válasszuk ki az Everyone –t -&gt; Add -&gt; Share -&gt; Done 
+4.2.30.	Csatoljunk egy hálózati meghajtót minden felhasználónak bejelentkezés után:
+4.2.31.	A Group Policy Management Editor –ban a bal oldali ablakban navigáljunk el erre a csomópontra:
+User Configuration\Preferences\Windows Settings
+4.2.32.	Jelöljük ki a Drive Maps –et -&gt; jobb gomb -&gt; New -&gt;Mapped Drive
+4.2.33.	A felugró ablakban az Action –nél válasszuk ki a Create –et
+4.2.34.	Állítsuk be az alábbiakat:
+Location: \\dc01\share
+Pipáljuk be a Reconnect -et
+Label as: DATA
+Drive Letter: P
+4.2.35.	OK
+4.2.36.	A Group Policy Management Editor –ban File -&gt; Exit
+
+4.2.37.	Ellen&#337;rizzük le az imént elvégzett beállítások m&#369;ködését:
+4.2.38.	Ha még nem fut a Client01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben aClient01virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben aClient01virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: miskolc\administrator
+password: Password1
+4.2.39.	Ha nincs a notepad parancsikonja az asztalon, akkor adjuk ki az alábbi parancsot a DC01-en és a Client01-en is:
+Gpupdate /force
+               
+            </pre></li><li class="listitem"><p>Alkalmazások tiltás/engedélyezése csoportházirend segítségével</p><pre class="programlisting">4.3.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben a DC01 virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben a DC01 virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: administrator
+password: Password1
+4.3.2.	Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers (ADUC)
+4.3.3.	Keressük meg az IT_user10 nev&#369; felhasználót: jelöljük ki a miskolc.hu –t -&gt; jobb gomb -&gt; Find…
+4.3.4.	A felugró ablakba írjuk be a felhasználó nevét:
+Name: IT_user10
+4.3.5.	Jelöljük ki az IT_user10-et -&gt; jobb gomb -&gt; Properties -&gt; Account fül
+4.3.6.	Vegyük ki a pipát az ’Account is disabled’ opció el&#337;l -&gt; OK
+&#8195;
+4.3.7.	Jelöljük ki az IT_user10-et -&gt; jobb gomb -&gt; Reset Password…
+New password: Password1
+Confirm password: Password1
+OK -&gt; OK
+4.3.8.	Ha még nem fut azSRV01, akkor indítsuk el és jelentkezzünk be rá:
+Válasszuk ki a Hyper-V Manager-ben azSRV01 virtuális gépet -&gt; jobb gomb -&gt; Start
+Válasszuk ki a Hyper-V Manager-ben azSRV01 virtuális gépet -&gt; jobb gomb -&gt; Connect
+user: IT_user10
+password: Password1
+4.3.9.	Gy&#337;z&#337;djünk meg róla, hogy a notepad alkalmazást el tudjuk-e indítani
+Start -&gt; Search programs and files: notepad -&gt; a listában kattintsunk a Notepad -re
+4.3.10.	Ha elindult az alkalmazás gépeljünk be valami és mentsük el, vagy csak zárjuk be.
+4.3.11.	Térjünkvissza a DC01-re éshozzunklétreegybiztonságicsoportot:
+Start -&gt; Administrative Tools -&gt; Active Directory Users and Computers (ADUC)
+4.3.12.	Jelöljükki a Miskolc.hu/Felhasználóktárolót -&gt;jobbgomb -&gt; New -&gt; Group
+Group name: Restricted Users
+Group scope: Global
+Group type: Security
+4.3.13.	AdjukhozzáazIT_user10felhasználótehhez a csoporthoz:
+Jelöljükki a Restricted Userscsoportot -&gt; Properties -&gt; Members fül -&gt; Add…
+Enter the object names to select (examples): IT_user10 -&gt; Check names -&gt; OK -&gt; OK -&gt; OK
+
+4.3.14.	Indítsuk el a Group Policy Management konzolt: Start -&gt; Administrative Tools -&gt;Group Policy Management
+4.3.15.	Jelöljükki a Desktop Configurationházirendet a Forest: Miskolc.hu\miskolc.hu\Desktop Computers alatt -&gt;jobbgomb -&gt; Edit
+4.3.16.	Jelöljükki a Computer Configuration\Policies\Windows Settings\Security Settings\System Servicescsomópontot
+4.3.17.	A jobboldaliablakbanjelöljükkiaz ‘Application Identity’ szervízt -&gt;jobbgomb -&gt; Properties
+4.3.18.	A felugróablakbanjelöljük be a ‘Define this policy setting’opciótésválasszukaz ‘Automatic’indításimódot -&gt; OK
+
+4.3.19.	BaloldalonjelöljükkiazApplication Control Policies\AppLocker\Executable Rules–t -&gt;jobbgomb
+-&gt;Create Default Rules
+4.3.20.	IsmétjobbgombazExecutable Rules –on -&gt;Create New Rule
+4.3.21.	Before You Begin -&gt; Next &gt;
+4.3.22.	Permissions: Deny -&gt; Select… -&gt; Enter the object name to select (examples): Restricted Users -&gt; Check Names -&gt; OK -&gt; Next &gt;
+4.3.23.	Conditions: Path-&gt; Next &gt;
+4.3.24.	Path: %windir%\system32\notepad.exe-&gt; Next &gt;
+4.3.25.	Exceptions: Next &gt;
+4.3.26.	Name and Description: Description: Notepad-&gt;Create
+4.3.27.	Jelöljükkiaz Application Control Policies\AppLocker -t
+4.3.28.	Jobboldalon Configure Rule Enforcement: Configure rule enforcement
+Executable rules: Configured
+Enforce rules
+OK
+
+4.3.29.	Ellen&#337;rizzük a módosítottházirendhatását:
+Adjukki a gpupdate /forceparancsot a DC01-en ésazSRV01-en is
+4.3.30.	AzSRV01-es gépenindítsuk el a notepad alkalmazást:
+Start -&gt; Search programs and files: notepad -&gt; a listában kattintsunk a Notepad -re
+4.3.31.	Hibaüzenetetkapunk, hogyazalkalmazás a házirendkorlátozásamiattnemindítható.
+4.3.32.	Zárjuk be a hibaüzenetet: OK
+
+            </pre></li></ol></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a accesskey="p" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s03.html">El&#337;z&#337;</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02.html">Fel</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="https://gyires.inf.unideb.hu/KMITT/c09/ch02s05.html">Következ&#337;</a></td></tr><tr><td width="40%" align="left" valign="top">2.3. 3. Gyakorlat&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="https://gyires.inf.unideb.hu/KMITT/c09/index.html">Tartalom</a></td><td width="40%" align="right" valign="top">&nbsp;2.5. 5 . Gyakorlat</td></tr></tbody></table></div></body></html>

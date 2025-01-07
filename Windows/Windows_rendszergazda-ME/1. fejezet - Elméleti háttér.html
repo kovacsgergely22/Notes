@@ -1,0 +1,203 @@
+<!-- saved from url=(0048)https://gyires.inf.unideb.hu/KMITT/c09/ch01.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+    <title>1. fejezet - Elm�leti h�tt�r</title>
+    <link
+      rel="stylesheet"
+      href="./1. fejezet - Elm�leti h�tt�r_files/style.css"
+      type="text/css"
+    />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.75.2" />
+    <link
+      rel="home"
+      href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+      title="A Windows Server 2008 R2 menedzsel�se"
+    />
+    <link
+      rel="up"
+      href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+      title="A Windows Server 2008 R2 menedzsel�se"
+    />
+    <link
+      rel="prev"
+      href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+      title="A Windows Server 2008 R2 menedzsel�se"
+    />
+    <link
+      rel="next"
+      href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s02.html"
+      title="1.2. A Windows term�kvonala"
+    />
+  </head>
+  <body
+    bgcolor="white"
+    text="black"
+    link="#0000FF"
+    vlink="#840084"
+    alink="#0000FF"
+  >
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tbody>
+          <tr>
+            <th colspan="3" align="center">1. fejezet - Elm�leti h�tt�r</th>
+          </tr>
+          <tr>
+            <td width="20%" align="left">
+              <a
+                accesskey="p"
+                href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+                >El&#337;z&#337;</a
+              >&nbsp;
+            </td>
+            <th width="60%" align="center">&nbsp;</th>
+            <td width="20%" align="right">
+              &nbsp;<a
+                accesskey="n"
+                href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s02.html"
+                >K�vetkez&#337;</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+    <div class="chapter" title="1. fejezet - Elm�leti h�tt�r">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title">
+              <a name="d0e68"></a>1. fejezet - Elm�leti h�tt�r
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="sect1" title="1.1. Bevezet�s">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both">
+                <a name="d0e71"></a>1.1. Bevezet�s
+              </h2>
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <p>
+          A mai vil�gban sz�m�t�g�pet nagyon sokan haszn�lnak. A haszn�latot
+          nagym�rt�kben befoly�solja, hogy milyen oper�ci�s rendszer �zemelteti
+          azt. Az oper�ci�s rendszereket nagyon sok szempont szerint lehet
+          csoportos�tani, m�g akkor is, ha a szakmai jellemz&#337;ket figyelmen
+          k�v�l hagyjuk. Szempont lehet, hogy az oper�ci�s rendszer mennyire
+          felhaszn�l�bar�t, vagy mennyire biztons�gos, esetleg cser�lhet&#337;-e
+          a grafikus fel�lete, stb. A felhaszn�l�k egy r�sze folyamatosan
+          igyekszik meggy&#337;zni m�sokat az �ltala haszn�lt oper�ci�s rendszer
+          el&#337;nyeir&#337;l. Ennek sor�n azonban (tal�n annak megszok�sa
+          miatt) nem eml�ti h�tr�nyait.
+        </p>
+        <p>
+          A PC-s vil�gban a felhaszn�l�kat j�r�szt k�t nagy csoportba lehet
+          sorolni: az egyik csoport a Microsoft Windows valamelyik v�ltozat�t
+          haszn�lja, m�g a m�sik csoport valamilyen Unix-szer&#369;t. A m�sodik
+          csoport list�ja nagyon hossz� is lehet, hisz� ide sorolj�k az �sszes
+          Linux vari�nst, �s a Mac OS X k�l�nb�z&#337; verzi�it is, f&#337;k�nt
+          az�ta, hogy az Apple �tt�rt az Intel processzor csal�d haszn�lat�ra.
+        </p>
+        <p>
+          Nem sz�nd�kom egyik csoport mellett se letenni a voksomat.
+          Tansz�k�nk�n (Miskolci Egyetem, �ltal�nos Informatikai Tansz�k) a
+          hallgat�k mindk�t oper�ci�s rendszer eset�ben v�laszthatnak
+          �Rendszergazdai ismeretek� c�m&#369; t�rgyat (Unix eset�ben egy Linux
+          v�ltozatra �p�tve). Windows eset�ben ez a t�rgy jellemz&#337;en az �pp
+          rendelkez�sre �ll� szerver v�ltozatra �p�l.
+        </p>
+        <p>
+          Jelenleg a legfrissebb szerver v�ltozat a Windows Server 2008 R2,
+          amely 2009 �v v�g�t&#337;l �rhet&#337; el (MSDN el&#337;fizet�ssel
+          2009. augusztus 14.). A megjelen�s �ta b&#337; 1 �v telt el. B�r
+          idegen nyelv&#369; szakk�nyvek a k�zel m�ltban jelentek m�r meg, de
+          magyar nyelv&#369; a mai napig (2011. febru�r) nem �rhet&#337; m�g el
+          a szok�sos kiad�k gondoz�s�ban (Szak Kiad�, Panem Kiad�, Kiskapu
+          Kiad�), �s �rdekes m�don a Microsoft hivatalos kurzusai k�z�tt is
+          mind�ssze 1 olyan tal�lhat�, amely a Server 2008 R2-vel foglalkozik.
+          Ez egy �n. update tanfolyam Server 2008-r�l 2008 R2-re (10159A �
+          Updating Your Windows Server 2008 Technology Skills to Windows Server
+          2008 R2).
+        </p>
+        <p>
+          Ez a jegyzet (terjedelm�b&#337;l ad�d�an) nem fedi le teljes m�rt�kben
+          egy rendszergazda tev�kenys�g�t (az ilyen k�nyvek 1400-1800 oldalasak
+          is lehetnek). F&#337;k�nt a fogalmakkal, a Windows-os rendszer
+          jelleg�vel akar megismertetni. Az elm�leti r�sz meg�ll a felhaszn�l�k
+          �s csoportok megismertet�s�n�l, a gyakorlatok azonban tov�bb
+          b&#337;v�tik az ismeretanyagot.
+        </p>
+        <p>
+          C�l, hogy a hallgat� az elm�letet meg�rtve, �s a gyakorlati p�ld�kat
+          teljes�tve k�pes legyen �n�ll�an egy rendszer �zemben tart�s�ra, a
+          haszn�lt oper�ci�s rendszer f&#337;bb jellemz&#337;inek meg�rt�s�re.
+          Ne okozzon gondot egy tetsz&#337;leges rendszer sz&#369;k
+          keresztmetszet�nek megkeres�se, vagy egy-egy szoftver telep�t�se.
+        </p>
+        <p>
+          Javasolt a gyakorlatokat vezet&#337; oktat�nak a gyakorlatokat
+          el&#337;re tesztelnie, mert telep�t�st&#337;l f�gg&#337;en
+          elk�pzelhet&#337;, hogy egyes gyakorlatokat a helyi jellemz&#337;k
+          f�ggv�ny�ben m�dos�tani kell.
+        </p>
+        <p>
+          A foglalkoz�sok javasolt kivitelez�se: a nagyobb hat�konys�g �rdek�ben
+          minden t�ma eset�ben el&#337;sz�r vagy a jegyzet, vagy m�s forr�s
+          seg�ts�g�vel az elm�leti ismereteket kell tiszt�zni, majd ezut�n
+          ker�lj�n sor az elm�lethez kapcsol�d� gyakorlatra. A gyakorlatok t�bb
+          esetben egym�sra �p�lnek, ez�rt nem javasolt egy-egy gyakorlatot
+          kihagyni, mert a k�s&#337;bbiek sor�n el&#337;fordulhat, hogy valamely
+          gyakorlat nem, vagy csak ker�l&#337; �ton lesz elv�gezhet&#337;.
+        </p>
+        <p></p>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tbody>
+          <tr>
+            <td width="40%" align="left">
+              <a
+                accesskey="p"
+                href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+                >El&#337;z&#337;</a
+              >&nbsp;
+            </td>
+            <td width="20%" align="center">&nbsp;</td>
+            <td width="40%" align="right">
+              &nbsp;<a
+                accesskey="n"
+                href="https://gyires.inf.unideb.hu/KMITT/c09/ch01s02.html"
+                >K�vetkez&#337;</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td width="40%" align="left" valign="top">
+              A Windows Server 2008 R2 menedzsel�se&nbsp;
+            </td>
+            <td width="20%" align="center">
+              <a
+                accesskey="h"
+                href="https://gyires.inf.unideb.hu/KMITT/c09/index.html"
+                >Tartalom</a
+              >
+            </td>
+            <td width="40%" align="right" valign="top">
+              &nbsp;1.2. A Windows term�kvonala
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
