@@ -18,6 +18,7 @@
 - [ ] [Deep Dive into Recursive Algorithms - Exploring Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2567328)
 - [ ] [Intro to NumPy [Video]](https://subscription.packtpub.com/video/data/9781836208631/p1/video1_1/overview)
 - [ ] [Machine Learning Algorithms Demystified - From Basics to Advanced Techniques](https://training.mammothinteractive.com/courses/enrolled/2569760)
+- [ ] [Machine Learning: Natural Language Processing in Python (V2)](https://www.udemy.com/course/natural-language-processing-in-python/learn/lecture/28576397?start=0#overview)
 - [ ] [Python Algorithm Mastery - Harness the Power of Machine Learning](https://training.mammothinteractive.com/courses/enrolled/2611499)
 - [ ] [Python Data Science Fundamentals - Comprehensive Bundle](https://training.mammothinteractive.com/courses/enrolled/2419257)
 - [ ] [Python Programming Fundamentals - The Ultimate Learning Path](https://training.mammothinteractive.com/courses/enrolled/2418912)
