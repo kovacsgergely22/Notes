@@ -1,5 +1,29 @@
 # A Windows Server 2008 R2 menedzselése [^1]
 
+1. [A Windows Server 2008 R2 menedzselése \[^1\]](#a-windows-server-2008-r2-menedzselése-1)
+   1. [1. fejezet - Elméleti háttér](#1-fejezet---elméleti-háttér)
+      1. [1.1. Bevezetés](#11-bevezetés)
+      2. [1.2. A Windows termékvonala](#12-a-windows-termékvonala)
+         1. [1.2.1. Korai változatok](#121-korai-változatok)
+         2. [1.2.2. Windows XP – Windows Server 2003](#122-windows-xp--windows-server-2003)
+         3. [1.2.3. Windows Vista – Windows Server 2008](#123-windows-vista--windows-server-2008)
+         4. [1.2.4. Windows 7- Windows Server 2008 R2](#124-windows-7--windows-server-2008-r2)
+      3. [1.3. A Windows Server 2008 R2 és kiadásai](#13-a-windows-server-2008-r2-és-kiadásai)
+      4. [1.4. Számítógépek, és logikai csoportok](#14-számítógépek-és-logikai-csoportok)
+         1. [1.4.1. Munkacsoport (Workgroup)](#141-munkacsoport-workgroup)
+         2. [1.4.2. Tartomány (Domain)](#142-tartomány-domain)
+      5. [1.5. Az installálási előkészületek](#15-az-installálási-előkészületek)
+         1. [1.5.1. A telepítés feltételei](#151-a-telepítés-feltételei)
+      6. [1.6. Az installálás lépései](#16-az-installálás-lépései)
+      7. [1.7. Bejelentkezés, kijelentkezés, jelszómódosítás](#17-bejelentkezés-kijelentkezés-jelszómódosítás)
+         1. [1.7.1. Security Options](#171-security-options)
+         2. [1.7.2. Leállítás (shutdown)](#172-leállítás-shutdown)
+      8. [1.8. Felhasználók, csoportok](#18-felhasználók-csoportok)
+         1. [1.8.1. Felhasználók létrehozása](#181-felhasználók-létrehozása)
+         2. [1.8.2.](#182)
+         3. [1.8.3. Csoportok létrehozása](#183-csoportok-létrehozása)
+
+
 ## 1. fejezet - Elméleti háttér
 
 ### 1.1. Bevezetés
@@ -97,6 +121,354 @@ A számítógépek időnként elromolnak, ekkor szervizbe viszik. Ha egy adott i
 #### 1.4.2. Tartomány (Domain)
 
 Tartományoknál (most egy egyszerűsített esetet nézve) van egy kitüntetett számítógép, amely több más mellett a felhasználók adatait (köztük a jelszót) is tárolja. A többi számítógépen beállításra kerül, hogy a jelszót (és a többi adatot) honnan kell „lekérni” annak érdekében, hogy a bejelentkezés jogosságát ellenőrizni lehessen. (FONTOS: az ellenőrzés ugyan nem pont így történik, de így könnyebb a tartomány szerepét megérteni.) Sikeres bejelentkezés esetén, ha a felhasználó módosítja a jelszavát, akkor a jelszó ezen a központi számítógépen fog megváltozni, és letárolódni. A következő bejelentkezés történhet bármelyik számítógépen. Ha ellenőrzéskor „lekérésre” kerül a jelszó, akkor a már módosított jelszó kerül összehasonlításra. A kitüntetett számítógépet tartományvezérlőnek (DC - Domain Controller) nevezzük. A tartományvezérlőn lehetőség van más adatok letárolására is, amely adatok között a tartományba tartozó számítógépek keresni tudnak (pl.: megosztott nyomtatókat, megosztott mappákat). Ennek a központi adattárnak a neve címtár, és a Windows 2000-től kezdődően Active Directory (AD) néven hivatkozhatunk rá.
+
+### 1.5. Az installálási előkészületek
+
+A telepítés során alapvetően két eltérő esetet szokás megkülönböztetni, amelyeknek több alesete lehet. Az első esetben vagy teljesen üres számítógépre kell a Windows 2008 R2-t telepíteni, vagy a már fent levő operációs rendszerre nincs szükség, letörölhető. A másik esetben a számítógépen egy olyan operációs rendszer van (akár Windows Server 2008), amelyiknek beállításaiból minél többet szeretnénk megtartani.
+
+#### 1.5.1. A telepítés feltételei
+
+Az első esetet installálásnak nevezzük, a másikat upgrade-nek. Mindkét esetben még a kezdés előtt ellenőrizni kell, hogy az adott számítógép alkalmas-e a Windows Server 2008 R2 futtatására. Valószínűleg igen, mert a Microsoft meglehetősen alacsony értékeket szokott megadni minimális elvárásként. Azt azonban érdemes leszögezni, hogy ha egy adott számítógép rendelkezik a minimális elvárásokkal, az még nem jelenti azt, hogy használható sebességű lesz. Ennek egyik oka, hogy a minimális elvárás nem egyezik meg a javasolt, vagy optimális elvárással. Másik oka pedig, hogy egy operációs rendszert általában nem öncélúan telepítünk, hanem azért, hogy alkalmazásokat futtasson. Az alkalmazások futtatásakor pedig további hardver igény jelentkezik. Ezt még tovább fokozhatja a várható terhelés, hiszen nem mindegy például, hogy egy SQL szerver mekkora adatbázisból dolgozik, és egységnyi idő alatt hány kérést kell kiszolgálnia. A hétköznapi életben az egyes cégek másképp hivatkoznak a telepítéshez szükséges igényekre, ráadásul néha ellentmondásosan. Néhány megfogalmazás:
+
+1. minimum requirements,
+
+2. recommended requirements,
+
+3. suggested requirements,
+
+4. supported requirements, stb.
+
+A Windows Server 2008 R2 esetében az Enterprise Edition változatú operációs rendszer használható sebességű futtatásához javasolt minimális hardver környezet:
+
+1. 2 GHz, vagy gyorsabb 2-4 magos processzor,
+
+1. 2 GB DDR3 memória, vagy több (lehetőleg Dual Channel módban),
+
+1. 40 GB SATA 7200-as percenkénti fordulatú merevlemez,
+
+1. DVD-ROM meghajtó,
+
+1. 1280x1024 felbontású grafikus kártya és monitor,
+
+1. billentyűzet, egér.
+
+A fentiekben megadott rendszernél természetesen több szempont szerint lehet gyorsabbat összeállítani (SSD használata, vagy több merevlemez RAID 3-ba szervezve, esetleg több processzor, stb.).
+
+A konfiguráció összeállítása után sajnos előfordulhat, hogy a számítógép installálás közben megáll, az installálás sikertelen lesz annak ellenére, hogy az egyes eszközök jók, működőképesek. Ennek több oka is lehet. Lehet, hogy valamely hardver komponens nem kompatibilis a Windows Server 2008 R2-vel, de az is lehet, hogy bár önmagában minden komponens megfelel, de a komponensek egymással akadnak össze (pl. alaplapi SCSI vezérlő és a grafikus kártya ugyanazt a megszakítást használja). A probléma kivédésére célszerű az egész rendszert egy szállítótól beszerezni, és már a rendelés leadásakor tisztázni, hogy az összerakott rendszer képes legyen a Windows Server 2008 R2-t futtatni. Ekkor van esély sikeres reklamációra.
+
+![A Microsoft HCL weblapja](img/1.5.1.jpg)
+
+1. ábra. A Microsoft HCL weblapja
+
+A Microsoft régóta folyamatosan frissít a honlapján egy listát (HCL – Hardware Compatibility List, http://www.microsoft.com/windows/compatibility/windows-7/en-us/default.aspx), amely azokat a hardver komponenseket tartalmazza, amelyeket teszteltek az adott operációs rendszerrel. Ki lehet választani az operációs rendszert (jelenleg csak kliens operációs rendszer választható ki: Windows XP, Windows Vista, Windows 7), az hogy 32 vagy 64 bites-e, és rá lehet keresni egy adott hardverre. Ugyanakkor lehet egy adott termékcsoportot tallózni is. A megtalált komponens esetében háromféle bejegyzés lehet: Compatible, Not compatible, No information available. Sajnos a kompatibilisnek jelölt hardver komponens sem garancia a biztos működésre, mert előfordulhat olyan eset, hogy egy grafikus kártyát egy adott alaplappal sikerült ugyan működésre bírni, de ha ez alapján a felhasználó megrendeli a grafikus kártyát, és másik alaplapba teszi, akkor lehet, hogy azzal nem működik…
+
+![HCL kompatibilitás esetei](img/1.5.2.jpg)
+
+2. ábra. HCL kompatibilitás esetei
+
+Hasonló célú lista érhető el a Windows Server Catalog honlapján is (http://www.windowsservercatalog.com/ ). A  legbiztosabb, ha komplett, összeállított rendszer kerül tesztelésre, és sikeres teszt után beszerzésre.
+
+Az operációs rendszer DVD-n kerül forgalmazásra, ezért célszerű olyan rendszerben gondolkodni, amely képes optikai meghajtóról boot-olni. Más módszerrel is megoldható ugyan az operációs rendszer installálása, de ez egy egyszerű, kényelmes módszer (nem túl sok számítógép installálása esetén).
+
+### 1.6. Az installálás lépései
+
+Optikai meghajtóról történő telepítés során először célszerű ellenőrizni, szükség szerint módosítani a boot eszközök sorrendjét. Biztonsági okok miatt sok helyen eleve kiveszik az optikai meghajtót, illetve az egyéb külső eszközöket. A BIOS-ba való belépés számítógépenként eltérő módon történhet, de sok esetben bekapcsolás után valamelyik funkció gomb (F) nyomva tartásával a szokásos. Itt kell megkeresni a boot menüt, majd ha szükséges volt a módosítás, akkor mentéssel kilépni, betenni a DVD-t a meghajtóba, és újra indítani a számítógépet.
+
+![Boot eszközök sorrendjének megadása](img/1.6.1.jpg)
+
+1. ábra. Boot eszközök sorrendjének megadása
+
+Sikeres boot-oláskor meg kell adni, hogy milyen nyelven kívánjuk installálni az operációs rendszert, milyen régiós beállítást kérünk (dátum – idő, pénz formátum miatt), majd hogy milyen billentyűzet kiosztást kérünk.
+
+![Telepítési adatok kiválasztása](img/1.6.2.jpg)
+
+4. ábra. Telepítési adatok kiválasztása
+
+A Next gomb megnyomása után következő oldalon rögtön kezdődhet a telepítés folytatása (Install →), vagy két további lehetőség közül lehet választani (információk a telepítésről – What to know…, illetve már telepített operációs rendszer javítása - Repair your computer).
+
+![Telepítés megkezdése](img/1.6.3.jpg)
+
+5. ábra. Telepítés megkezdése
+
+Az Install gomb megnyomása után megjelenő ablakban kell kiválasztani, hogy melyik változat kerüljön telepítésre (Standard, Enterprise, Datacenter, Web Server), illetve hogy grafikus felülettel (Full Installation), vagy anélkül (Server Core Installation). A 6. ábrán megfigyelhető az is, hogy csak 64 bites változat létezik.
+
+![A server változat megadása](img/1.6.4.jpg)
+
+6. ábra. A server változat megadása
+
+A megfelelő változat kiválasztása, és a Next megnyomása után a licensz szerződés szövege következik. Annak elfogadása, és Next után folytatódhat a további választás.
+
+![A licensz szerződés elfogadása](img/1.6.5.jpg)
+
+7. ábra. A licensz szerződés elfogadása
+
+A következős ablakban egy meglévő Windows operációs rendszer frissítése (Upgrade), vagy új installálás (Clean Install – most Custom) között lehet választani. Jelen esetben a Custom megadása után ki kell választani a merevlemezt, és a particiót, ahova az installálás történik.
+
+![Telepítési mód (Custom) kiválasztása](img/1.6.6.jpg)
+
+8. ábra. Telepítési mód (Custom) kiválasztása
+
+Ezután lehetőség van új partíció létrehozására, meglévők törlésére, összevonására, szükség szerint formázására. Az installáló program azonban csak a legfontosabb lehetőségeket biztosítja, komoly szolgáltatásokat nem érdemes várni, hiszen a kifejezetten erre való programok ára sok esetben közelít egy kliens Windows operációs rendszer árához (pl.: 2011 márciusában a Partition Magic forgalmazótól függően kb. 20.000 Ft, míg egy Windows 7 Home Premium OEM 27.000 Ft). (Érdekességképpen, 2005 augusztusában a Partition Magic kb. 21.000 Ft volt, míg a Windows XP Professional OEM 33.000 Ft). Természetesen léteznek ingyenes változatok is, több esetben Linux alapokon.
+
+![Merevlemez és partíció kiválasztása](img/1.6.7.jpg)
+
+9. ábra. Merevlemez és partíció kiválasztása
+
+Ezután a 10. ábrának megfeleően megkezdődik a szükséges fájlok tömörített változatának felmásolása (copying) a merevlemezre a DVD-ről, majd a felmásolt fájlok kitömörítése (expanding). Ehhez akár több GB átmeneti területre is szükség lehet a merevlemezen. A következő lépések automatikusan futnak le, nincs szükség felhasználói beavatkozásra.
+
+![Másolás, kitömörítés](img/1.6.8.jpg)
+
+10. ábra. Másolás, kitömörítés
+
+Kitömörítés után egy reboot-ot (11. ábra) követően folytatódik az installálás. Amikor ez is befejeződik, megjelenik a bejelentkezési ablak (12. ábra).
+
+![A számítógép újraindítása](img/1.6.9.jpg)
+
+11. ábra. A számítógép újraindítása
+
+![Bejelentkezési képernyő](img/1.6.10.jpg)
+
+12. ábra. Bejelentkezési képernyő
+
+Első sikeres bejelentkezés után a felhasználónak módosítania kell a jelszavát a 13. ábrának megfelelően.
+
+![Jelszó módosítás](img/1.6.11.jpg)
+
+13. ábra. Jelszó módosítás
+
+Módosítás után elkészül a felhasználó asztala (desktop), létrejönnek a szükséges fájlok, katalógusok (14. ábra).
+
+![Az asztal létrehozása](img/1.6.12.jpg)
+
+14. ábra. Az asztal létrehozása
+
+Ezután elindul egy alkalmazás (Initial Configuration Tasks), amely lehetőséget kezdeti beállítások elvégzésére (időzóna megadására, hálózat konfigurálására, számítógép nevének megadására, munkacsoportba, vagy tartományba történő belépésre, stb.). A 15. ábrán látható, hogy a frissen feltelepített Windows még nincs aktiválva (Not activated).
+
+![Kezdeti beállítások](img/1.6.13.jpg)
+
+15. ábra. Kezdeti beállítások
+
+Érdemes tisztázni az aktiválás fogalmát, szerepét. Telepítéskor ugyan meg kell adni az úgynevezett termékkulcsot, amivel igazoljuk, hogy rendelkezünk egy jogtiszta Windows-zal, de ez elkérhető ismerőstől, esetleg tőlünk kérik el a miénket. Mindkettő illegális használatra ad lehetőséget. Ezért a Windows XP-nél a Microsoft bevezette az aktiválást. Az aktiválás során egy program a számítógépben található fontosabb hardverekről (például processzor, hálózati kártya, grafikus kártya, memória, stb.) készít egy egyedi azonosító sorozatot. A program a termékkulcsot és ezt az azonosító sorozatot felküldi a Microsoft szerverébe (személyes adatok a Microsoft információi szerint nem kerülnek felküldésre). Ott először is ellenőrzésre kerül, hogy a termékkulcs benne van-e már az adatbázisban. Ha nincs, akkor letárolásra kerül a számítógépre jellemző egyedi azonosító sorozattal. Ha a termékkulcs már benne van az adatbázisban, akkor ott kell lennie mellette az azonosító sorozatnak is. A letárolt azonosítónak és a most felkerült azonosítónak meg kell egyeznie, vagy csak néhány hardver komponens esetében szabad eltérnie. Ha a kelleténél több eltérés van, akkor az arra utal, hogy másik gépre történt az installálás, és az lehet, hogy jogtalan volt. Ekkor sikertelen lesz az aktiválás. Lehetőség van korrigálni a Microsoft ügyfélszolgálatán telefonos kapcsolat keretében. Visszatérve az aktíváláshoz, válasszuk ki az első menüpontot (Activate Windows), majd a megjelenő ablakban (16. ábra) adjuk meg a termékkulcsot, és válasszuk a Next gombot.
+
+![Termékkulcs (Product Key) megadása](img/1.6.14.jpg)
+
+16.- ábra. Termékkulcs (Product Key) megadása
+
+Az előbb elmondottak alapján egyértelmű, hogy az aktiváláshoz élő Internet kapcsolattal kell rendelkezni, vagyis a hálózat konfigurálását (IP cím, alhálózati maszk, alapértelmezett átjáró, DNS szerverek elérhetőségének megadása) az aktiválás előtt meg kell tenni. Ha minden rendben történt, akkor a 17. ábrának megfelelő ablaknak kell megjelennie (Activation was successful).
+
+![Sikeres aktiválás](img/1.6.15.jpg)
+
+17. ábra. Sikeres aktiválás
+
+### 1.7. Bejelentkezés, kijelentkezés, jelszómódosítás
+
+A számítógépen dolgozva használjuk annak erőforrásait, és hálózaton keresztül pedig más gépektől szolgáltatásokat elérve azok erőforrásait is. Annak érdekében, hogy ez ellenőrzötten történjen meg, a korszerű operációs rendszerek a felhasználókat valamilyen azonosítási procedurának vetik alá. Az azonosítás módja igen sok féle lehet. Viszonylag elterjedtnek számít a név-jelszó (másnéven tudás-) alapú, a smartcard alapú, és a biometriai (ujjlenyomat, arcfelismerés) alapú. Ezek közül is a tudás alapú a legelterjedtebb. Biztonsági megfontolások miatt a cégek előírják, hogy adott időközönként a felhasználóknak cserélniük kell jelszavukat. A Windows-ra jellemző, hogy ugyanazt a tevékenységet (például jelszócserét) többféleképpen is el lehet végezni. Ilyen esetekben célszerű a legkönnyebben használhatót választani. Jelen esetben (jelszó módosításhoz) a CTRL-ALT-DEL gombok egyidejű megnyomásával induló alkalmazást érdemes választani. Az előző Windows verziókban ekkor a Security Dialog Box-nak nevezett alkalmazás indult el. A Windows Server 2008 R2 esetében a Security Options (18. ábra) jelenik meg.
+
+#### 1.7.1. Security Options
+
+![Security Options](img/1.7.1.jpg)
+
+18. ábra. Security Options
+
+Ennek negyedik választási lehetősége a Change a password… Mivel előfordulhatna, hogy egy magára hagyott gépen a bejelentkezett felhasználó jelszavát valaki a felhasználó tudta nélkül így módosítaná, ezért először a régi jelszót kell megadni. Mivel ezt is, és az új jelszót is „vakon” kell megadni, és fennáll az elgépelés lehetősége, ezért az új jelszót kétszer kell megadni (19. ábra).
+
+![Jelszó módosítás](img/1.7.2.jpg)
+
+19. ábra. Jelszó módosítás
+
+Érdemes végig venni a Security Options többi szolgáltatását is. Első a Lock this computer. Előfordulhat, hogy rövidebb-hosszabb időre magára kell hagyni a számítógépet, amelyen egy korábbi bejelentkezést követően megkezdett munkák folynak (például olyan elindított alkalmazás, amelyek számol, dolgozik, és futása még nem fejeződött be). Ha a felhasználó ekkor kijelentkezik, akkor ezek a programok leállnak, futásuk megszakad, és az eddigi részeredmények elvesznek. Ha viszont a számítógépet felügyelet nélkül bejelentkezve magára hagyják, akkor egy másik felhasználó visszaélhet vele (például e-mail-eket küldhet a nevében, elolvassa dokumentumait, stb.). Ennek kiküszöbölésére vezették be a zárolási lehetőséget (Lock). Zárolás alatt az alkalmazások futnak tovább. A zárolás feloldása után a felhasználó is tovább dolgozhat a gépen. Korábbi Windows verziókban, ha a zárolást a rendszergazda oldotta fel, akkor a bejelentkezett felhasználó alkalmazásai abortálódtak, és az el nem mentett adatok elvesztek.
+
+A második lehetőség a Switch User. Szintén előfordulhat, hogy bár épp valaki be van jelentkezve a számítógépen, de rövid időre valaki másnak is szüksége volna rá. Ugyanakkor a bejelentkezett felhasználó elindított alkalmazásai még futnak. Kijelentkezés esetén az alkalmazások futása megszakadna. Ennek megoldására vezették be felhasználóváltást. A zároláshoz hasonlóan az alkalmazások futnak tovább, és lehetőség van egy új felhasználó bejelentkezésére. Annak megtörténte után az újonnan bejelentkezett felhasználó dolgozhat, programokat indíthat. Munkája végeztével kijelentkezhet. Ezután az elsőnek bejelentkezett felhasználó (a zároláshoz hasonlóan) visszajelentkezhet.
+
+A harmadik lehetőség (Log off) tulajdonképpen már szóba került. A felhasználó ezzel jelentkezik ki, és egy másik felhasználó pedig bejelentkezhet. Alkalmazásai bezáródnak, el nem mentett adatai elvesznek. Az operációs rendszer ugyan detektálja ezt (alkalmazástól függően), és jelzi is, de a felhasználó kikényszerítheti a kilépést (Force).
+
+A negyedik lehetőség már tisztázásra került (jelszó módosítás).
+
+Az ötödik (utolsó) lehetőség segítségével (Start Task Manager) egy olyan 6 füllel rendelkező alkalmazás indítható el, amellyel megnézhető:
+
+1. milyen programokat futtat a felhasználó (Applications),
+
+2. milyen futó folyamatok vannak (Processes),
+
+3. a szolgáltatások közül (Services) melyek milyen állapotban vannak (Stopped, Running),
+
+4. grafikus felületen ellenőrizhető a processzor és a memória terheltség (Performance),
+
+5. ellenőrizhető a hálózatra használható kártyák (Bluetooth, Wired és Wireless) forgalma,
+
+6. és végül a bejelentkezett felhasználók (Users).
+
+Bár sokat fejlődött a Task Manager, azért jó tudni, hogy vannak olyan hasonló célt szolgáló (akár ingyenes) alkalmazások, amelyek ennél több információt szolgáltatnak. Az egyik leginkább elterjedt program a Sysinternals cég (http://www.sysinternals.com) által készített Process Explorer. (Az oldal 2006 óta a Microsoft Technet oldalán keresztül érhető el: http://technet.microsoft.com/en-us/sysinternals/bb896653).
+
+#### 1.7.2. Leállítás (shutdown)
+
+Bár nem itt érhető el, de meg kell említeni a Shutdown (leállítás) menüpontot. Sok felhasználó a munkaidő végén számítógépét nem állítja le, hanem egyszerűen kikapcsolja. Bár ez nem szabályszerű, mégis egyes esetekben nem okoz problémát, máskor pedig igen. Ennek oka az, hogy az operációs rendszer sok adatot, változást a memóriában őriz. Például az alkalmazások futásakor létrehozott információt is, mint egy Word esetében a dokumentumot magát. Amikor a felhasználó elmenti a dokumentumot, akkor az operációs rendszer amennyiben a késleltetett írás be van kapcsolva, akkor nem menti el az adatokat rögtön (bár azt jelzi vissza), hanem csak később, amikor a felhasználó épp nem végez munkát a számítógépen. Ha a mentést követően a felhasználó egyszerűen kikapcsolja a számítógépet, akkor azok az adatai, amelyekről azt hiszi, hogy el vannak mentve (de adott esetben még sem), elvesz(het)nek. Shutdown esetében az operációs rendszer ezeket az el nem végzett mentéseket befejezi. Annak függvényében, hogy mennyi el nem mentett adat van, a shutdown folyamat viszonylag hosszabb ideig is tarthat. Érdemes kivárni.
+
+### 1.8. Felhasználók, csoportok
+
+A korszerű operációs rendszerek mindegyikében igyekeznek megoldani azt a problémát, hogy egy gyakorlatlan felhasználó az operációs rendszer fájljait kitörölje, átnevezze, esetleg vírussal elfertőzze. A Windows operációs rendszerekben erre azt a megoldást választották, hogy installálás után automatikusan létrejön két speciális csoport (Group): az Administrators (Rendszergazdák) és a Guests (Vendégek), valamint két speciális felhasználó: az Administrator (Rendszergazda) és a Guest (Vendég) (20. ábra).
+
+![Telepítéskor automatikusan létrejövő két speciális felhasználó](img/1.8.1.jpg)
+
+20. ábra. Telepítéskor automatikusan létrejövő két speciális felhasználó
+
+Az Administrator olyan felhasználó, amely „gyárilag” különböző „privilégiumokkal” rendelkezik. Alapesetben egyedül jogosult a rendszer működését meghatározó paraméterek lekérdezésére, megváltoztatására. „Privilégiumai” egy részét át sem tudja ruházni. A Guest létrehozásának célja az volt, hogy legyen olyan korlátozott jogosultságú felhasználó, aki eleve nem képes komolyabb feladatok elvégzésére, és ebből a korlátozásból nem tud kilépni sem. A csoportok fogalma később részletesebben tisztázásra kerül. Egyelőre annyit érdemes tudni, hogy engedélyeket, jogokat csoportokhoz is hozzá lehet rendelni, és ezeket az engedélyeket, jogokat a csoport tagjai megkapják.
+
+Érdemes két másik fogalmat is tisztázni, az engedélyt (permission) és a jogot (right). Az engedély erőforrás használathoz kötődik (van engedélyem olvasni egy fájlt, nincs engedélyem törölni egy fájlt, nincs engedélyem nyomtatni, stb.). Jog pedig rendszertevékenység elvégzéséhez kötődik (van jogom módosítani a rendszeridőt, nincs jogom archiválni, nincs jogom lokálisan bejelentkezni, nincs jogom leállítani a rendszert, stb.). A jogosultságok egy része átruházható, illetve a jogot élvezők köre bővíthető, szűkíthető. Több operációs rendszerben ezek a fogalmak összemosódnak.
+
+#### 1.8.1. Felhasználók létrehozása
+
+Felhasználókat kétféleképpen lehet létrehozni: vagy teljesen új felhasználó létrehozásával, vagy egy meglévő felhasználó másolásával. Workgroup esetében (illetve olyan tartománybeli gépeken, amelyek nem tartományvezérlők) felhasználók létrehozására, módosítására a Microsoft Management Console-hoz (mmc) egy hozzáadott alkalmazás (úgynevezett snap-in-ek) szolgál. A szükséges snap-in neve: Local Users and Groups. Domain esetében mindkét célra az Active Directory Users and Computers nevű alkalmazás szolgál (21. ábra).
+
+![Az Active Directory Users and Computers indítása](img/1.8.2.jpg)
+
+21. ábra. Az Active Directory Users and Computers indítása
+
+Az MMC segítségével a legtöbb rendszergazdai tevékenység elvégezhető. Tetszés szerint kialakítható MMC-k hozhatók létre, és azokat el lehet menteni. Az operációs rendszer installálásakor több előre kialakított MMC is felkerül, amiket menük segítségével lehet elindítani. Néhány fontosabb Snap-in:
+
+1. Számítógép kezelő (Computer Management)
+
+2. Eszköz kezelő (Device Management)
+
+3. Diszk kezelő (Disk Management)
+
+4. Eseményfigyelő (Event Viewer)
+
+5. Helyi felhasználók és csoportok (Local Users and Groups)
+
+6. Rendszer információk (System Information)
+
+Az installálás témakörénél tisztázásra került a munkacsoport és a tartomány fogalma. Nem tartományvezérlőn csak helyi felhasználót (local user) lehet létrehozni, aki csak az adott számítógépre fog tudni belépni. Tartományvezérlőn pedig csak tartományi felhasználót (domain user) lehet létrehozni, aki a tartomány minden számítógépén be tud lépni (…ha ez nem kerül korlátozásra). Tartományvezérlőn helyi felhasználó nincs. Ezt a helyi felhasználók kezelésére szolgáló program a megfelelő menüben piros X-szel jelzi is.
+
+Egy felhasználó létrehozásakor az operációs rendszer a felhasználóhoz hozzárendel egy azonosítót, amivel sikeres belépés után a felhasználó tevékenységét követi. A Windows-ban ez az azonosító a SID (Security Identification). A SID-et a Windows bizonyos szabályok betartásával generálja, és kiterjedten használja. (pl.: SID-je van a csoportoknak, de SID-je van az installációnak is!) Ha a felhasználó ezek után létrehoz egy fájlt, akkor a Windows nem a felhasználó nevét írja a fájl mellé, mint tulajdonost, hanem a felhasználó SID-jét. Ezért, ha a felhasználót valami ok miatt töröljük a felhasználók közül, majd később ugyanolyan néven létrehozzuk, akkor a generálás véletlenszerű része miatt a felhasználó nem a korábbi SID-jét kapja vissza. A felhasználó SID-jének megváltoztatására nincs lehetőség, korábbi fájljainak tulajdonosánál a törölt SID látszik, de mert a felhasználó törlésre került, ezért az operációs rendszer nem tudja a SID-et feloldani névvel. A felhasználó tehát nem lesz tulajdonosa korábbi fájljainak. A korrigálás igen macerás és időigényes. Elkerülésére a javaslat az, hogy a felhasználókat nem törölni kell, hanem letiltani. A letiltás később bármikor feloldható.
+
+Kisebb vállalatok esetében a másolás viszonylag ritkán kerül használatra. A módszer eleve csak domain esetében áll rendelkezésre, és tulajdonképpen akkor kifizetődő, ha nagyobb létszámú olyan felhasználó van, vagy lesz, akik több jellemzőjükben (például csoporttagságukban) hasonlítanak egymásra.
+
+![Új felhasználó létrehozása](img/1.8.3.jpg)
+
+22. ábra. Új felhasználó létrehozása
+
+Létrehozáskor (22. ábra) tartomány esetében jellemzően meg kell adni a felhasználó nevét (Firstname, Lastname, Fullname), bejelentkezési nevét (User logon name), induló jelszavát (Password),
+
+![Az új felhasználó alapadatainak megadása](img/1.8.4.jpg)
+
+23. ábra. Az új felhasználó alapadatainak megadása
+
+#### 1.8.2.
+
+majd checkbox-ok segítségével lehet kiválasztani a következőket (23. ábra):
+
+a felhasználónak az első sikeres bejelentkezéskor meg kell változtatnia jelszavát (User must change password at next logon);
+
+a felhasználó nem módosíthatja jelszavát (User cannot change password). Jellemző közösen használt fiók (account) esetében;
+
+a jelszó sohasem jár le (Password never expires);
+
+a fiók le van tiltva (Account is disabled).
+
+Létrehozás után már további jellemzők is megadhatók (24. ábra):
+
+![Létező felhasználó adatainak megtekintése, módosítása](img/1.8.5.jpg)
+
+24. ábra. Létező felhasználó adatainak megtekintése, módosítása
+
+1. telefonszámok (mobil, vezetékes, otthoni, fax, stb)
+
+2. e-mail cím
+
+3. web oldal címe
+
+4. lakcím vagy munkahelyi cím adatok (város, irányítószám, megye, stb)
+
+5. mely gépekről jelentkezhet be
+
+6. mely napokon, és azon belül mely időpontokban
+
+7. az account lejáratának ideje (soha, vagy egy adott nap).
+
+Fontos tisztázni, hogy a felhasználó bejelentkezési nevének egyedinek kell lennie, hiszen két vagy több azonos nevű felhasználó esetében az azonos nevű felhasználókat már csak jelszavuk különböztetné meg egymástól. A felhasználó bejelentkezési nevének bizonyos kötöttségeket kell teljesítenie:
+
+1. fontos, hogy érvényességi körén belül egyedinek kell lennie (munkacsoport esetében az adott gépen, tartomány esetében az egész tartományban)
+
+2. a név bár 256 karakter hosszú is lehet, de nem javasolt, hogy hosszabb legyen, mint 64 karakter (minden bejelentkezéskor be kell gépelni…)
+
+3. ne tartalmazza a következő karakterek egyikét sem:   <  >  ?  =  *  +  ,  \  [  ]  /  |  
+
+4. nem hiba, de nem javasolt ékezetes karakterek használata, mert ékezet nélküli billentyűzeten problémát okozhat azok bevitele.
+
+Ha a név megadásánál kisbetűk és nagy betűk is használatra kerültek, a Windows megjegyzi azt, de megadásnál nem különbözteti meg. Ennek megfelelően a következő nevek azonosítás szempontjából egymással egyenértékűek: kovacs, KOVACS, Kovacs, stb.
+
+#### 1.8.3. Csoportok létrehozása
+
+A létrehozott felhasználók segítségével szabályozni lehet, kik jelentkezhetnek be a számítógépre. Ezek a felhasználók munkájuk során erőforrásokat fognak használni (nyomtatók, diszkek). A költséges erőforrások használatát célszerű korlátozni. Ugyancsak célszerű korlátozni a diszken tárolt fájlokhoz való hozzáféréseket is, a bennük levő információ miatt. Hozzáférési engedély megadása esetén jellemzően lesznek olyan felhasználók, akik a fájlokat olvashatják, és lesznek olyanok, akik módosíthatják is azokat. Ez a korábban már bevezetett engedélyek segítségével szabályozható. Nagyobb méretű vállalat esetében (bár a felhasználók egyediek) a felhasználók igényeit áttekintve általában kialakíthatók olyan csoportok, amely csoportba tartozó felhasználók jellemzően azonos erőforrásokat fognak használni, azonos módon. Ilyen esetekben ugyan van lehetősége a rendszergazdának arra, hogy mindenkinek egyedileg adja meg az engedélyeket, de sok felhasználó esetében ez időigényes, és többször lehet hibázni is. A feladat leegyszerűsítése érdekében csoportokat lehet létrehozni, és az engedélyeket a csoportokhoz lehet hozzárendelni. Ez után meg kell adni, mely felhasználók mely csoportokba tartoznak. A csoporttagság miatt automatikusan megkapják a csoporthoz rendelt erőforrás használati engedélyeket. Ha később (bármilyen okból) módosítani kell egy erőforrás használatának jellegét (olvasásról olvasás + írásra), akkor nem kell egyesével minden felhasználót módosítani, hanem csak a csoporthoz rendelt engedélyeket kell módosítani, és már a módosított engedélyek fognak a felhasználókra vonatkozni.
+
+![Új csoport létrehozása az Active Directory Users and Computers-ben](img/1.8.6.jpg)
+
+25. ábra. Új csoport létrehozása az Active Directory Users and Computers-ben
+
+Tartomány esetében a csoport létrehozásánál (25. ábra) meg kell adni a csoport nevét (hasonló kötöttségekkel, mint a felhasználói név esetében), valamint ki kell választani a csoport hatókörét (hatókör: scope) (Domain Local – Tartományi helyi, Global – Globális, illetve Universal – Univerzális). A hatókör meghatározza, hol lehet hivatkozni a csoport nevére. Ugyancsak meg kejll adni a csoport típusát (típus: type) (Security – Biztonsági illetve Distribution – Terjesztési) (26. ábra). Összefoglalva, e két utolsó adat megadásával tulajdonképpen az kerül meghatározásra, hogy hol, és milyen célokra lehet majd használni a csoportot.
+
+Már létező csoportok esetében kétféle módon lehet megadni a csoporttagságot:
+
+1. Az első esetben ki kell választani azt a csoportot, amelynek a tagjait módosítani kell, majd a Members (tagok) fül segítségével bővíthető, szűkíthető a tagok listája.
+
+2. A másik esetben a felhasználók oldaláról lehet megközelíteni a csoporttagságot. Kiválasztva a felhasználót, a Member Of (Tagja ezeknek a csoportoknak) fül segítségével meg lehet adni, mely csoportoknak legyen tagja.
+
+![Csoport létrehozásánál megadásra kerülő adatok](img/1.8.7.jpg)
+
+26. ábra. Csoport létrehozásánál megadásra kerülő adatok
+
+Bár mindkét módszer járható, egy konkrét esetben azt érdemes választani, amelyikkel egyszerűbb a feladat megoldása. Ha a csoporthoz kell több felhasználót hozzáadni, akkor a csoport oldaláról javasolt a feladatot elvégezni, ha pedig a felhasználót kell több csoportba beletenni, akkor a felhasználó oldaláról érdemes megoldani a feladatot (27. és 28. ábra).
+
+![Csoporttagság módosítása a felhasználó felől](img/1.8.8.jpg)
+
+27. ábra. Csoporttagság módosítása a felhasználó felől
+
+![Csoporttagság módosítása a csoport felől](img/1.8.9.jpg)
+
+28. ábra. Csoporttagság módosítása a csoport felől
+
+A felhasználó csoporttagságainak bővítését mutatja be a 29. ábra.
+
+![A felhasználó csoporttagságának kibővítése tartomány esetén](img/1.8.10.jpg)
+
+29. ábra. A felhasználó csoporttagságának kibővítése tartomány esetén
+
+(Add. Advanced…, Find Now)
+
+Vegyük a csoport hatókörét. Tételezzük fel, hogy egy konkrét vállalat esetében különböző osztályok vannak: Tervezési Osztály, Bér és Munkaügyi Osztály, Kiszállítási Osztály, stb. Ezeken az osztályokon van egy osztályvezető, akinek van titkárnője, és beosztottjai. Ebben az esetben célszerűnek látszik olyan csoportok létrehozása, amelyek megegyeznek az osztályok nevével. Például: TervO, BMO, KO, stb. A csoportoknak azok a felhasználók lesznek a tagjai, akik az adott osztályon dolgoznak. Ez jól áttekinthető csoporttagságot eredményez. Ugyanakkor érdemes végiggondolni, hogy az egyes osztályokon dolgozó titkárnők valószínűleg ugyanazokat az alkalmazásokat használják, és lesznek közösen használt fájljaik. Emiatt érdemes ilyen jellegű csoportokat is létrehozni (Titkarnok). Ebből adódóan lesznek olyan felhasználók, akik két, vagy még több csoportnak lesznek a tagjai. Ezzel a módszerrel könnyen kialakíthatók lesznek a csoportok, és a tagságok. Fontos tisztázni, hogy ekkor még semmilyen erőforráshoz való hozzáférés nem került meghatározásra. Az erre a célra létrehozott csoportok esetében a csoport hatókörének a Globális csoportot kell megadni.
+
+Az engedélyek hozzárendelése akkor egyszerűsödne, ha a csoportok egymásba ágyazhatók lennének. Az egyik csoportba a felhasználók kerülnek, a másik csoporthoz pedig hozzárendelésre kerülnek az erőforrás használati engedélyek. Az egymásba ágyazás lehetséges, de nem tetszőleges módon. Globális csoportba tartományi helyi csoportot nem lehet beletenni, viszont tartományi helyi csoportba globális csoport (is) beletehető. Nézzük ennek figyelembevételével a tartományi helyi csoportokat.
+
+Sor kerül tehát sor az erőforrásokhoz való hozzáférési engedélyek megadására. Az erőforrások (tartomány esetében) jellemzően valamelyik tartománybeli számítógépen keresztül állnak rendelkezésre. Az erőforráshoz való hozzáféréshez emiatt a felhasználónak olyan felhasználónak kell lennie, aki az adott számítógépen rendelkezik (helyi) felhasználói fiókkal. Korábban ugyanakkor tisztázásra került, hogy tartomány esetében nem célszerű helyi felhasználókkal dolgozni. Helyettük erre a célra a tartományi felhasználók vannak. Az ellentmondás feloldására alakították ki a tartományi helyi csoportokat. A globális csoportok a vállalat felépítésének megfelelően kerülnek kialakításra. A tartományi helyi csoportok pedig az erőforrásoknak megfelelően. Így létezhet például egy Nyomtathatnak nevű csoport. A csoport tagjainak megadjuk egy adott nyomtatóra való nyomtatás engedélyét. Mivel jelenleg még üres a csoport (hiszen most jött létre), ezért (az engedély megadásának ellenére) senki nem fog tudni nyomtatni. A következő lépés az, hogy fel kell tölteni ezt a csoportot.
+
+Bármilyen hatókörű csoportról is beszélünk, csoportba egy felhasználó mindig beletehető. Viszont a globális csoportokban a felhasználók már benne vannak. Annak érdekében, hogy ezt fel lehessen használni, a tartományi helyi csoportokba bele lehet tenni globális csoportokat is. Előtte azonban meg kell vizsgálni a csoportok másik jellemzőjét, a típusát.
+
+A biztonsági csoport rendelkezik a korábban már bevezetett SID-del, ami egyedi azonosításra ad lehetőséget, és így alkalmas hozzáférési engedélyek kezelésére. A terjesztési csoportnak nincs SID-je, ezért terjesztési csoporthoz nem lehet hozzáférési engedélyt rendelni. Az univerzális csoportokat egyelőre elhagyva a lehetséges csoporttok a következők lehetnek:
+
+1. Tartományi helyi, biztonsági (Domain Local Security - DLS)
+
+2. Tartományi helyi, terjesztési (Domain Local, Distribution – DLD)
+
+3. Globális, biztonsági (Global Security – GLS)
+
+4. Globális, terjesztési (Global Distribution – GLD).
+
+Az előbb bevezetett rövidítések segítségével áttekinthető formában megadható, hogy mely csoportok ágyazhatók egymásba:
+
+1. DLS-be: DLD, DLS, GLD,
+
+2. DLD-be: DLD, DLS, GLD, GLS,
+
+3. GLS-be: GLD, GLS,
+
+4. GLD-be: GLD, GLS.
+
+A felsorolás segítségével ellenőrizhető, hogy globális csoportba valóban csak globális csoport tehető bele. Ugyancsak a fenti rövidítések segítségével megadható az is, hogy ha hozzáférési engedélyt kell adni egy erőforráshoz, akkor ott csak DLS, illetve GLS fog megjelenni.
+
+Első alkalommal gondot okozhat annak megértése, hogy mi történik olyan esetekben, ha egy felhasználó több csoportnak a tagja, és különböző csoporttagságai révén különböző hozzáférési engedélyekhez jut. Ennek megoldása tulajdonképpen egyszerű: egy adott erőforrás esetén tetszőleges sorrendben venni kell az egyes csoporttagságokkal járó hozzáférési engedélyeket, és azokat összegezni (kumulálni) kell. Példán keresztül: ha egy felhasználó Users csoporttagsága miatt kap egy olvasási engedélyt egy adott fájl esetében, egy másik csoporttagsága miatt pedig kap egy írási engedélyt, akkor ezek eredője az olvasási + írási engedély lesz. Ha a sorrend lenne a meghatározó, akkor az írási (mint másodszor megvizsgált engedély) felülírná az olvasási engedélyt, és az a fura helyzet állna elő, hogy olvasni ugyan nem tudja a felhasználó a fájlt, de írni igen.
+
+A tiltás (egy engedély megvonása) mindent felülír függetlenül attól, hogy milyen sorrendben vizsgáljuk a csoporttagságokat.
 
 ---
 

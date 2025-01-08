@@ -2,4 +2,4 @@
 
 ## Windows rendszergazda - ME
 
-[Jegyzeteim](Windows_rendszergazda-ME/notes.md)
+[Wágner György - A Windows Server 2008 menedzselése](Windows_rendszergazda-ME/notes.md)
