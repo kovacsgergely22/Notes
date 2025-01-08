@@ -7,26 +7,29 @@
 ---
 
 1. [Dr. Adamkó Attila - Fejlett Adatbázis technológiák](#dr-adamkó-attila---fejlett-adatbázis-technológiák)
-   1. [Bevezetés](#bevezetés)
-   2. [XML alapok](#xml-alapok)
-      1. [A névterek és az újrafelhasználhatóság](#a-névterek-és-az-újrafelhasználhatóság)
-      2. [Érvényes XML dokumentumok](#érvényes-xml-dokumentumok)
-         1. [XML dialektusok: DTD és XML séma](#xml-dialektusok-dtd-és-xml-séma)
-            1. [Legfontosabb XML Schema elemek](#legfontosabb-xml-schema-elemek)
-      3. [Információtartalom és feldolgozási stratégiák](#információtartalom-és-feldolgozási-stratégiák)
-         1. [Nyelvfüggetlen feldolgozási stratégiák: DOM és SAX](#nyelvfüggetlen-feldolgozási-stratégiák-dom-és-sax)
-      4. [A dokumentumtervezés alapjai](#a-dokumentumtervezés-alapjai)
-   3. [XML adatbázisok](#xml-adatbázisok)
-   4. [XDM: az XPath és XQuery adatmodellje](#xdm-az-xpath-és-xquery-adatmodellje)
-   5. [XPath](#xpath)
-   6. [XQuery](#xquery)
+   1. [1. Bevezetés](#1-bevezetés)
+   2. [2. XML alapok](#2-xml-alapok)
+      1. [2.1. A névterek és az újrafelhasználhatóság](#21-a-névterek-és-az-újrafelhasználhatóság)
+      2. [2.2. Érvényes XML dokumentumok](#22-érvényes-xml-dokumentumok)
+         1. [2.2.1. XML dialektusok: DTD és XML séma](#221-xml-dialektusok-dtd-és-xml-séma)
+            1. [2.2.1.1. Legfontosabb XML Schema elemek](#2211-legfontosabb-xml-schema-elemek)
+      3. [2.3. Információtartalom és feldolgozási stratégiák](#23-információtartalom-és-feldolgozási-stratégiák)
+         1. [2.3.1. Nyelvfüggetlen feldolgozási stratégiák: DOM és SAX](#231-nyelvfüggetlen-feldolgozási-stratégiák-dom-és-sax)
+      4. [2.4. A dokumentumtervezés alapjai](#24-a-dokumentumtervezés-alapjai)
+         1. [2.4.1. Leíró- és adat-orientált dokumentum struktúrák](#241-leíró--és-adat-orientált-dokumentum-struktúrák)
+      5. [4.2. Építőelemek: attribútumok, elemek és karakteradatok](#42-építőelemek-attribútumok-elemek-és-karakteradatok)
+   3. [***Leíró jellegű dokumentumokban***](#leíró-jellegű-dokumentumokban)
+   4. [XML adatbázisok](#xml-adatbázisok)
+   5. [XDM: az XPath és XQuery adatmodellje](#xdm-az-xpath-és-xquery-adatmodellje)
+   6. [XPath](#xpath)
+   7. [XQuery](#xquery)
 
 
 [Könyv elérhetősége](https://gyires.inf.unideb.hu/GyBITT/12/)
 
 ---
 
-## Bevezetés
+## 1. Bevezetés
 
 ![0](images/0.png)
 
@@ -41,7 +44,7 @@
 * XML dokumentum szerkezeti kialakítása és az egyes megközelítések előnyének és hátrányának áttekintése
 * Validálás szabványos technológiákkal
 
-## XML alapok
+## 2. XML alapok
 
 1. XML célkitűzései:
   * legyen egyszerűen használható a (webes)rendszerekben,
@@ -78,7 +81,7 @@
   * szöveges formátum -> megjelenítés
   * strukturált -> tartalom, információelérés, adatcsere -> gépi úton is feldolgozhatók
 
-### A névterek és az újrafelhasználhatóság
+### 2.1. A névterek és az újrafelhasználhatóság
 
 * Újrafelhasználhatóság -> névterek
   * névütközések elkerülése különböző alkalmazások XML dokumentumainak keveredésekor
@@ -99,7 +102,7 @@
 <person xmlns:account="">
 ```
 
-### Érvényes XML dokumentumok
+### 2.2. Érvényes XML dokumentumok
 
 * **Jól-formázott** XML dokumentumok, amelyek logikai tartalma és felépítése teljesen megegyezik:
   * DTD-vel
@@ -122,11 +125,11 @@
   * integritás: egyediségvizsgálat , hivatkozások épsége
   * üzleti szabályok: pl. nettó ár - ÁFA% - bruttó ár összefüggés, vagy akár olyan bonyolult dolog is, mint a helyesírás-ellenőrzés
 
-#### XML dialektusok: DTD és XML séma
+#### 2.2.1. XML dialektusok: DTD és XML séma
 
-##### Legfontosabb XML Schema elemek
+##### 2.2.1.1. Legfontosabb XML Schema elemek
 
-### Információtartalom és feldolgozási stratégiák
+### 2.3. Információtartalom és feldolgozási stratégiák
 
 * W3C InfoSet -> jól-formázott XML dokumentumok információtartalmának leírására szolgáló absztrakt adathalmaz ->dokumentum rendelkezik InfoSettel, ha:
   * jól-formált,
@@ -146,7 +149,7 @@
  xmlns:msg="http://message.example.org/">Phone home!</msg:message>
  ```
 
-#### Nyelvfüggetlen feldolgozási stratégiák: DOM és SAX
+#### 2.3.1. Nyelvfüggetlen feldolgozási stratégiák: DOM és SAX
 
 * A Dokumentum Objektum Modell (Document Object Model / DOM) egy platform- és nyelvfüggetlen standard programozói interfész amely a HTML, XHTML, XML valamint rokon formátumaiknak a szerkezetét és az objektumaikkal történő interakciókat modellezi
 * A DOM egymással szülő-gyermek kapcsolatban álló objektumok rendszere
@@ -201,15 +204,44 @@ A DOM és a SAX gyors összevetése:
   * Kevesebb memória
   * Inkább csak a dokumentum végigolvasására, nem módosítására
 
-### A dokumentumtervezés alapjai
+### 2.4. A dokumentumtervezés alapjai
 
 1. **Leíró és adat-orientált dokumentum szerkezetek**
    * Leíró dokumentumstruktúra -> XML tartalom már létező szöveg alapú kiegészítése
    * Adat-orientált dokumentumszerkezet -> XML tartalom maga a fontos adat
 2. **Építő elemek: attriútumok, elemek és karakter adatok**
-   * 
+   * dizájn, olvashatóság, értelmezhetőség
 3. **Buktatók**
-   * 
+
+#### 2.4.1. Leíró- és adat-orientált dokumentum struktúrák
+
+- leíró dokumentumstruktúra: XML tartalmat már létező, szöveg alapú adat kiegészítésére (hasonlóan HTML címkék weboladalakhoz)
+- Adat-orientált dokumentumszerkezet: XML tartalom maga a fontos adat (XML jelölő a fontos adat -> XML jelölők jól struktúrált adatok leírására)
+
+***Adat-orientált dokumentumok***
+
+- Általában alkalmazások számára
+- A dokumentumokban szereplő adatok segítségével elképzelhetjük, hogy az adatnak egy az egyhez leképezése van az alkalmazásunk jellemzőivel, az XML dokumentumot ezzel az objektumaink szerializált verziójává alakítva. Ez a szerializáció nagyon gyakori az XML-nél, ilyenkor legtöbbször adat-orientált megközelítést használunk.
+- .NETnél (18.old)
+- JAVA XML csomagban -> JAVA API for XML Binding (JAXB) -> XML dokumentumok Java osztállyá történő oda-vissza leképezése
+- Java Bean-ek is XML-re képezhetők
+- XML -> folyamatok leírására Apache Ant
+- adat-orientált dokumentumok a legjobb választás bármilyen fajta jól struktúrált adat ábrázolására.
+
+***Leíró dokumentumok***
+
+- felhasználói fogyasztásra tervezve -> emberek által olvasható szövegek XML jelölővel bővítve
+- a tartalmat nem a jelölő határozza meg
+- a jelölő adat nagyon struktúrálatlan
+- HTML weboldalak
+- **Megjelenítés:** XHTML -> XML jelölő alkalmazása leíró stílusú dokumentumhoz a megjelenés szabályozására
+- **Indexelés:** alkalmazások -> hatékony kiemelés XML jelölőt használva -> majd indexelik a dokumentumot (relációs adatbázist vagy teljes szöveges indexelő szoftvert használva)
+- **Annotációk:** alkalmazás XML-lel fűzhet annotációt már létező dokumentumokhoz
+
+### 4.2. Építőelemek: attribútumok, elemek és karakteradatok
+
+***Leíró jellegű dokumentumokban***
+- 
 
 ## XML adatbázisok
 

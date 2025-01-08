@@ -180,6 +180,38 @@ r31: <b> <i> Honda </i> 71233 </b> <br/>
       - a szövegcsomópont esetén kiírja az eredménybe ezt a csomópontot (a szövegtartalmat),
       - egyéb csomópontokat figyelmen kívül hagy.
 
+- Az XSLT transzformáció nem garantálja a jól-formáltság feltételeit az eredménydokumentumok esetében -> fejlesztők feladata
+- többértelműség: egy csomóponthoz több szabály is definiálva -> sorrendiség = legkésőbb definiált szabály prioritása
+
+***XSLT feldolgozást végző motor általános struktúrája*** -> Saxon rendszer
+- **fa felépítő egység** (Tree Constructor), 3 modul
+  - SAX API-ra épülve lineárisan átolvassa XML, XSLT dokumentumokat
+  - generált köztes dokumentumon normalizálás (felesleges szóközök eltávolítása)
+  - felépíti csomópontok fáját
+- **XSLT fordító** -> fa elemzése, konvertálása tömörített utasításkódra -> XSL fa (decorated XSL tree).
+  - tényleges transzformációvégrehajtás optimalizálása -> döntési fa mellett egyéb optimalizációs lépések
+    - szelekciós feltételek egyszerűsítése
+    - jellemzők közvetlen elérésének megvalósítása
+    - változók elérésének gyorsítása
+- **Navigációs modul (Tree navigator)**
+  - gyökér elemtől gyerekek felé
+  - feldolgozott kontextuscsomóponthoz illeszkedő minta megkeresése
+- **XSLT értelmező modul (XSLT Interpreter)**
+  - transzformáció tényleges végrehajtása
+- **Kiíró modul (Outputter)**
+
+***XSLT transzformációs parancsok***
+- mintaillesztési utasítás
+- feltételes transzformáció
+- változókezelés
+- névvel azonosított transzformációk
+- XML elemek létrehozása
+- elemek rendezése
+- csoportképzés
+- aggregáció
+- segédfüggvények
+- XSLT állományok összefűzése
+
 ### Az XSLT parancsai
 
 #### 1. Mintaillesztés
