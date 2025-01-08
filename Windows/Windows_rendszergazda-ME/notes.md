@@ -1219,9 +1219,9 @@ Témakör Bevezetés a vbs script-be és a powershell-be, AD recycle bin
 
 Feladatok:
 
-1. Szervezetiegységeklétrehozásaaz AD-ban
+1. Szervezeti egységekl étrehozása az AD-ban
 
-2. Kötegelt user létrehozásvb script segítségével
+2. Kötegelt user létrehozás vb script segítségével
 
 3. Ismerkedés a powershell-lel
 
@@ -1229,11 +1229,11 @@ Feladatok:
 
 5. Az Active Directory modul használata powershell-ben
 
-6. Az AD kukaengedélyezéseéshasználata
+6. Az AD kuka engedélyezése és használata
 
 Megoldások:
 
-1. Szervezetiegységeklétrehozásaaz AD-ban
+1. Szervezeti egységek létrehozása az AD-ban
 
 ```
 3.1.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
@@ -1258,7 +1258,7 @@ Name: SpecialAccounts -> ok
 Name: TestAccounts -> ok
 ```
 
-2. Kötegelt user létrehozásvb script segítségével
+2. Kötegelt user létrehozás vb script segítségével
 
 ```
 3.2.1.	Start ->Control Panel -> Folder Options ->View fül->vegyük ki a pipát az alábbi opció elől:
@@ -1360,7 +1360,7 @@ Set-ADUsermanagerboss –GivenName “Bela” –Surename “Nagy” –homepage
 
 ![2.3.2](img/2.3.2.png)
 
-6. Az AD kukaengedélyezéseéshasználata
+6. Az AD kuka engedélyezése és használata
 
 ```
 3.6.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
@@ -1585,9 +1585,9 @@ Témakör Nyomtatás
 
 Feladatok:
 
-1. A nyomtatószerverszerepkörtelepítése a DC01-es szerverre
+1. A nyomtatószerver-szerepkör telepítése a DC01-es szerverre
 
-2. Nyomtatóillesztőprogramtelepítése
+2. Nyomtató-illesztőprogram telepítése
 
 3. Új nyomtató hozzáadása a DC01-es szerverhez
 
@@ -1599,7 +1599,7 @@ Feladatok:
 
 Megoldások:
 
-1. A nyomtatószerverszerepkörtelepítése a DC01-es szerverre
+1. A nyomtatószerver-szerepkör telepítése a DC01-es szerverre
 
 ```
 5.1.1.	Ha még nem fut a DC01, akkor indítsuk el és jelentkezzünk be rá:
@@ -1614,7 +1614,7 @@ password: Password1
 5.1.6.	Confirm Installation Selections ->Install -> Close 
 ```
             
-2. Nyomtatóillesztőprogramtelepítése
+2. Nyomtató-illesztőprogram telepítése
 
 ```
 5.2.1.	Start -> Administrative Tools -> Print Management -> Print Servers -> DC01 -> Drivers –> jobb gomb -> Add Driver… -> Next >
@@ -1718,11 +1718,11 @@ Feladatok:
 
 4. A team.miskolc.hu A record bejegyzése a DNS-be
 
-5. A team site elérésénektesztelése, újmegbeszélésindítása, dokumentumfeltöltése
+5. A team site elérésének tesztelése, új megbeszélésindítása, dokumentum feltöltése
 
 Megoldások:
 
-1. A szükségesprogramokletöltéseésújmerevlemezcsatolásaaz SRV01-es szerverhez
+1. A szükséges programok letöltése és új merevlemez csatolása az SRV01-es szerverhez
 
 ```
 6.1.1.	Töltsük le a az alábbi linkről a szükséges programokat tartalmazó virtuális merevlemez fájlt:
@@ -1742,7 +1742,7 @@ password: Password1
 6.1.7.	Kattintsunk a ’Disk 1’ –re (ahol az Offline feliratot látjuk) -> jobb gomb -> Online
 ```
             
-2. Az SPF2010 szoftverelőfeltételektelepítéseaz SRV01-es szerverre
+2. Az SPF2010 szoftver előfeltételek telepítése az SRV01-es szerverre
 
 ```
 Start -> Command Prompt -> navigáljunk el a telepítő fájlokhoz:
@@ -1832,11 +1832,11 @@ Feladatok:
 
 3. A Windows Backup Feature telepítése, manuális backup indítása
 
-4. Restore indítása, sikerességénekellenőrzése
+4. Restore indítása, sikerességének ellenőrzése
 
 Megoldások:
 
-1. 4 újvirtuálismerevlemezlétrehozásaéscsatlakoztatása a DC01-es szerverhez
+1. 4 új virtuális merevlemez létrehozása és csatlakoztatása a DC01-es szerverhez
 
 ```
 7.1.1.	Start -> Administrative Tools -> Hyper-V manager -> New -> Hard Disk… 
@@ -2427,7 +2427,7 @@ Feladatok:
 
 3. Az RDS01-es szerver létrehozása
 
-4. Az RDS szerverszerepkörtelepítéseaz RDS01-es szerverre
+4. Az RDS szerver szerepkör telepítése az RDS01-es szerverre
 
 5. Csoporttagság konfigurálása a szervereken
 
