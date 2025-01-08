@@ -18,11 +18,17 @@
       4. [2.4. A dokumentumtervezés alapjai](#24-a-dokumentumtervezés-alapjai)
          1. [2.4.1. Leíró- és adat-orientált dokumentum struktúrák](#241-leíró--és-adat-orientált-dokumentum-struktúrák)
       5. [4.2. Építőelemek: attribútumok, elemek és karakteradatok](#42-építőelemek-attribútumok-elemek-és-karakteradatok)
-   3. [***Leíró jellegű dokumentumokban***](#leíró-jellegű-dokumentumokban)
-   4. [XML adatbázisok](#xml-adatbázisok)
-   5. [XDM: az XPath és XQuery adatmodellje](#xdm-az-xpath-és-xquery-adatmodellje)
-   6. [XPath](#xpath)
-   7. [XQuery](#xquery)
+         1. [4.2.1. Az elemek és attribútumok jellemzőinek különbsége](#421-az-elemek-és-attribútumok-jellemzőinek-különbsége)
+            1. [4.2.1.1. Az elemek idő és helyigényesebbek mint az attribútumok](#4211-az-elemek-idő-és-helyigényesebbek-mint-az-attribútumok)
+            2. [4.2.1.2. Az elemek rugalmasabbak mint az attribútumok](#4212-az-elemek-rugalmasabbak-mint-az-attribútumok)
+            3. [4.2.1.3. Karakteradatok vs. attribútumok](#4213-karakteradatok-vs-attribútumok)
+         2. [4.2.2. Elemek azonosítójaként használjunk attribútumokat](#422-elemek-azonosítójaként-használjunk-attribútumokat)
+         3. [4.2.3. Kerüljük az attribútumok használatát olyan dokumentumoknál, ahol a sorrend fontos](#423-kerüljük-az-attribútumok-használatát-olyan-dokumentumoknál-ahol-a-sorrend-fontos)
+      6. [4.3. Buktatók](#43-buktatók)
+   3. [3. XML adatbázisok](#3-xml-adatbázisok)
+   4. [4. XDM: az XPath és XQuery adatmodellje](#4-xdm-az-xpath-és-xquery-adatmodellje)
+   5. [5. XPath](#5-xpath)
+   6. [6. XQuery](#6-xquery)
 
 
 [Könyv elérhetősége](https://gyires.inf.unideb.hu/GyBITT/12/)
@@ -241,12 +247,81 @@ A DOM és a SAX gyors összevetése:
 ### 4.2. Építőelemek: attribútumok, elemek és karakteradatok
 
 ***Leíró jellegű dokumentumokban***
-- 
+- A leíró szöveg egy elem tartalmává válik, az információ a szövegről pedig attribútummá.
 
-## XML adatbázisok
+#### 4.2.1. Az elemek és attribútumok jellemzőinek különbsége
 
-## XDM: az XPath és XQuery adatmodellje
+##### 4.2.1.1. Az elemek idő és helyigényesebbek mint az attribútumok
 
-## XPath
+1. A hely kérdése
+   - Elemek mindig több helyet igényelnek mint attribútumok (DOM-ban csomópont összes elemét létre kell hoznia)
+2. A feldolgozási idő kérdése
+   - Elemek időben is igényesebbek mint az attribútumok (DOM-ban nem dolgozzák fel addig attribútumokat, ameddig nem találkoznak velük)
 
-## XQuery
+##### 4.2.1.2. Az elemek rugalmasabbak mint az attribútumok
+
+- Attribútumok limitáltak adat megjelenítésben
+- Elemek kimondottan alkalmasak struktúrált adatok befogadására
+- struktúrált adat egy attribútumban -> sztring értelmezéséhez nekünk kell kódot írni. pl. dátum attribútumként tárolása -> nagyobb sztring tárolható karakteradatként
+
+##### 4.2.1.3. Karakteradatok vs. attribútumok
+
+- Megfontolandó karakteres adat használata:
+  - adat nagyon hosszú
+  - nagy számú levédett (escapelt) XML karakter van
+    - Használható CDATA szekció
+  - adat rövid, de teljesítmény fontos, és SAX-ot használunk
+- Megfontolandó attribútum használata
+  - adat rövid és struktúrálatlan
+  - SAX-ot használva a feldolgozó kódot egyszerűnek akarjuk látni
+
+#### 4.2.2. Elemek azonosítójaként használjunk attribútumokat
+
+#### 4.2.3. Kerüljük az attribútumok használatát olyan dokumentumoknál, ahol a sorrend fontos
+
+- attribútumoknál nincsen kötött sorrend
+
+### 4.3. Buktatók
+
+1. Kerüljük a speciális platformra vagy feldolgozó implementációra való tervezést
+  - Jól tervezettnek kell lennie, miután megjelent és írott kódok készültek a szerkezetre, a változtatás majdnem tiltott
+  - nem jó dokumentumszerkezetet valamilyen feldolgozó verziójához készíteni
+  - A dokumentum struktúrája csak egy szerződés, semmi több, nem interfész és nem implementáció -> értenünk kell dokumentumok használatát, amihez tervezünk
+  - Ha dokumentumaink nem kizárólag csak a mi alkalmazásunknak készül, mindenképp győződjünk meg arról, hogy úgy tervezzünk a dokumentum szerkezetét, hogy véletlenül se függjön semmilyen platformspecifikus, vagy feldolgozó implementáció specifikus jellemzőtől.
+2. Az alapul szolgáló adatmodell többnyire nem a legjobb választás az XML-hez
+  - a legtöbb perzisztens tároló mechanizmus, mint például a relációs adatbáziskezelők, az egyszerű fájlok, az objektum adatbázisok vagy bármi hasonló nem az XML figyelembevételével és annak szerkezetét szem előtt volt tervezve
+  - Relációs adatbázisokat használni hierarchikus adatokra általában azt jelenti, hogy van egy adattábla, amely a „szülőt” jelöli a hierarchikus kapcsolatban, és külön egy tábla (vagy táblák) a „gyerekeket” reprezentálva a kapcsolatrendszerben
+  - szükségtelen komplikációkat és plusz munkát adna a feldolgozási folyamathoz, mert nem használja az XML egyik legnagyszerűbb jellemzőjét: annak a tudását, hogy hierarchikus adatokat ábrázoljon.
+  - A legfontosabb dolog, amit szem előtt kell tartanunk amikor a dokumentumunk szerkezetét tervezzük, hogy arra az absztrakt modellre épüljön, amely leginkább leírja azt, amit kódolni szeretnénk. Véletlenül se a modell valamilyen más technológiában (Java, C++, ...) készült implementációjára
+3. Kerüljük a dokumentumok túltelítését
+  - bár a lemezen a hely olcsó, mégsem ajánlatos pazarolni,
+  - minden egyes bitje a dokumentumnak át fog folyni egy XML feldolgozón, tehát minél hosszabb a dokumentum, annál tovább tart ez a folyamat,
+  - ha a dokumentumot kommunikációs eszközként fogják használni, mint például egy SOAP dokumentumot egy XML-alapú webszolgáltatáshoz, az egészet ki kell majd küldeni a hálózatra.
+  - Gyakran célravezető, ha a ténylegesen a dokumentumba kerülő adatokat kielemezzük annak érdekében, hogy elkerüljük a fölösleges bitek szaporítását
+4. Kerüljük a hivatkozásokkal túlterhelt dokumentum struktúrák használatát
+  - Az egyik legfájdalmasabb pont egy XML feldolgozó kód írásánál, ha a feldolgozandó dokumentum szerkezet nagyon sűrűn használ referenciákat
+
+***Összegezve az alábbi kérdésekre kell választ találnunk:*** 
+- Elem vagy attribútum? 
+  - Gyakori adatváltoztatás 
+  - Kis, egyszerű adat, ritka módosítással 
+- Hierarchia vagy hivatkozás? 
+  - Alstruktúra tartalmazása 
+  - Több sor tartalmazása
+  - Többszörös előfordulás 
+- Stilisztikai választások 
+  - Olvashatóság 
+  - Készítő / feldolgozó szempontok 
+
+Saját XML alkalmazás tervezése esetén az adatszervezést a következő lépések mentén tegyük: 
+1. Elemek meghatározása 
+2. Kulcsfontosságú elemek megkeresése 
+3. Elemek kapcsolatának feltérképezése
+
+## 3. XML adatbázisok
+
+## 4. XDM: az XPath és XQuery adatmodellje
+
+## 5. XPath
+
+## 6. XQuery
