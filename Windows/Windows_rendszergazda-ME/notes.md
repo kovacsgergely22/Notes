@@ -84,6 +84,7 @@ A következő táblázatban összefoglalva láthatók a különböző (fontosabb
 1.1. táblázat - Windows verziók
 
 | Név, verziók |	Kernel |	RTM |
+| --- | --- | --- |
 | Windows NT 4.0 Workstation, Server, Enterprise  Server | NT 4.0 |	1381 |
 | Windows 2000 Professional, Server, Advanced Server | NT 5.0 | 2195 |
 | Windows XP Home, Professional | NT 5.1 | 2600 |
@@ -978,6 +979,7 @@ Jelszó: Password1
 2.1. táblázat - gépcímek
 
 | gépneve | IP címe | maszk | DNS |
+--- | --- | --- | --- |
 | DC01 | 10.10.1.1 | 255.0.0.0 | 10.10.1.1 |
 | SRV01 | 10.10.1.2 | 255.0.0.0 | 10.10.1.1 |
 | Core01 | 10.10.1.3 | 255.0.0.0 | 10.10.1.1 |
