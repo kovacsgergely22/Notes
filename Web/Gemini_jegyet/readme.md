@@ -1,9 +1,9 @@
-# Kovács László - XML technikák [^1]
+# Kovács László - XML technikák 
 
-## ora_A01.pdf
+## ora_A01.pdf [^1]
 
-1. [Kovács László - XML technikák \[^1\]](#kovács-lászló---xml-technikák-1)
-   1. [ora\_A01.pdf](#ora_a01pdf)
+1. [Kovács László - XML technikák](#kovács-lászló---xml-technikák)
+   1. [ora\_A01.pdf \[^1\]](#ora_a01pdf-1)
       1. [Az XML alapjai](#az-xml-alapjai)
          1. [Bevezetés](#bevezetés)
          2. [Az XML előnyei](#az-xml-előnyei)
