@@ -51,13 +51,14 @@
 
 ### Jegyzeteim
 
-1. [Az XML kézikönyv - Neil Bradley](XML-kezikonyv_Neil_Bradley/readme.md)
-2. [Fejlett adatbázis technológiák - Adamkó Attila](Fejlett_adatbazis_technologiak-Adamko_Attila/notes.md)
-3. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
-4. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
-5. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
-6. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
-7. [XML technikák - Kovács László ME](XML_Kovacs_Laszlo/notes.md)
+1. [Az XML és XML technikák - Google Gemini által generált jegyzet Kovács László tananyaga alapján](Gemini_jegyet/readme.md)
+2. [Az XML kézikönyv - Neil Bradley](XML-kezikonyv_Neil_Bradley/readme.md)
+3. [Fejlett adatbázis technológiák - Adamkó Attila](Fejlett_adatbazis_technologiak-Adamko_Attila/notes.md)
+4. [XML Basics - Shashi Banzal](XML_basics-S_Banzal/readme.md)
+5. [XML Sémanyelvek - Jeszenszky Péter](XML_semanyelvek-Jeszenszky_Peter/notes.md)
+6. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
+7. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
+8. [XML technikák - Kovács László ME](XML_Kovacs_Laszlo/notes.md)
 
 ### Online könyvek
 

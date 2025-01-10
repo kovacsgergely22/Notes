@@ -1,0 +1,283 @@
+# Kovács László - XML technikák [^1]
+
+## ora_A01.pdf
+
+1. [Kovács László - XML technikák \[^1\]](#kovács-lászló---xml-technikák-1)
+   1. [ora\_A01.pdf](#ora_a01pdf)
+      1. [Az XML alapjai](#az-xml-alapjai)
+         1. [Bevezetés](#bevezetés)
+         2. [Az XML előnyei](#az-xml-előnyei)
+         3. [Az XML használata](#az-xml-használata)
+         4. [Az XML története](#az-xml-története)
+         5. [Az XML szintaxisa](#az-xml-szintaxisa)
+         6. [Az XML feldolgozása](#az-xml-feldolgozása)
+         7. [Az XML szabványai](#az-xml-szabványai)
+         8. [Az XML jövője](#az-xml-jövője)
+         9. [Összefoglalás](#összefoglalás)
+      2. [XML alapfogalmai](#xml-alapfogalmai)
+      3. [XML teszt](#xml-teszt)
+      4. [XML teszt - megoldások](#xml-teszt---megoldások)
+
+
+```
+XML
+  ├── Dokumentum
+  │   ├── Elem
+  │   ├── Attribútum
+  │   ├── Szöveges tartalom
+  │   └── XML deklaráció
+  ├── Sémák és szabványok
+  │   ├── XML Schema
+  │   ├── DTD
+  │   ├── XSLT
+  │   ├── XPath
+  │   └── Namespace
+  ├── Felhasználási területek
+  │   ├── Adatcsere
+  │   ├── Konfigurációs fájlok
+  │   ├── Webszolgáltatások
+  │   └── Dokumentumok
+  └── Kapcsolódó fogalmak
+      ├── Jelölőnyelv
+      ├── HTML
+      ├── Feldolgozó
+      ├── Érvényesítés
+      └── Struktúra
+```
+
+### Az XML alapjai
+
+#### Bevezetés
+
+Az XML egy jelölő nyelv, amelyet adatok tárolására és cseréjére használnak. Az XML dokumentumok szöveges fájlok, amelyek jelölő elemeket tartalmaznak, amelyek a dokumentum tartalmának struktúráját jelölik. Az XML-t a World Wide Web Consortium (W3C. fejlesztette ki, és 1998-ban adták ki).
+
+#### Az XML előnyei
+
+- Platformfüggetlen: Az XML dokumentumokat bármilyen platformon olvasni és feldolgozni lehet.
+- Könnyen olvasható: Az XML dokumentumok emberi olvashatóak és könnyen érthetőek.
+- Könnyen generálható és elemzhető: Az XML dokumentumokat könnyen generálhatják és elemezhetik programok.
+- Rugalmas: Az XML lehetővé teszi a felhasználók számára saját jelölő elemek definiálását.
+
+#### Az XML használata
+
+Az XML-t számos különböző célra használják, többek között:
+
+- Adatcsere: Az XML-t adatok cseréjére használják különböző alkalmazások között.
+- Webszolgáltatások: Az XML-t webszolgáltatások létrehozására és fogyasztására használják.
+Konfigurációs fájlok: Az XML-t konfigurációs fájlok létrehozására használják.
+- Dokumentumok: Az XML-t dokumentumok tárolására és cseréjére használják.
+
+#### Az XML története
+
+Az XML a Standard Generalized Markup Language (SGML). részhalmaza. Az SGML-t 1986-ban fejlesztették ki, és az XML-t 1998-ban adták ki. Az XML egyszerűbb és könnyebben használható, mint az SGML.
+
+#### Az XML szintaxisa
+
+Az XML dokumentumok szöveges fájlok, amelyek jelölő elemeket tartalmaznak. A jelölő elemek a dokumentum tartalmának struktúráját jelölik. A jelölő elemeknek nyitó és záró tagja van. A nyitó tag a jelölő elem nevét tartalmazza, a záró tag a jelölő elem nevét tartalmazza egy "/" karakterrel. A jelölő elemek attribútumokat is tartalmazhatnak. Az attribútumok a jelölő elem további információit tartalmazzák.
+
+Példa XML dokumentumra:
+
+```
+<?xml version="1.0"?>
+<könyv>
+  <cím>Harry Potter és a bölcsek köve</cím>
+  <szerző>J.K. Rowling</szerző>
+  <kiadás>1997</kiadás>
+  <kiadó>Graham Potter</kiadó>
+</könyv>
+```
+
+Ebben a példában a dokumentum egy könyvet ír le. A könyvnek címe, szerzője, kiadás éve és kiadója van.
+
+#### Az XML feldolgozása
+
+Az XML dokumentumokat XML feldolgozók segítségével lehet feldolgozni. Az XML feldolgozók olyan programok, amelyek az XML dokumentumokat olvashatják és elemezhetik. Az XML feldolgozók számos különböző feladatot végezhetnek, például:
+
+XML dokumentumok érvényesítésének ellenőrzése: Az XML feldolgozók ellenőrizhetik, hogy az XML dokumentumok érvényesek-e az XML szabvány szerint.
+XML dokumentumok átalakítása: Az XML feldolgozók átalakíthatják az XML dokumentumokat más formátumokba, például HTML-be vagy JSON-ba.
+XML dokumentumok lekérdezése: Az XML feldolgozók lekérdezéseket futtathatnak az XML dokumentumokon.
+
+#### Az XML szabványai
+
+Az XML-t számos szabvány szabályozza, többek között:
+
+XML 1.0: Az XML 1.0 az XML alapvető szabványa.
+XML Schema: Az XML Schema egy szabvány, amely lehetővé teszi az XML dokumentumok szerkezetének definiálását.
+XSLT: Az XSLT egy szabvány, amely lehetővé teszi az XML dokumentumok átalakítását más formátumokba.
+XPath: Az XPath egy szabvány, amely lehetővé teszi az XML dokumentumok lekérdezését.
+
+#### Az XML jövője
+
+Az XML egy érett technológia, amelyet széles körben használnak a világon. Az XML várhatóan továbbra is fontos szerepet fog játszani az adatok tárolásában és cseréjében.
+
+#### Összefoglalás
+
+Az XML egy jelölő nyelv, amelyet adatok tárolására és cseréjére használnak. Az XML dokumentumok szöveges fájlok, amelyek jelölő elemeket tartalmaznak, amelyek a dokumentum tartalmának struktúráját jelölik. Az XML-t a World Wide Web Consortium (W3C). fejlesztette ki, és 1998-ban adták ki. Az XML platformfüggetlen, könnyen olvasható, könnyen generálható és elemzhető, és rugalmas. Az XML-t számos különböző célra használják, többek között adatcsere, webszolgáltatások, konfigurációs fájlok és dokumentumok. Az XML a Standard Generalized Markup Language (SGML). részhalmaza. Az XML-t számos szabvány szabályozza, többek között az XML 1.0, az XML Schema, az XSLT és az XPath. Az XML egy érett technológia, amelyet széles körben használnak a világon, és várhatóan továbbra is fontos szerepet fog játszani az adatok tárolásában és cseréjében.
+
+### XML alapfogalmai
+
+XML alapjai
+
+- XML: A kiterjeszthető jelölőnyelv (eXtensible Markup Language). egy szöveges jelölőnyelv, amelyet adatcsere és dokumentumok tárolására használnak.
+- Jelölőnyelv: Egy olyan nyelv, amely a szövegben speciális jelöléseket használ a tartalom szerkezetének és formázásának megadására.
+- Elem: Az XML dokumentumok alapvető építőkövei. Az elemeknek nyitó és záró tagja van, és attribútumokkal rendelkezhetnek.
+- Attribútum: Az elemek további információit tartalmazó tulajdonságok.
+- XML dokumentum: Egy vagy több elem által alkotott hierarchikus szerkezetű szöveges fájl.
+- XML szabvány: A W3C által meghatározott szabványok, amelyek az XML dokumentumok szerkezetét és feldolgozását szabályozzák.
+- XML feldolgozó: Egy program, amely az XML dokumentumokat olvasni, elemezni és feldolgozni tudja.
+- XML használat: Adatcsere, webszolgáltatások, konfigurációs fájlok, dokumentumok tárolása és cseréje.
+- XML előnyei: Platformfüggetlen, könnyen olvasható, könnyen generálható és elemzhető, rugalmas.
+- XML története: Az XML az SGML részhalmaza, amelyet 1998-ban adtak ki.
+- SGML: A Standard Generalized Markup Language egy általánosabb jelölőnyelv, amelynek XML az egyik részhalmaza.
+- XML szintaxisa: Az XML dokumentumokban használt jelölések és szabályok.
+Helyesen formált XML dokumentum: Az XML szabványnak megfelelő dokumentum.
+- XML szabványok: Az XML 1.0, XML Schema, XSLT, XPath.
+- XML jövője: Az XML várhatóan továbbra is fontos szerepet fog játszani az adatok tárolásában és cseréjében.
+
+### XML teszt
+
+XML teszt
+
+1. **Mi az XML?**
+a. Egy programozási nyelv
+b. Egy jelölőnyelv
+c. Egy adatbázis
+d. Egy webböngésző
+
+2. **Mi a különbség az XML és az HTML között?**
+a. Az XML strukturált adatok tárolására szolgál, míg az HTML weboldalak megjelenítésére szolgál
+b. Az XML csak szöveget tartalmaz, míg az HTML képeket és videókat is tartalmazhat
+c. Az XML egy nyílt forrású nyelv, míg az HTML egy zárt forrású nyelv
+d. Az XML egy újabb technológia, mint az HTML
+
+3. **Hogyan néz ki egy XML dokumentum?**
+a.
+
+```
+<html>
+  <head>
+    <title>Példa XML dokumentum</title>
+  </head>
+  <body>
+    <h1>Hello, világ!</h1>
+  </body>
+</html>
+```
+
+b.
+
+```
+<?xml version="1.0"?>
+<könyvtár>
+  <könyv>
+    <cím>Harry Potter és a bölcsek köve</cím>
+    <szerző>J.K. Rowling</szerző>
+    <kiadás>1997</kiadás>
+    <kiadó>Graham Potter</kiadó>
+  </könyv>
+</könyvtár>
+```
+
+c.
+
+```
+{
+  "title": "Példa XML dokumentum",
+  "author": "J.K. Rowling",
+  "year": 1997,
+  "publisher": "Graham Potter"
+}
+```
+
+d.
+
+```
+# Példa XML dokumentum
+```
+
+4. **Mi az XML eleme?**
+a. Az XML dokumentum legkisebb egysége
+b. Az XML dokumentum tartalma
+c. Az XML dokumentum szerkezete
+d. Az XML dokumentum típusa
+
+5. **Mi az XML attribútum?**
+a. Az XML elem adatai
+b. Az XML elem neve
+c. Az XML elem típusa
+d. Az XML elem verziója
+
+6. **Mi az XML fájl kiterjesztése?**
+a. .txt
+b. .html
+c. .css
+d. .xml
+
+7. **Mi az XML feldolgozó?**
+a. Egy program, amely XML dokumentumokat olvas és feldolgoz
+b. Egy program, amely XML dokumentumokat hoz létre
+c. Egy program, amely XML dokumentumokat szerkeszt
+d. Egy program, amely XML dokumentumokat nyomtat
+
+8. **Mi az XML Schema?**
+a. Egy szabvány, amely meghatározza az XML dokumentumok szerkezetét
+b. Egy szabvány, amely meghatározza az XML dokumentumok megjelenését
+c. Egy szabvány, amely meghatározza az XML dokumentumok tartalmát
+d. Egy szabvány, amely meghatározza az XML dokumentumok feldolgozását
+
+9. **Mi az XSLT?**
+a. Egy szabvány, amely lehetővé teszi az XML dokumentumok átalakítását más formátumokba
+b. Egy szabvány, amely lehetővé teszi az XML dokumentumok lekérdezését
+c. Egy szabvány, amely lehetővé teszi az XML dokumentumok érvényesítését
+d. Egy szabvány, amely lehetővé teszi az XML dokumentumok létrehozását
+
+10. **Mi az XPath?**
+a. Egy szabvány, amely lehetővé teszi az XML dokumentumok átalakítását más formátumokba
+b. Egy szabvány, amely lehetővé teszi az XML dokumentumok lekérdezését
+c. Egy szabvány, amely lehetővé teszi az XML dokumentumok érvényesítését
+d. Egy szabvány, amely lehetővé teszi az XML dokumentumok létrehozását
+
+11. **Mi az XML Namespace?**
+a. Egy szabvány, amely lehetővé teszi az XML elemek egyedi azonosítását
+b. Egy szabvány, amely lehetővé teszi az XML elemek különböző névterekben való használatát
+c. Egy szabvány, amely lehetővé teszi az XML elemek különböző verziókban való használatát
+d. Egy szabvány, amely lehetővé teszi az XML elemek különböző típusú adatai
+
+### XML teszt - megoldások
+
+1. **Mi az XML?**
+b. Egy jelölőnyelv
+
+2. **Mi a különbség az XML és az HTML között?**
+a. Az XML strukturált adatok tárolására szolgál, míg az HTML weboldalak megjelenítésére szolgál
+
+3. **Hogyan néz ki egy XML dokumentum?**
+b. (A többi opció más típusú fájlokat ábrázol).
+
+4. **Mi az XML eleme?**
+a. Az XML dokumentum legkisebb egysége
+
+5. **Mi az XML attribútum?**
+a. Az XML elem adatai
+
+6. **Mi az XML fájl kiterjesztése?**
+d. .xml
+
+7. **Mi az XML feldolgozó?**
+a. Egy program, amely XML dokumentumokat olvas és feldolgoz
+
+8. **Mi az XML Schema?**
+a. Egy szabvány, amely meghatározza az XML dokumentumok szerkezetét
+
+9. **Mi az XSLT?**
+a. Egy szabvány, amely lehetővé teszi az XML dokumentumok átalakítását más formátumokba
+
+10. **Mi az XPath?**
+b. Egy szabvány, amely lehetővé teszi az XML dokumentumok lekérdezését
+
+11. **Mi az XML Namespace?**
+b. Egy szabvány, amely lehetővé teszi az XML elemek különböző névterekben való használatát
+
+---
+
+[^1]: Google Gemini által generált jegyzet Kovács László XML jegyzetei és XML technikák 2 tananyaga alapján
