@@ -4,22 +4,29 @@
 
 1. [Web témakörök](#web-témakörök)
    1. [HTML, CSS, JavaScrip](#html-css-javascrip)
-      1. [Online kurzusok](#online-kurzusok)
+      1. [Online könyvek](#online-könyvek)
+      2. [Online kurzusok](#online-kurzusok)
    2. [PHP](#php)
-      1. [Online kurzusok](#online-kurzusok-1)
+      1. [Online könyvek](#online-könyvek-1)
+      2. [Online kurzusok](#online-kurzusok-1)
    3. [Spring](#spring)
+      1. [Online könyvek](#online-könyvek-2)
+      2. [Online kurzusok](#online-kurzusok-2)
    4. [Webfejlesztés AI-al](#webfejlesztés-ai-al)
+      1. [Online kurzusok](#online-kurzusok-3)
    5. [XML](#xml)
       1. [Webes adatkezelő környezetek tárgy - ME](#webes-adatkezelő-környezetek-tárgy---me)
       2. [Jegyzeteim](#jegyzeteim)
       3. [Példák](#példák)
-      4. [Online könyvek](#online-könyvek)
-      5. [Online kurzusok](#online-kurzusok-2)
+      4. [Online könyvek](#online-könyvek-3)
+      5. [Online kurzusok](#online-kurzusok-4)
       6. [Hasznos linkek](#hasznos-linkek)
-   6. [Jegyzetek](#jegyzetek)
+   6. [Általános jegyzetek](#általános-jegyzetek)
 
 
 ## HTML, CSS, JavaScrip
+
+### Online könyvek
 
 ### Online kurzusok
 
@@ -32,6 +39,8 @@
 
 ## PHP
 
+### Online könyvek
+
 ### Online kurzusok
 
 - [ ] [Intro to PHP [Video]](https://subscription.packtpub.com/video/web-development/9781836202394/p1/video1_1/php-overview-and-getting-started)
@@ -39,7 +48,13 @@
 
 ## Spring
 
+### Online könyvek
+
+### Online kurzusok
+
 ## Webfejlesztés AI-al
+
+### Online kurzusok
 
 - [ ] [Building Modern Websites with ChatGPT - Techniques in React, JavaScript, and CSS](https://training.mammothinteractive.com/courses/enrolled/2518307)
 - [ ] [Python Coding Essentials Bundle - Build Projects and Learn to Code](https://training.mammothinteractive.com/courses/enrolled/2611301)
@@ -80,7 +95,7 @@
 
 - [Java DOM Parse](https://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm)
 
-## Jegyzetek
+## Általános jegyzetek
 
 * A Markdown szerkesztőben a VSCode-ban az F1 gomb lenyomása után
   * Markdown All in One: Create Table of Contents parancs kiválasztásával automatikusan tartalomjegyzéket generál a különböző szintű headerek alapján. Szükséges hozzá a VSCode-ban a Markdown All in One bővítmény!
