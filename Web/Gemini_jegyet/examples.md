@@ -1,5 +1,14 @@
 # XML példák
 
+1. [XML példák](#xml-példák)
+   1. [XML internal DTD-vel](#xml-internal-dtd-vel)
+   2. [XML external DTD-vel](#xml-external-dtd-vel)
+   3. [XML CSS fájl használatával](#xml-css-fájl-használatával)
+      1. [Példa 1](#példa-1)
+      2. [Példa 2.](#példa-2)
+      3. [Példa 3](#példa-3)
+
+
 ## XML internal DTD-vel
 
 ```
@@ -61,9 +70,9 @@
 - [External XML](examples/2.xml)
 - [External XML-hez DTD](examples/books.dtd)
 
-### XML CSS fájl használatával és XSL használatával
+## XML CSS fájl használatával
 
-1. Példa
+### Példa 1
 
 ***XML fájl***
 
@@ -90,7 +99,7 @@ FirstTag {
 - [XML fájl](examples\firstXmlFile.css)
 - [CSS fájl](examples\firstXmlFile.css)
 
-2. Példa
+### Példa 2.
 
 ***XML fájl***
 
@@ -145,7 +154,7 @@ email{
 - [XML fájl](examples\businessCard.xml)
 - [CSS fájl](examples\businessCard.css)
 
-3. Példa
+### Példa 3
 
 ***XML fájl***
 
