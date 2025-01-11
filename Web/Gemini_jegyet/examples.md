@@ -25,7 +25,7 @@
 </konyvtar>
 ```
 
-[Internal XML](examples/1.xml)
+- [Internal XML](examples/1.xml)
 
 ## XML external DTD-vel
 
@@ -58,8 +58,8 @@
 <!ELEMENT price (#PCDATA)>
 ```
 
-[External XML](examples/2.xml)
-[External XML-hez DTD](examples/books.dtd)
+- [External XML](examples/2.xml)
+- [External XML-hez DTD](examples/books.dtd)
 
 ### XML CSS fájl használatával és XSL használatával
 
@@ -87,8 +87,8 @@ FirstTag {
 }
 ```
 
-[XML fájl](examples\firstXmlFile.css)
-[CSS fájl](examples\firstXmlFile.css)
+- [XML fájl](examples\firstXmlFile.css)
+- [CSS fájl](examples\firstXmlFile.css)
 
 2. Példa
 
@@ -142,8 +142,8 @@ email{
 }
 ```
 
-[XML fájl](examples\businessCard.xml)
-[CSS fájl](examples\businessCard.css)
+- [XML fájl](examples\businessCard.xml)
+- [CSS fájl](examples\businessCard.css)
 
 3. Példa
 
@@ -211,5 +211,5 @@ email{
 email::before {content : "Email: "}
 ```
 
-[XML fájl](examples\businessCard2.xml)
-[CSS fájl](examples\businessCard2.css)
+- [XML fájl](examples\businessCard2.xml)
+- [CSS fájl](examples\businessCard2.css)
