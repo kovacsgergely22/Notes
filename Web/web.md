@@ -59,6 +59,7 @@
 6. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
 7. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
 8. [XML technikák - Kovács László ME](XML_Kovacs_Laszlo/notes.md)
+9. [XML példák](Gemini_jegyet/examples.md)
 
 ### Online könyvek
 
