@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="businessCard2.css"?>
+
+<BusinessCards>
+    <BusinessCard>
+        <Name>Joe Marini</Name>
+        <phone type="home" primary="primary">1 6554 454654</phone>
+        <phone type="work">5 2461 564654</phone>
+        <phone type="mobile">2 4646 456464</phone>
+        <email>steve@gmail.com</email>
+    </BusinessCard>
+
+    <BusinessCard>
+        <Name>Steve Paul</Name>
+        <phone type="home">1 6554 454654</phone>
+        <phone type="work" primary="primary">5 2461 564654</phone>
+        <phone type="mobile">2 4646 456464</phone>
+        <email>someone@else.com</email>
+    </BusinessCard>
+</BusinessCards>
