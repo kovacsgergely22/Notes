@@ -66,7 +66,7 @@
 
 ### Webes adatkezelő környezetek tárgy - ME
 
-[Webes adatkezelő környezetek](XML_ME/Webes_adatkezelo_kornyezetek/readme.md)
+[Webes adatkezelő környezetek - féléves feladat jegyzőkönyv](XML_ME/Webes_adatkezelo_kornyezetek/readme.md)
 
 ### Jegyzeteim
 
