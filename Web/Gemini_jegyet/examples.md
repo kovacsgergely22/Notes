@@ -96,7 +96,7 @@ FirstTag {
 }
 ```
 
-- [XML fájl](examples\firstXmlFile.css)
+- [XML fájl](examples\firstXmlFile.xml)
 - [CSS fájl](examples\firstXmlFile.css)
 
 ### Példa 2.
