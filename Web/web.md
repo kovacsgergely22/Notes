@@ -12,9 +12,10 @@
    5. [XML](#xml)
       1. [Webes adatkezelő környezetek tárgy - ME](#webes-adatkezelő-környezetek-tárgy---me)
       2. [Jegyzeteim](#jegyzeteim)
-      3. [Online könyvek](#online-könyvek)
-      4. [Online kurzusok](#online-kurzusok-2)
-      5. [Hasznos linkek](#hasznos-linkek)
+      3. [Példák](#példák)
+      4. [Online könyvek](#online-könyvek)
+      5. [Online kurzusok](#online-kurzusok-2)
+      6. [Hasznos linkek](#hasznos-linkek)
    6. [Jegyzetek](#jegyzetek)
 
 
@@ -59,7 +60,10 @@
 6. [XML Sémanyelvek - Jeszenszky Péter - rövidített, példák nélkül](XML_semanyelvek-Jeszenszky_Peter/notes_rovid.md)
 7. [XML Sémanyelvek - Jeszenszky Péter - csak példák](XML_semanyelvek-Jeszenszky_Peter/notes_examples.md)
 8. [XML technikák - Kovács László ME](XML_Kovacs_Laszlo/notes.md)
-9. [XML példák](Gemini_jegyet/examples.md)
+
+### Példák
+
+1.  [XML példák](Gemini_jegyet/examples.md)
 
 ### Online könyvek
 
