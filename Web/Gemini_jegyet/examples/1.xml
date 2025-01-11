@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE konyvtar [
+  <!ELEMENT konyvtar (konyv+)>
+  <!ELEMENT konyv (cim, szerzo, kiado)>
+  <!ELEMENT cim (#PCDATA)>
+  <!ELEMENT szerzo (#PCDATA)>
+  <!ELEMENT kiado (#PCDATA)>
+]>
+<konyvtar>
+  <konyv>
+    <cim>A kis herceg</cim>
+    <szerzo>Antoine de Saint-Exupéry</szerzo>
+    <kiado>Móra Könyvkiadó</kiado>
+  </konyv>
+  <konyv>
+    <cim>A három musketeers</cim>
+    <szerzo>Alexandre Dumas</szerzo>
+    <kiado>Európa Könyvkiadó</kiado>
+  </konyv>
+</konyvtar>
