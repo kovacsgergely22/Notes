@@ -76,7 +76,7 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - unintentional unsecure behavior (nem szándékos bizonytalan viselkedés)
     - malicious behavior (rosszindulatú viselkedés)
     - nem bízhatunk meg a felhasználókban
-      - lehetnek rosszingulatúak
+      - lehetnek rosszindulatúak
       - nem biztos, hogy tudják mit kell csinálniuk
   - **Process**
     - security is not integrated into the entire process (a biztonság nem integrálódik a teljes folyamatba)
@@ -85,7 +85,7 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - development tools don't promote security (A fejlesztési eszközök nem támogatják a biztonságot)
 - Program készítésekor át kell gondolni, hogyan mennek rosszul a dolgok. Hogyan támadnának meg, hogyan védhetem meg az alkalmazásom?
 - Dokumentáció -> oktatni az embereket
-- Kódelemzés, CI (A szoftverfejlesztés területén a folyamatos integráció (CI – continuous integration) az a fejlesztési folyamat, amikor a fejlesztők a munkájuk másolatát naponta akár többször is megosztják a verziókezelő rendszerben).
+- Kódelemzés, CI (A szoftverfejlesztés területén a folyamatos integráció (CI: continuous integration) az a fejlesztési folyamat, amikor a fejlesztők a munkájuk másolatát naponta akár többször is megosztják a verziókezelő rendszerben).
 
 ### 1.7. Szoftver sebezhetőségek és támadási fázisok
 
