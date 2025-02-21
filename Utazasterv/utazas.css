@@ -15,7 +15,7 @@ h1, h2, h3 {
     max-height: 40vh; /* Táblázat maximális magassága a megjelenítő 40%-a */
     overflow-y: auto; /* Függőleges görgetés engedélyezése */
     margin: 20px auto; /* Középre igazítja a táblázatot */
-    width: 70%; /* Táblázat szélessége */
+    width: 75%; /* Táblázat szélessége */
 }
 
 table {
