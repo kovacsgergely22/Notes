@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+    <link rel="stylesheet" href="utazas.css" />
+    <title>Sofőrök adatai</title>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+    
+
+    <h2>Sofőrök adatai</h2>
+
+    <table id="soforTabla">
+        <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Sofőr neve</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Összesítés</h2>
+
+    <table id="osszesitesTabla">
+      <thead>
+        <tr>
+          <th>Sofőr neve</th>
+          <th>Összes utak száma</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <script>
+        fetch('soforok.json')
+            .then(response => response.json())
+            .then(data => {
+                const tabla = document.getElementById('soforTabla').getElementsByTagName('tbody')[0];
+                const osszesitesTabla = document.getElementById('osszesitesTabla').getElementsByTagName('tbody')[0];
+                const soforSzamlalo = {};
+
+                data.forEach(sofor => {
+                    let sor = tabla.insertRow();
+                    let datumCella = sor.insertCell();
+                    let soforCella = sor.insertCell();
+
+                    datumCella.textContent = sofor.datum;
+                    soforCella.textContent = sofor.sofor;
+
+                    if (soforSzamlalo[sofor.sofor]) {
+                        soforSzamlalo[sofor.sofor]++;
+                    } else {
+                        soforSzamlalo[sofor.sofor] = 1;
+                    }
+                });
+
+                for (const [sofor, szam] of Object.entries(soforSzamlalo)) {
+                    let sor = osszesitesTabla.insertRow();
+                    let soforCella = sor.insertCell();
+                    let szamCella = sor.insertCell();
+
+                    soforCella.textContent = sofor;
+                    szamCella.textContent = szam;
+                }
+            });
+    </script>
+
+</body>
+
+</html>

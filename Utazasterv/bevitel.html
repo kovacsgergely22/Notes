@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+    <link rel="stylesheet" href="utazas.css" />
+    <title>Új Bevitel</title>
+</head>
+
+<body>
+    <header>
+        <h1>Új Bevitel</h1>
+    </header>
+
+    <div id="pin-kod-bevitel">
+        <label for="pin-kod">PIN kód:</label>
+        <input type="password" id="pin-kod" />
+        <button onclick="ellenorizPinKod()">Bejelentkezés</button>
+    </div>
+
+    <div id="bevitel-form" style="display: none;">
+        <form id="ujBevitelForm">
+            <label for="datum">Dátum:</label>
+            <input type="date" id="datum" name="datum" required />
+
+            <h3>Sofőrök</h3>
+            <div id="soforGombok">
+                <button type="button" onclick="hozzaadSofor('Fízer Bence')">Fízer Bence</button>
+                <button type="button" onclick="hozzaadSofor('Kovács Gergely')">Kovács Gergely</button>
+                <button type="button" onclick="hozzaadSofor('Kovács László')">Kovács László</button>
+                <button type="button" onclick="hozzaadSofor('Laczkó Szabolcs')">Laczkó Szabolcs</button>
+                <button type="button" onclick="hozzaadSofor('Sándor András')">Sándor András</button>
+                <button type="button" onclick="hozzaadSofor('Toldi Csaba')">Toldi Csaba</button>
+                <button type="button" onclick="hozzaadSofor('Turcsik Dániel')">Turcsik Dániel</button>
+                <button type="button" onclick="hozzaadSofor('Vincze Milán')">Vincze Milán</button>
+            </div>
+
+            <input type="hidden" id="soforok" name="soforok" />
+
+            <h3>Kiválasztott sofőrök:</h3>
+            <div id="kivalasztottSoforok"></div>
+
+            <button type="submit">Hozzáadás</button>
+        </form>
+    </div>
+
+    <script>
+        const helyesPinKod = "5665"; // Ezt a pin-kódot kell megadni a bejelentkezéshez
+
+        function ellenorizPinKod() {
+            const pinKod = document.getElementById('pin-kod').value;
+            if (pinKod === helyesPinKod) {
+                document.getElementById('pin-kod-bevitel').style.display = 'none';
+                document.getElementById('bevitel-form').style.display = 'block';
+            } else {
+                alert('Helytelen PIN kód!');
+            }
+        }
+
+        function hozzaadSofor(sofor) {
+            const soforokInput = document.getElementById('soforok');
+            let soforok = soforokInput.value ? soforokInput.value.split(',') : [];
+            if (soforok.length < 2 && !soforok.includes(sofor)) {
+                soforok.push(sofor);
+                soforokInput.value = soforok.join(',');
+                frissitKivalasztottSoforok();
+            } else {
+                alert('Maximum 2 sofőrt választhatsz!');
+            }
+        }
+
+        function torolSofor(sofor) {
+            const soforokInput = document.getElementById('soforok');
+            let soforok = soforokInput.value.split(',');
+            soforok = soforok.filter(s => s !== sofor);
+            soforokInput.value = soforok.join(',');
+            frissitKivalasztottSoforok();
+        }
+
+        function frissitKivalasztottSoforok() {
+            const kivalasztottSoforokDiv = document.getElementById('kivalasztottSoforok');
+            const soforok = document.getElementById('soforok').value.split(',');
+            kivalasztottSoforokDiv.innerHTML = '';
+            soforok.forEach(sofor => {
+                const soforDiv = document.createElement('div');
+                soforDiv.textContent = sofor;
+                const torlesGomb = document.createElement('button');
+                torlesGomb.textContent = 'Törlés';
+                torlesGomb.onclick = () => torolSofor(sofor);
+                soforDiv.appendChild(torlesGomb);
+                kivalasztottSoforokDiv.appendChild(soforDiv);
+            });
+        }
+
+        document.getElementById('ujBevitelForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const datum = document.getElementById('datum').value;
+            const soforok = document.getElementById('soforok').value.split(',');
+
+            if (soforok.length === 0) {
+                alert('Legalább egy sofőrt ki kell választani!');
+                return;
+            }
+
+            const ujBevitel = soforok.map(sofor => ({ datum, sofor }));
+
+            let soforokAdatok = JSON.parse(localStorage.getItem('soforokAdatok')) || [];
+            soforokAdatok = soforokAdatok.concat(ujBevitel);
+            localStorage.setItem('soforokAdatok', JSON.stringify(soforokAdatok));
+
+            alert('Adatok sikeresen hozzáadva!');
+            document.getElementById('ujBevitelForm').reset();
+            document.getElementById('soforok').value = '';
+            frissitKivalasztottSoforok();
+        });
+
+        // Adatok betöltése a localStorage-ból és megjelenítése a táblázatban
+        document.addEventListener('DOMContentLoaded', function () {
+            const soforokAdatok = JSON.parse(localStorage.getItem('soforokAdatok')) || [];
+            const tabla = document.getElementById('soforTabla').getElementsByTagName('tbody')[0];
+            const osszesitesTabla = document.getElementById('osszesitesTabla').getElementsByTagName('tbody')[0];
+            const soforSzamlalo = {};
+
+            soforokAdatok.forEach(utazas => {
+                let sor = tabla.insertRow();
+                let datumCella = sor.insertCell();
+                let soforCella = sor.insertCell();
+
+                datumCella.textContent = utazas.datum;
+                soforCella.textContent = utazas.sofor;
+
+                if (soforSzamlalo[utazas.sofor]) {
+                    soforSzamlalo[utazas.sofor]++;
+                } else {
+                    soforSzamlalo[utazas.sofor] = 1;
+                }
+            });
+
+            for (const [sofor, szam] of Object.entries(soforSzamlalo)) {
+                let sor = osszesitesTabla.insertRow();
+                let soforCella = sor.insertCell();
+                let szamCella = sor.insertCell();
+
+                soforCella.textContent = sofor;
+                szamCella.textContent = szam;
+            }
+        });
+    </script>
+</body>
+
+</html>
