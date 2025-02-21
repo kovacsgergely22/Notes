@@ -15,7 +15,25 @@ h1, h2, h3 {
     max-height: 40vh; /* Táblázat maximális magassága a megjelenítő 40%-a */
     overflow-y: auto; /* Függőleges görgetés engedélyezése */
     margin: 20px auto; /* Középre igazítja a táblázatot */
-    width: 75%; /* Táblázat szélessége */
+    width: 90%; /* Alapértelmezett szélesség */
+}
+
+@media (min-width: 800px) {
+    .table-container {
+        width: 75%; /* 800 px-nél nagyobb eszközöknél */
+    }
+}
+
+@media (min-width: 1000px) {
+    .table-container {
+        width: 60%; /* 1000 px-nél nagyobb eszközöknél */
+    }
+}
+
+@media (min-width: 1200px) {
+    .table-container {
+        width: 50%; /* 1200 px-nél nagyobb eszközöknél */
+    }
 }
 
 table {
