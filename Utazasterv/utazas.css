@@ -4,28 +4,34 @@ body {
     background-repeat: no-repeat; /* A kép ne ismétlődjön */
     background-color: #f0f0f0; /* Halvány háttérszín a jobb olvashatóság érdekében */
     font-family: sans-serif; /* Szöveg alapértelmezett betűtípusa */
-  }
+}
 
-  h1,h2,h3 {
+h1, h2, h3 {
     color: aliceblue;
     text-align: center;
-  }
-  
-  table {
-    color: black;
-    width: 40%; /* Táblázat szélessége */
+}
+
+.table-container {
+    max-height: 40vh; /* Táblázat maximális magassága a megjelenítő 40%-a */
+    overflow-y: auto; /* Függőleges görgetés engedélyezése */
     margin: 20px auto; /* Középre igazítja a táblázatot */
+    width: 40%; /* Táblázat szélessége */
+}
+
+table {
+    color: black;
+    width: 100%; /* Táblázat szélessége a konténeren belül */
     border-collapse: collapse; /* Cellák közötti dupla vonalak eltüntetése */
-  }
-  
-  th, td {
+}
+
+th, td {
     background-color: white;
     border: 1px solid black; /* Cellák körüli vonal */
     padding: 8px; /* Cellák belső padding-je */
     text-align: left; /* Szöveg igazítása balra */
-  }
+}
 
-  #kivalasztottSoforok {
+#kivalasztottSoforok {
     background-color: white;
     padding: 10px;
     border: 1px solid #ccc;

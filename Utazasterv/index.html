@@ -12,35 +12,38 @@
 
 <body>
     <header>
-        
+        <h1>Utazás nyilvántartó</h1>
     </header>
-    
 
     <h2>Sofőrök adatai</h2>
 
-    <table id="soforTabla">
-        <thead>
-            <tr>
-                <th>Dátum</th>
-                <th>Sofőr neve</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table id="soforTabla">
+            <thead>
+                <tr>
+                    <th>Dátum</th>
+                    <th>Sofőr neve</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
     <h2>Összesítés</h2>
 
-    <table id="osszesitesTabla">
-      <thead>
-        <tr>
-          <th>Sofőr neve</th>
-          <th>Összes utak száma</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
+    <div class="table-container">
+        <table id="osszesitesTabla">
+            <thead>
+                <tr>
+                    <th>Sofőr neve</th>
+                    <th>Összes utak száma</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 
     <script>
         fetch('soforok.json')
@@ -50,18 +53,18 @@
                 const osszesitesTabla = document.getElementById('osszesitesTabla').getElementsByTagName('tbody')[0];
                 const soforSzamlalo = {};
 
-                data.forEach(sofor => {
+                data.forEach(utazas => {
                     let sor = tabla.insertRow();
                     let datumCella = sor.insertCell();
                     let soforCella = sor.insertCell();
 
-                    datumCella.textContent = sofor.datum;
-                    soforCella.textContent = sofor.sofor;
+                    datumCella.textContent = utazas.datum;
+                    soforCella.textContent = utazas.sofor;
 
-                    if (soforSzamlalo[sofor.sofor]) {
-                        soforSzamlalo[sofor.sofor]++;
+                    if (soforSzamlalo[utazas.sofor]) {
+                        soforSzamlalo[utazas.sofor]++;
                     } else {
-                        soforSzamlalo[sofor.sofor] = 1;
+                        soforSzamlalo[utazas.sofor] = 1;
                     }
                 });
 
@@ -75,7 +78,6 @@
                 }
             });
     </script>
-
 </body>
 
 </html>
