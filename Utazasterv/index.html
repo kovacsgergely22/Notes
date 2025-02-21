@@ -49,33 +49,38 @@
         fetch('soforok.json')
             .then(response => response.json())
             .then(data => {
+                // Rendezés dátum szerint fordított sorrendben
+                data.sort((a, b) => new Date(b.datum) - new Date(a.datum));
+    
                 const tabla = document.getElementById('soforTabla').getElementsByTagName('tbody')[0];
                 const osszesitesTabla = document.getElementById('osszesitesTabla').getElementsByTagName('tbody')[0];
                 const soforSzamlalo = {};
-
+    
                 data.forEach(utazas => {
                     let sor = tabla.insertRow();
                     let datumCella = sor.insertCell();
                     let soforCella = sor.insertCell();
-
+    
                     datumCella.textContent = utazas.datum;
                     soforCella.textContent = utazas.sofor;
-
+    
                     if (soforSzamlalo[utazas.sofor]) {
                         soforSzamlalo[utazas.sofor]++;
                     } else {
                         soforSzamlalo[utazas.sofor] = 1;
                     }
                 });
-
-                for (const [sofor, szam] of Object.entries(soforSzamlalo)) {
+    
+                const sortedSoforSzamlalo = Object.entries(soforSzamlalo).sort((a, b) => b[1] - a[1]);
+    
+                sortedSoforSzamlalo.forEach(([sofor, szam]) => {
                     let sor = osszesitesTabla.insertRow();
                     let soforCella = sor.insertCell();
                     let szamCella = sor.insertCell();
-
+    
                     soforCella.textContent = sofor;
                     szamCella.textContent = szam;
-                }
+                });
             });
     </script>
 </body>

@@ -1,5 +1,253 @@
 [
     {
+        "datum": "2024-05-02",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-05-06",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-05-06",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2024-05-10",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2024-05-10",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-05-14",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-05-14",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-05-18",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-05-18",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-05-22",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-05-22",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-05-26",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-05-26",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-05-30",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-05-30",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-06-03",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-06-03",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-06-06",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-06-07",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-06-07",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-06-11",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-06-11",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-06-13",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-06-15",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-06-19",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-06-19",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-06-23",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-06-27",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-07-01",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-07-01",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-07-05",
+        "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2024-07-05",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-07-09",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-07-13",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-07-17",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-07-17",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-07-21",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-07-23",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-07-25",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-07-29",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-07-29",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-08-02",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-08-02",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-08-06",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-08-14",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-08-18",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-08-22",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2024-08-26",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2024-08-30",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-09-03",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2024-09-07",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-09-11",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-09-11",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-09-11",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2024-09-15",
+        "sofor": "Sándor András"
+    },
+    {
+        "datum": "2024-09-15",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2024-09-17",
+        "sofor": "Sándor András"
+    },
+    {
+        "datum": "2024-09-17",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2024-09-19",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-09-19",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2024-09-23",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2024-09-23",
+        "sofor": "Turcsik Dániel"
+    },
+    {
         "datum": "2024-09-27",
         "sofor": "Laczkó Szabolcs"
     },
