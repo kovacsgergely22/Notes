@@ -1,10 +1,42 @@
 [
     {
-      "datum": "2025-02-18",
-      "sofor": "Kovács Gergely"
+        "datum": "2025-02-02",
+        "sofor": "Turcsik Dániel"
     },
     {
-      "datum": "2025-02-18",
-      "sofor": "Sándor András"
+        "datum": "2025-02-02",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2025-02-06",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2025-02-06",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2025-02-10",
+        "sofor": "Laczkó Szabolcs"
+    },
+    {
+        "datum": "2025-02-10",
+        "sofor": "Kovács László"
+    },
+    {
+        "datum": "2025-02-14",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2025-02-14",
+        "sofor": "Sándor András"
+    },
+    {
+        "datum": "2025-02-18",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2025-02-18",
+        "sofor": "Sándor András"
     }
-  ]
+]
