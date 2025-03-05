@@ -29,7 +29,13 @@
 #### CIA
 
 - Confidentiality (bizalmasság, titoktartás)
-  - Információhoz csak a megfelelő jogosultsággal rendelkező férjen hozzá.
+  - Az érzékeny és magánjellegű információhoz csak a megfelelő jogosultsággal rendelkező férjen hozzá, illetéktelen személy, szervezet vagy eljárás számára ne.
+  - bankos példa, látható érzékeny adatokat tartalmazó iratok
+  - Az adatokat titokban és biztonságban kell tartani a kíváncsi szemek elől, de rendelkezésre bocsátani az arra jogosultak számára
+  - Fontos:
+    - A személyes adatok védelme miatt
+    - Üzleti előnyök fenntartása miatt
+    - Jogszabályi megfelelés miatt
 - Integrity (integritás)
   - Adatok pontosak és változatlanok maradjanak, hacsak nem szükséges a módosítás
   - ellenőrző összegek
@@ -79,4 +85,30 @@
 ### Threats and Vulnerabilities
 
 - Kiberbiztonsági szakemberként cél: megakadályozni, hogy a fenyegetések kihasználják a vállalati rendszerek sebezhetőségeit
-- Threat (fenyegetés): Minden
+- Threat (fenyegetés): Minden olyan dolog, amely kárt, veszteséget, sérülést vagy veszélyt okozhat informatikai rendszereinkben
+  - Külső forrásból származnak:
+    - Természeti katasztrófák
+    - kibertámadásokból
+    - adatintegritás megsértésből
+    - bizalmas információk nyilvánosságra hozatalából
+    - egyéb
+  - csak minimálizálhatók, nem tudjuk elkerülni -> sebezhetőségek ellenőrzése
+- Vulnerability (sebezhetőség): A rendszer tervezésének vagy megvalósításának bármely gyenge pontja
+  - Belső tényezőkből erednek:
+    - Szoftverhibák
+    - Rosszul konfigurált szoftverek
+    - Nem megfelelően védett hálózati eszközökből
+    - Hiányzó biztonsági javításokból
+    - A fizika biztonság hiányából
+    - egyéb
+  - A mi, vagyis szervezetünk ellenőrzése alatt állnak, megakadályozhatjuk a sebezhetőségek kihasználását:
+    - mérsékeljük, áthelyezzük, elkerüljük vagy elfogadjuk a sebezhetőségekkel járó kockázatot ->
+    - kockázatkezelési döntés
+- Ahol a Threats (fenyegetések) és Vulnerabilities (sebezhetőségek) keresztezik egymást, ott van a kockázata a vállalati rendszereknek és hálózatoknak.
+  - Ha van egy fenyegetés, de nincs hozzá illő sebezhetőség, akkor nincs kockázat.
+  - Ha van egy sebezhetőség, de nincs ellene megfelelő fenyegetés, akkor nincs kockázat sem. -> reggel munkahelyre beérős példa
+- Kockázatkezelés: különböző módokat kell találni arra, hogy minimalizáljuk egy bizonyos kimenetel bekövetkezésének valószínűségét, és elérjük azokat az eredményeket, amelyeket valóban el akarunk érni.
+  - Szolgáltatások folyamatosságának fenntartása
+  - Rendszereink általános biztonságának fenntartása
+  - Sebezhetőségek minimalizálásával meg akarjuk védeni szervezetünket az adatbiztonság megsértésétől.
+  - Vagy megfelelő enyhítő intézkedések annak érdekében, hogy minimalizáljuk a fenyegetés hatását a vállalati rendszereinkre, ha a kockázat megvalósult
