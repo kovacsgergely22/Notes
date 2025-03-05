@@ -160,9 +160,9 @@ Recommended Course Order
 
 ### Cybersecurity Path
 
-- Cybersecurity Mastery - Total Data Protection and Advanced Encryption Techniques
-- Ultimate Cybersecurity Incident Response and Threat Hunting Bundle
-- Linux Fundamentals for Ethical Hacking - The Complete Journey
+- [ ] [Cybersecurity Mastery - Total Data Protection and Advanced Encryption Techniques](https://training.mammothinteractive.com/courses/enrolled/2415670)
+- [ ] [Ultimate Cybersecurity Incident Response and Threat Hunting Bundle](https://training.mammothinteractive.com/courses/enrolled/2416327)
+- [ ] [Linux Fundamentals for Ethical Hacking - The Complete Journey](https://training.mammothinteractive.com/courses/enrolled/2415680)
 
 ---
  
@@ -305,13 +305,13 @@ Recommended Course Order
 
 ### Up next: CompTIA Security
 
-- The Absolute CompTIA Security+ Certification Path (SY0-701) with Practice Exam  
-- CompTIA Advanced Security Practitioner Certification Series (CASP+) with Practice Exam  
-- CompTIA Cybersecurity Analyst+ Certification Bundle (CySA+) with Practice Exam  
+- [ ] [The Absolute CompTIA Security+ Certification Path (SY0-701) with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2446325)
+- [ ] [CompTIA Advanced Security Practitioner Certification Series (CASP+) with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2439181)
+- [ ] [CompTIA Cybersecurity Analyst+ Certification Bundle (CySA+) with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2438562)
  
 ### Up next: Java Spring Boot Mastery Bundle: From Beginner to Advanced with Practice Exam
 
-- Embark on Your Java Spring Boot Journey: From Beginner to Application Builder with Practice Exam
+- [ ] [Embark on Your Java Spring Boot Journey: From Beginner to Application Builder with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2152126)
 - Dive Deep into Data: Mastering Spring JDBC, JPA, and Hibernate to Completion with Practice Exam
 - Build Your Ultimate Web Application: Java Spring Boot Takes You There with Practice Exam
 - Transform Your Ideas into Reality: Create a Java Web Application with Spring Boot with Practice Exam
@@ -329,12 +329,12 @@ Recommended Course Order
 
 ### Dive deep: Cybersecurity
 
-- [The Art of Ethical Hacking - Penetration Testing Unleashed with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2463127)
+- [ ] [The Art of Ethical Hacking - Penetration Testing Unleashed with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2463127)
 - Data Fortress - Advanced Protection and Encryption Techniques with Practice Exam  
 - Mobile Security Vanguard - Best Practices and Strategies with Practice Exam  
 - Cloud Defense - Security and Risk Management Essentials with Practice Exam  
 - Incident Command - Expert Response and Threat Hunting with Practice Exam  
-- [Cyber Shield - Mastering Web Application Security with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2463137)
+- [ ] [Cyber Shield - Mastering Web Application Security with Practice Exam](https://training.mammothinteractive.com/courses/enrolled/2463137)
 
 ### Next: Continue your AWS journey 
 
