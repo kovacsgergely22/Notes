@@ -7,3 +7,6 @@
 - [ ] [Cybersecurity Mastery - Total Data Protection and Advanced Encryption Techniques](https://training.mammothinteractive.com/courses/enrolled/2415670)
 
 ## Jegyzetek
+
+- CompTIA Security+:
+  - Integrity hiányos, a fejezetből a többi is kell

@@ -102,3 +102,11 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - lebontsa az egészet (Denial of service - DOS)
 
 ### 1.8 Támadási minták
+
+- Reconnaissance (Felderítés)
+  - Methods:
+    - Excavation (kiásás): a célpont utáni kutatás, információk kiásása
+
+---
+
+1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
