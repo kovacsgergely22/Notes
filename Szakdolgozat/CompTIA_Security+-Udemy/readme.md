@@ -132,6 +132,54 @@
   - Sebezhetőségek minimalizálásával meg akarjuk védeni szervezetünket az adatbiztonság megsértésétől.
   - Vagy megfelelő enyhítő intézkedések annak érdekében, hogy minimalizáljuk a fenyegetés hatását a vállalati rendszereinkre, ha a kockázat megvalósult
 
+## Section 17 Identity and Access Management (IAM) Solutions
+
+- Az azonosság- és hozzáférés-kezelés (IAM) az információbiztonság alapvető eleme, amely biztosítja, hogy a megfelelő személyek a megfelelő időben, a megfelelő okból a megfelelő erőforrásokhoz férjenek hozzá.
+- Az azonosság- és hozzáférés-kezelési technológiák olyan eszközöket biztosítanak az üzleti folyamatokhoz, amelyek megkönnyítik az elektronikus személyazonosságok kezelését, beleértve a jelszókezelést, a hálózati hozzáférés-ellenőrzést és a digitális személyazonosságok kezelését.
+- Az azonosság- és hozzáférés-kezelés a biztonsági ellenőrzésekre, az azonosítási technikákra, a hozzáférés-ellenőrzésre és a fiókkezelésre összpontosít annak biztosítása érdekében, hogy csak az arra jogosult felhasználók férjenek hozzá bizonyos erőforrásokhoz és adatokhoz.
+  - Identification - Azonosítás: az a folyamat, amelynek során a felhasználó személyazonosságot állít, általában felhasználónév vagy e-mail cím formájában.
+  - Authentication - Hitelesítés: a felhasználó, az eszköz vagy a rendszer személyazonosságának ellenőrzésére szolgáló folyamat
+  - Authorization - Engedélyezés: A felhasználó hitelesítését követően az engedélyezési folyamat határozza meg, hogy a felhasználó milyen jogosultságokkal vagy hozzáférési szintekkel rendelkezik.
+  - Accounting - elszámolás, könyvelés, auditálás: a felhasználói tevékenységek nyomon követésének és rögzítésének folyamata a megfelelő biztonsági felügyelet és a múltbeli nyilvántartások céljából.
+- Identity and Access Management
+  - Felhasználói fiókok rendelkezésre bocsátása és megszüntetése
+  - A személyazonosság igazolása
+  - Interoperabilitás
+  - Tanúsítás
+- Multifactor Authentication (MFA)
+  - Megoldások alapjai:
+    - Valami, amit tudsz
+    - Valami, amid van
+    - Valami, ami vagy
+    - Valami, amit csinálsz
+    - Valahol vagy
+  - Megvalósítások
+    - biometrikus
+    - hard tokens, soft tokens - kemény és puha tokenek
+    - security keys - biztonsági kulcsok
+    - pass keys - belépési kulcsok
+- Password Security - jelszóbiztonság
+  - jelszószabályzatok legjobb gyakorlatai
+  - jelszókezelők használata
+  - jelszó nélküli hitelesítés a modern személyazonosság- és hozzáférés-kezelő rendszerekben
+- Password attacks - jelszótámadások
+  - jelszószóró támadások
+  - brute force attack - nyers erővel végrehajtott támadások
+  - szótári támadások
+  - hibrid támadások
+- Sinle Sign-On (SSO) - egyszeri bejelentkezés: egy olyan felhasználói hitelesítési szolgáltatás, amely lehetővé teszi a felhasználó számára, hogy egyetlen bejelentkezési azonosítót, pl nevet és jelszót használjon több alkalmazáshoz való hozzáféréshez különböző technológiák pl LDAP, OAuth és SAML segítségével.
+- Federation - szövetségek: egy olyan folyamat, amely lehetővé teszi az identitások megosztását és használatát több információs rendszerben vagy szervezetben, hogy a felhasználók egyetlen hitelesítő adatokkal férhessenek hozzá a különböző rendszerekhez
+- Privileged Access Management (PAM) - kiváltságos hozzáférések kezelése: a just-in-time engedélyek, a jelszó páncéltermek és az ideiglenes fiókok használatát jelenti egy adott rendszer vagy eszköz feletti rendszergazdai hozzáférés megszerzéséhez
+- Access Control Models - hozzáférés-szabályozási modellek
+  - Mandatory Access Control - kötelező hozzáférés-szabályozás
+  - Discretionaly Access Control - diszkrecionális hozzáférés-szabályozás,
+  - Role-based Access Control - szerepkör-alapú hozzáférés-szabályozás
+  - Rule-based Access Control - Szabályalapú hozzáférés-szabályozás
+  - Attribute-based Access Control - attribútumalapú hozzáférés-szabályozás
+  - napszakkorlátozások
+  - legkisebb jogosultság koncepciójának megvalósítása
+- Assigning Permissions - Jogosultságok kiosztása
+
 ## Section 18 Vulnerabilities and Attacks
 
 - Vulnerabilities: A sebezhetőségek a számítógépes rendszer, hálózat vagy alkalmazás hardverének, szoftverének, konfigurációjának vagy folyamatainak olyan gyengeségeit vagy hibáit jelentik, amelyeket rosszindulatú szervezetek kihasználhatnak.
@@ -242,3 +290,72 @@
   - Time of Check - Ellenőrzés ideje
   - Target of Evaluation - értékelés célja
   - Time of Use - használat ideje
+
+## Section 19 Malicious Activity
+
+- Distributed Denial Service (DDoS) - Elosztott szolgáltatásmegtagadási támadások
+  - Denial of Service Attack - szolgáltatásmegtagadásos támadások
+  - Amplified Distributed Denial of Service - erősített elosztott szolgáltatásmegtagadásos támadások
+  - Reflected Distributed Denial of Service - reflektált elosztott szolgáltatásmegtagadásos támadások
+  - Elkerülés és megállítás módjai
+- Domain Name Server (DNS) Attacks - tartománynévkiszolgáló-támadások
+  - DNS cache poisoning - DNS cache mérgezés
+  - DNS amplification attacks - DNS-erősítési támadások
+  - DNS tunneling - DNS alagút
+  - Domain hijacking - tartomány eltérítés
+  - DNS zone transfer attacks - DNS-zónaátviteli támadások
+- Directory Traversal Attacks/Path Traversal - könyvtár áthaladási támadás, útvonal áthaladás magában foglalja a felhasználó által megadott bemeneti fájlnevek elégtelen biztonsági érvényesítésének vagy szanálásának magyarázatát.
+- Privilege Escalation Attacks - jogosultság-emelkedési támadások: a hálózati behatolás azon típusa, amely a rendszer sebezhetőségének kihasználásával olyan erőforrásokhoz való magasabb szintű hozzáférést tesz lehetővé, amelyek normális esetben védettek egy alkalmazással vagy felhasználóval szemben
+- Replay Attacks - visszajátszási támadások: az érvényes adatátvitel rosszindulatú vagy csalárd megismétlését vagy késleltetését jelentik. A támadó elfogja az adatátvitelt, majd újra továbbítja azt.
+- Session/Cookie/Session Key Hijacking - Munkamenet eltérítés: a támadó átveszi a felhasználói munkamenetet. A támadó egy érvényes számítógépes munkamenetet kihasználva jogosulatlan hozzáférést szerezhet a számítógépes rendszerben lévő információkhoz vagy szolgáltatásokhoz.
+- Malicious Code Injection Attacks - rosszindulatú kódinjektálási támadások: támadások széles csoportja, ahol a támadó káros kódot juttathat be egy programozói rendszerbe, hogy az nem kívánt módon viselkedjen.
+- Identify Indicators of Compromise (IoC) - Kompromittáltság jelzői
+  - fiókok zárolása
+  - egyidejű munkamenet-használat
+  - blokkolt tartalom
+  - impossible travel - lehetetlen utazás
+  - erőforrás-fogyasztás
+  - erőforrások hozzáférhetetlensége
+  - cikluson kívüli naplózás
+  - dokumentumok közzététele
+  - feltörték
+  - hiányzó naplófájlok
+
+## Section 21 Security Techniques
+
+- Wireless Infrastructure Security - számos biztonsági kihívás
+- Wireless Security Settings - wireless biztonsági beállítások
+  - WPA3
+  - AAA
+  - RADIUS
+  - kriptográfiai protokollok
+  - hitelesítési protokollok
+- Application Security
+  - bemeneti érvényesítés
+  - biztonságos cookie-k
+  - statikus kódelemzés
+  - dinamikus kódelemzés
+  - kódaláírás
+  - sandboxing
+- Network Access Control (NAC) - hálózati hozzáférés-szabályozás: biztonsági megoldás, amely házirendeket érvényesít a hálózatban lévő eszközökr és felhasználókra.
+  - Célja, hogy megvédja a hálózatokat a potenciális fenyegetésektől azáltal, hogy korlátozza a hálózati erőforrások elérhetőségét a végponti eszközök és felhasználók számára.
+- Web and DNS filtering - Web és DNS szűrés
+  - ügynök-alapú webszűrőkkel, 
+  - központosított proxyk
+  - URL-szkennelés
+  - tartalom kategorizálása
+  - blokkolási szabályokkal
+  - reputation - hírnév
+- Email Security
+  - Protokollok
+    - DMARC,
+    - DKIM
+    - SPF
+    - átjáró protokoll
+  - spamszűrési technikák
+- Endpoint Detection and Response (EDR) - végpontok észlelése és reagálása: kiberbiztonsági technológia, amely folyamatosan figyeli és gyűjti a végponti eszközök, pl számítógépek, táblagépek vagy okostelefonok adatait, hogy azonosítsa, kivizsgálja és megelőzze a potenciális kiberbiztonsági fenyegetéseket
+- User behavior Analytics - felhasználói viselkedéselemzés: egy olyan folyamat, amely a gépi tanuláson alapuló adatelemzést és a felhasználói viselkedésmintákat használja fel a rendszerben vagy hálózatban zajló, potenciálisan káros tevékenységek azonosítására
+  - Normál viselkedés alapvonalának meghatározásával az UBA-rendszerek képesek észlelni az anomáliákat vagy eltéréseket
+- Selecting Secure Protocols - biztonságos protokollok kiválasztása
+  - protokoll kiválasztása
+  - szállítási módszerek kiválasztása
