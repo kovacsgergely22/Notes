@@ -166,6 +166,11 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
       - Flooding - elárasztás
       - Resource leak exposure - Erőforrás-szivárgás expozíció
       - Sustained client engagement - Tartós ügyfélelköteleződés
+  - **Repudiation** - Megtagadás, elutasítás:
+    - Lebonyolíthatok-e tranzakciót, de úgy tehetem, hogy a rendszer ne tudja bizonyítani, hogy a tranzakció valóban megtörtént?
+    - Akkor fordul elő, ha a rendszer nem követi megfelelően és nem naplózza megfelelően a felhasználók műveleteit, vagy nem védi a naplókat.
+    - A támadó manipulálhatja a rendszert, hogy hibás adatokat naplózzon, és úgy tűnik, hogy a tranzakció nem történt meg, vagy más típusú tranzakció történt.
+    - Példa: A támadó képes lehet hitelkártyás vásárlást végrehajtani, miközben lehetetlenné teszi a rendszer számára annak bizonyítását, hogy a vásárlás egy adott kártyaszámmal történt.
 - **Megelőzés**: 
   - Sanitized - fertőtlenítés
     - Szűrés: nem használhat pontosvesszőt, nem használhat csőoperátorokat vagy & jeleket
