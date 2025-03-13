@@ -264,12 +264,96 @@
 ### SQL and XML Injection
 
 - SQL injection: 
+  - Structured Query Language - sturktúrált lekérdezési nyelv utasításai segítségével történik
+    - Parancsok:
+      - Select: adott adat beolvasása az adatbázisból
+      - Insert: beszúrás az adatbázisba
+      - Delete: adott adat eltávolítása az adatbázisból
+      - Update: adott adat felülírása az adatbázisban
   - olyan típusú kibertámadás, amely a webes alkalmazások vagy adatbázisok sebezhetőségeit használja ki.
   - a támadás során rosszindulatú inputot illesztenek be a felhasználói bemenetekbe vagy lekérdezésekbe, és ez lehetővé teszi a támadók számára, hogy manipulálják és futtassák a nem kívánt strukturált lekérdezési nyelvet vagy SQL parancsokat az alkalmazás adatbázisában
+  - egy támadó rosszindulatú adatokat küld a rendszerbe, amelyet aztán egy parancs vagy lekérdezés részeként feldolgoznak, ami nem kívánt következményekhez vezet.
+  - Bejelentkezéskor a felhasználónevet és a jelszót elküldi a weboldal az adatbázisba, és lekérdezi, hogy a felhasználónév és a jelszó megegyezik-e az ott tároltakkal. -> 
+    - SQL utasítással: -> pl: Select * from Users where user_id = 'Jason' and password = 'Pass123'
+    - Ha van egyezés, megkapjuk a hozzáférést
+  - Code Injection: további információk vagy kód beillesztése egy adatbeviteli űrlapon keresztül egy ügyféltől egy alkalmazásba.
+    - Code injection egy általános forma, SQL injection egy speciális típus
+  - SQL injection támadás: egy SQL-lekérdezés befecskendezéséből áll a beviteli űrlapon keresztül, amelyet az ügyfél arra használ, hogy adatokat küldjön egy webes alkalmazásnak.
+    - SQL injektáláskor a támadó megpróbál paramétereket vagy kódot beilleszteni az SQL utasításba, amelyet az adatbázis lekérdezéséhez használnak.
+    - A támadó vagy URL paraméterként adja be a bemenetét egy űrlapmezőbe való beírással, 
+    - vagy a cookie-k módosításával 
+    - POST adatok megváltoztatásával
+    - HTTP-fejléc segítségével
+  - Könnyen automatizálható, sok eszköz van ehhez, amelyek SQL injection-re és kishasználásokra összpontosít
+  - Kihasználása:
+    - Űrlapmezőben: 
+      - felhasználónévhez az a felhasználó, akivel be akarok jelentkezni -> pl. Jason
+      - jelszó: támadóként nem ismerem a jelszót -> beírom: 'OR 1=1;
+      - ekkor a form adatai bekerülnek a backend SQL utasításában, majd lekérdezik az adatbázist.
+      - Teljes lekérdező parancs ez lesz: Select * from Users where user_id = 'Jason' and password = ''OR 1=1;' -> hozzáférés engedélyezett
+      - ': escape karakter
+      - amit jelszóként beírtunk kiértékeli, hogy egyezik-e Jason jelszavával, VAGY 1=1-gyel -> 1 mindig egyenlő 1-el!
+    - Megakadályozása:
+      - Use input validation - bemeneti érvényesítés
+      - Sanitize date - felhasználóktól kapott adatok szanálása
+      - Use a web application firewall - webes alkalmazás tűzfal használata az ügyfél és webkiszolgáló közé helyezve, alkalmas elvégezni előző 2-t
 - XML injection:
+  - Extensible Markup Language (XML) - Bővíthető jelölőnyelv
+  - A webalkalmazások hitelesítésre, engedélyezésre vagy más típusú adatcserére használják.
+  - Ügyéltől a kiszolgálóhoz, vagy egyik kiszolgálótól a másikhoz kerülnek.
+  - XML-adatok szállítás közbeni védelme érdekében azokat mindig titkosított alagúton belül kell küldeni pl. TLS Tunnel használatával
+  - Kiszolgáló védelme érdekében:
+    - Input Validation
+    - Input Sanitization
+  - Ha **titkosítás vagy bemeneti érvényesítés** nélkül küldünk XML-adatokat, akkor azok sebezhetőek lesznek:
+    - Snooping (szimatolás)
+    - Spoofing (hamisítás)
+    - Request forgery (kéréshamisítás)
+    - Injection of arbitary code (tetszőleges kódbevitel)
   - XPath injectionnek is nevezik
   - Olyan biztonsági sebezhetőség, amely az XML-adatokat vagy bővíthető jelölőnyelvi adatokat feldolgozó webes alkalmazásokat célozza
   - A támadás során a támadó manipulálhatja az XML-bemeneteket, hogy kihasználja az alkalmazás XML-elemző vagy feldolgozó mechanizmusainak sebezhetőségeit. Ez aztán jogosulatlan hozzáféréshez, adatfeltáráshoz vagy más rosszindulatú műveletekhez vezethet az adott webes alkalmazáson belül.
+  - XML példa korábbi jegyzetekből
+  - XML exploitok:
+    - XML Bomb (Billion Laughs Attack): egy XML fájlt vesz, majd kódolást használ az entitások kódolására és exponenciális méretűvé bővítésére, ami a tárhelyen memóriát fogyaszt és potenciálisan összeomolhat. 
+      - Úgy működik mint egy bomba vagy szolgáltatásmegtagadási támadás
+      - egymilliárd lol az entitás hivatkozások faktoriális jellege miatt
+      - Ez akár 3 GB-nyi memóriát is foglalhat az XML-fájlon belüli ismétlődések miatt
+      - Ha egy támadó hozzáfér a szerverhez, és feldolgozza az alábbi XML-fájlt, akkor elkezdheti fogyasztani az összes erőforrást a webszerverünkön -> XML bomba
+
+```
+<?xml version="1.0"?>
+<!DOCTYPE lolz [
+<!ENTITY lol "lol">
+<!ELEMENT lolz (#PCDATA)>
+<!ENTITY lol1 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">
+<!ENTITY lol2 "&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;">
+<!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
+<!ENTITY lol4 "&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;">
+<!ENTITY lol5 "&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;">
+<!ENTITY lol6 "&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;">
+<!ENTITY lol7 "&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;">
+<!ENTITY lol8 "&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;">
+<!ENTITY lol9 "&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;">
+]>
+<lolz>&lol9;</lolz>
+```
+
+    - XML External Entity (XXE) támadás: egy helyi erőforrás iránti kérés beágyazására tesz kísérletet.
+      - Az alábbi kódban az XML-egység egy Linux-gép shadow fájlját próbálja beolvasni, amely a rendszer fiókjainak password hash-eit tartalmazza
+      - Megelőzés: Input validation
+      - XML Vulnerability, XML Exploitation, XML Injection: XML sebezhetőség, amelyet kihasználnak
+
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+  <!ELEMENT foo ANY>
+  <!ENTITY xxe SYSTEM "file:///etc/shadow">
+]>
+<foo>&xxe;</foo>
+```
+
+- Bármikor, amikor a felhasználó bevitele történik, legyen az URL, fájl, mező bevitele egy weboldalon, vagy valamilyen XML-adat átküldése, sok biztonsági problémát megelőzhetünk ha csak bemeneti érvényesítést használunk.
 
 ### Cross-site scripting (XSS)
 
@@ -359,3 +443,8 @@
 - Selecting Secure Protocols - biztonságos protokollok kiválasztása
   - protokoll kiválasztása
   - szállítási módszerek kiválasztása
+
+
+---
+
+- [ ] [CompTIA Security+ (SYO-701) Complete Course & Exam - Dion Training Solutions](https://www.udemy.com/course/securityplus/learn/lecture/40331142?start=15#content)
