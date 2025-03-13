@@ -145,6 +145,31 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
   - Módosíthatom a kérésparaméterek tartalmát a biztonság aláásása érdekében?
 - **Input Data Manipulation**
   - Megadhatok-e fájlt vagy egyéb bemeneti adatokat unortodox formában a biztonsági védelem megkerülésére?
+- **Action Spoofing**
+  - Elrejthetem-e, álcázhatom-e az egyik műveletet a másiknak, és ezáltal rávehetem-e a felhasználót, hogy egyfajta műveletet kezdeményezzen, amikor egy másik műveletet szándékozik kezdeményezni?
+  - Példa: Egy webalkalmazás felhasználója kiválaszt egy Küldés feliratú gombot, de lekérdezés helyett letölti a szoftvert a felhasználó számítógépére. Ezt meg lehet valósítani a clickjacking segítségével, amelyben a felhasználó látja az egyik felületet, de valójában egy másik, láthatatlan felülettel lép kapcsolatba.
+- **Software Integrity Attack**:
+  - Rábírhatok-e egy felhasználót, programot, kiszolgálót vagy eszközt olyan műveletekre, amelyek aláássák a szoftverkód, az eszköz, az adatszerkezetek vagy az eszköz firmware-ének integritását?
+  - Azt eredményezi, hogy a célpont nem biztonságos állapotba kerül, ami felhasználható egy következő támadás előkészítésére.
+- **Infect the Application with Malicious Code**:
+  - Hozzáadhatom saját rosszindulatú kódomat vagy erőforrásaimat az alkalmazáshoz?
+  - A támadók különféle technikákat használhatnak arra, hogy saját rosszindulatú kódjukat hozzáadják egy futó alkalmazáshoz.
+    - **Code inclusion**
+    - **Code injection**
+    - **Command injection**
+    - **Content spoofing**
+    - **Resource location spoofing**
+  - **Denial of Service**
+    - Elvégezhetek bizonyos műveleteket, amelyek megakadályozzák a jogos felhasználókat a szoftver használatában?
+    - A szolgáltatás megtagadása többféle megközelítéssel is megvalósítható, amelyek közvetlenül letiltják a szolgáltatásokat, vagy annyira leblokkolják a rendszert, hogy az már nem tudja támogatni a szolgáltatást.
+      - Excessive allocation - Túlzott elosztás
+      - Flooding - elárasztás
+      - Resource leak exposure - Erőforrás-szivárgás expozíció
+      - Sustained client engagement - Tartós ügyfélelköteleződés
+- **Megelőzés**: 
+  - Sanitized - fertőtlenítés
+    - Szűrés: nem használhat pontosvesszőt, nem használhat csőoperátorokat vagy & jeleket
+    - Karakterkorlát
 
 
 ---
