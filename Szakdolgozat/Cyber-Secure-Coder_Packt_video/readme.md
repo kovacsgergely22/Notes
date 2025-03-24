@@ -176,6 +176,77 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - Szűrés: nem használhat pontosvesszőt, nem használhat csőoperátorokat vagy & jeleket
     - Karakterkorlát
 
+### 1.9 Feladat - Sebezhetőségek keresése
+
+### 1.10 Sebezhetőségek keresése
+
+### 1.11 Feladat Új jelszókövetelmények
+
+### 1.12 Új jelszókövetelmények
+
+### 1.13. Feladat Jelszavak hash-elése
+
+- Soha nem tárolhatók jelszavak plain-textben!!!
+- sha256 hashelési algoritmus
+- Salt: sózás -> véletlenszerű karakterkészlet hozzáadva a jelszóhoz hash-elés előtt. Só hozzáadása => hash-elés
+
+### 1.1.4. Jelszavak hash-elése
+
+- md5 nem túl robosztus, könnyen feltörhető szivárványtáblával
+  - hash ütközési problémák
+  - nem javasolt a használata jelszavak tárolásához
+  - checksumhoz kiváló (ellenőrző összeg)
+- sha512 ajánlott
+- salt hard code (kemény kódolás - változóban tárolva mindenkinek ugyanaz) -> nem jó -> ha ezt valahogy megszerzik szivárványtáblával szintén megszerezhetők az információk (brute force)
+- salt tárolása: adatbázisban a jelszó hash-sel, mindenkinek más -> kriptográfiailag biztonságos só generálása mindenkinek -> ezt kell tenni egy **hitelesítési rendszerben**
+- jelszó megadásakor azt újra hash-eljük, és összehasonlítjuk a tárolt jelszó hash-sel.
+- Soha nem szabad plain textet hasonlítani plain texthez -> hash-eket kell hasonlítani
+- hash algoritmusok
+  - sha256
+  - sha384
+  - sha512
+  - blake2b
+  - blake2s
+- Pythonban pbkdf2_hmac algoritmusnak megadható (python dokumentációban)
+  - hash név
+  - password
+  - salt,
+  - iterációk: teljesítménytől függ, (100.000, 1.000.000)
+  - dklen: származtatott kulcs néhány bit hosszúságból
+
+#### Python példa:
+
+  ```
+  def GeneratePasswordHash(password, SALT):
+    try:
+      import binascii
+      dk = hashlib.pbkdf2_hmac('sha512', password, SALT, 100000)
+      return True, binascii.hexlify(dk)
+    except:
+      return False, "Hashing Failure"
+  ```
+
+  hibát okozhat Pythonban
+
+  ```
+  def GeneratePasswordHash(password, SALT):
+    import binascii
+    dk = hashlib.pbkdf2_hmac('sha512', password.encode(), SALT.encode(), 100000)
+    return True, binascii.hexlify(dk)
+  ```
+
+
+
+- Mi az oka, hogy még mindig sokan használnak elavult, nem biztonságos megoldásokat?
+  - kezdők nem ismerik
+  - lustaság, fejlesztőként nem adunk hozzá funkciókat, amire nem lesz szükség -> biztonság kivétel ez alól
+  - ha szerződésben nincs rögzítve a jelszavak hash-elése, a fejlesztók 60%-a plain-textben tárolja -> pedig tulajdonképpen csak függvényhívás (olyanokat kell használni, amelyek tesztelve vannak, alaposan kutatott, bizonyított hashelési módszerek)
+  - Ha gyorsabbá kell tenni a bejelentkezést -> csökkentik a biztonságot
+- 
+
+### 1.15. Sebezhetőségi intelligencia
+
+### 1.16. 
 
 ---
 
