@@ -1,0 +1,15 @@
+{
+  "name": "superheroes-npm",
+  "version": "1.0.0",
+  "description": "Which superhero are you?",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kovács Gergely",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^4.0.0"
+  }
+}
