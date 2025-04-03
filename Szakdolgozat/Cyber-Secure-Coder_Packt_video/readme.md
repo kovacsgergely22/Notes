@@ -246,7 +246,230 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
 
 ### 1.15. Sebezhetőségi intelligencia
 
-### 1.16. 
+- Információforrások a szoftverprojektjeit érintő sebezhetőségekről:
+  - Általában ingyenesen használhatók (Are typically free to use)
+  - Előfizetésen keresztül értesítheti Önt (például RSS hírfolyamokon vagy e-mail listákon) (May notify you through subscription (RSS feeds or email lists, for example))
+- Ügyeljen arra, hogy figyelje a projektjei által használt összes szoftver információforrását:
+  - Platformok
+  - Alkalmazásokká összeállított modulok (Modules complied into applications)
+  - Alkalmazáson kívüli modulok, de ez a futtatás ugyanaz a folyamatterület (Modules external to application, but that run is same process space)
+  - Helyi külső API-k, amelyeket az alkalmazás hív meg (Local external APIs your application calls)
+  - Web- és felhőszolgáltatások, amelyeket az alkalmazás hív (Web and cloud services your application calls)
+- Lépést kell tartani a függőségek sebezhetőségeivel például NPM -> a függőségeknek is vannak függőségeik... -> örökölhetünk sebezhetőségeket -> ezek a sebezhetőségek (vulnerabilities) kizsákmányolásokhoz vezethetnek (exploits).
+- Valós eljárások, kódok vagy végrehajtható fájlok, amelyek kihasználják a sebezhetőségeket (Actual procedures, code, or executables that take advantage of vulnerabilities)
+- Elősegítheti a szoftverprojektjein végzett tesztek egy részét. (May drive some of the tests you perform on your software projects.)
+- Bizonyos helyzetekben illegális vagy veszélyes lehet kísérletezni (legyen óvatos!) (May be illegal or dangerous to experiment with in some situations (Be careful!))
+- Ellenőrzött környezetben kell kísérletezni. (Should be experimented with in a controlled environment.)
+- A weben különböző forrásokból szerezhető be. (May be obtained through various sources on the web.)
+  - Examples
+    - Offensive Security databes: https://www.exploit-db.com
+    - Common Exploits at http://www.commonexploits.com
+- Sebezhetőségi adatbázisok (Vulnerabilities databases)
+  - Különféle kormányzati és kereskedelmi szervezetek adják ki (Published by various government and commercial organizations)
+  - Nem mindig tartalmazza a legfrissebb információkat, de általában igen (Do not always contain the latest information, but are generally)
+    - Átfogó (Comprehensive)
+    - Tartalmaz keresési lehetőségeket (Include search capabilities)
+    - Automatikusan kereshető fejlesztési automatizálási szkriptekkel (Can be searched automatically by development automation scripts)
+    - Lehet benn POC (Proof of concept - részletes leírás, hogy használható ki a sebezhetőség)
+  - National Vulnerability Database
+    - https://nvd.nist.gov
+    - The U.S government's repository of vulnerability management data.
+    - A Security Content Automation Protocol (SCAP) által meghatározott géppel olvasható formátumban tartva. (Maintained in the machine-readable format specified by the Security Content Automation Protocol (SCAP))
+    - Tartalmazza a biztonsági ellenőrzőlisták adatbázisait, a biztonsággal kapcsolatos szoftverhibák hibás konfigurációit, a termékneveket és a hatásmérőket. (Includes databases of security checklists, security-related software defects misconfigurations, product names, and impact metrics.)
+  - Offensive Security's Exploit Database
+  - https://www.exploit-db.com/
+  - A kihasználások és a sebezhető szoftverek kereshető archívuma, CVE formátumban. (A searchable archive of exploits and vulnerable software, supplied in the CVE format.)
+- Command Attack Pattern Enumeration and Classification (CAPEC)
+  - https://capec.mitre.org
+  - Maintained by MITRE Corporation (A MITRE karbantartója)
+  - A list of common attack patterns
+- OWASP Top 10
+  - https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+  - Maintained by Open Web Application Security Project (OWASP)
+  - A list of common threats and strategies for countering them. (A gyakori fenyegetések listája és a leküzdésük stratégiái.)
+  - Owasp provides many other resources
+- CWE/SANS Top 25 Most Dangerous Software Errors
+  - https://cwe.mitre.org/top25
+  - Maintained by the SANS Institute, working with MITRE and other organizations
+  - A list of the most widespread and critical software errors that can lead to serious vulnerabilities in software. (A legelterjedtebb és legkritikusabb szoftverhibák listája, amelyek súlyos szoftver sérülékenységekhez vezethetnek.)
+  - Overlaps the OWASP Top 10, and the CWE website provides a comparison to the OWASP Top 10 (Átfedi az OWASP Top 10-et, és a CWE webhely összehasonlítást nyújt az OWASP Top 10-hez)
+  - While OWASP focuses on web and mobile apps, CWE/SANS tends to cover all types of software, include desktop applications.
+- Biztonsági közlemények és tanácsok (Security bulletins and advisories)
+  - Published by vendors of systems, application runtime environments, frameworks, web browsers, and other platforms and tools you use in your software projects. (Rendszerek, alkalmazás-futási környezetek, keretrendszerek, webböngészők és egyéb, a szoftverprojektjeiben használt platformok és eszközök szállítói által közzétéve.)
+  - Provide the most comprehensive and timely source of vulnerability and exploit information for the technologies they cover. (A sebezhetőség legátfogóbb és legidőszerűbb forrása, és az általuk lefedett technológiákkal kapcsolatos információk kihasználása.)
+  - Microsoft Security Bulletins https://technet.microsoft.com/en-us/security/bulletins.aspx
+  - Apple Security Updates https://support.apple.com/en-us/HT201222
+  - Android Security Bulletins https://source.android.com/security/bulletin/
+  - Ubuntu Security Notices https://www.ubuntu.com/usn/
+  - Amazon Web Services Latest Bulletins https://aws.amazon.com/security/security-bulletins/
+  - jQuery Updates Blog https://blog.jquery.com
+  - Chrome Releases https://chromereleases.googleblog.com
+- Open source software project issue trackers
+  - Legfrissebb információkkal szolgál a frissítésekről és a folyamatban lévő problémákról
+  - Examples:
+    - Node.js https://groups.google.com/forum/#forum/nodejs-sec
+    - Python Bug Tracker https://bugs.python.org/
+    - Hadoop Issue Tracking https://hadoop.apache.org/issue_tracking.html
+    - MySQL Bugs https://bugs.mysql.com
+    - Docker Issues https://github.com/docker/docker/issues
+- "Vulnerability is the capacity to exploit something" (A sebezhetőség valaminek a kihasználásának a képessége.)
+
+### 1.16. Vulnerablity Search - Feladat
+
+- Attacking various websites and applications yourself (Különféle webhelyek és alkalmazások saját maga megtámadása)
+  - One of the best ways to gain experience with common vulnerabilities (Az egyik legjobb módja annak, hogy tapasztalatokat szerezzen a gyakori sebezhetőségekkel kapcsolatban)
+  - Probably illegal (Valószínűleg illegális)
+  - Will annoy system operators and users (Zavarja a rendszerüzemeltetőket és a felhasználókat)
+- A legal more polite alternative - use example applications and websites expressly provided for this purpose (Jogilag udvariasabb alternatíva – használjon példaalkalmazásokat és kifejezetten erre a célra szolgáló weboldalakat)
+  - OWASP Juice Shop Project - Used in this course provide the "Woodworker's Wheelhouse" online store catalog
+  - OWASP Vulnerable Web Applicatons Directory Project
+  - 15 Vulnerable Sites To (Legally) Practice Your Hacking Skills - 2016 Update (https://www.checkmarx.com/ ...)
+  - 40+ Intentionally Vulnerable Websites To (Legally) Practice Your Hacking Skills (https://www.bonkersabouttech.com/security/ ...)
+  - Penetration Testing Practice Lab - Vulnerable Apps/Systems (https://www.amanhardikar.com/mindmaps/Practice.html)
+- Woodworkers Wheelhouse
+  - Serves as the "setting" for activities in this course
+  - Imaginary company that sells hardwood lumber, tools, and other supplies for woodworkers and other hobbyists, as well as some home improvement and interior decorating supplies
+- You will work on a web-based application for Woodworkers Wheelhouse
+  - Includes a product catalog from which customers can order products online, and various other features.
+  - Prototype app started by another developer.
+  - Developed in:
+    - Node.js version 6.10.3
+    - Express.js
+    - Angular.js
+    - Bootstrap
+    - Other web development frameworks
+  - To begin, you will research Node.js on the web to identify and vulnerabilities in this version.
+
+### 1.17 Vulnerablity Search - Tevékenység
+
+- sanitize-html csomag a package.jsonban
+- jsonwebtoken
+- snyk.io-n Vulnerablity DB -> https://security.snyk.io/
+- https://docs.npmjs.com/about-semantic-versioning
+  - Using semantic versioning to specify update types your package can accept
+You can specify which update types your package can accept from dependencies in your package's package.json file.
+
+For example, to specify acceptable version ranges up to 1.0.4, use the following syntax:
+
+Patch releases: 1.0 or 1.0.x or ~1.0.4
+Minor releases: 1 or 1.x or ^1.0.4
+Major releases: * or x
+For more information on semantic versioning syntax, see the npm semver calculator.
+
+Example: 
+
+```
+"dependencies": {
+  "my_dep": "^1.0.0",
+  "another_dep": "~2.2.0"
+},
+```
+
+- Ellenőrizhetők automatizált eszközökkel -> pl. SonarQube https://www.sonarsource.com/products/sonarqube/
+- Nagyobb frissítések elronthatják a program működését
+
+## 2. Sebezhetőségek keresése
+
+### 2.18. Szoftverhibák
+
+- Szoftvernek és bugoknak is van életciklusa
+  - Bugoknál, hibajelentés, javítás (remélhetőleg nem vezet be újabb hibákat) -> biztonsági problémák -> buffer overflow
+  - Terms that describe software problems correspond to phases of the development process (A szoftverproblémákat leíró kifejezések a fejlesztési folyamat fázisainak felelnek meg)
+    - **Error** - A mistake that someone makes when producing software (during design, programming, installation, configuration) (Hiba – Hiba, amelyet valaki a szoftver gyártása során követ el (tervezés, programozás, telepítés, konfigurálás során))
+    - **Fault** - An error manifested within code. When you can point to a problem are in code that is leading to a security problem (a bug), you are identifying the fault. (Hiba – A kódon belüli hiba. Ha olyan kódban lévő problémára tud rámutatni, amely biztonsági problémához (hibához) vezet, akkor azonosítja a hibát.)
+    - **Defect** - A deviation from requirements (resulting from a fault) - when something doesn't work the way it should, or doesn't live up to quality requirements. (Hiba – a követelményektől való eltérés (hiba miatt) – amikor valami nem úgy működik, ahogy kellene, vagy nem felel meg a minőségi követelményeknek.)
+    - **Failure** - A real-world problem that occurs when a defect is released to customers. (Meghibásodás – Valós probléma, amely akkor jelentkezik, amikor a hibát kiadják az ügyfeleknek.)
+- Security defects may be placed in code maliciously. (A biztonsági hibák rosszindulatúan helyezhetők el a kódban.)
+- More often, they are simply due to a development mistake, such as:
+  - A programming error
+  - Mistaken or incomplete assumptions, such as:
+    - The environment in which software will operate
+    - How specific APIs or functions work
+    - Access rights users will have
+  - A change in the context in which te software runs
+  - Using third-party code that is not secure
+  - Bugs introduced through maintenance updates
+- Build Security into your Design Processes
+  - The stronger your design early on, the less code you will have to change later on.
+  - To build security into your design processes:
+    - Be sure that you understand what you are trying to build.
+    - Identify the environment in which your software will run.
+    - Identify the major modules in your software.
+    - List all of the errors that might occur in various modules, and how you will deal with them
+    - Resist adding features that are not driven by requirements
+    - Adhere to secure coding standards for the languages and environments you use:
+      - SEI CERT Oracle Coding Standard for Java
+      - SEI CERT Android Secure Coding Standard
+      - SEI CERT C Coding Standard
+      - SEI CERT C++ Coding Standard
+      - SEI CERT Perl Coding Standard
+>- A biztonsági hibák rosszindulatúan helyezhetők el a kódban. (A biztonsági hibák rosszindulatúan helyezhetők el a kódban.)
+>- Gyakrabban egyszerűen fejlesztési hibából adódnak, például:
+> - Programozási hiba
+> - Téves vagy hiányos feltételezések, például:
+> - A környezet, amelyben a szoftver működik
+> - Az egyes API-k vagy funkciók működése
+> - A felhasználóknak hozzáférési joguk lesz
+> - Változás a szoftver futási környezetében
+> - Harmadik féltől származó, nem biztonságos kód használata
+> - A karbantartási frissítéseken keresztül bevezetett hibák
+>- Építsen be biztonságot tervezési folyamataiba
+> - Minél erősebb a tervezés korai szakaszában, annál kevesebb kódot kell később módosítania.
+> - A biztonság beépítése a tervezési folyamatokba:
+> - Győződjön meg arról, hogy megérti, mit akar felépíteni.
+> - Határozza meg a környezetet, amelyben a szoftver futni fog.
+> - Határozza meg a szoftver főbb moduljait.
+> - Sorolja fel az összes hibát, amely a különböző modulokban előfordulhat, és hogyan fogja kezelni őket
+> - Ne adjon hozzá olyan funkciókat, amelyeket nem a követelmények vezérelnek
+> - Tartsa be az Ön által használt nyelvekre és környezetekre vonatkozó biztonságos kódolási szabványokat:
+> - SEI CERT Oracle kódolási szabvány Java számára
+> - SEI CERT Android Secure Coding Standard
+> - SEI CERT C kódolási szabvány
+> - SEI CERT C++ kódolási szabvány
+> - SEI CERT Perl kódolási szabvány
+
+### 2.19 Külső könyvtárak
+
+- Problem in standard libraries
+  - Standard libraries
+    - Provide classes, templates subroutines, macros, global variables, and other commonly used constructs
+    - Are included with every implementation of a programming language
+    - Are treated by developers almost as part of the programming language itself
+    - Are used extensively by developers
+    - May contain functions that are inheretly insecure or that can easily be used inappropriately in ways that make them unsecure
+>- Probléma a szabványos könyvtárakban
+> - Szabványos könyvtárak
+> - Osztályokat, sablon alprogramokat, makrókat, globális változókat és egyéb gyakran >használt konstrukciókat biztosítanak
+> - A programozási nyelv minden megvalósítása tartalmazza
+> - A fejlesztők szinte a programozási nyelv részeként kezelik
+> - A fejlesztők széles körben használják
+> - Tartalmazhat olyan funkciókat, amelyek eredendően nem biztonságosak, vagy amelyek könnyen nem megfelelően használhatók olyan módon, hogy azok nem biztonságosak
+
+- Pythonban néhány library technikailag third party -> sok ember erőfeszítése, remélhetőleg foglalkoznak a biztonsággal -> elolvasni hozzá a dokumentációt, biztonsági figyelmezetetéseket.
+- Dependencies
+  - Third party source code libraries:
+    - Enable developers to develop faster, using functionally developed and tested by others
+    - May in turn use third-party code, which would make it fouth-party code, from your perspective.
+    - May be of very high quality, but you shouldn't simply assume that they will be.
+    - Example:
+      - OpenSSL Heartbleed vulnerability
+  - You need to ensure that you are aware of all of the code dependencies
+>- Függőségek
+> - Harmadik fél forráskód-könyvtárai:
+> - Lehetővé teszi a fejlesztők számára, hogy gyorsabban fejlesszenek, a funkcionálisan kifejlesztett és mások által tesztelt termékek használatával
+> - Használhat harmadik féltől származó kódot, ami az Ön szemszögéből negyedik fél kódját eredményezné.
+> - Lehet, hogy nagyon jó minőségűek, de nem szabad egyszerűen feltételezni, hogy azok lesznek.
+> - Példa:
+>  - OpenSSL Heartbleed sebezhetőség
+>- Győződjön meg arról, hogy tisztában van az összes kódfüggőséggel
+- Most developers don't have the time or experience to develop encryption that is better than what is provided in high-quality encryption libraries.
+- Megfelelő titkosítási algoritmus választása! -> MD5 hash ütközési problémák
+- Security of Host Sytems and Service Providers
+  - Cloud services
+    - Seem inherently less secure than on-premises, based on common-sense analysis.
+    - In many cases, actually provide greater security than on-premises, according to evidence.
+    - Add another layer of complexity to IT systems.
+  - 
 
 ---
 
