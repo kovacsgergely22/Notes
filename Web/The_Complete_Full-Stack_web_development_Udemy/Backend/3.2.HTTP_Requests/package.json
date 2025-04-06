@@ -1,0 +1,16 @@
+{
+  "name": "3.2.http_requests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kovács Gergely",
+  "license": "ISC",
+  "description": "Hello, this is a test for the HTTP requests module in Node.js. This module allows you to make HTTP requests to external APIs and services. In this test, we will be using the axios library to make GET and POST requests to a sample API. We will also be using the dotenv library to manage environment variables. The test will include making a GET request to fetch data from the API, and a POST request to send data to the API. We will also be logging the responses to the console for verification.",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
