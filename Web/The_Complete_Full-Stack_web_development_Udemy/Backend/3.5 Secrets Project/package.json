@@ -1,7 +1,6 @@
 {
-  "name": "3.3-middleware",
+  "name": "3.5-joke-maker-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
-    "express": "*",
-    "morgan": "^1.10.0"
-  }
+    "express": "*"
+  },
+  "description": ""
 }
