@@ -101,7 +101,7 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - fenntartja a hozzáférést vagy kiterjeszti a jogosultságokat
     - lebontsa az egészet (Denial of service - DOS)
 
-### 1.8 Támadási minták
+### 1.8. Támadási minták
 
 - Hogyan támadná meg valaki, hogyan törné meg? Hogyan védekezhetek ellene? -> Megfelelő gondolkodásmód
 - **Reconnaissance (Felderítés, felmérés, feltárás)**: milyen webalkalmazást futtat, verziószámok stb. Információgyűjtés ezekről, URL piszkálás, URL-be beírogatás, nyitott portok keresése stb. Minden lehetséges információ összegyűjtése a sebezhetőségek felderítéséhez és kihasználásához. Fontos. -> Nem szabad információt adni, ha nem muszáj -> nem tűnik rosszindulatú tevékenységnek, ha nincs naplózás vagy hozzáférési minták nyomon követése.
@@ -176,13 +176,13 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - Szűrés: nem használhat pontosvesszőt, nem használhat csőoperátorokat vagy & jeleket
     - Karakterkorlát
 
-### 1.9 Feladat - Sebezhetőségek keresése
+### 1.9. Feladat - Sebezhetőségek keresése
 
-### 1.10 Sebezhetőségek keresése
+### 1.10. Sebezhetőségek keresése
 
-### 1.11 Feladat Új jelszókövetelmények
+### 1.11. Feladat Új jelszókövetelmények
 
-### 1.12 Új jelszókövetelmények
+### 1.12. Új jelszókövetelmények
 
 ### 1.13. Feladat Jelszavak hash-elése
 
@@ -190,7 +190,7 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
 - sha256 hashelési algoritmus
 - Salt: sózás -> véletlenszerű karakterkészlet hozzáadva a jelszóhoz hash-elés előtt. Só hozzáadása => hash-elés
 
-### 1.1.4. Jelszavak hash-elése
+### 1.14. Jelszavak hash-elése
 
 - md5 nem túl robosztus, könnyen feltörhető szivárványtáblával
   - hash ütközési problémák
@@ -340,7 +340,7 @@ A biztonság iránti igény azonosítása szoftverprojektjei során)
     - Other web development frameworks
   - To begin, you will research Node.js on the web to identify and vulnerabilities in this version.
 
-### 1.17 Vulnerablity Search - Tevékenység
+### 1.17. Vulnerablity Search - Tevékenység
 
 - sanitize-html csomag a package.jsonban
 - jsonwebtoken
@@ -428,7 +428,7 @@ Example:
 > - SEI CERT C++ kódolási szabvány
 > - SEI CERT Perl kódolási szabvány
 
-### 2.19 Külső könyvtárak
+### 2.19. Külső könyvtárak
 
 - Problem in standard libraries
   - Standard libraries
@@ -469,8 +469,157 @@ Example:
     - Seem inherently less secure than on-premises, based on common-sense analysis.
     - In many cases, actually provide greater security than on-premises, according to evidence.
     - Add another layer of complexity to IT systems.
-  - 
+- - A gazdagép rendszerek és a szolgáltatók biztonsága
+ - Felhőszolgáltatások
+   - A józan ész elemzése alapján eredendően kevésbé biztonságosnak tűnik, mint a helyszíni.
+   - A bizonyítékok szerint sok esetben valóban nagyobb biztonságot nyújt, mint a helyszíni.
+   - Adjon hozzá egy újabb komplexitási réteget az IT-rendszerekhez.
+
+### 2.20. A hibák biztonságos kezelése
+
+- Error messaging
+  - Default error messaging
+  - Approach to Error Handling
+  - Even when error messages do not give details, subtle clues may be provided to an attacker.
+- A hibaüzenetekben nem szabad egyértelmű információkat kiadni, például bejelentkezésnél nem írjuk ki, hogy a jelszó hibás -> információ, hogy a felhasználónév jó
+  - Fejlesztés során viszont fontos az egyértelmű hibamegjelölés -> utána ki kell kapcsolni
+- Fail-Safe
+  - A fail-safe system ensures that after a failure, the system is in the least harmful (or most secure) state for the data, the user, and anything else affected by the system.
+  - A bad example:
+  
+```
+if (IsAccessAllowed( ) == -1) {
+  //Inform user that acces is denied here.
+} else {
+  //Allow user to do something here.
+}
+```
+
+  - Ha a hozzáférés nem engedélyezett, tájékoztassa a felhasználót róla, ha engedélyezett csak engedélyezze
+  - Improved example:
+
+```
+if (IsAccessAllowed( ) == 1) {
+  //Allow user to do something here.
+} else {
+  //Inform user that access is denied here.
+}
+```
+
+- Failure Recovery
+  - Calls to the operating system, libraries, services, and APIs may return a value that indicates whether the call succeeded of failed.
+  - Check return values that identify whether the call succeeded or failed, and respond appropriately.
+  - When you write code to recover from failure:
+- Implement Secure Error Handling
+  - Exception handlers:
+    - Place code that might throw an exception in a try block and code that handles exceptions in a catch block. (The mechanism for doing this varies from one language to other.)
+    - Use the most specific exception for the code you're writing.
+    - Avoid catching a fundamental exception type and handling all exception types in a generic way.
+    - If you're using a language that supports a finally code block that in always called (whether an exception is thrown or not), then use it to return resources to the state they were in before the try block was executed.
+    - Examples: Release connections to database/services, delete temporary files, release temporary data structures
+    - Legyen nagyon konkrét a hibaleírás
+-  Functions:
+   -  Check return codes and respond appropriately when making calls to the operating system, libraries, services, and APIs.
+   -  Avoid using functions that fail silently, and find safer alternative functions.
+   -  If pass/fail return code not provided, check the return value to determine how to proceed:
+      -  Safe to perform further calculations.
+      -  Some other remediation is necessary.
+- Respond to failures.
+  - Due to an expected reason
+    - Provide code to recover appropriately.
+  - Due to an unexpected reason or a reason the program can't recover from
+    - Log the unexpected value.
+    - Cleanly terminate (break sessions, delete temporary files, destroy other resources an attacker might use.)
+    - Ha kapcsolatot nyitok, naplózom a nyitását, zárását
+    - Folyamatos naplózásra van szükség
+    - A webalkalmazás számára elérhető naplófájlok készítése nagyon rossz!!! -> El kell kerülni, a naplófájlokat is védeni kell. 
+    - Naplófájlok, időbélyegek használata
+
+### 2.21. Emberi vonatkozású biztonság
+
+- Az ember a gyenge láncszem, ha szoftverről és technológiáról van szó.
+- Vulnerabilities Attributed to the Human Element
+  - Using passwords that are easily broken by an attacker.
+  - Providing credentials or access to an attacker:
+    - Posting them in unsecure locations.
+    - Leaving logged-in devices unattended.
+    - Providing them directly to an attacker.
+  - Storing files in unsecure locations.
+  - Attaching unsecure devices to otherwise secure networks.
+  - Leaving sensitive information on unsecure devices.
+  - Transferring electronically secured information to unsecure outputs, such as printed hard copy.
+  - Passing highly sensitive information in unsecure email.
+  - Including sensitive information in a "Reply All" response
+  - Accidentally addressing the wrong recipient in a confidential email.
+  - Disabling or circumventing software security features.
+  - Enabling unsecure software features, such as file-sharing, remote access, and so forth.
+  - Skipping critical security checks to save time.
+  - Downloading and (unintentionally) installing malware.
+  - Visiting risky websites and blindly permitting malware to gain a foothold.
+  - Falling for scams in email, text messaging services, and social networking sites.
+  - Allowing unauthorized people into secure locations.
+  - Changing security-related settings that they don't understand.
+  - Mistakes by software developers and system administrators:
+    - Accidentally changing the configuration of a firewall or server to a less ...
+    - Forgetting to enable or re-enable important security monitoring or log...
+    - Bypassing or disabling critical security checks.
+- Social Engineering Attacks
+  - Tailgating and piggybacking
+  - Phishing
+  - Spear phising
+  - Baiting
+  - Click-baiting
+  - Social media reconnaissance
+  - Nem szabad linkekre kattintani -> fel kell menni a szolgáltató saját oldalára, ott minden meglesz, nem kell a link
+- Input validation
+  - Critical security component of many applications, sice it protects angainst some of the most dangerous vulnerabilities.
+  - Consider developing a centralized input validation function to reduce complexity, increase consistently, and makes it easier to improve and maintain.
+  - Do not rely solely on client-side input validation since client-side code is generally easer to bypass or modify than server side.
+  - All input to server operations should be validated on the server side.
+  - Use client-side validation as well - to improve performance, for example.
+  - Input validation can check for a number of factors, such as:
+    - The type of data allowed (e.g., decimal numbers, currency)
+    - The range of data allowed
+    - Which characters are allowed
+    - The minimum and maximum length of data
+
+### 2.22. Biztonsági követelmények és tervezés
+
+- The CIA Triad: Through development, ensure that your software provides three aspects of security:
+  - Confidentiality - Keep information and communications private and protect them from unauthorized access.
+  - Integrity - Keep an organization's information accurate, without error, and without unauthorized modification.
+  - Availability - Ensure that systems operate continuously and that authorized users and access the data that they need.
+- Evaluating Security Requirements
+  - **S**ymbiotic: 
+    - Don't conflict ot contradict each other
+    - Work together as a system
+  - **E**vident:
+    - Each requirement is plain and clear
+    - Can only be interpreted one way
+  - **C**omplete:
+    - Taken as a whole, the requirements communicate all security expectations for the project
+  - **U**nitary:
+    - Each requirement addresses one and only one thing
+  - **R**ealistic:
+    - Appropriate
+    - Possible
+    - Attainable
+  - **E**valuable:
+    - Expressed as something that can be measured 
+    - Can be evaluated as passing or failing
+
+### 2.23. Biztonság a szoftver életciklusán keresztül
+
+- Igények összegyűjtése
+  - Felhasználói igények
+  - Platformkövetelmények
+  - Biztonsági követelmények
+  
+![2.22](img/2.22.png)
+
+Csillag: a sebezhetőség helye
 
 ---
+
 
 1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
