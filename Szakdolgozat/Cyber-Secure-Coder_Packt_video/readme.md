@@ -617,7 +617,21 @@ if (IsAccessAllowed( ) == 1) {
   
 ![2.22](img/2.22.png)
 
-Csillag: a sebezhetőség helye
+  - Csillag: a sebezhetőség helye
+- Kódellenőrzés
+- Statikus és dinamikus kódellenőrzés
+- GitHooks
+- OWASP Top 10
+- SonarQube
+- Fuzzteszt, session management, pentest
+- Telepítési fázis, felhasználókhoz kerül
+- Ezt követően is előfordulnak hibák -> pl. függőségben komoly sebezhetőséget találnak -> javítani kell
+
+### 2.24. Assignment: Exploring Leftover Artifacts
+
+### 2.5. Exploring Leftover Artifacts
+
+- Tisztázni kell, miket láthat a felhasználó, ennek megfelelően kell elhelyezni azokat
 
 ---
 
