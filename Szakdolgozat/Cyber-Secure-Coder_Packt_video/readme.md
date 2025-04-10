@@ -629,9 +629,39 @@ if (IsAccessAllowed( ) == 1) {
 
 ### 2.24. Assignment: Exploring Leftover Artifacts
 
-### 2.5. Exploring Leftover Artifacts
+### 2.25. Exploring Leftover Artifacts
 
 - Tisztázni kell, miket láthat a felhasználó, ennek megfelelően kell elhelyezni azokat
+
+## 3. Designing for security
+
+### 3.26. Principles of Secure Design
+
+- OWASP Security Design Principles
+  - Minimize attack surface area. -> Nem teszek be felesleges funkciót, amire nincs szükség -> plusz támadási felület
+  - Establish secure defaults. -> alapértelmezett biztonsági beállítások -> MongoDB nyílt kiadása teljesen nyitott, ha nem változtatunk rajta. -> Beállíthatunk felhasználói fiókokat és 27017 porton van. -> Ha nincs beállítva fiók, a 27017 porton "belehallgatva" elérhetők az adatok, ha nincsenek felhasználók beállítva
+  - Least privilege -> legkisebb kiváltság, szerep alapú hozzáférés-szabályozás kell
+  - Defense in depth
+  - Fail securely. -> hozzáférés megtagadása meghibásodás esetén!
+- Input sanitize:
+  - Bemenő adatok fertőtlenítése, 
+    - Több helyen, nehezen karbantartható kód
+    - Ha a kérés beérkezik, ha van benne a megadott karakterek közül -> fertőtlenítsd (middleware-ben célszerű)
+- A biztonságnak is fontos szempontnak kell lenni a tervezés közben
+
+### 3.27. Avoid Common Mistakes
+
+- Avoiding The Top 10 Software Security Design Flaws
+  - Earn or give, but never assume, trust. -> valamilyen módon meg kell teremteni a bizalmat két szolgáltatás között
+  - Use an authentication mechanism that cannot be bypassed or tampered with. -> ha hitelesítési módszert használunk, meg kell bizonyosodni róla, hogy jó Pl. Oauth -> Oauth2
+  - Authorize after you authenticate.
+  - Strictly separate data and control instructions, and never process control instructions received from untrusted sources.
+  - Define an approach that ensures that all data are explicitly validated.
+  - Use cryptography correctly.
+  - Identify sensitive data and how they should be handled.
+  - Always consider the users. -> ne bízz a felhasználókban
+  - Understand how integrating external components changes your attack surface. -> API-k használata veszélyes lehet
+  - Be flexible when considering future changes to objects and actors.
 
 ---
 
