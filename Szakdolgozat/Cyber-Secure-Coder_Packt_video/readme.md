@@ -663,7 +663,60 @@ if (IsAccessAllowed( ) == 1) {
   - Understand how integrating external components changes your attack surface. -> API-k használata veszélyes lehet
   - Be flexible when considering future changes to objects and actors.
 
+### 3.28-3.29. Gyakori biztonsági tervezési hibák feladat és megoldás
+
+### 3.30. Understand Risks and Vulnerabilities
+
+- The Risk Equation
+  - Threats: Something or someone that can take advantage of vulnerabilities - such as an attacker, malware, inexperienced user, accident, or disaster
+  - Vulnerabilities: Deficiencies that enable an attacker to violate the system's integrity
+  - Consequences: Damage resulting from a threat taking advantage of the vulnerability
+  - Risk = Threats x vulnerabilities x Consequences
+- Threat modeling - Fenyegetésmodellezés
+  - Define general security objectives and scope - Általános biztonsági célok, hatókör meghatározása (scope)
+    - Collect existing project documentation and guidelines.
+    - Gather security requirements already defined for you, such as compliance and project requirements
+  - Decompose the software
+    - Break up your software into conceptual entry points, components, and boundaries where an attacker might interact with your application.
+      - interfész alkalmazása az alkalmazás és adatbázis között
+    - Identify assets an attacker might be interested in, who should be allowed to access each area, and how access is controlled
+    - Diagram how data flows through the application
+  - Identify and rank threats
+    - Think like an attacker
+    - Examine the application and identify where threats exist.
+    - Use tools like STRIDE and DREAD to help you identify and rank threats
+- Benefits of Threat Modeling
+  - Can save time and problems in the development process
+  - Enables you to identify design flaws during design, before you start writing code.
+  - Reduces the time and cost needed to fix security issues later on.
+  - May save time in testing since it will show where security test are needed.
+  - Much more specific than a general project risk analysis.
+  - Provides a high level of detail and insight into potential vulnerabilities in first draft of architecture.
+  - Enables design improvements before any code is written, eliminating the time and expense of rework later
+  - Should be performed even by solo developers or small teams who don't generally perform a formal risk analysis process.
+
+![3.30](img/3.30.png)
+
+### 3.31. Risk response strategies
+
+- Risk response strategies
+
+| Testing Method | Description |
+| --- | --- | 
+| Risk avoidance | Eliminate the risk (reduce it zero). You might accomplish this by averting the process, activity, or application that causes the risk. For example, a particular optional software feature brings unacceptable risk into play, you might simply decide to not include that feature to eliminate the risk it brings. |
+| Risk transference | Move the responsibility for the risk partially or completely to another organization, such as an insurance company or an outsourcing provider. For example, you might outsource a particular web service from a vendor who will pay penalties if the service fails. Risk transference might be appropriate if the risks are larger and more complicated than your enterprise can manage on its own. |
+| Risk mitigation | Implement controls and sountermeasures to reduce the likelihood and impact of risk to the organization. For example, you might write code that prevents users from entering certain data values that might present a security problem.|
+| Risk acceptance | Agree that the risk is acceptable without taking any additional action. Perhaps the consequences are negligible or easily recovered from. Not all risks can be avoided; likevise, not al risks can be transferred or mitigated. As you develop software, you must decide what level of risk is unlikely or does not have enough potential for harm to warrant extra effort and cost. |
+
+- Octa, Off zero használata
+
+![3.31](img/3.31.png)
+
+
+
 ---
+
+
 
 
 1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
