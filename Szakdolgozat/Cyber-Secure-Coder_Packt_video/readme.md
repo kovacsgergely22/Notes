@@ -712,11 +712,88 @@ if (IsAccessAllowed( ) == 1) {
 
 ![3.31](img/3.31.png)
 
+### 3.32. Exploit Countermeasures
 
+- Countermeasures
+
+![3.32](img/3.32.png)
+
+![3.32.1](img/3.32.1.png)
+
+## 4. Developing Secure Code
+
+"A sebezhetőségeket általában mi okozzuk"
+
+- Common General Programming Errors
+  - A few types of common errors are responsible for many types of vulnerabilities
+    - Development tools:
+      - Provide warnings and hints about common errors.
+      - Can help you write better code.
+      - Pay attention to what they tell you
+
+=>
+- Inapptopriate use of dangerous functions, APIs, and system calls
+- Use of deprecated libraries
+- Buffer Overruns
+- Race conditions
+- Integer range issues
+- Out of bounds array indexing
+- Unhandlend exceptions
+- Memory Leaks
+- Dangling and null pointer references
+- Unused code
+- Unintitialized variables
+- Injection vulnerabilities
 
 ---
 
+- Javascriptben használjunk strict módot: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+  - Megelőzi az injection támadásokhoz vezető hibákat
+- Vannak alapesetben szigorú nyelvek: Rust, Haskell
+- Másokhoz kellenek olyan eszközök (pl. Javascript), amelyek kikényszerítik a szigorúságot
+  - TypeScript -> lefordítja a scriptet Javascriptre
 
+---
 
+- Common General Programming Errors
+  - Carefully research the configuration options available in your development tool kit.
+    - Some options are not well known.
+    - Their purpose may not be immediately clear.
+    - They may not be enabled by default, but they can very helpful
+    - So invest time to understand all of your tools' configuration options.
+
+---
+
+- Visual Studio compiler's /GS an # pragma strict_gs_check options can be set to perform automatic security checks for certain buffer overrun scenarios.
+
+---
+
+- Guidelines for Secure Coding - 1
+  - Reduce unnecessary complexity.
+  - Write code to be read by humans (meaningful variable names, clear coding style, etc.)
+  - Use unit tests and comments to show and explain how code is intended to be used.
+  - For common tasks, use well-maintained and tested existing code, rather than creating new code.
+  - Review al third-party applications, code, libraries, and APIs to determine whether they are required, and whether they function safely.
+  - In your declaration or before first use, explicitly initialize all variables and other data stores.
+  - Never pass user-supplied inputs directly to any dynamic execution function.
+  - Make sure your compiler warnings are enabled to point out potential security problems and coding problems before you find them in testing.
+  - Do not enable your code to directly issue operating system commands, such as through command shells. Instead use task-specific APIs built in to the programming language, standard libraries, or related tools.
+  - Prevent users from modifying code, generating, or injecting new code.
+- Guidelines for Secure Coding - 2
+  - Prevent race conditions by preventing multiple simultaneous requests (locking) or through a synchronization mechanism.
+  - Protect shared variables and resources from inappropriate concurrent access.
+  - When the application requires elevated privileges, raise privileges as late as possible, and drop them as soon as possible.
+  - Eliminate the possibility of calculation and overflow errors. Look for:
+    - Conversion and casting between data types
+    - Values that are too large or too small to fit within the allocated range
+    - Tuncation
+    - Discrepancies in byte size, precision, signed/unsigned
+    - NaN (not a number) calculations
+  - Use code-signing, such as checksums or hashes, to verify the integrity of code including libraries, executables, interpreted code, resources, and configuration files.
+  - Make sure updates are performed safely. Use cryptographic signatures for your cde and verify them in your download client. Use encrypted channels to transfer code to client.
+  - Secure both client and server software, but emphasize server security.
+  - Research and use the configuration options and user interface features of your development tool kit, which may alert you to possible security problems.
+
+---
 
 1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
