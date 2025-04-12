@@ -722,6 +722,8 @@ if (IsAccessAllowed( ) == 1) {
 
 ## 4. Developing Secure Code
 
+### 4.33. Guidelines for Secure Code
+
 "A sebezhetőségeket általában mi okozzuk"
 
 - Common General Programming Errors
@@ -793,6 +795,73 @@ if (IsAccessAllowed( ) == 1) {
   - Make sure updates are performed safely. Use cryptographic signatures for your cde and verify them in your download client. Use encrypted channels to transfer code to client.
   - Secure both client and server software, but emphasize server security.
   - Research and use the configuration options and user interface features of your development tool kit, which may alert you to possible security problems.
+
+### 4.34. Buffer Overflows and Prevention
+
+- Eszközök megfelelő megválasztása meghatározza (C++,C hajlamos erre)
+- Magasabb szinten: Java, C# -> köztes nyelv, virtuális gépen fut, nem teljesen lehetetlen de nem mi kezeljük a memóriát
+- Dinamikus nyelvek: Ruby, Python -> sokszor alacsony szintű nyelveken valósulnak meg mint C vagy C++ -> buffer overflow továbbra is lehetséges, de nem mi kezeljük manuálisan a memóriát
+- Buffer Overrun Defects
+  - Cause of many cyber security problems
+    - Morris worm
+      - The first major cyber attack on the Internet
+      - Disabled large portions of the Internet for several days in 1988
+    - The Heartbleed Bug
+      - Put more than half of all web servers at risk in 2014
+      - Put encrypted data and credential at risk of exposure
+  - Enable an attacker to acces a data buffer
+    - Reading or writing data that exceeds the boundaries allocated to that buffer
+    - Can be used to:
+      - Crash the software
+      - Read (possibly sensitive) data outside the bounds of the buffer
+      - Write data outside of the buffer, enabling attacker to inject malicious code or data
+  - Apply to a wide variety of data types, such as pointers, arrays, and so forth
+  - Types of buffer overruns include:
+    - Buffer overflows
+    - Buffer overreads
+    - Interger overflows
+    - Uncontrolled format strings
+
+![4.34](img/4.34.png)
+
+- Prevent Buffer Overflow Defects
+  - Validate user input for type and length to ensure it will not overflow the legitimate data boundaries.
+  - Use the least privileges possible for the accounts in which your processes run.
+  - Be especially careful when passing input parameters to other code, especially unmanaged code, DLLs, etc.
+  - (If you use third-party libraries), use only libraries that you have researched very carefully to ensure they are free from buffer overflow vulnerabilities.
+
+![4.34.1](img/4.34.1.png)
+
+- Make sure that the start location for each read operation remains within the buffer boundaries.
+- Make sure that the end location for each read operation reamains within the buffer boundaries.
+
+### 4.35. Race Conditions
+
+- Multiprocessoring, multithreading
+
+![4.35](img/4.35.png)
+
+- Deadlocks
+- Nem könnyen kihasználható sebezhetőség, de lehetséges
+- Impact of Race Conditions on Threading/Muliprocessing
+  - When you write multi-processing or multi-threading code always consider that:
+    - Timing may not be completely consistent.
+    - If errors occur, a process or thread may not even complete successfully.
+    - You nedd to account for what happens when these problems occur.
+  - Race conditions:
+    - Often involve just a fraction of a second.
+    - May also occur over a longer period of time.
+- Prevent Race Conditions
+  - Lock the shard resource when the process is modifying it, and unlock it when the process is done.
+    - This can get qiute complicated.
+    - Example: An error occurs in the process that has locked the resource, so you will deadlock other processes that use that resource. In some cases, it may be preferable to leave the resource locked than to continue in an undefinded state.
+  - Write code that doesn't depend on side effects.
+    - A side effect is when a function changes a variable outside of its own scope.
+    - If possible, only modify data inside of the local scope of the thread or process.
+  - Write temporary files in a data store that is available only to a single thread or process.
+  - Research best practices for writing multiple threading or multiple processing code in the language and system you are developing in. Tools you might use (if available) include semaphores, mutexes, and others.
+
+### 4.36-37. Assignment: Using Locks to Remediate a Race Condition - Activity: Using Locks to Remediate a Race Condition
 
 ---
 
