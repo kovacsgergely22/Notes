@@ -863,6 +863,8 @@ if (IsAccessAllowed( ) == 1) {
 
 ### 4.36-37. Assignment: Using Locks to Remediate a Race Condition - Activity: Using Locks to Remediate a Race Condition
 
+### 4.38.
+
 ---
 
 1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
