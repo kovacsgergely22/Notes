@@ -863,7 +863,81 @@ if (IsAccessAllowed( ) == 1) {
 
 ### 4.36-37. Assignment: Using Locks to Remediate a Race Condition - Activity: Using Locks to Remediate a Race Condition
 
-### 4.38.
+### 4.38. OWASP TOP 10 Platform Vulnerabilities
+
+- Webre vonatkozik, más platformokhoz is összeállítottak néhányat
+
+![4.38](img/4.38.png)
+
+### 4.39. Web Application Vulnerabilities Deep Dive
+
+- Provide Secure Authentication and Session Management: To avoid authentiction and session management defects, make sure your software:
+  - Bases authentication and session management capabilities upon a single set of strong authentication and session management controls.
+  - Requires strong passwords.
+  - Requires users to change passwords periodically and not reuse old passwords.
+  - Does not log passwords entered on failed login attempts.
+  - Blocks repeated failed attempts.
+  - Provides a single, careful mechanism through which passwords can be changed.
+  - Does not store password.
+- Protect from Injection Attacks
+  - Design your software to prevent user input (data) from being interpreted as a command.
+  - Be careful using APIs that may not prevent user input from being interpreted as a command.
+  - If it is not practical to implement other protections, escape input data so it will be treated as data, sot commands.
+  - Use input validation to accept only characters that are allowed.
+  - When possible, use strong data typing on variables that hold user input.
+  - Limit users' database access to minimize the damage that can be caused by SQL injection.
+  - Encrypt sensitive data in the database.
+  - Don't store sensitive data in the database.
+- Prevent XSS
+  - XSS is a possible when web application dynamically includes user input in the web page's content without first properly validating the data.
+  - The defect might be in client-side or server-side code.
+  - An attacker can use this defect to:
+    - Run a script in the victim's browser.
+    - Hijack user sessions.
+    - Deface websites.
+    - Redirect the user to a malicious site.
+  - Code analysis tools are not able to find all potential XSS problems.
+  - Manual code review and testing is often necessary. Make sure that code:
+    - Doesn't pass untrusted data to JavaScript or other browser APIs that generate active content.
+    - Escape data on output.
+    - Sanitizes HTML Content
+    - Sets a Content-Security Policy (CSP) in HTTP headers:
+
+```
+X-Content-Security-Policy: script-src 'self' http://code.jquery.com; style-src 'self'
+```
+
+- Provide Secure Access Control
+  - Application does not properly enforce restrictions on what authenticated users do.
+  - Enables attacker to access unauthorized functionally and data, such as:
+    - Access other user accounts.
+    - View sensitive files.
+    - Modify other user data.
+    - Change access rights.
+  - To avoid this defect, make sure your software:
+    - Provides a consistent, easy-to-analyze authorization module that is invoked from all of your business functions. Frequently, such protection is provided by one or more components external to the applicaton code.
+    - Denies al access by default, explicitly granting access to specific roles for every function.
+    - Ensures that conditions are in the poper state to allow access to functions that are part of a workflow.
+    - Enables entitlements to be easily updated and audited (not hard-coded).
+    - Protects each function and each type of data that requires access control.
+    - Does not prvide "side door" navigation to functions and data that require access control.
+    - Checks authentication and authorization on the server side.
+    - Does not expose direct object referencing schemes (such as a path and file name), but instead uses a per-user or per-session indirect reference to identify objects.
+      - Example: Use an index value to identify all files to which the current user has authorized access, rahter than a file path or database key that an attacker could use to figure out how to access other resources.
+- Prevent Security Misconfiguration
+  - Good security requires having a secure configuration defined and deployed for the application, frameworks, application server, web server, database server, platform, etc. pl. MongoDB regisztráció nélkül nyitva áll a világ előtt
+  - Secure settings should be defined, implemented, and maintained, as default are often not secure.
+  - Unnecessary features shoulc be removed or disabled.
+  - Default logging and error messages should be reviewed to ensure they don't provide information helpful to an attacker.
+  - Software should be kept up to date.
+- Prevent Sensitive Data Exposure
+  - Many web application and APIs do not properly protect sensitive data, such as financial, healthcare, and PII.
+  - Attackers may steal of modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes.
+  - Sensitive data requires extra protection (encryption at rest or in transit) and special precautions when exchanged with the browser.
+
+### 4.40. Mobile Application Vulnerabilites
+
+
 
 ---
 
