@@ -358,10 +358,72 @@
 ### Cross-site scripting (XSS)
 
 - Olyan webes biztonsági sebezhetőség, ahol egy rosszindulatú szkriptet juttatnak be egy olyan weboldalba, amelyet más felhasználók néznek, jellemzően egy felhasználó által generált tartalom segítségével, hogy jogosulatlan műveleteket hajtsanak végre a böngészőjükben.
+  - Először az URL-címet alakítjuk ki úgy, hogy a szkriptet hozzáadjuk egy biztonságos weboldalhoz:
+
+```
+https://www.diontraining.com/search?q=<script%20type='application/javascript'>alert('xss')</script>
+```
+
+  - a `search?q=` -> általában egy weboldalon keresésre használnánk, lekérdezés
+  - ezutan a lekérdezést a beilleszteni kívánt scriptbe fogjuk cserélni
+  - kipróbálható: [xss-game.appspot.com](https://xss-game.appspot.com/)
+- Előző példa -> **Reflektált, vagy Non-Persistent XSS**: Ez a fajta támadás csak akkor következik be, ha azért indítják el, mert Ön rákattint a linkre, vagy beírja a webböngészőjébe és megnyomja az Entert.
+  - Ha megtörténik, egyszer történik meg, aztán abbamarad, nem tartós
+- **Persistent XSS:** egy tartós cross-site scripting támadás lehetővé teszi a támadó számára, hogy kódot illesszen be az adott megbízható webhely által használt backend adatbázisba.
+  - Ezzel a támadónak már nem kell megvárnia, hogy valaki ténylegesen rákattintson a linkre, mivel a rosszindulatú kód már be van ágyazva a weboldal adatbázisába.
+  - Bármikor, amikor a felhasználó betölti az oldalt vagy a tartalmat az adatbázisból, a tartós cross-site szkriptet is betölti.
+- Mindkét XSS **szerver oldali scripting támadások** formáinak tekinthetők, mivel egy kiszolgáló az, amely végrehajtja a bejuttatott szkripteket.
+- Van egy kliens-oldali támadás is, amelyet **DOM cross-site scripting támadásnak** neveznek:
+  - DOM (Document Object Model) cross-site scripting támadás az ügyfél webböngészőjét használja ki a kliensoldali szkriptek segítségével a weboldal tartalmának és elrendezésének módosítására.
+  - A DOM az, ahogyan a dolgok megjelennek a kliens böngészőjében, de a szkriptek DOM-ba történő beillesztésével ez ténylegesen megváltoztatható. 
+
+```
+https://diontraining.com/index.html#default<script>alert(document.cookie)</script>
+```
+
+- itt az alert ablak a dokumentum cooki-jait mutatja meg. A webböngésző DOM-ján belül próbálunk meg hozzáférni a cookie-tárolóhoz, ezért ezt a böngészőben próbáljuk végrehajtani, és megjeleníteni az ügyfél cookie-ainak tartalmát. Ha a webböngésző sebezhető erre, akkor a kódok azt fogják mondani, hogy 'Ó, látom ezt a kódot' -> document.cookie-kat kérsz.
+  - Lehetséges document.write-tal
+  - document.location
+  - egyéb olyan dolgok, amelyek hozzáférhetnek a DOM környezethez és megváltoztathatják azt.
+- Amikor DOM XSS-t hajtunk végre, akkor az adott helyi rendszer bejelentkezett felhasználói engedélyeivel fog futni -> ha bejelentkezett rendszergazda lefuttatja a cross-site scripting támadást -> rendszergazdaként férhet hozzá a rendszerhez.
 
 ### Cross-site request forgery (XSRF)
 
 - Webes biztonsági kihasználás, a támadó arra összpontosít, hogy megpróbálja becsapni a felhasználót, hogy tudtán kívül, beleegyezése nélkül hajtson végre egy műveletet egy másik weboldalon, hogy potenciálisan nem szándékos vagy káros műveleteket hajtson végre a felhasználó kontextusában az adott weboldalon.
+- **Session Management fogalma**: a munkamenetkezelés alapvető biztonsági összetevője a webes alkalmazásoknak.
+  - A session management lehetővé teszi a webes alkalmazások számára, hogy ey felhasználót több különböző művelet és kérés során egyedileg azonosítsanak, miközben megőrzik az adott felhasználó által generált adatok állapotát, és biztosítják, hogy azok továbbra is az adott felhasználóhoz legyenek rendelve.
+- **Cookie:** lényegében csak egy szöveges fájl, amely a felhasználóról szóló információk tárolására szolgál, amikor a felhasználó meglátogatja a webhelyet.
+  - Ez a cookie akkor jön létre, amikor a kiszolgáló először elküldi a HTTP-válasz fejlécet a sütivel együtt az ügyfélnek.
+  - Ezután az ügyfél által a kiszolgálónak visszaküldött minden további kérés fejlécének tartalmaznia ezt a sütit a legfrisebb információkkal. 
+  - Cookiek lehetnek:
+    - Persistent (tartós): a böngésző gyorítótárában maradnak, amíg a felhasználó nem törli őket, vagy le nem járnak.
+      - Ezeket titkosítani és védeni kell, mert érzékeny információkat is tartalmazhatnak.
+    - Non-Persistent (nem tartós): munkamenet cookie-ként is ismerik.
+      - A memóriában vannak és nagyon rövid ideig használatosak. Amikor a böngésző befejezi a munkamenetet, a munkamenet süti törlődik.
+- **Session Hijacking (munkamenet eltérítés):** a spoofing attack egy olyan típusa, amikor a támadó leválasztja az állomás kapcsolatot, majd az eredeti állomás IP-jének meghamisításával vagy más átvételi mechanizmus használatával a saját gépével helyettesíti azt.
+  - Sok session hijacking támadás történik a sütik ellopásával vagy módosításával.
+  - Ha a támadónak sikerül ellopnia a munkamenet-sütit, akkor a már hitelesítő felhasználóként átveheti a munkamenetet.
+  - Másik formája a munkamenet-kezelésre összpontosít, amelyet egy adatbázis segítségével végeznek, és ez az adatbázis minden felhasználóhoz hozzárendel egy véletlenszerű munkamenet-tokent. Ha a véletlenszerű séma nem igazán véletlenszerű, akkor olyan tokeneket hoz létre, amelyeket egy támadó könnyen kitalálhat, és ez azt jelenti, hogy előre megjósolhatja a munkamenetet, és a véletlenszerű token kitalálásával átveheti a már hitelesített munkamenetet.
+- **Session Prediction:** munkamenet előrejelzési támadások egyszerűen a hamisítási támadások egy fajtája, ahol a támadó megpróbálja megjósolni a munkamenet-tokent, hogy eltérítse az Ön munkamenetét. 
+  - A session prediction támadások megelőzése érdekében a munkamenet-tokeneket nem kiszámítható algoritmussal kell generálni, és valóban véletlenszerűnek kell lenniük. Így a munkamenet tokeneket nem lehet könnyen kitalálni.
+  - A munkamenet tokeneknek nem szabad semmilyen információt felfedniük a munkamenet ügyfeléről, ehelyett a munkamenet-tokeneknek egyszer használatos jegyeknek kell lenniük az adott munkamenet időtartamára.
+- **Cross-Site Request Forgery (XSRF):** (webhelyközi kéréshamisítás) egy olyan rosszindulatú szkript, amelyet a támadó webhelyén tárolnak, és amely felhasználható egy másik webhelyen indított munkamenet kihasználására ugyanazon a böngészőn belül. 
+  - Ehhez a támadónak meg kell győznie áldozatát, hogy indítson munamenetet a célzott weboldalon. Ha ez megtörtént, a támadó átadhat egy HTTP-kérést az áldozat böngészőjének, és ezt a céloldalon végzett műveletnek álcázhatja.
+  - Ha például már bejelentkezett a fiókjába, a támadó megpróbálhatja egy cross-site request segítségével megváltoztatni a jelszavát vagy az adott fiók e-mail címét.
+  - Cross-site Request Forgery sokféleképpen álcázható:
+    - használhatnak olyan dolgokat, mint a kép, a címkék és más HTML-kódolási technikák, hogy elrejtsék magukat.
+    - XSRF anélkül is megvalósítható, hogy az áldozatnak feltétlenül rá kellene kattintania egy linkre, hogy az áldozatot kihasználják.
+    - Ahhoz, hogy a XSRF működjön, a weboldalnak rendelkeznie kell egy olyan funkcióval, amely jogosulatlan hozzáféréshez vezethet, például egy "elfelejtettem a jelszavam" funkcióval. A webhelynek pedig a felhasználók hitelesítéséhez sütikre kell támaszkodnia, és kiszámítható mintákat kell használnia a munkamenet-kezeléshez, amelyeket ki lehet találni.
+    - például
+      - először is tegyük fel, hogy a böngésző már hitelesített a céloldalon. A példában az áldozat bankja.
+      - Ezután az XSRF megpróbálja ellopni az érvényes munkamenet-tokeneket az áldozat böngészőjéből. Ebben a példában tegyük fel, hogy a webböngészőben két lap van nyitva. Az egyik a támadó weboldala, a másik pedig az Ön bankja.
+      - Ön már bejelentkezett a bankjához, de most már a támadó weboldalához is csatlakozott ezen az új lapon belül, mert egy adathalász kampány vagy más social engineerin módszer keretében rákattintott egy linkre.
+      - A támadó most egy XSRF támadással megpróbálhatja manipulálni a munkamenetet az Ön bankjával, mivel a böngészője már hitelesített az adott webhelyen, és megpróbálhatja átvenni a munkamenetet a másik lapon belül.
+  - Hogyan előzhető meg a cross-site request forgery?
+    -  Először is biztosíthatja, hogy minden űrlapbeadásnál felhasználó-specifikus tokeneket használjanak, hogy megelőzzék az XSRF támadást -> Ezt a műveletet a webfejlesztők a biztonságos kódolás és a legjobb gyakorlatok részeként végzik.
+    -  Véletlenszerűséget adhat hozzá, és további információkat kérhez, amikor a felhasználó megpróbálja visszaállítani a jelszavát, vagy megkövetelheti a kétfaktoros hitelesítést
+    -  Megkövetelheti a felhasználótól, hogy adja meg az aktuális jelszavát, amikor jelszavát módosítani próbálja. Ez valójában megállítaná a cross-site request forgery támadások nagy részét, mivel ezek általában a felhasználó tudta nélkül próbálják megváltoztatni a felhasználó jelszavát, hogy a támadó átvehesse a fiókot. 
+ - Ha valaki megpróbálja rávenni az áldozatot, hogy akaratlanul végezzen el egy műveletet egy weboldalon, akkor ez általában a cross-site request forgery egy formája. Ez leggyakrabban úgy történik, hogy az áldozatot valamilyen ismeretlen frissítésre próbálják rávenni az alapértelmezett e-mail címükön, vagy a felhasználó jelszavának megváltoztatásával.
 
 ### Buffer Overflow
 
