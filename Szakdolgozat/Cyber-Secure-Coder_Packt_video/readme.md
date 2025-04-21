@@ -937,7 +937,51 @@ X-Content-Security-Policy: script-src 'self' http://code.jquery.com; style-src '
 
 ### 4.40. Mobile Application Vulnerabilites
 
+- Use Platforms Properly
+  - Misuse of a platform feature of failure to use platform security controls can lead to vulnerabilities.
+  - Examples: Providing escessive platform permissions and misusing security controls such as iOS Keychain, the Android Keystore System, Windows Hello, encryption APIs, and so forth.
+- Store Data Securely
+  - Storing data improperly may expose it or cause unintended data leadage.
+  - This covers a wide range of possible problem areas, such as file and object storage on loccal drives, SD cards, network volumes, and cloud storage, as well as memory caches, databases, log files, web cookies, and browser local storage.
+  - Vulnerabilities may originate from a variety of sources, such as the operating system, frameworks, the compiler environment.
+- Provide Secure Communication
+  - This includes:
+    - All aspects of packaging sensitive data and tramsmitting it into or out of the device.
+    - Using services improperly, exposing data, and transmitting sensitive assets without encryption
+    - Communication between applications, between devices, between an application and server.
+    - Technologies such as TCP/IP, Wi-Fi, Bluetooth, NFC, audio, infrared, GSM, 3G, SMS, and RFID.
+    - Transport layer security problems, such as poor handshaking, using vulnerable SSL versions, failing to check certificates.
+    - Data such as passwords, tokens, encryption keys, private user information, account details, documents, metadata, and code.
+    - Risk to data in transit, such as unauthorized viewing or modification, and the inability to prove the data-s origin.
+    - Never store the user's password or shared secrets on the client.
+    - Enforce strong password policies.
+    - Make sure authentication requirements of your various platforms match. For example, authentication requirements of your mobile and desktop applications should match those of the equivalent web application.
+    - Whenever possible, perform authentication requests on the server side. Load application data on the client only upon successful authentication.
+    - Avoid storing sensitive data on the client. I you must do this, ensure that data will only be accessible upon successfully entering the correct credentials by using an encryption key that is securely derived from the user's login credentials.
+    - Persistent authentication ("remember me on this device") is not a safe default fr mobile applications. Provide it as an opt-in setting.
+    - For mobile device applications, enable the user to revoke persistent authentication from a remote management console so the user can reverse access by stolen or lost devices.
+- Provide Sufficient Cryptography
+  - Incorrect or inappropriate use of cryptography can leave sensitive data exposed.
+- Provide Secure Authorization
+  - Failure to authorize properly may enable an attacker to gain elevated privileges.
+  - An example of insecure authorization includes having client-side code that determines permissions based on authentication, where it facilities a client-side attack.
+- Ensure Client Code Quality
+  - A variety of client code quality problems on the client side (desktop and mobile apps, web clients, etc.) may lead to a wide range of security problems.
+  - Examples of client code quality problems include buffer overflows and format string vulnerabilities.
+- Prevent Code Tampering and Reverse Engineering
+  - Exposure of code and data may enable an attacker to:
+    - Identify vulnerabilities, information about back-end servers, cryptographic constants and ciphers, and intellectual property.
+    - Directly modify an application's functionality.
+    - Change the contents of memory.
+    - Change or replace system APIs
+    - Modify data and resources in order to subvert the intended use of the software.
+  - Mobile apps are especially vulnerable to reverse engineering and code tampering.
+  - To reverse engineer, the attacker processes exposed files (such as an app package ona mobile device) to extract its souce code, libraries, algorithms, and other assets.
+- Eliminate Extraneous Functionality
+  - Developers might include extra or hidden functionality in the released version of an app, which provides a back door that gives an attacker inappropriate access.
+  - Examples include noting a password within an included app resource, or disabling two-factor authentication during testing and leaving it disabled in the release version.
 
+### 4.41. IoT Vulnerabilities Deep Dive
 
 ---
 
