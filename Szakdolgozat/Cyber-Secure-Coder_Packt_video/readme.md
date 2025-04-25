@@ -983,6 +983,134 @@ X-Content-Security-Policy: script-src 'self' http://code.jquery.com; style-src '
 
 ### 4.41. IoT Vulnerabilities Deep Dive
 
+### 4.42. Desktop Vulnerabilities Deep Dive
+
+### 4.43. Privacy Vulnerability Defects
+
+- Privacy Vulnerability Defects
+  - Protect users' sensitive data from being exposed by:
+    - Independent hackers
+    - Government agencies (foreign and domestic, intelligence service, police agencies)
+    - Violent non-state actors (such as terrorist organizations and drug cartels)
+    - Users themselves - from inadvertently leaving sensitive information unprotected
+  - OWASP's list of the Top 10 Privacy Risks
+    - P1: Web Application Vulnerabilities
+    - P2: Operator-sided Data Leakage
+    - P3: Insufficient Data Breach Response
+    - P4: Insufficient Deletion of Personal Data
+    - P5: Non-transparent Policies, Terms and Conditions
+    - P6: Collection of data not required for the primary purpose
+    - P7: Sharing of data with third party
+    - P8: Outdated personal data
+    - P9: Missing or Insufficient Session Expiration
+    - P10: Insecure Data Transfer
+- Privacy by Design
+  - Account for privacy throughout every development phase, as in Security by Design.
+  - Not simply protecting data, but designing software so data doesn't need protection.
+    - E.g., avoid transferring data from the client to the server in the first place.
+  - Initially proposed by Ann Cavoukian, the Information & Privacy Commissioner of Ontario, Canada, as a set of severn principles:
+    - Proactive not Reactive; Preventative not Remedial
+    - Privacy as the Defaul Setting
+    - Privacy Embedded into Design
+    - Full Functionality - Postive-Sum, Not Zero-Sum
+    - End-to-End Security - Full Lifecycle Protection
+    - Visibility and Transparency - Keep it Open
+    - Respect for User Privacy - Keep it User-Centric
+- Data Anonymization
+  - To maintain privacy, personal identifiable information (PII) may nedd to be anonymized before it can be processed and analyzed.
+  - This means that the identity associated with personal data has been masked somehow so the data can be processed and analyzed without revealing the person associated with that data.
+- Protect Sensitive Information
+  - Identify any information that is sensitive, and apply appropriate controls to ensure it remains private
+    - Consider all personally identifiable information (PII) sensitive, as it can be used to establish a person's identify and might be used to cause them substantial harm, embarrassment, inconvenience, or unfairness.
+    - Refer to privacy guidelines for yout country, municipality, or organization for specific lists of PII you may be legally required to protect.
+    - A typically list includes:
+      - User name
+      - Email address
+      - Home address
+      - Phone number
+      - Social Security number (even if it's jut the last 4 digits)
+      - Driver's license or state ID#
+      - Passport number
+      - Allen registration number
+      - Finincial account number
+      - Biometric identifiers
+      - Citizenship or immigration status
+      - Medical information
+      - Ethnic of religious association
+      - Sexual orientation
+      - Account passwords
+      - Date of birth
+      - Criminal history
+      - Mother's maiden name
+- Anonymize Personal Data
+  - Use one of the following techniques to mask the identifying data:
+    - Replacement - Substitute any values that could be used to identify the user with different values.
+    - Suppression - Omit (all or in part) any values that could be used to idenfity the user.
+    - Generalization - Substitute specific values that could be used to identify the user with something less specific. For example, geeral the date of birth to the year or decade in which the user was born.
+    - Perturbation - Make random changes to the data to corrupt values that could be used to identify the user.
+  - Anonimize non-sensitive data as well, if it could be used for the reverse anonymization of sensitive data.
+  - Make sure that the masking process will produce the same results each time.
+  - Make sure that the same masking process will produce the same results each time.
+  - Make sure that data types remain compliant with the schema.
+  - Preserve the meaning of the data.
+- Prevent Operator-Sided Data Leakage
+  - The system operator may exposed data.
+    - Intentional malicious breach.
+    - Unintentional mistake.
+  - Defects in the software may enable such leakage, such as:
+    - Weak or poorly implemented access management controls
+    - Encryption
+  - To avoid this defect:
+    - Implement effective and secure access management controls.
+    - Endrypt data at rest and in transit.
+    - Implement effective, secure appropriate identity and access management.
+    - Provide awareness training for all employees on handling personal data.
+    - Implement a data classification and information handling policy.
+    - Implement tools like data leakage prevention and SIEMs to monitor and detect data leaked from endpoints, web portals, and cloud services.
+    - Implement privacy by design.
+    - Anonymize personal data.
+- Respond Appropriately to Data Breaches
+  - A data breach should be followed up with an appropriate response.
+    - Example: Limit the extent of the leak, inform those who are affected, and remedy defects or problems that made the breach possible.
+  - To avoid this defect:
+    - Provide continuous monitoring and logging features to monitor for situations that might indicate personal data leakage and loss.
+    - Provide features to warn users of possible suspicious activity in theri accounts.
+    - Create, maintain, and periodically test an incident response plan.
+    - Continuously monitor for personal data leakage and loss.
+    - When a breach occurs:
+      - Validate that the breach occured.
+      - Determine the most effective way to prevent further leakage, and implement it.
+      - Assign in indcident manager to be responsible for the investigation.
+      - Decide how to investigate and respond to the data breach to ensure that evidence is appropriately handled.
+      - Assemble an incident response team.
+      - Notify affected people as appropriate.
+      - Determine whether to notify the authorities as appropriate.
+      - Remedy any defects of problems that made the breach possible
+  - Delete Private of Sensitive Data That is No Longer Needed
+    - Defects make the software fail to delete private or sensitive data that is no longer needed, putting privacy at risk.
+    - To avoid this defect:
+      - Design the software to minimize data that is stored in the first place.
+      - Promptly delete data that is no longer needed.
+      - Properly delete data when a user issues a rightful request.
+      - Securely lock the data from any access until deletion is possible, if prompt deletion is not possible due to technical restrictions.
+      - Ensure prompt deletion of data in backups, copies, cloud storage, or data shaed with third-party sources.
+      - Clearly inform users when backups must be kept, as requird by law.
+      - Provide evidence (such as logging and messagint to the user) to verify deletion according to policy.
+      - Identify deletion policies (circumstances under which data must be deleted, and the timeframe dor deletion), and implement automation and/or manual procedures to ensure that happens.
+  - Make Sure Privacy Policies, Terms and Conditions are Clear
+    - The software may not make it clear to users what it will do with their data so users can make good decisions about how to manage their data within the software.
+    - To avoid this defect:
+      - Provide release notes with software updates to clearly and simply explain how terms and conditions change over time.
+      - Track which users have consented to the terms and conditions, including the version if terms and conditions have changeed over time.
+      - Implement a Do Not Track feature on the server side, so users can disable tracking, and provide an opt-out capability for users.
+      - Provide users with a list of all tracking mechanisms used in the software, explaining how and by whom the information is used.
+      - Inform users (through a clear and well-written terms and conditions page, for example) how datais processed, including collection, storage, processing, and deletion.
+    - Consider using a readability tester (such as https://readable.io) to help you verify that your terms and conditions are easy to read.
+
+### 5.44. Secure Session Management
+
+
+
 ---
 
 1. [ ] [Cyber Secure Coder](https://subscription.packtpub.com/video/cloud-and-networking/9781835884348/p2/video2_1/bugs-in-software)
