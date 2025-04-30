@@ -339,10 +339,12 @@
 <lolz>&lol9;</lolz>
 ```
 
-    - XML External Entity (XXE) támadás: egy helyi erőforrás iránti kérés beágyazására tesz kísérletet.
-      - Az alábbi kódban az XML-egység egy Linux-gép shadow fájlját próbálja beolvasni, amely a rendszer fiókjainak password hash-eit tartalmazza
-      - Megelőzés: Input validation
-      - XML Vulnerability, XML Exploitation, XML Injection: XML sebezhetőség, amelyet kihasználnak
+
+- XML External Entity (XXE) támadás: egy helyi erőforrás iránti kérés beágyazására tesz kísérletet.
+  - Az alábbi kódban az XML-egység egy Linux-gép shadow fájlját próbálja beolvasni, amely a rendszer fiókjainak password hash-eit tartalmazza
+  - Megelőzés: Input validation
+  - XML Vulnerability, XML Exploitation, XML Injection: XML sebezhetőség, amelyet kihasználnak
+
 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
