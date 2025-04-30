@@ -10,5 +10,5 @@
 
 ## Jegyzetek
 
-- CompTIA Security+:
-  - Integrity hiányos, a fejezetből a többi is kell
+- [CompTIA Security+ jegyzetek](https://kovacsgergely22.github.io/Notes/Szakdolgozat/CompTIA_Security+-Udemy/)
+- [Cyber Secure Coder](https://kovacsgergely22.github.io/Notes/Szakdolgozat/Cyber-Secure-Coder_Packt_video/)
