@@ -1,0 +1,2 @@
+# Vezetés-szervezés jegyzet
+
