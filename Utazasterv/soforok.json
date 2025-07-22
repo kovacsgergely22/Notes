@@ -298,6 +298,7 @@
     {
         "datum": "2025-07-04",
         "sofor": "Kovács László"
+<<<<<<< HEAD
     },
     {
         "datum": "2025-07-08",
@@ -314,5 +315,7 @@
     {
         "datum": "2025-07-20",
         "sofor": "Toldi Csaba"
+=======
+>>>>>>> ad3bb3a07ddc06f1473e1c64abab19e6cdf6401a
     }
 ]
