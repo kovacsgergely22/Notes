@@ -1,6 +1,6 @@
 # Tesztek megoldásai a CompTIA Network+ vizsga anyagából
 
-## Section 6 - Wireless Networks
+## Section 7 - Wireless Networks
 
 #### 1. Vezeték Nélküli Hálózati Típusok Teszt
 

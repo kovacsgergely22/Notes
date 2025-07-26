@@ -1,6 +1,6 @@
 # Jegyzetek a CompTIA Network+ vizsga anyagából
 
-## Section 6 - Wireless Networks
+## Section 7 - Wireless Networks
 
 ### 1. Vezeték Nélküli Hálózat Típusok
 - A vezeték nélküli hálózatok forradalmasítják a kapcsolódási lehetőségeket, rugalmasságot és skálázhatóságot kínálva.
