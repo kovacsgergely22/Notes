@@ -2,8 +2,7 @@
 
 ## Section 6 - Wireless Networks
 
-Vezeték Nélküli Hálózatok
-1. Vezeték Nélküli Hálózat Típusok
+### 1. Vezeték Nélküli Hálózat Típusok
 - A vezeték nélküli hálózatok forradalmasítják a kapcsolódási lehetőségeket, rugalmasságot és skálázhatóságot kínálva.
     - Ad Hoc Hálózat / Független Alap Szolgáltatási Készlet (Independent Basic Service Set - IBSS)
         - Az eszközök közvetlenül kapcsolódnak egymáshoz, nem központi hozzáférési ponton keresztül.
@@ -30,7 +29,38 @@ Vezeték Nélküli Hálózatok
         - Autonóm AP: Önálló eszközök, amelyek önállóan kezelik a vezeték nélküli funkciókat; kisebb beállításokhoz hasznosak, ahol nincs szükség központi vezérlőre.
         - Könnyűsúlyú AP: Központilag egy vezeték nélküli vezérlő irányítja őket; egyszerűbbek és olcsóbbak, megkönnyítve a kezelést nagy hálózatokban.
     - Vezeték Nélküli Hálózat Típus Kiválasztásának Szempontjai: A teljesítmény, a megbízhatóság és a könnyű használat a hálózattípustól függően változik; fel kell mérni a specifikus környezeti igényeket és feladatokat a megfelelő típus kiválasztásakor.
-2. Vezeték Nélküli Antennák
+
+---
+
+### **1. Vezeték Nélküli Hálózati Típusok Teszt**
+
+1.  Melyik vezeték nélküli hálózati típusban csatlakoznak az eszközök **közvetlenül egymáshoz, központi hozzáférési pont nélkül**?
+    A. Infrastruktúra mód
+    B. Pont-pont hálózat
+    C. Ad Hoc hálózat
+    D. Mesh hálózat
+
+2.  Melyik vezeték nélküli hálózati típus jellemzően egy **központosított vezeték nélküli hozzáférési pontot (AP) használ**, és fizikai hálózatban a csillag topológiához hasonlóan működik?
+    A. Ad Hoc mód
+    B. Infrastruktúra mód
+    C. Mesh hálózat
+    D. Pont-pont hálózat
+
+3.  Melyik vezeték nélküli hálózati típus az, amelyik **sokoldalú és ellenálló**, a csomópontok több másik csomóponthoz is csatlakoznak, ezzel **végtelen számú útvonalat** hozva létre az adatok számára, és **önmagát gyógyító képességgel** is rendelkezik?
+    A. Infrastruktúra hálózat
+    B. Ad Hoc hálózat
+    C. Pont-pont hálózat
+    D. Mesh hálózat
+
+4.  Melyik állítás írja le legpontosabban a **pont-pont vezeték nélküli hálózatot**?
+    A. Ideális gyors, ideiglenes beállításokhoz, meglévő infrastruktúra nélkül.
+    B. Két különálló helyet köt össze hosszabb távolságokon, **nagy nyereségű antennákat** használva.
+    C. Jellemzően egy hozzáférési pontra támaszkodik, amely a hálózat központi pontjaként szolgál.
+    D. Több csomópont közötti dinamikus útválasztási döntésekre támaszkodik a rugalmasság érdekében.
+
+---
+
+### 2. Vezeték Nélküli Antennák
 - Az antennák határozzák meg a továbbított jel irányát és hatótávolságát.
 - A vezeték nélküli antennák olyan eszközök, amelyek rádiófrekvenciás jeleket küldenek és fogadnak.
     - Típusok:
@@ -57,7 +87,7 @@ Vezeték Nélküli Hálózatok
     - Megfelelő Antenna Kiválasztásának Előnyei: Biztosítja az erős és megbízható kapcsolatot, testre szabja a hálózatot a felhasználói igényekhez és a térbeli korlátokhoz, javítja a vezeték nélküli kommunikációs rendszer teljesítményét és hatékonyságát.
     - A nagyobb antennák növelhetik a jeltávolságot, de több energiát igényelnek.
     - Vizsga Tippek: Értse meg, mikor kell használni az egyes antennatípusokat, ismerje a patch antennákat épületek közötti kommunikációhoz, és ismerje fel az antennatípusokat a jellemzőik alapján (omnidirekcionális, unidirekcionális, parabolikus, Yagi).
-3. Vezeték Nélküli Frekvenciák
+### 3. Vezeték Nélküli Frekvenciák
 - A vezeték nélküli frekvenciák a rádióhullámok vezeték nélküli hálózatokban történő továbbítására és fogadására használt különböző frekvenciasávokra utalnak.
 - Minden frekvenciasávnak specifikus jellemzői vannak a sebességgel, lefedettséggel és az interferencia elkerülésére vonatkozó szabályozásokkal kapcsolatban.
     - 2.4 GHz Sáv
@@ -85,7 +115,7 @@ Vezeték Nélküli Hálózatok
         - 2.4 GHz: Lassabb sebesség, de nagyobb lefedettség.
         - 5 GHz: Gyorsabb sebesség, rövidebb hatótávolság és megnövekedett interferencia érzékenység szélesebb csatornákkal.
         - 6 GHz: Leggyorsabb sebesség, de legrövidebb távolság és kisebb áthatolás szilárd tárgyakon.
-4. 802.11 Szabványok
+### 4. 802.11 Szabványok
 - Az IEEE 802.11 szabvány határozza meg a vezeték nélküli helyi hálózat (WLAN) kommunikációs technológiáit, amelyek az idővel fejlődtek a gyorsabb adatátviteli sebességek és a megbízhatóbb hálózatok iránti igények kielégítésére.
     - Wireless a (802.11a)
         - Frekvenciasáv: 5 GHz.
@@ -122,7 +152,7 @@ Vezeték Nélküli Hálózatok
         - A nagyobb sebességek gyakran rövidebb lefedettségi távolságokkal járnak egyetlen hozzáférési pont esetén.
         - Figyelembe kell venni a kompatibilitást és a frekvenciasávokat a hibaelhárítási forgatókönyvekben.
         - Ne támaszkodjon marketing anyagokra a vizsgán, tartsa magát a hivatalos szabványokhoz.
-5. Vezeték Nélküli Biztonság
+### 5. Vezeték Nélküli Biztonság
 - A vezeték nélküli hálózatok kényelmet kínálnak, de könnyű hozzáférésük miatt biztonsági kockázatokat is jelentenek; a megfelelő hitelesítés és titkosítás elengedhetetlen a hálózati biztonsághoz.
     - Hitelesítési Mechanizmusok
         - Előre Megosztott Kulcs (Pre-Shared Key - PSK): Megosztott kulcs a hozzáférési pont és az ügyféleszközök között; skálázhatósági problémák nagy környezetekben, az egyéni felelősség hiánya; nem praktikus nagy irodai környezetekben.
@@ -166,7 +196,7 @@ Vezeték Nélküli Hálózatok
         - WPS: nyomógombos konfigurációt foglal magában, de a biztonság érdekében ki kell kapcsolni.
         - PSK: személyes módú hitelesítés.
         - Vállalati mód: egyéni felhasználói hitelesítés központosított szerveren keresztül (pl. RADIUS 802.1X-el).
-6. Captive Portálok
+### 6. Captive Portálok
 - A captive portálok olyan weboldalak, amelyeket a modern vezeték nélküli hálózatokban vendég hozzáféréshez használnak.
 - Gyakran megtalálhatók nyilvános hálózatokban (hotelek, repülőterek, kávézók) és üzleti vendéghálózatokban.
 - A felhasználó hálózati kapcsolatának elfogásával és egy speciális weboldalra való átirányításával működnek.
@@ -181,38 +211,5 @@ Vezeték Nélküli Hálózatok
         - Kompatibilitási Tesztelés: Biztosítani kell a funkcionalitást különböző eszközökön és böngészőkön keresztül.
     - Kulcspontok: Kulcsfontosságú a nyilvános és vendég vezeték nélküli hálózatok számára; egyensúlyt teremt a felhasználói hozzáférés és a hálózati biztonság között; javítja a felhasználói élményt és segíti a jogi megfelelőséget; gondos tervezést, biztonsági és megfelelőségi szempontokat igényel.
 
-### Tesztek
-
-Rendben, itt van a teszt a vezeték nélküli hálózati típusokról, a kért formázással:
-
----
-
-**1. Vezeték Nélküli Hálózati Típusok Teszt**
-
-1.  Melyik vezeték nélküli hálózati típusban csatlakoznak az eszközök **közvetlenül egymáshoz, központi hozzáférési pont nélkül**?
-    A. Infrastruktúra mód
-    B. Pont-pont hálózat
-    C. Ad Hoc hálózat
-    D. Mesh hálózat
-
-2.  Melyik vezeték nélküli hálózati típus jellemzően egy **központosított vezeték nélküli hozzáférési pontot (AP) használ**, és fizikai hálózatban a csillag topológiához hasonlóan működik?
-    A. Ad Hoc mód
-    B. Infrastruktúra mód
-    C. Mesh hálózat
-    D. Pont-pont hálózat
-
-3.  Melyik vezeték nélküli hálózati típus az, amelyik **sokoldalú és ellenálló**, a csomópontok több másik csomóponthoz is csatlakoznak, ezzel **végtelen számú útvonalat** hozva létre az adatok számára, és **önmagát gyógyító képességgel** is rendelkezik?
-    A. Infrastruktúra hálózat
-    B. Ad Hoc hálózat
-    C. Pont-pont hálózat
-    D. Mesh hálózat
-
-4.  Melyik állítás írja le legpontosabban a **pont-pont vezeték nélküli hálózatot**?
-    A. Ideális gyors, ideiglenes beállításokhoz, meglévő infrastruktúra nélkül.
-    B. Két különálló helyet köt össze hosszabb távolságokon, **nagy nyereségű antennákat** használva.
-    C. Jellemzően egy hozzáférési pontra támaszkodik, amely a hálózat központi pontjaként szolgál.
-    D. Több csomópont közötti dinamikus útválasztási döntésekre támaszkodik a rugalmasság érdekében.
-
----
 
 
