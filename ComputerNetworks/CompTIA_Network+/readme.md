@@ -32,31 +32,31 @@
 
 ---
 
-### **1. Vezeték Nélküli Hálózati Típusok Teszt**
+### **Teszt**
 
 1.  Melyik vezeték nélküli hálózati típusban csatlakoznak az eszközök **közvetlenül egymáshoz, központi hozzáférési pont nélkül**?
-    A. Infrastruktúra mód
-    B. Pont-pont hálózat
-    C. Ad Hoc hálózat
-    D. Mesh hálózat
+    - A. Infrastruktúra mód
+    - B. Pont-pont hálózat
+    - C. Ad Hoc hálózat
+    - D. Mesh hálózat
 
 2.  Melyik vezeték nélküli hálózati típus jellemzően egy **központosított vezeték nélküli hozzáférési pontot (AP) használ**, és fizikai hálózatban a csillag topológiához hasonlóan működik?
-    A. Ad Hoc mód
-    B. Infrastruktúra mód
-    C. Mesh hálózat
-    D. Pont-pont hálózat
+    - A. Ad Hoc mód
+    - B. Infrastruktúra mód
+    - C. Mesh hálózat
+    - D. Pont-pont hálózat
 
 3.  Melyik vezeték nélküli hálózati típus az, amelyik **sokoldalú és ellenálló**, a csomópontok több másik csomóponthoz is csatlakoznak, ezzel **végtelen számú útvonalat** hozva létre az adatok számára, és **önmagát gyógyító képességgel** is rendelkezik?
-    A. Infrastruktúra hálózat
-    B. Ad Hoc hálózat
-    C. Pont-pont hálózat
-    D. Mesh hálózat
+    - A. Infrastruktúra hálózat
+    - B. Ad Hoc hálózat
+    - C. Pont-pont hálózat
+    - D. Mesh hálózat
 
 4.  Melyik állítás írja le legpontosabban a **pont-pont vezeték nélküli hálózatot**?
-    A. Ideális gyors, ideiglenes beállításokhoz, meglévő infrastruktúra nélkül.
-    B. Két különálló helyet köt össze hosszabb távolságokon, **nagy nyereségű antennákat** használva.
-    C. Jellemzően egy hozzáférési pontra támaszkodik, amely a hálózat központi pontjaként szolgál.
-    D. Több csomópont közötti dinamikus útválasztási döntésekre támaszkodik a rugalmasság érdekében.
+    - A. Ideális gyors, ideiglenes beállításokhoz, meglévő infrastruktúra nélkül.
+    - B. Két különálló helyet köt össze hosszabb távolságokon, **nagy nyereségű antennákat** használva.
+    - C. Jellemzően egy hozzáférési pontra támaszkodik, amely a hálózat központi pontjaként szolgál.
+    - D. Több csomópont közötti dinamikus útválasztási döntésekre támaszkodik a rugalmasság érdekében.
 
 ---
 
