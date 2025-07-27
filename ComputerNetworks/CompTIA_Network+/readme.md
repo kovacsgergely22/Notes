@@ -64,13 +64,13 @@
 - Az antennák határozzák meg a továbbított jel irányát és hatótávolságát.
 - A vezeték nélküli antennák olyan eszközök, amelyek rádiófrekvenciás jeleket küldenek és fogadnak.
     - Típusok:
-        - Omni-direkcionális Antennák
+        - Omni-directional Antennák (többirányú antennák)
             - Úgy vannak kialakítva, hogy minden irányba egyenlő erővel sugározzanak és fogadjanak jeleket.
             - Ideálisak széles lefedettség biztosítására egyenletes jelerősséggel.
             - Gyakran használatosak vezeték nélküli hozzáférési pontokban, mobil hotspotokban és nyilvános hálózatokban.
             - Gyakran be vannak építve eszközökbe (vezeték nélküli AP-k, mobiltelefonok).
             - Akkor használatosak, ha a jel iránya ismeretlen, vagy több eszközhöz kell elérnie.
-        - Uni-direkcionális Antennák
+        - Uni-directional Antennák (egyirányú antennák)
             - Az energiát egyetlen irányba koncentrálják a fókuszált jelnyaláb érdekében.
             - Legjobb, ha jeleket specifikus területekre vagy távoli helyszínekre irányítják.
             - Gyakran használják pont-pont kapcsolatokban, távoli épületek vagy területek összekapcsolására.
