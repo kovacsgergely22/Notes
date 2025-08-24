@@ -32,7 +32,7 @@
 
 ---
 
-### **Teszt**
+#### **Teszt**
 
 1.  Melyik vezeték nélküli hálózati típusban csatlakoznak az eszközök **közvetlenül egymáshoz, központi hozzáférési pont nélkül**?
     - A. Infrastruktúra mód
@@ -87,6 +87,19 @@
     - Megfelelő Antenna Kiválasztásának Előnyei: Biztosítja az erős és megbízható kapcsolatot, testre szabja a hálózatot a felhasználói igényekhez és a térbeli korlátokhoz, javítja a vezeték nélküli kommunikációs rendszer teljesítményét és hatékonyságát.
     - A nagyobb antennák növelhetik a jeltávolságot, de több energiát igényelnek.
     - Vizsga Tippek: Értse meg, mikor kell használni az egyes antennatípusokat, ismerje a patch antennákat épületek közötti kommunikációhoz, és ismerje fel az antennatípusokat a jellemzőik alapján (omnidirekcionális, unidirekcionális, parabolikus, Yagi).
+
+---
+
+#### Teszt
+
+Teszt: Vezeték nélküli antennák
+1. Melyik állítás írja le legjobban egy körsugárzó antenna (omnidirectional antenna) jellemzőjét a források szerint? A.  Egyetlen irányba fókuszálja az energiát a koncentrált sugárzás érdekében. B.  Nagy jelnyereséget biztosít szűk sugárral a nagy távolságú kommunikációhoz. C.  Egyenlően sugároz és vesz jeleket minden irányba. D.  Görbült tányérra van szüksége az energia fókuszálásához.
+2. Mi a egyirányú antenna (uni-directional antenna) fő célja a források alapján? A.  Széles lefedettség biztosítása egységes jelerősséggel nyilvános hálózatokban. B.  Közvetlen kapcsolat létrehozása két eszköz között hozzáférési pont nélkül. C.  A jel energiájának fókuszálása meghatározott területek vagy távoli helyek felé. D.  A jel hatótávolságának növelése többemeletes épületekben.
+3. Melyik antennatípust említik kifejezetten úgy, mint amely nagy jelnyereséget biztosító, keskeny sugárzással rendelkező irányított antenna, nagy távolságú kommunikációhoz? A.  Körsugárzó antenna (Omnidirectional Antenna). B.  Parabolikus antenna (Parabolic Antenna). C.  Yagi antenna (Yagi Antenna). D.  Dipól antenna (Dipole Antenna).
+4. Milyen kulcsfontosságú területre van hatással az antenna kiválasztása a források szerint? A.  A hálózati kábelezés költségére. B.  A használt hálózati topológia típusára (pl. csillag vagy mesh). C.  A hálózati teljesítményre és a felhasználói élményre. D.  Az alkalmazott titkosítási szabványra.
+
+---
+
 ### 3. Vezeték Nélküli Frekvenciák
 - A vezeték nélküli frekvenciák a rádióhullámok vezeték nélküli hálózatokban történő továbbítására és fogadására használt különböző frekvenciasávokra utalnak.
 - Minden frekvenciasávnak specifikus jellemzői vannak a sebességgel, lefedettséggel és az interferencia elkerülésére vonatkozó szabályozásokkal kapcsolatban.
