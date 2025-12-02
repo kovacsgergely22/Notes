@@ -483,7 +483,7 @@
         "datum": "2025-11-01",
         "sofor": "Kovács Gergely"
     },
-        {
+    {
         "datum": "2025-11-01",
         "sofor": "Turcsik Dániel"
     },
@@ -498,5 +498,37 @@
         {
         "datum": "2025-11-09",
         "sofor": "Vincze Milán"
+    },
+    {
+        "datum": "2025-11-13",
+        "sofor": "Turcsik Dániel"
+    },
+    {
+        "datum": "2025-11-13",
+        "sofor": "Sándor András"
+    },
+    {
+        "datum": "2025-11-17",
+        "sofor": "Toldi Csaba"
+    },
+    {
+        "datum": "2025-11-17",
+        "sofor": "Sándor András"
+    },
+    {
+        "datum": "2025-11-21",
+        "sofor": "Kovács Gergely"
+    },
+    {
+        "datum": "2025-11-21",
+        "sofor": "Laczkó Szabolcs"
+    },
+        {
+        "datum": "2025-11-24",
+        "sofor": "Fízer Bence"
+    },
+        {
+        "datum": "2025-11-28",
+        "sofor": "Turcsik Dániel"
     }
 ]
