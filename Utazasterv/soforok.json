@@ -694,5 +694,33 @@
     {
         "datum": "2026-03-25",
         "sofor": "Sándor András"
+    },
+    {
+        "datum": "2026-03-29",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum": "2026-04-02",
+        "sofor": "Fízer Bence"
+    },
+    {
+        "datum":"2026-04-06",
+        "sofor":"Kovács Gergely"
+    },
+    {
+        "datum":"2026-04-06",
+        "sofor":"Vincze Milán"
+    },
+    {
+        "datum":"2026-04-10",
+        "sofor":"Toldi Csaba"
+    },
+    {
+        "datum":"2026-04-10",
+        "sofor":"Vincze Milán"
+    },
+    {
+        "datum":"2026-04-14",
+        "sofor":"Toldi Csaba"
     }
 ]
